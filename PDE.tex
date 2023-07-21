@@ -90,13 +90,22 @@ if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 \frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \quad\quad \text{inhomogeneous}
 \end{align*}
 
+\newpage
+
 \subsection{Boundry Conditions}
-Boundary conditions are constraints necessary for the solution of a boundary value problem. A boundary value problem is a differential equation to be solved in a domain on whose boundary the function is known. We will be intrested in one type of boundry conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
+\ \ 
+\begin{definition}{Boundary conditions}
+    are constraints necessary for the solution of a boundary value problem.
+\end{definition}
+\begin{definition}
+    boundary value problem is a differential equation to be solved in a domain on whose boundary the function is known.
+\end{definition}
+We will be intrested in one type of boundry conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
 \[
-    \nabla^2 u(x) = 0 \;\;\;\; \forall x \in G    
+    \nabla^2 u(x) = 0 \quad \forall x \in G    
 \]
 \[
-    u(x) = f(x) \;\;\;\; \forall x \in G    
+    u(x) = f(x) \quad \forall x \in G    
 \]
 \begin{center}
 \includegraphics[scale=0.1]{laplacecircle.png} 
@@ -105,40 +114,294 @@ Boundary conditions are constraints necessary for the solution of a boundary val
     G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
 Equations involving such conditions are classified as Drichlet problems.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Intial Condition}
-The initial condition is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally. An example is the heat equation with intial condition.
+\subsection{Intial Condition}
+\
+\begin{definition}
+    The initial condition is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally.
+\end{definition}
+An example is the heat equation with intial condition.
 \begin{align*}
 \frac{\partial u(x,t)}{\partial t}  &= c^2 \frac{\partial u(x,t)}{\partial x}
-\\
 \\
 u(x,0) &= f(x)
 \end{align*}
 Equations involving such conditions are classified as Cauchy problems.
-\subsection*{Equations of Mathematical Physics}
-The most frequently incountered equations in physics are the following
+\subsection{Equations of Mathematical Physics}
+The most frequently encountered equations in physics are the following
 \begin{enumerate}
 \item Heat Equation
-\begin{align*}
-\frac{\partial u(x,t)}{\partial t}  &= c^2 \frac{\partial^2 u(x,t)}{\partial x^2}
-\end{align*}
-
+\[
+    \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}    
+\]
 \item Wave Equation 
-\begin{align*}
-\frac{\partial^2 u(x,t)}{\partial t^2}  &= c^2 \frac{\partial^2 u(x,t)}{\partial x^2}
-\end{align*}
-
+\[
+    \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}    
+\]
 \item Laplace's Equation
-\begin{align*}
-\nabla^2 u(x) = \frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \cdots = 0
-\end{align*}
+\[
+    \nabla^2 u(x) = \frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \cdots = 0    
+\]
 \end{enumerate}
 
-those will be our main focus in this course.
-\\
+\newpage
 
+\section{Canonical Form}
+Consider the following PDE with variable coefficients. We are aiming to transform this equation into its canonical form
+\begin{equation}
+A\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x^2} + 2B\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x\partial y}+C\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial y^2}+F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right) = 0
+\end{equation}
+The first three terms are called the principle terms and the last term is called the Yound term (Y.T) which does not contain second order derivatives of u.
+\par
+We start by preforming a change of variables such that.
+\[
+    \xi = \xi\left(x,y\right),\quad\quad \eta = \eta\left(x,y\right)    
+\]
+taking into consideration the Jacobian of the transformation
+\[
+    J =\begin{vmatrix} \frac{\partial\xi}{\partial x}  \;\;\; \frac{\partial\eta}{\partial x} \\ \\ \frac{\partial\xi}{\partial y}\;\;\; \frac{\partial\eta}{\partial y} \end{vmatrix} \neq 0    
+\]
+Then we find our derivatives.
+\begin{align*}
+\frac{\partial u}{\partial x} &= \frac{\partial u}{\partial\xi}\frac{\partial\xi}{\partial x}+\frac{\partial u}{\partial\eta}\frac{\partial\eta}{\partial x}
+\\
+\frac{\partial^2 u}{\partial x^2} &= \frac{\partial u}{\partial\xi}\frac{\partial^2\xi}{\partial x^2}+\frac{\partial\xi}{\partial x}\left[\frac{\partial^2 u}{\partial\xi^2}\frac{\partial\xi}{\partial x}+\frac{\partial^2 u}{\partial\eta\partial\xi}\frac{\partial\eta}{\partial x}\right]+\frac{\partial u}{\partial\eta}\frac{\partial^2\eta}{\partial x^2}+\frac{\partial\eta}{\partial x}\left[\frac{\partial^2 u}{\partial\eta^2}\frac{\partial\eta}{\partial x}+\frac{\partial^2 u}{\partial\eta\partial\xi}\frac{\partial\xi}{\partial x}\right]
+\end{align*}
+
+adding similar terms and simplifying
+
+\begin{equation}
+\frac{\partial^2 u}{\partial x^2} = {(\frac{\partial\xi}{\partial x})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial x})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
+\end{equation}
+
+and in similar fashion we can get.
+
+\begin{equation}
+\frac{\partial^2 u}{\partial y^2} = {(\frac{\partial\xi}{\partial y})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial y})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
+\end{equation}
+
+\begin{equation}
+\frac{\partial^2 u}{\partial y\partial x} = \frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}\frac{\partial^2 u}{\partial\xi^2}+\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta^2} + Y.T
+\end{equation}
+
+substituting (2), (3), and (4) in (1) we get.
+\begin{align*}
+       A&\left[{(\frac{\partial\xi}{\partial x})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial x})}^2\frac{\partial^2 u}{\partial\eta^2}\right]
+    \\ +2B&\left[\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}\frac{\partial^2 u}{\partial\xi^2}+\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta^2}\right] 
+    \\ +C&\left[{(\frac{\partial\xi}{\partial y})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial y})}^2\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T =0    
+\end{align*}
+rearranging terms.
+\begin{align*}
+\left[A{(\frac{\partial\xi}{\partial x})}^2+2B\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}+C{(\frac{\partial\xi}{\partial y})}^2\right]\frac{\partial^2 u}{\partial\xi^2}+\left[A{(\frac{\partial\eta}{\partial x})}^2+2B\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}+C{(\frac{\partial\eta}{\partial y})}^2\right]\frac{\partial^2 u}{\partial\eta^2}\\
++\left[2A\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}+2B\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]+2C\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\right]\frac{\partial^2 u}{\partial\eta\partial\xi}+Y.T=0
+\end{align*}
+we now try to find $\xi$ and $\eta$ such that.
+\[
+    \left[A{(\frac{\partial\xi}{\partial x})}^2+2B\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}+C{(\frac{\partial\xi}{\partial y})}^2\right] =0    
+\]
+\[
+    \left[A{(\frac{\partial\eta}{\partial x})}^2+2B\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}+C{(\frac{\partial\eta}{\partial y})}^2\right]=0    
+\]
+
+we notice that both equations are the same quadratic equation, thus we solve for one of them to find both $\xi$ and $\eta$, we choose the first one and start by dividing the equation by ${(\frac{\partial\xi}{\partial y})}^2$.
+\[
+    A\frac{{(\frac{\partial\xi}{\partial x})}^2}{{(\frac{\partial\xi}{\partial y})}^2}+2B\frac{\left(\frac{\partial\xi}{\partial x}\right)}{\left(\frac{\partial\xi}{\partial y}\right)}+C =0    
+\]
+\[
+    A{(\frac{\partial y}{\partial x})}^2-2B\frac{\partial y}{\partial x}+C =0    
+\]
+
+now using the quadratic formula to solve for $\frac{\partial y}{\partial x}$.
+
+\[
+    \frac{\partial y}{\partial x} = \frac{-\left(-2B\right)\pm\sqrt{{(-2B)}^2 -4AC}}{2A} = \frac{B\pm\sqrt{B^2 -AC}}{A}    
+\]
+
+this is called the charctaristic equation.
+
+\begin{enrichment*}{Equations Classification}
+Equations are classified based on the value of the expression under the root
+
+$B^2 > AC \;\;\;\;\;\; \forall x,y\in G$, Hyperbolic PDE (the general case of the wave equation) 
+
+$B^2 < AC \;\;\;\;\;\; \forall x,y\in G$, Elliptic PDE (the general case of the Laplace equation) 
+
+$B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the Heat equation) 
+\end{enrichment*}
+
+
+\subsection{Examples}
+
+\begin{example}
+    Transform to the canonical form.
+    \[
+        4y^2\frac{\partial^2 u}{\partial x^2}-e^{2x}\frac{\partial^2 u}{\partial y^2}+\underbrace{6y^3}_{\text{Y.T}} = 0    
+    \]
+    \begin{center}
+        ------ \textcolor{Solution}{Solution} ------ 
+    \end{center}
+    we start by determining the functions A,B, and C.
+    \[
+        A\left(x,y\right)=4y^2 \quad,\quad B\left(x,y\right)=0 \;\;\;,\;\;\; C\left(x,y\right)=-e^{2x}    
+    \]
+    we conclude from this that it has the form of a Hyperbolic PDE.
+    \[
+        B^2 =0 \quad>\quad AC=-4y^2e^{2x}, \quad \forall y\neq0,\quad \forall x    
+    \]
+    now we use the charchtarstic equation to determine the value of $\xi$ and $\eta$.
+    \begin{align*}
+        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}\\
+        \\
+        &= \frac{\pm\sqrt{4y^2 e^{2x}}}{4y^2}=\pm\frac{e^x}{2y}
+    \end{align*}
+    rearranging and intgrating.
+    \begin{align*}
+        2ydy &= \pm e^x dx
+        \\
+        \int 2ydy &= \pm \int e^x dx
+        \\ \hspace{6cm}
+        y^2 &= \pm e^x + constant \quad \Longrightarrow \quad y^2 \pm e^x = constant 
+    \end{align*}
+    we now set $\xi$ and $\eta$.
+    \[
+        \xi = e^x + y^2 \quad , \quad \eta = e^x - y^2    
+    \]
+    we now work out the derivatives.
+    \begin{align*}
+        \hspace{5cm}
+        \frac{\partial u}{\partial x} &= \frac{\partial u}{\partial\xi}\frac{\partial\xi}{\partial x} + \frac{\partial u }{\partial\eta}\frac{\partial\eta}{\partial x}
+        \\
+        &= \frac{\partial u}{\partial\xi}e^x+\frac{\partial u}{\partial\eta}e^x
+        \\
+        \frac{\partial^2 u}{\partial x^2} &= e^x\left[\frac{\partial^2 u}{\partial\xi^2} e^x + \frac{\partial^2 u}{\partial\eta\partial\xi}e^x\right]+e^x\left[\frac{\partial^2 u}{\partial\eta^2} e^x + \frac{\partial^2 u}{\partial\xi\partial\eta}e^x\right]+Y.T
+        \\
+        &= e^{2x}\frac{\partial^2 u}{\partial\xi^2}+2e^{2x}\frac{\partial^2 u}{\partial\xi\partial\eta}+e^{2x}\frac{\partial^2 u}{\partial\eta^2}+Y.T
+        \\
+        \frac{\partial^2 u}{\partial y^2} &= 4y^2\frac{\partial^2 u}{\partial\xi^2}-8y^2\frac{\partial^2 u}{\partial\xi\partial\eta}+4y^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
+    \end{align*}
+    substituting in our original equation.
+    \[
+        4y^2\left[e^{2x}\frac{\partial^2 u}{\partial\xi^2}+2e^{2x}\frac{\partial^2 u}{\partial\xi\partial\eta}+e^{2x}\frac{\partial^2 u}{\partial\eta^2}\right]-e^{2x}\left[4y^2\frac{\partial^2 u}{\partial\xi^2}-8y^2\frac{\partial^2 u}{\partial\xi\eta}+4y^2\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T = 0    
+    \]
+    \begin{align*}
+        16y^2 e^{2x}\frac{\partial^2 u}{\partial\xi\partial\eta}+Y.T &= 0
+        \\
+        \frac{\partial^2 u}{\partial\xi\partial\eta} +Y.T &= 0
+    \end{align*}
+\end{example}
+\begin{example}
+    Transform to the canonical form
+    \[
+        x^2\frac{\partial^2 u}{\partial x^2}+y^2\frac{\partial^2 u}{\partial y^2} = 0  
+    \]
+    \begin{center}
+        ------ \textcolor{Solution}{Solution} ------ 
+    \end{center}
+    determining the functions A,B, and C.
+    \[
+        A\left(x,y\right)=x^2 \;\;\;,\;\;\; B\left(x,y\right)=0 \;\;\;,\;\;\; C\left(x,y\right)=y^2    
+    \]
+    it has the form of a Elliptic PDE.
+    \[
+        B^2 =0 \;\;\;<\;\;\; AC=x^2 y^{2}, \;\;\;\forall y, x  
+    \]
+    using the charchtarstic equation.
+    \begin{align*}
+        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
+        \\
+        &= \frac{\pm\sqrt{-x^2 y^2}}{x^2}=\pm i\frac{y}{x}
+        \\
+        \int\frac{dy}{y} &= \pm i\int\frac{dx}{x}
+        \\
+        \ln\left(y\right) &= \pm i \ln\left(x\right)+\text{constant}
+    \end{align*}
+    we will choose $\xi$ to be the imaginary part and $\eta$ to be the real part.
+    \[
+        \xi = \ln\left(x\right) \;\;\;\;\; , \;\;\;\;\; \eta = \ln\left(y\right)    
+    \]
+    working out the derivatives.
+    \begin{align*}
+        \frac{\partial u}{\partial x} &= \frac{\partial u}{\partial\xi}\frac{\partial\xi}{\partial x} + \frac{\partial u }{\partial\eta}\frac{\partial\eta}{\partial x}
+        \\
+        &= \frac{\partial u}{\partial\xi}\frac{1}{x}+\frac{\partial u}{\partial\eta}\left(0\right)
+        \\
+        \frac{\partial^2 u}{\partial x^2} &= \frac{1}{x}\left[\frac{\partial^2 u}{\partial\xi^2}\frac{1}{x}+\frac{\partial^2 u}{\partial\eta\partial\xi}\left(0\right)\right] + Y.T
+        \\
+        \frac{\partial^2 u}{\partial x^2} &=\frac{1}{x^2}\frac{\partial^2 u}{\partial\xi^2}+Y.T
+        \\
+        \frac{\partial^2 u}{\partial y^2} &=\frac{1}{y^2}\frac{\partial^2 u}{\partial\eta^2}+Y.T
+    \end{align*}
+    substituting in our original equation.
+    \begin{align*}
+        x^2\left[\frac{1}{x^2}\frac{\partial^2 u}{\partial\xi^2}\right]+y^2\left[\frac{1}{y^2}\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T &= 0
+        \\
+        \frac{\partial^2 u}{\partial\xi^2}+\frac{\partial^2 u}{\partial\eta^2}+Y.T &=0
+    \end{align*}
+\end{example}
+\begin{example}
+    Transform to the canonical form
+    \[
+        y^2\frac{\partial^2 u}{\partial x^2}+2xy\frac{\partial^2 u}{\partial x\partial y}+x^2\frac{\partial^2 u}{\partial y^2} = 0  
+    \]
+    \begin{center}
+        ------ \textcolor{Solution}{Solution} ------ 
+    \end{center}
+    determining the functions A,B, and C.
+    \[
+        A\left(x,y\right)=y^2 \;\;\;,\;\;\; B\left(x,y\right)=xy \;\;\;,\;\;\; C\left(x,y\right)=x^2    
+    \]
+    it has the form of a Parabolic PDE.
+    \[
+        B^2 =x^2 y^2 \;\;\;=\;\;\; AC=x^2 y^2, \;\;\;\forall y, x  
+    \]
+    using the charchtarstic equation.
+    \begin{align*}
+        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
+        \\
+        &= \frac{xy}{y^2}=\frac{x}{y}
+        \\
+        \int y dy &= \int x dx 
+        \\
+        y^2 &= x^2 +\text{constant}
+    \end{align*}
+    we will assign $\xi$ to be this function
+    \[
+        \xi = y^2 - x^2
+    \]
+    and for $\eta$ it's Optional but to make the solution easier we will assign the previous function with different sign  
+    \[
+        \eta = y^2 + x^2 \ \ \text{or} \ \ \eta = - y^2 - x^2
+    \]
+    rest of the solution same as Hyperbolic and elliptic PDEs
+    the Canonical form in the end will be 
+    \begin{align*}
+        \frac{\partial^2 u}{\partial\xi^2}+Y.T &=0
+        \\
+        \text{or}
+        \\
+        \frac{\partial^2 u}{\partial\eta^2}+Y.T &=0
+    \end{align*}
+\end{example}
+
+\begin{observation}
+    the Canonical form of all Hyperbolic equations is 
+    \[
+        \frac{\partial^2 u}{\partial\xi\partial\eta} +Y.T = 0
+    \]
+\end{observation}
+\begin{observation}
+    the Canonical form of all elliptic equations is 
+    \[
+        \frac{\partial^2 u}{\partial\xi^2}+\frac{\partial^2 u}{\partial\eta^2}+Y.T =0
+    \]
+\end{observation}
+\begin{observation}
+    the Canonical form of all Parabolic equations is 
+    \begin{align*}
+        \frac{\partial^2 u}{\partial\xi^2}+Y.T &=0
+        \\
+        \text{or}
+        \\
+        \frac{\partial^2 u}{\partial\eta^2}+Y.T &=0
+    \end{align*}
+\end{observation}
 \end{document}
