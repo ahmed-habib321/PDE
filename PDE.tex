@@ -46,82 +46,70 @@ The main goal of many scientfic displines can be summerized to the following:
 \end{enumerate}
 
 The result of 1 is often a system of partial differential equations, thus the second becomes solving those partial differential equations.
-\\
-\\
+\par
 A partial differential equation (PDE) is is a differential equation containing partial derivatives of the dependent variable with repect to more than one independent variable.
 
-\subsection*{Order of PDE}
+\subsection{Order of PDE}
 The order of a PDE is determined by the highest derivative in the equation.
 \begin{align*}
-\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \;\;\;\;\;\; first \; order
+\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \ \ \ \ \Longrightarrow  \text{First order}
 \\
-\\
-\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= c \;\;\;\;\;\;\; fourth \; order
+\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= c \ \ \ \ \Longrightarrow  \text{Fourth order}
 \end{align*}
 do not mistake the order of the PDE with its degree, the degree of the PDE is the highest exponent appearing in the equation.
-\subsection*{Linearity} 
+\subsection{Linearity} 
 A linear PDE is one that is of first degree in all of its field variables and partial derivatives.
 \begin{align*}
-\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \;\;\;\;\;\;\ linear
+\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \quad\quad \text{linear}
 \\
+\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \quad\quad \text{linear}
 \\
-\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \;\;\;\;\;\; linear
+\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \quad\quad \text{nonlinear}
 \\
-\\
-\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \;\;\;\;\;\; nonlinear
-\\
-\\
-\frac{\partial^3 u}{\partial x^3} + {(\frac{\partial^2 u}{\partial y^2})}^5 &= \sin(x) \;\;\;\;\;\; nonlinear
+\frac{\partial^3 u}{\partial x^3} + {(\frac{\partial^2 u}{\partial y^2})}^5 &= \sin(x) \quad\quad \text{nonlinear}
 \end{align*}
 
 a linear operator can be defined for any linear equation, taking the first equation in the previous list, the linear operator $L$ can be defined as.
-
-\begin{align*}
+\[
 L = \frac{\partial }{\partial t} + \frac{\partial u}{\partial x}
-\end{align*} 
-
+\]
 and the equation can be written as.
-\begin{align*}
-L(u)=0
-\end{align*}
+\[
+    L(u)=0    
+\]
 
-
-\subsection*{Homogeneity}
+\subsection{Homogeneity}
 Let $L$ be a linear operator. Then a linear partial differential equation can be written in the form.
-\begin{align*}
-L(u) = f(x_1,x_2, \dots , t)
-\end{align*}
+\[
+    L(u) = f(x_1,x_2, \dots , t)    
+\]
 if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 \begin{align*}
-\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \;\;\;\;\;\; homogeneous
+\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \quad\quad \text{homogeneous}
 \\
-\\
-\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \;\;\;\;\;\; inhomogeneous
+\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \quad\quad \text{inhomogeneous}
 \end{align*}
 
-
-\subsection*{Boundry Conditions}
-
+\subsection{Boundry Conditions}
 Boundary conditions are constraints necessary for the solution of a boundary value problem. A boundary value problem is a differential equation to be solved in a domain on whose boundary the function is known. We will be intrested in one type of boundry conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
-\begin{align*}
-\nabla^2 u(x) = 0 \;\;\;\; \forall x \in G
-\\
-\\
-u(x) = f(x) \;\;\;\; \forall x \in G
-\end{align*}
-
+\[
+    \nabla^2 u(x) = 0 \;\;\;\; \forall x \in G    
+\]
+\[
+    u(x) = f(x) \;\;\;\; \forall x \in G    
+\]
 \begin{center}
-%\begin{figure}[h!]
 \includegraphics[scale=0.1]{laplacecircle.png} 
-%\end{figure}
 \end{center}
-
-
-\begin{align*}
-G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace
-\end{align*}
+\[
+    G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
+\]
 Equations involving such conditions are classified as Drichlet problems.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection*{Intial Condition}
 The initial condition is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally. An example is the heat equation with intial condition.
 \begin{align*}

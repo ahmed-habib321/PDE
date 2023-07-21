@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  21 JUL 2023 12:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  21 JUL 2023 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -875,72 +875,68 @@ Package pdftex.def Info: Cover1.jpg  used on input line 34.
 \openout5 = `PDE.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 48--52
-
- []
-
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 55.
-(C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 54.
+ (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 55.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 55.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 55.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 55.
+(Font)              <10> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 55.
+(Font)              <7> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 55.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 55.
+(Font)              <5> on input line 54.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
-<laplacecircle.png, id=22, 1580.90625pt x 1036.62282pt>
+) [3{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<laplacecircle.png, id=24, 1580.90625pt x 1036.62282pt>
 File: laplacecircle.png Graphic file (type png)
 <use laplacecircle.png>
-Package pdftex.def Info: laplacecircle.png  used on input line 115.
+Package pdftex.def Info: laplacecircle.png  used on input line 102.
 (pdftex.def)             Requested size: 158.09988pt x 103.66835pt.
- [4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
-[5] (PDE.aux)
+[4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png>] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25834 strings out of 476048
- 562109 string characters out of 5780228
- 1867753 words of memory out of 5000000
- 46070 multiletter control sequences out of 15000+600000
- 555043 words of font info for 63 fonts, out of 8000000 for 9000
+ 25838 strings out of 476048
+ 562190 string characters out of 5780228
+ 1866753 words of memory out of 5000000
+ 46073 multiletter control sequences out of 15000+600000
+ 558040 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,11n,96p,1239b,525s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-Output written on PDE.pdf (5 pages, 2216465 bytes).
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
+Output written on PDE.pdf (4 pages, 2241504 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
