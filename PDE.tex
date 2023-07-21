@@ -404,4 +404,139 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
         \frac{\partial^2 u}{\partial\eta^2}+Y.T &=0
     \end{align*}
 \end{observation}
+
+
+\section{Heat Equation}
+The heat equation is a prototypical example for a prabolic equation. The general form of the heat equation is the following.
+\[
+    \frac{\partial u(x,t)}{\partial t} = c^2\nabla^2 u(x,t) = C^2\left[\frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \dots\right]    
+\]
+we will be studying the heat equation only in one dimension thus this reduces to.
+\[
+    \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}     
+\]
+
+
+\subsection{Fourier Transform}
+
+The fourier transform of the function $f(x)$ is defined as.
+\[
+    \mathscr{F}\left[f\left(x\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}f\left(x\right)dx= g\left(s\right)    
+\] 
+the inverse fourier transform is 
+\[
+    \mathscr{F}^{-1}\left[g\left(s\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ixs}g\left(s\right)ds= f\left(x\right)    
+\]
+\setcounter{equation}{0}
+\subsubsection*{the fourier transform of a derivative}
+\begin{align}
+    \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}\frac{df\left(x\right)}{dx}dx
+\end{align}
+notice that
+\begin{align}
+\frac{d}{dx}\left[e^{ixs}f\left(x\right)\right] &= e^{ixs}\frac{df\left(x\right)}{dx} + ise^{ixs}f\left(x\right)
+\\
+e^{ixs}\frac{df\left(x\right)}{dx} &= \frac{d}{dx}\left[e^{ixs}f\left(x\right)\right] -ise^{ixs}f\left(x\right)
+\end{align}
+substitute (3) in (2)
+\begin{align*}
+\mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= \frac{1}{\sqrt{2\pi}}
+\int_{-\infty}^{\infty}\frac{d}{dx}\left[e^{ixs}f\left(x\right)\right]dx - is\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}f\left(x\right)dx
+\\
+\mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= \frac{1}{\sqrt{2\pi}}{\left[e^{ixs}f\left(x\right)\right]}_{-\infty}^{\infty} - is \mathscr{F}\left[f\left(x\right)\right]
+\\
+\text{the  first term must vanish }&\text{as we assume f is absolutely intgrable on} \mathbb{R}
+\\
+\mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= - is \mathscr{F}\left[f\left(x\right)\right]
+\end{align*}
+in the same way the fourier transform for the second derivative will yield
+\begin{align*}
+\mathscr{F}\left[\frac{d^2f\left(x\right)}{dx^2}\right] &=  \mathscr{F}\left[\frac{d}{dx}\frac{df\left(x\right)}{dx}\right]
+\\
+&= - is\mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] = -s^2 \mathscr{F}\left[f\left(x\right)\right]
+\end{align*}
+and in general
+\[
+    \mathscr{F}\left[\frac{d^nf\left(x\right)}{dx^n}\right] = {(-is)}^n\mathscr{F}\left[f\left(x\right)\right]    
+\]
+\setcounter{equation}{0}
+\subsection{Cauchy Problem}
+\begin{figure*}[b]
+    \begin{enrichment}{Augustin-Louis Cauchy}{Cauchy.jpg}{2.4}{.8}{.17}
+        Baron Augustin-Louis Cauchy (1789-1857) was a renowned French mathematician and physicist who made significant contributions to various fields of mathematics, including partial differential equations (PDEs). His work in PDEs laid the groundwork for modern analysis and helped establish the rigorous theoretical foundation for the study of these equations.
+    \end{enrichment}    
+\end{figure*}
+
+Consider the following one dimensional heat equation cauchy problem
+\begin{equation}
+\frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \;\;\;\;\; c\neq0, \;\;\;\;\; -\infty < x< \infty
+\end{equation}
+\begin{equation}
+u(x,0) = \phi (x)
+\end{equation}
+the fourier transform of u is
+\[
+    \mathscr{F}[u(x,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}u\left(x,t\right)dx= \nu\left(\xi,t\right)    
+\]
+preforming the transform on both sides of equation (1)
+\begin{equation}
+\frac{\partial\nu(\xi,t)}{\partial t} = -c^2 \xi^2 \nu(\xi,t)
+\end{equation}
+and the new intial condition.
+\begin{equation}
+\mathscr{F}[u(x,0)] = \nu(\xi,0) =\mathscr{F}[\phi(x)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}\phi\left(x\right)dx = \psi(\xi)
+\end{equation}
+the solution of (3) is.
+\[
+    \nu(\xi,t) = Ae^{-c^2 \xi^2 t}    
+\]
+and A can be found from (4). 
+\begin{equation}
+\nu(\xi,t)= \psi(\xi)e^{-c^2 \xi^2 t}
+\end{equation}
+to find u we preform the inverse fourier transform on (5).
+\begin{align*}
+u(x,t) &= \mathscr{F}^{-1}[\nu(\xi,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}\nu(\xi,t)d\xi
+\\
+&= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\psi(\xi)d\xi
+\end{align*}
+substituting the value of $\psi$ from (4) and renamming the varable of intgration to y.
+\[
+    u(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\left[\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{iy\xi}\phi\left(y\right)dy\right]d\xi    
+\]
+simplify.
+\begin{equation}
+u(x,t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi \right] \phi(y)dy
+\end{equation}
+considering the inner intgral.
+\begin{equation}
+J = \int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi
+\end{equation}
+simplifying the power by completing the square.
+\begin{align*}
+iy\xi -ix\xi - c^2 \xi^2 t &= -tc^2\left(\xi^2-\frac{i\xi}{tc^2}(y-x)\right)
+\\
+&= -tc^2\left({(\xi-\frac{i}{tc^2}(y-x))}^2 + \frac{{(y-x)}^2}{4t^2 c^4}\right)
+\end{align*}
+substituting in (7)
+\begin{align*}
+J   &= \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{-tc^2\frac{{(y-x)}^2}{4t^2 c^4}} d\xi
+\\
+    &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
+\end{align*}
+shift the function by $\frac{i}{tc^2}(y-x)$ to the left and since the limits of intgration are infinity the value of the intgral is the same.
+\begin{align*}
+J = &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\xi^2} d\xi
+\end{align*}
+it is now clear that J is a gaussian intgral that we can eaisly find its value.
+\begin{align*}
+J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}
+\end{align*}
+substituing in (6) we finally get u.
+\[
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
+\]
+this equation is called Poisson's Formula.
+
+
 \end{document}
