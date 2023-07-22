@@ -10,4 +10,10 @@
 \contentsline {section}{\numberline {3}Heat Equation}{9}{}%
 \contentsline {subsection}{\numberline {3.1}Fourier Transform}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Cauchy Problem}{10}{}%
+\contentsline {subsection}{\numberline {3.3}Mixed Homogeneous Problem}{12}{}%
+\contentsline {subsection}{\numberline {3.4}Mixed Inhomogeneous Problem}{14}{}%
+\contentsline {section}{\numberline {4}Wave Equation}{15}{}%
+\contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{15}{}%
+\contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{17}{}%
+\contentsline {subsection}{\numberline {4.3}Cauchy Problem (3D)}{19}{}%
 \contentsfinish 

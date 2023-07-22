@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  21 JUL 2023 17:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 13:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -781,24 +781,24 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen320
 \Gm@dimlist=\toks49
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 8.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 11.
  (PDE.aux)
 \openout1 = `PDE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count357
@@ -823,7 +823,7 @@ Package caption Info: End \AtBeginDocument code.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 8.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -859,14 +859,14 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 16.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 19.
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <Cover1.jpg, id=4, 3126.68124pt x 4111.36pt>
 File: Cover1.jpg Graphic file (type jpg)
 <use Cover1.jpg>
-Package pdftex.def Info: Cover1.jpg  used on input line 34.
+Package pdftex.def Info: Cover1.jpg  used on input line 37.
 (pdftex.def)             Requested size: 597.51068pt x 845.02997pt.
  [1
 
@@ -875,83 +875,123 @@ Package pdftex.def Info: Cover1.jpg  used on input line 34.
 \openout5 = `PDE.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 54.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 54.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 54.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 54.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 54.
+(Font)              <10> on input line 57.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 54.
+(Font)              <7> on input line 57.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 54.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54.
+(Font)              <5> on input line 57.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 97.
+(mdframed)              on input line 100.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 100.
+(mdframed)              on input line 103.
 <laplacecircle.png, id=24, 1580.90625pt x 1036.62282pt>
 File: laplacecircle.png Graphic file (type png)
 <use laplacecircle.png>
-Package pdftex.def Info: laplacecircle.png  used on input line 111.
+Package pdftex.def Info: laplacecircle.png  used on input line 114.
 (pdftex.def)             Requested size: 158.09988pt x 103.66835pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 119.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 124.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 134.
  [4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png>] [5] [6] [7] [8] [9]
 <Cauchy.jpg, id=53, 331.2375pt x 331.2375pt>
 File: Cauchy.jpg Graphic file (type jpg)
 <use Cauchy.jpg>
-Package pdftex.def Info: Cauchy.jpg  used on input line 467.
+Package pdftex.def Info: Cauchy.jpg  used on input line 475.
 (pdftex.def)             Requested size: 68.28644pt x 68.28319pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 467--467
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 475--475
 [][] 
  []
 
-[10 <./Cauchy.jpg>] [11] (PDE.aux)
+[10 <./Cauchy.jpg>] [11]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 553.
+ [12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 666--668
+
+ []
+
+[14] [15] [16]
+<d_Alembert.jpg, id=81, 1177.39874pt x 1504.8722pt>
+File: d_Alembert.jpg Graphic file (type jpg)
+<use d_Alembert.jpg>
+Package pdftex.def Info: d_Alembert.jpg  used on input line 880.
+(pdftex.def)             Requested size: 68.28644pt x 87.25739pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 880--880
+[][] 
+ []
+
+
+Overfull \hbox (2.2179pt too wide) detected at line 920
+[]
+ []
+
+[17 <./d_Alembert.jpg>] [18]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 971.
+<div.png, id=88, 188.20313pt x 141.52875pt>
+File: div.png Graphic file (type png)
+<use div.png>
+Package pdftex.def Info: div.png  used on input line 981.
+(pdftex.def)             Requested size: 112.92273pt x 84.9179pt.
+ [19 <./div.png>] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25931 strings out of 476048
- 564422 string characters out of 5780228
+ 25961 strings out of 476048
+ 564988 string characters out of 5780228
  1885753 words of memory out of 5000000
- 46162 multiletter control sequences out of 15000+600000
+ 46192 multiletter control sequences out of 15000+600000
  569994 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,96p,1239b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (11 pages, 2398354 bytes).
+ 89i,13n,96p,1239b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on PDE.pdf (19 pages, 2959859 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
+ 181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
