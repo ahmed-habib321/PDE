@@ -15,5 +15,8 @@
 \contentsline {section}{\numberline {4}Wave Equation}{15}{}%
 \contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{15}{}%
 \contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{17}{}%
-\contentsline {subsection}{\numberline {4.3}Cauchy Problem (3D)}{19}{}%
+\contentsline {subsection}{\numberline {4.3}Spherical Mean and Darboux's Equation}{19}{}%
+\contentsline {subsection}{\numberline {4.4}Kirchhoff's Formula}{22}{}%
+\contentsline {section}{\numberline {5}Laplace's Equation}{25}{}%
+\contentsline {subsection}{\numberline {5.1}Harmonic Functions}{25}{}%
 \contentsfinish 

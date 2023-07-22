@@ -96,12 +96,12 @@ if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 \newpage
 
 \subsection{Boundry Conditions}
-\ \ 
-\begin{definition}{Boundary conditions}
-    are constraints necessary for the solution of a boundary value problem.
+\
+\begin{definition}[Boundary Conditions]
+    Boundary conditions are constraints necessary for the solution of a boundary value problem.
 \end{definition}
-\begin{definition}
-    boundary value problem is a differential equation to be solved in a domain on whose boundary the function is known.
+\begin{definition}[Boundary Value Problem]
+    BVP is a differential equation to be solved in a domain on whose boundary the function is known.
 \end{definition}
 We will be intrested in one type of boundry conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
 \[
@@ -116,13 +116,13 @@ We will be intrested in one type of boundry conditions in this course which is t
 \[
     G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
-\begin{definition}
-    Drichlet problems are problems that has only boundry conditions
+\begin{definition}[Drichlet problems]
+    are problems that has only boundry conditions
 \end{definition}
 \subsection{Intial Condition}
 \
-\begin{definition}
-    The initial condition is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally.
+\begin{definition}[The initial condition]
+    is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally.
 \end{definition}
 An example is the heat equation with intial condition.
 \[
@@ -131,8 +131,8 @@ An example is the heat equation with intial condition.
 \[
     u(x,0) = f(x)
 \]
-\begin{definition}
-    Cauchy problems are problems that has only intial conditions
+\begin{definition}[Cauchy problems]
+    are problems that has only intial conditions
 \end{definition}
 \subsection{Equations of Mathematical Physics}
 The most frequently encountered equations in physics are the following
@@ -550,8 +550,8 @@ this equation is called Poisson's Formula.
 \setcounter{equation}{0}
 \subsection{Mixed Homogeneous Problem}
 \ 
-\begin{definition}
-    a mixed problem is a problem that has both Drichlet boundry condition and Cauchy intial condition
+\begin{definition}[Mixed Problem]
+    is a problem that has both Drichlet boundry condition and Cauchy intial condition
 \end{definition}
 Consider the following one dimensional heat equation 
 \begin{equation}
@@ -964,11 +964,68 @@ substitute $a_n$ and $b_n$ to get $u\left(x,t\right)$
 
 \newpage 
 
-\subsection{Cauchy Problem (3D)}
+\setcounter{equation}{0}
+\subsection{Spherical Mean and Darboux's Equation}
+The spherical mean of a function $f$ is defined as.
+\begin{equation}
+M_{f}(x,r) = \frac{1}{\omega_{n}r^{n-1}} \int_{|y-x|=r} f(y)dS_y
+\end{equation}
+where $\omega_{n}$ is the surface area of an n-diminsional unit sphere\footnote{for n =3 or the three diminsional case $\omega_{3} = 4\pi$}, thus the amount $\omega_{n}r^{n-1}$ is the surface area of an n-diminsional sphere of raduis $r$, $dS_y$ is the element of intgration on the surface of the sphere, $x = (x_{1},x_{2}, \dots,x_{n})$ and $y = (y_{1},y_{2}, \dots,y_{n})$ are vectors in n-diminsions, where $x$ is the center of the sphere and $y$ is any point of the surface on the sphere, thus we have $|y-x|^2 = {(y_{1}-x_{1})}^2 + {(y_{2}-x_{2})}^2 + \dots + {(y_{n}-x_{n})}^2 = r^2$, and the intgral is over the whole surface of the sphere.
 
-We have seen how formula d'Almbert can solve the one dimensional wave equation cauchy problem but the solution of the wave equation in dimensions higher than one shows to be more complicated. Our attempt to solve the three dimensional wave equation will start by defining the spherical mean of a unction then using it to solve a PDE called Darboux's equation which we later use its solution to deduce Kirchoff's formula which is our desired solution.
+we will show that this function satisfy an important partial differential equation, which is the Euler-Poisson-Darboux equation or just Darboux's equation.
+\begin{equation}
+\frac{\partial^2 V}{\partial r^2} + \frac{n-1}{r}\frac{\partial V}{\partial r} = \nabla_{x}^{2} V
+\end{equation} 
+where $\nabla_{x}^{2}$ is the Laplace-Beltrami operator, a generaliation of the laplace operator in n-diminsional spherical coordinates.
+\par
+we will start by defining the unit vector $\xi$ such that the vector is normal to the surface.
+\begin{center}
+\includegraphics[scale=0.1]{xi.png}
+\end{center}
+\[
+    y-x = \xi r    
+\]
+\begin{equation}
+y = x + \xi r
+\end{equation}
+\[
+    |y-x| = |\xi|r = r, \;\;\;\;\;\; |\xi| = 1    
+\]
+thus the surface elements are related as.
+\[
+    dS_y = r^{n-1} dS_\xi    
+\]
+substituting in (1).
+\begin{equation}
+M_{f}(x,r) = \frac{1}{\omega_{n}} \int_{|\xi|=1} f(x+\xi r)dS_\xi
+\end{equation} 
+at $r = 0$. 
+\begin{equation}
+M_{f}(x,0) = \frac{f(x)}{\omega_{n}} \int_{|\xi|=1} dS_\xi = f(x)
+\end{equation}
+the intgral $\displaystyle \int_{|\xi|=1} dS_\xi$ is the surface area of a unit sphere in n diminsions which is equale to $\omega_n$
 
-\begin{theorem}{Divergence Theorem}
+from (3) and remembering that $y$, $x$, and $\xi$ are all vectors, then we can write their components as.
+\[
+    y_i = x_i + \xi_i r    
+\]
+using this vector notation to differntiate (4) with respect to r.
+\begin{align*}
+\frac{\partial M_f (x,r)}{\partial r} &= \frac{1}{\omega_n} \int_{|\xi|=1} \frac{\partial f(y)}{\partial r}dS_\xi
+\\
+&= \frac{1}{\omega_n} \int_{|\xi|=1} \sum_{i=1}^{n} \frac{\partial f(y)}{\partial y_i}\frac{\partial y_i}{\partial r} dS_\xi
+\\
+&= \frac{1}{\omega_n} \int_{|\xi|=1} \sum_{i=1}^{n} \frac{\partial f(y)}{\partial y_i}\xi_i dS_\xi
+\end{align*}
+using the chain rule we find.$\displaystyle \frac{\partial f(y)}{\partial y_i} \frac{\partial x_i}{\partial x_i} = \frac{\partial f(y)}{\partial y_i} \frac{\partial y_i}{\partial x_i}\frac{\partial x_i}{\partial y_i} = \frac{\partial f(y)}{\partial x_i}$, since $\displaystyle \frac{\partial x_i}{\partial y_i} = 1$
+\[
+    \frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n} \int_{|\xi|=1} \sum_{i=1}^{n} \frac{\partial f(y)}{\partial x_i}\xi_i dS_\xi    
+\]
+using the chain rule one more time.$\displaystyle \frac{\partial f(y)}{\partial x_i} \frac{\partial \xi_i}{\partial \xi_i}= \frac{\partial f(y)}{\partial x_i}\frac{\partial x_i}{\partial \xi_i}\frac{\partial \xi_i}{\partial x_i} = \frac{\partial f(y)}{\partial \xi_i}\frac{1}{r}$, since $\displaystyle \frac{\partial \xi_i}{\partial x_i} = \frac{1}{r}$
+\begin{equation}
+\frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n r} \int_{|\xi|=1} \sum_{i=1}^{n} \frac{\partial f(y)}{\partial \xi_i}\xi_i dS_\xi
+\end{equation}
+\begin{theorem}[Divergence Theorem]
     Also called Green-Gauss-Ostrogradsky theorem realtes the volume intgral to the surface intgral under some conditions, more precisely, the surface integral of a vector field over a closed surface (flux) is equal to the volume integral of the divergence over the region. We will use this later in our treatment.
     \[
         \int\int\int_{Volume} \frac{\partial \textbf{F}(x,y,z)}{\partial x}dV = \int\int_{Surface} \textbf{F}(x,y,z)\cos(\angle x,\vec{n}) dS    
@@ -981,6 +1038,425 @@ We have seen how formula d'Almbert can solve the one dimensional wave equation c
     \includegraphics[scale=0.6]{div.png}
     \end{center}
 \end{theorem}
+comparing the form we have with the divergence theorem we see that the sum we have is the dot product of our vector function with $\xi$\footnote{the components $\xi_i$ are dirction cosines, i.e $\xi_{1}^{2}+\xi_{2}^{2}+...+\xi_{n}^{2} = 1$} which is the unit vector always normal to the surface of the sphere by our definition, and we can transform our integral to a volume integral.
+\[
+    \frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n r} \int_{|\xi|\leq 1} \sum_{i=1}^{n} \frac{\partial^2 f(y)}{\partial \xi_{i}^{2}} d\xi    
+\]
+using the chain rule we have.
+\begin{align*}
+\frac{\partial M_f (x,r)}{\partial r} &= \frac{r^2}{\omega_n r} \int_{|\xi|\leq 1} \sum_{i=1}^{n} \frac{\partial^2 f(y)}{\partial x_{i}^{2}} d\xi
+\\
+&=\frac{r}{\omega_n} \nabla_{x}^{2} \int_{|\xi|\leq 1} f(y)d\xi
+\end{align*}
+notice that .
+\[
+    \frac{\partial M_f (x,0)}{\partial r} = 0    
+\]
+now we will change our volume element from the relation (3).\footnote{remember that y is a vector thus $dy = dy_1 dy_2 dy_3 ...dy_n$ and since $dy_i = rd\xi_i$ then $dy = rrr...d\xi_1 d\xi_2 d\xi_3 ...$}
+\[
+    d\xi = \frac{1}{r^n}dy    
+\]
+thus we have 
+\begin{align*}
+\frac{\partial M_f (x,r)}{\partial r} &= \frac{r}{\omega_n r^n} \nabla_{x}^{2} \int_{|y-x|\leq r} f(y)dy
+\\
+&= \frac{1}{\omega_n r^{n-1}} \nabla_{x}^{2} \int_{|y-x|\leq r} f(y)dy
+\\
+&= \frac{1}{\omega_n r^{n-1}} \nabla_{x}^{2} \int_{\rho = 0}^{r} \int_{|y-x| = \rho} f(y)dS_y d\rho
+\end{align*}
+rearranging and multiply and divide by $\rho^{n-1}$.
+\[
+    r^{n-1} \frac{\partial M_f (x,r)}{\partial r} =  \nabla_{x}^{2}\int_{\rho = 0}^{r} \frac{\rho^{n-1}}{\omega_n \rho^{n-1}} \int_{|y-x|= \rho}f(y)dS_y d\rho    
+\]
+notice that on the right hand side an expression the same as the spherical mean (4) is attained thus we substitute .
+\[
+    r^{n-1} \frac{\partial M_f (x,r)}{\partial r} = \nabla_{x}^{2}\int_{\rho = 0}^{r} \rho^{n-1} M_{f}(x,r) d\rho    
+\]
+diffrentiating the expression with respect to r.
+\begin{align*}
+\frac{\partial}{\partial r}\left( r^{n-1} \frac{\partial M_f (x,r)}{\partial r}\right) &= \nabla_{x}^{2} \frac{\partial}{\partial r}\int_{\rho = 0}^{r} \rho^{n-1} M_{f}(x,r) d\rho
+\\
+r^{n-1} \frac{\partial^2 M_f (x,r)}{\partial r^2} + (n-1)r^{n-2}r^{n-1} \frac{\partial M_f (x,r)}{\partial r} &= \nabla_{x}^{2} r^{n-1} M_f (x,r)
+\end{align*}
+rearranging and simplifying we finally arive at Darboux's equation (2) where $ V=M_f (x,r) $.
+\[
+    \frac{\partial^2 M_f (x,r)}{\partial r^2} + \frac{n-1}{r} \frac{\partial M_f (x,r)}{\partial r} = \nabla_{x}^{2} M_f (x,r)    
+\]
+
+\begin{figure*}[b]
+    \begin{enrichment}{Jean Gaston Darboux}{Darboux.jpg}{2.4}{.8}{.17}
+        Born in Nimes Jean Gaston Darboux (1842-1917) was a renowned 
+        French mathematician who made significant contributions to Partial Differential Equations (PDEs). 
+        Darboux's work centered on the theory of linear and nonlinear partial differential equations, 
+        which are fundamental to understanding various physical phenomena and mathematical models. 
+        He tackled important questions related to the existence, uniqueness, and regularity of solutions to these equations, 
+        laying the groundwork for future investigations in the field.
+    \end{enrichment}    
+\end{figure*}
+
+\newpage
+
+\setcounter{equation}{0}
+\setcounter{footnote}{0}
+\subsection{Kirchhoff's Formula}
+We have seen how formula d'Almbert can solve the one dimensional wave equation cauchy problem but the solution of the wave equation in dimensions higher than one shows to be more complicated. 
+Our attempt to solve the three dimensional wave equation 
+we will use the results of the spherical mean and Darboux's equation to develop an effective formula to solve three diminsional wave equation Cahuchy problems called Kircchoff's formula.
+\par
+Consider the following three dimensional wave equation Cauchy problem.
+\begin{equation}
+\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \nabla_{x}^{2}u(x,t), \;\;\;\;\;\; c\neq 0 ,\;\;\; t > 0
+\end{equation}
+\begin{equation}
+    \text{I.C} \quad \Longrightarrow \quad 
+    \begin{cases}
+    u\left(x,0 \right) = \phi\left(x\right)
+    \\
+    \\
+    \displaystyle \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+    \end{cases}
+\end{equation}
+where $x = (x_1,x_2,x_3)$ is a three diminsional vector.
+\par
+we start by considering Darboux's equation (54) in n = 3.
+\begin{align}
+\frac{\partial^2 M_f (x,r)}{\partial r^2} + \frac{2}{r} \frac{\partial M_f (x,r)}{\partial r} &= \nabla_{x}^{2} M_f (x,r) \notag
+\\ 
+r\frac{\partial^2 M_f (x,r)}{\partial r^2} + 2 \frac{\partial M_f (x,r)}{\partial r} &= r\nabla_{x}^{2} M_f (x,r)
+\end{align}
+we notice that.
+\begin{align*}
+\frac{\partial }{\partial r}\left(rM_f (x,r) \right) &= r\frac{\partial M_f(x,r)}{\partial r} +M_f (x,r)
+\\
+\frac{\partial^2 }{\partial r^2}\left(rM_f (x,r) \right) &= r\frac{\partial^2 M_f(x,r)}{\partial r^2} + \frac{\partial M_f(x,r)}{\partial r}  + \frac{\partial M_f(x,r)}{\partial r}
+\end{align*}
+\begin{equation}
+\frac{\partial^2 }{\partial r^2}\left(rM_f (x,r) \right) = r\frac{\partial^2 M_f(x,r)}{\partial r^2} + 2\frac{\partial M_f(x,r)}{\partial r}
+\end{equation}
+substituting (4) in (3).
+\begin{equation}
+\frac{\partial^2 }{\partial r^2}\left(rM_f (x,r) \right) = r\nabla_{x}^{2} M_f (x,r)
+\end{equation}
+we now consider the spherical mean of the function $u$ where n = 3.\footnote{when n = 3 then $\omega_3 = 4\pi$ the surface area of a 3d sphere}
+\[
+    M_{u}(x,t,r) = \frac{1}{4\pi r^2} \int_{|y-x|=r} f(y)dS_y    
+\]
+calculating the spherical mean of the whole equation (1) we get.
+\[
+    \frac{\partial^2}{\partial t^2} M_{u}(x,t,r) = c^2 \nabla_{x}^{2}M_{u}(x,t,r)    
+\]
+multiply by r.
+\[
+    \frac{\partial^2}{\partial t^2} r M_{u}(x,t,r) = c^2 r\nabla_{x}^{2}M_{u}(x,t,r)    
+\]
+from (5) we get.
+\begin{equation}
+    \frac{\partial^2}{\partial t^2} \left[r M_u (x,t,r) \right] = c^2 \frac{\partial^2 }{\partial r^2}\left[r M_u (x,t,r) \right]    
+\end{equation}
+
+\newpage 
+
+the intial conditions will be.
+\begin{equation}
+rM_{u}(x,0,r) = rM_\phi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\phi(y)dS_y
+\end{equation}
+\begin{equation}
+\frac{\partial}{\partial t}\left(rM_{u}(x,0,r)\right) = rM_\psi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\psi(y)dS_y
+\end{equation}
+we notice that this is a one diminsional wave equation that can be solved using the method developed earlier d'Alembert formula.
+\[
+    rM_u(x,t,r) = \frac{1}{2}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2c}\int_{x-ct}^{x+ct} sM_\psi(x,s)ds    
+\]
+\begin{equation}
+M_u(x,t,r) = \frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2cr}\int_{x-ct}^{x+ct} sM_\psi(x,s)ds
+\end{equation}
+we note that.
+\[
+\lim_{r\to 0} M_u(x,t,r) = u(x,t)    
+\]
+now we start studying the limit to find our target function $u(x,t)$.
+\begin{align}
+\lim_{r\to 0} M_u(x,t,r) = \lim_{r\to 0}\frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right] \notag
+\\
++\lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds
+\end{align}
+the first limit can be rearranged to.
+\[
+    \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+ctM_\phi(x,r+ct)+rM_\phi(x,r-ct)-ctM_\phi(x,r-ct)\right]    
+\]
+rearranging one more time and noting that the spherical mean function is an even function $\displaystyle M_f(r)=M_f(-r)$ thus we can multiplay the r varialble by negative one.
+\begin{align*}
+    \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+rM_\phi(x,r-ct)\right] & +\lim_{r\to 0} \frac{1}{2r}ct\left[M_\phi(x,r+ct)-M_\phi(x,ct-r)\right]
+    \\
+    \frac{1}{2} \lim_{r\to 0} \left[M_\phi(x,r+ct)+M_\phi(x,r-ct)\right] & + ct \lim_{r\to 0} \frac{\left[M_\phi(x,r+ct)-M_\phi(x,ct-r)\right]}{2r}
+    \\
+    \frac{1}{2} \left[M_\phi(x,ct)+M_\phi(x,-ct)\right] & + ct \frac{\partial M_\phi(x,ct)}{\partial ct}
+\end{align*}
+the first limit is equale to $M_\phi(x,ct)$ due to the fnction being even and we notice that the second limit is the defenition of the derivative$\displaystyle f'(x) = \lim_{h\to 0} \frac{f(x+h) - f(x-h)}{2h}$ with respect to $ct$ thus the limit is finally evaluted to.
+\[
+    \lim_{r\to 0}\frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right] = M_\phi(x,ct) + ct\frac{\partial}{\partial ct}(M_\phi(x,ct))    
+\]
+consider .
+\[
+    \frac{\partial}{\partial t}[tM_\phi(x,ct)] = M_\phi(x,ct)+t \frac{\partial M_\phi(x,ct)}{\partial ct}\frac{\partial ct}{\partial t} = M_\phi(x,ct)+ct \frac{\partial M_\phi(x,ct)}{\partial ct}    
+\]
+\[
+\therefore \lim_{r\to 0}\frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right] = \frac{\partial}{\partial t}[tM_\phi(x,ct)]    
+\]
+now considering the second limit.
+\[
+    \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds    
+\]
+direct substitution will result in an indetermined form $\frac{0}{0}$ since the function inside the intgral is an odd function thus the symmetrical intgral will vanish thus we will utalize l'Hopital's rule to find the limit.
+\begin{enrichment*}{l'Hopital's rule}
+    \[
+        \lim_{{x \to c}} \frac{{f(x)}}{{g(x)}} = \lim_{{x \to c}} \frac{{f'(x)}}{{g'(x)}}    
+    \]
+\end{enrichment*}
+\[
+    \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds = \lim_{r\to 0}\frac{1}{2c}\frac{\partial}{\partial r}\left[\int_{r-ct}^{r+ct} sM_\psi(x,s)ds\right]    
+\]
+to find the derivative of the intgral we use Libenz rule.
+\begin{enrichment*}{Libenz rule}
+    \[
+        \frac{d}{dx}\int_{a(x)}^{b(x)} f(x,y)dy = \frac{db(x)}{dx}f(x,b(x))-\frac{da(x)}{dx}f(x,a(x)) + \int_{a(x)}^{b(x)} \frac{\partial f(x,y)}{\partial x} dy    
+    \]
+\end{enrichment*}
+in our case
+\begin{align*}
+\frac{\partial}{\partial r}\left[\int_{r-ct}^{r+ct} sM_\psi(x,s)ds\right] &= (r+ct)M_\psi(x,r+ct) - (r-ct)M_\psi(x,r-ct) + \int_{r-ct}^{r+ct} \frac{\partial}{\partial r} sM_\psi(x,s)ds
+\\
+ &= ct[M_\psi(x,r+ct)+M_\psi(x,r-ct)]
+\end{align*}
+\\
+thus the limit will become.
+\[
+    \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds = \lim_{r\to 0}\frac{ct[M_\psi(x,r+ct)+M_\psi(x,r-ct)]}{2c}    
+\]
+which is finally evaluated to.
+\[
+    \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds = tM_\psi(x,ct)    
+\]
+we now finally substitute the first and the second limit in (10).
+\[
+    u(x,t) = \lim_{r\to 0} M_u(x,t,r) = \frac{\partial}{\partial t}[tM_\phi(x,ct)] + tM_\psi(x,ct)    
+\]
+using the defenition of spherical mean with $r=ct$ our final formula becomes.
+\begin{figure*}[b]
+    \begin{enrichment}{Gustav Kirchhoff}{Kirchhoff.jpg}{2.4}{.8}{.17}
+        Gustav Kirchhoff (1824-1887) was a prominent German physicist
+        Kirchhoff made significant advancements in the understanding of wave phenomena and the mathematical modeling of physical systems using PDEs.
+        One of Kirchhoff's most notable contributions in PDEs is his formulation of the Kirchhoff equations, which describe the propagation of waves in elastic materials, such as solids and thin plates. These equations are fundamental to the study of vibrations, acoustics, and the behavior of mechanical systems subjected to dynamic loads.
+    \end{enrichment}    
+\end{figure*}
+\[
+    u(x,t) = \frac{\partial}{\partial t}\left[\frac{1}{4\pi c^2 t}\int_{|y-x|=ct}\phi(y)dS_y\right] + \frac{1}{4\pi c^2 t}\int_{|y-x|=ct}\psi(y)dS_y    
+\]
+which is called Kirchhoff's Formula.
+
+
+\section{Laplace's Equation}
+Laplace's equation is one of the most important PDE in matheatical physics most notably in the study of electromagnetism. Our first stem is get accustomed to some termnology. Consider the following problem.
+\[
+    \nabla^2 u(x,y)= \frac{\partial^2 u(x,y,z)}{\partial x^2}+\frac{\partial^2 u(x,y,z)}{\partial y^2} = 0 \;\;\;\; , (x,y) \in G    
+\]
+where G is a simply bounded connected domain whose boundry $\gamma$ is a contor.
+\\
+the boundry condition for this problem is.
+\[
+    u(x,y)|_\gamma = f(x,y)    
+\]
+\begin{center}
+\includegraphics[scale=0.1]{domain.png}
+\end{center}
+we can see that this is a Dirchlet problem.
+\par
+if the function $u$ that satisfy the laplace eqution and is in the set of two dimensional contineous functions on the domain G $u \in C^2(G)$, 
+i.e. all of $u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
+are contineous finctions on G, then the function $u$ is called a harmonic function on G.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%              continue laplace    
+%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Harmonic Functions}
+we will discuss some properties or theorems of the harmonic function
+
+\begin{observation}
+    u(x,y) at the center of the circle where r=0 that is when x=0 and y=0 is
+    \[
+        u(0,0) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\alpha -\theta)+(0)^2}d\beta =\frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)d\beta     
+    \]
+\end{observation}    
+
+\begin{theorem}[Liouville Theorem]
+    A harmonic function of the whole plane, i.e. $(x,y) \in \mathbb{R}^2$, can not be bounded from above or bounded from below unless it is constant.    
+\end{theorem}
+\begin{proof}
+    assume the harmonic function is bounded from below, i.e.    
+    \[
+        u(x,y) \geq m \;\; \forall (x,y) \in \mathbb{R}^2     
+    \]
+    without loss of generality $m > 0$ is assumed.
+    \\
+    we know that $ -1 \leq cos(\theta) \leq 1$
+    \begin{align*}
+        \therefore
+        \frac{R^2-r^2}{R^2+2Rr+r^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{R^2-r^2}{R^2-2Rr+r^2}
+        \\
+        \frac{(R-r)(R+r)}{{(R+r)}^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{(R-r)(R+r)}{{(R-r)}^2}
+        \\
+        \frac{R-r}{R+r} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{R+r}{R-r}
+    \end{align*}
+    therefore
+    \[
+        \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R-r}{R+r} d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\alpha -\theta)+(0)^2}d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R+r}{R-r} d\beta    
+    \]
+    and from observation 5.1 
+    \[
+        \frac{R-r}{R+r} u(0,0) \leq u(x,y) \leq \frac{R+r}{R-r} u(0,0)    
+    \]
+    taking the limit as $R \to \infty$ to include the whole plane we get.
+    \[
+        u(0,0) \leq u(x,y) \leq u(0,0) \;\;\; \Rightarrow \;\;\; u(x,y) = u(0,0)    
+    \]
+    therefore the function is constant when it is bounded from below, the same argument can be used for bounded from above case.
+\end{proof}
+
+\begin{theorem}[Regularity Theorem]
+    If u is a harmonic and contineous function on G and its boundry $\gamma$, then u is analytic at every point on G, i.e. can be represented as as a power series and can be diffrentiated infinit times.    
+\end{theorem}
+\begin{proof}
+    we know that.       
+    \[
+        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty} r^n[a_n\;\cos(n\theta)+b_n\;\sin(n\theta)]    
+    \]
+    and we know from de Moivre's formula that.
+    \[
+        \cos(n\theta) = \sum_{k=0}^{n} A_k {(\cos\theta)}^k {(\sin\theta)}^{n-k}    
+    \]
+    and
+    \[
+        \sin(n\theta) =  \sum_{k=0}^{n} B_k {(\cos\theta)}^k {(\sin\theta)}^{n-k}    
+    \]
+    substituting in $u(x,y)$ we get.
+    \[
+        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty} r^n\left[a_n\sum_{k=0}^{n} A_k (cos\theta)^k (sin\theta)^{n-k}\right] + \sum_{n=1}^{\infty} r^n\left[b_n\sum_{k=0}^{n} B_k (cos\theta)^k (sin\theta)^{n-k}\right]    
+    \]
+    put $r^n = r^{n-k}r^k $ and we know that $x = rcos\theta$ and $y=rsin\theta$.
+    \[
+        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty}\sum_{k=0}^{n} a_n A_k x^k y^{n-k} + \sum_{n=1}^{\infty}\sum_{k=0}^{n}b_n B_k x^k y^{n-k}    
+    \]
+    \[
+        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty}\sum_{k=0}^{n} C_{n,k} x^k y^{n-k}
+    \]
+    therefore the function can be represented as a power series at any point, i.e. is analytical.
+\end{proof}
+
+\begin{enrichment*}{Analytic Function}
+    is a Function that can be represented by a convergent power series in a region around each point within its domain. It is a function that is differentiable at every point within this region, and its derivative exists everywhere in that domain. 
+    and it can be differntiated nth time for $n \in \mathbb{N}$
+    \\
+    example (any Polynomial functions , Exponential function , Trigonometric functions ,etc.)
+\end{enrichment*}
+
+
+\newpage
+
+
+
+
+\begin{theorem}[Uniqueness of Drichlet Problem]
+    if there exist a solution of Laplace's equation 
+    with a boundery condition (Drichlet problem)
+    \[
+    \exists u \in C^2(G), u \in C(G \cup \gamma),\;\; \text{such that} \;\;\; \nabla^2 u =0 \;\;\; \text{and} \;\;\; u|_\gamma = f
+    \]
+    then the solution is unique.
+\end{theorem}
+
+\begin{proof}
+assuming the two function $u_1$ and $u_2$ are harmonic functions on G with boundry $\gamma$, i.e. 
+\[
+    u_1 ,u_2 \in C^2(G), u_1 , u_2 \in C(G \cup \gamma), \nabla^2 u_1 =0, \nabla^2 u_2 =0, u_1|_\gamma = f, u_2|_\gamma = f    
+\]
+we define the function $w$ as follow
+\[
+    w = u_1-u_2 \Rightarrow w\in C^2(G), w \in C(G \cup \gamma), \nabla^2 w =0, w|_\gamma = f-f = 0    
+\]
+the value of the function attains its maximum or minimum value on its boundry according to the maximum principle thus we have
+\[
+    \min(w) = 0 \leq w(x) \leq 0= \max(w) \forall x \in G \;\;\;\; thus \;\;\;\; w = 0 \Rightarrow u_1 = u_2     
+\]
+\end{proof}
+
+\begin{theorem}[Stability Theorem]
+    supposing the two functions $u_1$, $u_2$, are harmonic on domain G with boundry $\gamma$, and have the boundry conditions, 
+    \\
+    $u_1|_\gamma = f_1$ and $u_2|_\gamma = f_2$, if $|f_1 - f_2| \leq \epsilon  \;\;\; \forall \epsilon > 0$ then $|u_1(x) - u_2(x)| \leq \epsilon \;\;\; \forall x \in G \cup \gamma $
+\end{theorem}
+\begin{proof}
+    according to he maximum principle 
+    \[
+        -\epsilon \leq u_1 - u_2 \leq \epsilon \;\;\; \Rightarrow \;\;\; |u_1 - u_2| \leq \epsilon    
+    \]
+\end{proof}
+
+
+
+\begin{theorem}[Oleinik's Theorem (maximum principle)]
+    if u is a harmonic function on G and u is contineous on $G \cup \gamma$, then u attains its maximum or minimum value on $\gamma$    
+\end{theorem}
+\begin{proof}
+    suppose that the maximum value of u on $G \cup \gamma$ is M, and the minimum value of u on $G \cup \gamma$ is m, then it is clear that $M \geq m$.
+    \par
+    suppose that $M > m$ 
+    \par
+    we first define
+    \[
+        v(x,y) = u(x,y) + \frac{M-m}{2d^2}\left[(x-x_{1})^2+(y-y_{1})^2\right]    
+    \]
+    \begin{center}
+        \includegraphics[scale=0.1]{diameter.png}
+    \end{center}
+    where d is the diameter of the domain G, and $(x_1,y_1)$ is a point inside G such that, $u(x_1,y_1) = M$, thus we have.
+    \[
+        v(x_1,y_1) = u(x_1,y_1) = M    
+    \]
+    and on $\gamma$ we find
+    \begin{align*}
+        v(x,y) &\leq m+\frac{M-m}{2}
+        \\
+        v(x,y) &\leq \frac{M+m}{2} < \frac{M+M}{2} = M
+        \\
+        v(x,y) &< M
+    \end{align*}
+    this means that v attains a maximum value at a point call it $(x_2,y_2)$ inside G thus we have.
+    \[
+        \frac{\partial^2 v(x_2,y_2)}{\partial x^2} \leq 0 \;\;\;\;\; \text{and} \;\;\;\;\; \frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
+    \]
+    \[
+        \therefore  \nabla^2 v(x_2,y_2) =  \frac{\partial^2 v(x_2,y_2)}{\partial x^2}+\frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
+    \]
+    from the defenition of v e obtain
+    \begin{align*}
+        \frac{\partial^2 v}{\partial x^2} &= \frac{\partial^2 u}{\partial x^2} + \frac{M-m}{d^2}
+        \\
+        \frac{\partial^2 v}{\partial y^2} &= \frac{\partial^2 u}{\partial y^2} + \frac{M-m}{d^2}
+        \\
+        \nabla^2 v = \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial x^2} &= \nabla^2 u + \frac{2(M-m)}{d^2} =  \frac{2(M-m)}{d^2}
+        \\
+        \nabla^2 v &= \frac{2(M-m)}{d^2} > 0
+    \end{align*}
+    which is a contradiction thus M must equale m 
+\end{proof}
 
 
 

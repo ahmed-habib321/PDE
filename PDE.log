@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -966,32 +966,102 @@ Overfull \hbox (2.2179pt too wide) detected at line 920
  []
 
 [17 <./d_Alembert.jpg>] [18]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 973.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 973.
+<xi.png, id=88, 1252.68pt x 1023.825pt>
+File: xi.png Graphic file (type png)
+<use xi.png>
+Package pdftex.def Info: xi.png  used on input line 983.
+(pdftex.def)             Requested size: 125.27533pt x 102.38849pt.
+ [19 <./xi.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 971.
-<div.png, id=88, 188.20313pt x 141.52875pt>
+(mdframed)              on input line 1028.
+<div.png, id=99, 188.20313pt x 141.52875pt>
 File: div.png Graphic file (type png)
 <use div.png>
-Package pdftex.def Info: div.png  used on input line 981.
+Package pdftex.def Info: div.png  used on input line 1038.
 (pdftex.def)             Requested size: 112.92273pt x 84.9179pt.
- [19 <./div.png>] (PDE.aux)
+ [20 <./div.png>]
+<Darboux.jpg, id=105, 458.71375pt x 601.24625pt>
+File: Darboux.jpg Graphic file (type jpg)
+<use Darboux.jpg>
+Package pdftex.def Info: Darboux.jpg  used on input line 1094.
+(pdftex.def)             Requested size: 68.28644pt x 89.50414pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1094--1094
+[][] 
+ []
+
+[21 <./Darboux.jpg>] [22] [23]
+Underfull \hbox (badness 1584) in paragraph at lines 1247--1250
+[]\T1/lmr/m/n/10 Gustav Kirch-hoff (1824-1887) was a promi-nent Ger-man physi-cist
+ []
+
+<Kirchhoff.jpg, id=115, 426.59375pt x 601.24625pt>
+File: Kirchhoff.jpg Graphic file (type jpg)
+<use Kirchhoff.jpg>
+Package pdftex.def Info: Kirchhoff.jpg  used on input line 1250.
+(pdftex.def)             Requested size: 68.28644pt x 96.23805pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1250--1250
+[][] 
+ []
+
+[24 <./Kirchhoff.jpg>]
+<domain.png, id=119, 1657.69313pt x 1041.8925pt>
+File: domain.png Graphic file (type png)
+<use domain.png>
+Package pdftex.def Info: domain.png  used on input line 1270.
+(pdftex.def)             Requested size: 165.77902pt x 104.19534pt.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1299.
+
+Overfull \hbox (36.98698pt too wide) detected at line 1321
+[] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
+ []
+
+[25 <./domain.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1333.
+ [26]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1376.
+Package mdframed Info: Not enough space on this page on input line 1383.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1400.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1414.
+<diameter.png, id=129, 1621.55812pt x 1041.8925pt>
+File: diameter.png Graphic file (type png)
+<use diameter.png>
+Package pdftex.def Info: diameter.png  used on input line 1427.
+(pdftex.def)             Requested size: 162.16531pt x 104.19534pt.
+ [27 <./diameter.png>] [28] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25961 strings out of 476048
- 564988 string characters out of 5780228
+ 26033 strings out of 476048
+ 566056 string characters out of 5780228
  1885753 words of memory out of 5000000
- 46192 multiletter control sequences out of 15000+600000
- 569994 words of font info for 68 fonts, out of 8000000 for 9000
+ 46254 multiletter control sequences out of 15000+600000
+ 592856 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,13n,96p,1239b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (19 pages, 2959859 bytes).
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on PDE.pdf (28 pages, 4060891 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 248 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
 
