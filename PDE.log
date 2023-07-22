@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -970,12 +970,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 973.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 973.
+
+Overfull \hbox (6.36252pt too wide) in paragraph at lines 978--980
+\T1/lmr/m/n/10 where $\OMS/lmsy/m/n/10 r[]$ \T1/lmr/m/n/10 is the Laplace-Beltrami op-er-a-tor, a gen-er-al-iza-tion of the Laplace op-er-a-tor in n-dimensional
+ []
+
 <xi.png, id=88, 1252.68pt x 1023.825pt>
 File: xi.png Graphic file (type png)
 <use xi.png>
 Package pdftex.def Info: xi.png  used on input line 983.
 (pdftex.def)             Requested size: 125.27533pt x 102.38849pt.
- [19 <./xi.png>]
+[19 <./xi.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1028.
@@ -1016,52 +1021,134 @@ File: domain.png Graphic file (type png)
 <use domain.png>
 Package pdftex.def Info: domain.png  used on input line 1270.
 (pdftex.def)             Requested size: 165.77902pt x 104.19534pt.
+<circle.png, id=120, 1181.91562pt x 1181.91562pt>
+File: circle.png Graphic file (type png)
+<use circle.png>
+Package pdftex.def Info: circle.png  used on input line 1293.
+(pdftex.def)             Requested size: 118.19849pt x 118.19849pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1315--1319
+
+ []
+
+[25 <./domain.png> <./circle.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1339--1341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1352--1356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1362
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1367--1371
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1373--1377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1413--1417
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1419--1423
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 1425--1429
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1437--1441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1446--1450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1455--1459
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1471
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 1484--1488
+
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1299.
+(mdframed)              on input line 1504.
 
-Overfull \hbox (36.98698pt too wide) detected at line 1321
+Overfull \hbox (36.98698pt too wide) detected at line 1526
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
  []
 
-[25 <./domain.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1333.
- [26]
+(mdframed)              on input line 1538.
+Package mdframed Info: Not enough space on this page on input line 1540.
+[29]
+Package mdframed Info: Not enough space on this page on input line 1540.
+ [30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1376.
-Package mdframed Info: Not enough space on this page on input line 1383.
+(mdframed)              on input line 1581.
+Package mdframed Info: Not enough space on this page on input line 1588.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1400.
+(mdframed)              on input line 1605.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1414.
-<diameter.png, id=129, 1621.55812pt x 1041.8925pt>
+(mdframed)              on input line 1619.
+<diameter.png, id=145, 1621.55812pt x 1041.8925pt>
 File: diameter.png Graphic file (type png)
 <use diameter.png>
-Package pdftex.def Info: diameter.png  used on input line 1427.
+Package pdftex.def Info: diameter.png  used on input line 1632.
 (pdftex.def)             Requested size: 162.16531pt x 104.19534pt.
- [27 <./diameter.png>] [28] (PDE.aux)
+ [31 <./diameter.png>] [32] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26033 strings out of 476048
- 566056 string characters out of 5780228
+ 26040 strings out of 476048
+ 566174 string characters out of 5780228
  1885753 words of memory out of 5000000
- 46254 multiletter control sequences out of 15000+600000
+ 46261 multiletter control sequences out of 15000+600000
  592856 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,13n,96p,1239b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (28 pages, 4060891 bytes).
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on PDE.pdf (32 pages, 4132993 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
+ 273 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

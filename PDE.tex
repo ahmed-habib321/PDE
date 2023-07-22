@@ -41,16 +41,16 @@
 \newpage
 
 \section{Introduction}
-The main goal of many scientfic displines can be summerized to the following:
+The main goal of many scientific disciplines can be summarized to the following:
 
 \begin{enumerate}
-\item Formulate a set of mathematical equations to model a phenomena of intrest
+\item Formulate a set of mathematical equations to model a phenomena of interest
 \item Analyze solutions to these equations in order to extract information and make predictions.
 \end{enumerate}
 
 The result of 1 is often a system of partial differential equations, thus the second becomes solving those partial differential equations.
 \par
-A partial differential equation (PDE) is is a differential equation containing partial derivatives of the dependent variable with repect to more than one independent variable.
+A partial differential equation (PDE) is is a differential equation containing partial derivatives of the dependent variable with respect to more than one independent variable.
 
 \subsection{Order of PDE}
 The order of a PDE is determined by the highest derivative in the equation.
@@ -86,7 +86,7 @@ Let $L$ be a linear operator. Then a linear partial differential equation can be
 \[
     L(u) = f(x_1,x_2, \dots , t)    
 \]
-if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
+if $f = 0$ then the equation is homogeneous, otherwise it is in-homogeneous.
 \begin{align*}
 \frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \dquad \text{homogeneous}
 \\
@@ -95,7 +95,7 @@ if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 
 \newpage
 
-\subsection{Boundry Conditions}
+\subsection{Boundary Conditions}
 \
 \begin{definition}[Boundary Conditions]
     Boundary conditions are constraints necessary for the solution of a boundary value problem.
@@ -103,7 +103,7 @@ if $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 \begin{definition}[Boundary Value Problem]
     BVP is a differential equation to be solved in a domain on whose boundary the function is known.
 \end{definition}
-We will be intrested in one type of boundry conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
+We will be interested in one type of boundary conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
 \[
     \nabla^2 u(x) = 0 \quad \forall x \in G    
 \]
@@ -117,14 +117,14 @@ We will be intrested in one type of boundry conditions in this course which is t
     G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
 \begin{definition}[Drichlet problems]
-    are problems that has only boundry conditions
+    are problems that has only boundary conditions
 \end{definition}
-\subsection{Intial Condition}
+\subsection{Initial Condition}
 \
 \begin{definition}[The initial condition]
-    is a condition that a solution must have at only on instant of time, which is the starting time as it can be found expremintally.
+    is a condition that a solution must have at only on instant of time, which is the starting time as it can be found experimentally.
 \end{definition}
-An example is the heat equation with intial condition.
+An example is the heat equation with initial condition.
 \[
     \frac{\partial u(x,t)}{\partial t}  = c^2 \frac{\partial u(x,t)}{\partial x}
 \]
@@ -132,7 +132,7 @@ An example is the heat equation with intial condition.
     u(x,0) = f(x)
 \]
 \begin{definition}[Cauchy problems]
-    are problems that has only intial conditions
+    are problems that has only initial conditions
 \end{definition}
 \subsection{Equations of Mathematical Physics}
 The most frequently encountered equations in physics are the following
@@ -158,7 +158,7 @@ Consider the following PDE with variable coefficients. We are aiming to transfor
 \begin{equation}
 A\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x^2} + 2B\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x\partial y}+C\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial y^2}+F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right) = 0
 \end{equation}
-The first three terms are called the principle terms and the last term is called the Yound term (Y.T) which does not contain second order derivatives of u.
+The first three terms are called the principle terms and the last term is called the Young term (Y.T) which does not contain second order derivatives of u.
 \par
 We start by preforming a change of variables such that.
 \[
@@ -224,7 +224,7 @@ now using the quadratic formula to solve for $\frac{\partial y}{\partial x}$.
     \frac{\partial y}{\partial x} = \frac{-\left(-2B\right)\pm\sqrt{{(-2B)}^2 -4AC}}{2A} = \frac{B\pm\sqrt{B^2 -AC}}{A}    
 \]
 
-this is called the charctaristic equation.
+this is called the characteristic equation.
 
 \begin{enrichment*}{Equations Classification}
 Equations are classified based on the value of the expression under the root
@@ -255,13 +255,13 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \[
         B^2 =0 \quad>\quad AC=-4y^2e^{2x}, \quad \forall y\neq0,\quad \forall x    
     \]
-    now we use the charchtarstic equation to determine the value of $\xi$ and $\eta$.
+    now we use the characteristic equation to determine the value of $\xi$ and $\eta$.
     \begin{align*}
         \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}\\
         \\
         &= \frac{\pm\sqrt{4y^2 e^{2x}}}{4y^2}=\pm\frac{e^x}{2y}
     \end{align*}
-    rearranging and intgrating.
+    rearranging and integrating.
     \begin{align*}
         2ydy &= \pm e^x dx
         \\
@@ -312,7 +312,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \[
         B^2 =0 \;\;\;<\;\;\; AC=x^2 y^{2}, \;\;\;\forall y, x  
     \]
-    using the charchtarstic equation.
+    using the characteristic equation.
     \begin{align*}
         \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
         \\
@@ -361,7 +361,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \[
         B^2 =x^2 y^2 \;\;\;=\;\;\; AC=x^2 y^2, \;\;\;\forall y, x  
     \]
-    using the charchtarstic equation.
+    using the characteristic equation.
     \begin{align*}
         \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
         \\
@@ -415,7 +415,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
 
 
 \section{Heat Equation}
-The heat equation is a prototypical example for a prabolic equation. The general form of the heat equation is the following.
+The heat equation is a prototypical example for a parabolic equation. The general form of the heat equation is the following.
 \[
     \frac{\partial u(x,t)}{\partial t} = c^2\nabla^2 u(x,t) = C^2\left[\frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \dots\right]    
 \]
@@ -427,16 +427,16 @@ we will be studying the heat equation only in one dimension thus this reduces to
 
 \subsection{Fourier Transform}
 
-The fourier transform of the function $f(x)$ is defined as.
+The Fourier transform of the function $f(x)$ is defined as.
 \[
     \mathscr{F}\left[f\left(x\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}f\left(x\right)dx= g\left(s\right)    
 \] 
-the inverse fourier transform is 
+the inverse Fourier transform is 
 \[
     \mathscr{F}^{-1}\left[g\left(s\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ixs}g\left(s\right)ds= f\left(x\right)    
 \]
 \setcounter{equation}{0}
-\subsubsection*{the fourier transform of a derivative}
+\subsubsection*{the Fourier transform of a derivative}
 \begin{align}
     \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}\frac{df\left(x\right)}{dx}dx
 \end{align}
@@ -457,7 +457,7 @@ substitute (3) in (2)
 \\
 \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= - is \mathscr{F}\left[f\left(x\right)\right]
 \end{align*}
-in the same way the fourier transform for the second derivative will yield
+in the same way the Fourier transform for the second derivative will yield
 \begin{align*}
 \mathscr{F}\left[\frac{d^2f\left(x\right)}{dx^2}\right] &=  \mathscr{F}\left[\frac{d}{dx}\frac{df\left(x\right)}{dx}\right]
 \\
@@ -475,14 +475,14 @@ and in general
     \end{enrichment}    
 \end{figure*}
 
-Consider the following one dimensional heat equation cauchy problem
+Consider the following one dimensional heat equation Cauchy problem
 \begin{equation}
 \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \;\;\;\;\; c\neq0, \;\;\;\;\; -\infty < x< \infty
 \end{equation}
 \begin{equation}
 u(x,0) = \phi (x)
 \end{equation}
-the fourier transform of u is
+the Fourier transform of u is
 \[
     \mathscr{F}[u(x,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}u\left(x,t\right)dx= \nu\left(\xi,t\right)    
 \]
@@ -490,7 +490,7 @@ preforming the transform on both sides of equation (1)
 \begin{equation}
 \frac{\partial\nu(\xi,t)}{\partial t} = -c^2 \xi^2 \nu(\xi,t)
 \end{equation}
-and the new intial condition.
+and the new initial condition.
 \begin{equation}
 \mathscr{F}[u(x,0)] = \nu(\xi,0) =\mathscr{F}[\phi(x)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}\phi\left(x\right)dx = \psi(\xi)
 \end{equation}
@@ -502,13 +502,13 @@ and A can be found from (4).
 \begin{equation}
 \nu(\xi,t)= \psi(\xi)e^{-c^2 \xi^2 t}
 \end{equation}
-to find u we preform the inverse fourier transform on (5).
+to find u we preform the inverse Fourier transform on (5).
 \begin{align*}
 u(x,t) &= \mathscr{F}^{-1}[\nu(\xi,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}\nu(\xi,t)d\xi
 \\
 &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\psi(\xi)d\xi
 \end{align*}
-substituting the value of $\psi$ from (4) and renamming the varable of intgration to y.
+substituting the value of $\psi$ from (4) and renaming the variable of integration to y.
 \[
     u(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\left[\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{iy\xi}\phi\left(y\right)dy\right]d\xi    
 \]
@@ -516,7 +516,7 @@ simplify.
 \begin{equation}
 u(x,t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi \right] \phi(y)dy
 \end{equation}
-considering the inner intgral.
+considering the inner integral.
 \begin{equation}
 J = \int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi
 \end{equation}
@@ -532,15 +532,15 @@ J   &= \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{-tc^2\fra
 \\
     &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
 \end{align*}
-shift the function by $\frac{i}{tc^2}(y-x)$ to the left and since the limits of intgration are infinity the value of the intgral is the same.
+shift the function by $\frac{i}{tc^2}(y-x)$ to the left and since the limits of integration are infinity the value of the integral is the same.
 \begin{align*}
 J = &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\xi^2} d\xi
 \end{align*}
-it is now clear that J is a gaussian intgral that we can eaisly find its value.
+it is now clear that J is a Gaussian integral that we can easily find its value.
 \begin{align*}
 J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}
 \end{align*}
-substituing in (6) we finally get u.
+substituting in (6) we finally get u.
 \[
     u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
 \]
@@ -551,7 +551,7 @@ this equation is called Poisson's Formula.
 \subsection{Mixed Homogeneous Problem}
 \ 
 \begin{definition}[Mixed Problem]
-    is a problem that has both Drichlet boundry condition and Cauchy intial condition
+    is a problem that has both Drichlet boundary condition and Cauchy initial condition
 \end{definition}
 Consider the following one dimensional heat equation 
 \begin{equation}
@@ -563,7 +563,7 @@ Consider the following one dimensional heat equation
 \begin{equation}
 \text{B.C} \quad \Longrightarrow \quad u(0,t) = u(L,t) = 0
 \end{equation}
-using the sepration of variables method.
+using the separation of variables method.
 \begin{equation}
 u(x,t) = X(x)T(t)
 \end{equation}
@@ -638,11 +638,11 @@ substituting in (4).
 \[
     u(x,t) = \sum_{n=1}^{\infty} b_n e^{-\frac{c^2 n^2 \pi^2}{L^2}}\sin\left(\frac{n\pi x}{L}\right)    
 \]
-using the intial condition.
+using the initial condition.
 \[
     u(x,0) = \phi(x) = \sum_{n=1}^{\infty} b_n \sin\left(\frac{n\pi x}{L}\right)    
 \]
-we found fourier coefficient which is our final step to determine u.
+we found Fourier coefficient which is our final step to determine u.
 \begin{enrichment*}{Fourier Coefficient}
     \[
         f(x) = a_0  + \sum_{n=1}^{\infty}\left[a_n \cos\left(\frac{n\pi x}{L}\right) + b_n \sin\left(\frac{n\pi x}{L}\right) \right]
@@ -661,9 +661,9 @@ we found fourier coefficient which is our final step to determine u.
 \newpage
 
 \setcounter{equation}{0}
-\subsection{Mixed Inhomogeneous Problem}
+\subsection{Mixed In-homogeneous Problem}
 
-Consider a more general heat equation than the previous one. Notice that the boundry conditions are functions not zeros as before.
+Consider a more general heat equation than the previous one. Notice that the boundary conditions are functions not zeros as before.
 \\
 \begin{equation}
 \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t), \;\;\;\;\; c\neq 0, \;\;\;\; 0<x<L
@@ -728,11 +728,11 @@ we finally have the new equation.
         v(L,t)= u(L,t) - B(t) = 0        
     \end{cases}    
 \end{align}
-we have solved a similer problem before and know that the solution for the homogenous equation in $v$ will be of the form.
+we have solved a similar problem before and know that the solution for the homogeneous equation in $v$ will be of the form.
 \begin{equation}
 v(x,t) = \sum_{n=0}^{\infty} T_n (t) \sin\left(\frac{n\pi x}{L}\right)
 \end{equation}
-similerly 
+similarly 
 \begin{equation}
     g(x,t) = \sum_{n=0}^{\infty} g_n (t) \sin\left(\frac{n\pi x}{L}\right)
 \end{equation}
@@ -773,7 +773,7 @@ now by substitute $T_n (t)$ in (7) we get $v$ then we can obtain $u$ by $u = v +
 
 
 \section{Wave Equation}
-The wave equation is the prototypical example for hyperpolic PDE's, it is a second order linear PDE that is used extensively in physics in studying the propagation of waves and wave fields. The general form of the wave equation is.
+The wave equation is the prototypical example for hyperbolic PDE's, it is a second order linear PDE that is used extensively in physics in studying the propagation of waves and wave fields. The general form of the wave equation is.
 \[
 \frac{\partial^2 u(x,t)}{\partial t^2} = c^2\nabla^2 u(x,t) = C^2\left[\frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \dots\right]    
 \]
@@ -809,7 +809,7 @@ we start by preforming a change of variables such that.
 \\
 &= \frac{\partial u}{\partial \xi}\frac{\partial^2 \xi}{\partial t^2} + \frac{\partial \xi}{\partial t}\left[\frac{\partial^2 u}{\partial \xi^2}\frac{\partial \xi}{\partial t} + \frac{\partial^2 u}{\partial\eta \partial\xi}\frac{\partial \eta}{\partial t} \right]+\frac{\partial u}{\partial \eta}\frac{\partial^2 \eta}{\partial t^2}+\frac{\partial \eta}{\partial t}\left[\frac{\partial^2 u}{\partial \eta^2}\frac{\partial \eta}{\partial t}+\frac{\partial^2 u}{\partial\xi\partial\eta}\frac{\partial\xi}{\partial t}\right]
 \end{align*}
-adding similar terms and simlifying.
+adding similar terms and simplifying.
 \[
 \because \frac{\partial\xi}{\partial t}=c\;\;\;,\;\;\;\frac{\partial\eta}{\partial t}=-c\;\;\;,\;\;\;\frac{\partial^2\xi}{\partial t^2}=0\;\;\;,\;\;\;\frac{\partial^2\eta}{\partial t^2}=0    
 \]
@@ -836,7 +836,7 @@ u\left(x,t\right)&=f\left(x+ct\right)+g\left(x-ct\right)
 \\
 \frac{\partial u\left(x,t\right)}{\partial t} &= cf'\left(x+ct\right)-cg'\left(x-ct\right)\notag
 \end{align}
-from the intial conditions (2).
+from the initial conditions (2).
 \begin{align}
 \phi\left(x\right) &= u\left(x,0\right)= f\left(x\right)+g\left(x\right)\notag
 \\ 
@@ -844,13 +844,13 @@ from the intial conditions (2).
 \\ 
 \psi\left(x\right)&=\frac{\partial u\left(x,0\right)}{\partial t} = cf'\left(x\right)-cg'\left(x\right)
 \end{align}
-multiplaying (6) by c and adding to (7).
+multiplying (6) by c and adding to (7).
 \begin{align}
 f'\left(x\right) &= \frac{1}{2c}\left(c\phi'\left(x\right)+\psi\left(x\right)\right)\notag
 \\ 
 f\left(x\right) &= \frac{1}{2c}\left[c\phi\left(x\right)+\int_0^x \psi\left(s\right)ds\right]+A
 \end{align}
-multiplaying (6) by c and subtracting (7) from it.
+multiplying (6) by c and subtracting (7) from it.
 \begin{align}
 g'\left(x\right) &= \frac{1}{2c}\left(c\phi'\left(x\right)-\psi\left(x\right)\right)\notag
 \\ 
@@ -863,7 +863,7 @@ substituting (8) and (9) in (5)
 \[
     u\left(x,t\right) = \frac{1}{2}\left[\phi\left(x+ct\right)+\phi\left(x-ct\right)\right]+\frac{1}{2c}\int_{x-ct}^{x+ct} \psi\left(s\right)ds + K    
 \]
-from the intial condition $u(x,0)$, we find that K=0 and finally we are left with.
+from the initial condition $u(x,0)$, we find that K=0 and finally we are left with.
 \[
     u\left(x,t\right) = \frac{1}{2}\left[\phi\left(x+ct\right)+\phi\left(x-ct\right)\right]+\frac{1}{2c}\int_{x-ct}^{x+ct} \psi\left(s\right)ds    
 \]
@@ -902,7 +902,7 @@ Consider the following one dimensional wave equation mixed problem.
     u\left(\pi,t\right)=0
     \end{cases}
 \end{equation}
-we start our solution by seprating the variables.
+we start our solution by separating the variables.
 \begin{align}
 u\left(x,t\right) &= X\left(x\right)T\left(t\right)
 \end{align}
@@ -930,7 +930,7 @@ substituting in (4).
 \[
     u\left(x,t\right) = \left[Asin\left(nx\right)+Bcos\left(nx\right)\right]\left[Csin\left(nt\right)+Dcos\left(nt\right)\right]    
 \]
-using the boundry condition (3).
+using the boundary condition (3).
 \[
     B\left[Csin\left(nt\right)+Dcos\left(nt\right)\right]=0    
 \]
@@ -938,11 +938,11 @@ and we choose $B=0$, the general solution for all n will then be.
 \[
     u\left(x,t\right) = \sum_{n=0}^{\infty}\left[a_{n}\sin\left(nt\right)+b_{n}\cos\left(nt\right)\right]\sin\left(nx\right)    
 \]
-using the intial condition $u(x,0)$ (2) to find the constants.
+using the initial condition $u(x,0)$ (2) to find the constants.
 \[
     u\left(x,0\right) = \phi\left(x\right) = \sum_{n=0}^{\infty}b_{n}\sin\left(nx\right)    
 \]
-and from fourier coefficients we can find $b_n$
+and from Fourier coefficients we can find $b_n$
 \[
     b_n = \frac{2}{\pi}\int_{0}^{\pi}\phi\left(x\right)\sin\left(nx\right)dx    
 \]
@@ -950,7 +950,7 @@ to find the other constant $a_{n}$.
 \[
     \frac{\partial u\left(x,t\right)}{\partial t} = \sum_{n=0}^{\infty}\left[na_{n}\cos\left(nt\right)-nb_{n}\sin\left(nt\right)\right]\sin\left(nx\right)    
 \]
-using the intial condition for the dierivative.
+using the initial condition for the derivative.
 \[
     \frac{\partial u\left(x,0\right)}{\partial t} = \psi\left(x\right)= \sum_{n=0}^{\infty}na_{n}\sin\left(nx\right)    
 \]
@@ -970,13 +970,13 @@ The spherical mean of a function $f$ is defined as.
 \begin{equation}
 M_{f}(x,r) = \frac{1}{\omega_{n}r^{n-1}} \int_{|y-x|=r} f(y)dS_y
 \end{equation}
-where $\omega_{n}$ is the surface area of an n-diminsional unit sphere\footnote{for n =3 or the three diminsional case $\omega_{3} = 4\pi$}, thus the amount $\omega_{n}r^{n-1}$ is the surface area of an n-diminsional sphere of raduis $r$, $dS_y$ is the element of intgration on the surface of the sphere, $x = (x_{1},x_{2}, \dots,x_{n})$ and $y = (y_{1},y_{2}, \dots,y_{n})$ are vectors in n-diminsions, where $x$ is the center of the sphere and $y$ is any point of the surface on the sphere, thus we have $|y-x|^2 = {(y_{1}-x_{1})}^2 + {(y_{2}-x_{2})}^2 + \dots + {(y_{n}-x_{n})}^2 = r^2$, and the intgral is over the whole surface of the sphere.
+where $\omega_{n}$ is the surface area of an n-dimensional unit sphere\footnote{for n =3 or the three dimensional case $\omega_{3} = 4\pi$}, thus the amount $\omega_{n}r^{n-1}$ is the surface area of an n-dimensional sphere of radius $r$, $dS_y$ is the element of integration on the surface of the sphere, $x = (x_{1},x_{2}, \dots,x_{n})$ and $y = (y_{1},y_{2}, \dots,y_{n})$ are vectors in n-dimensions, where $x$ is the center of the sphere and $y$ is any point of the surface on the sphere, thus we have $|y-x|^2 = {(y_{1}-x_{1})}^2 + {(y_{2}-x_{2})}^2 + \dots + {(y_{n}-x_{n})}^2 = r^2$, and the integral is over the whole surface of the sphere.
 
 we will show that this function satisfy an important partial differential equation, which is the Euler-Poisson-Darboux equation or just Darboux's equation.
 \begin{equation}
 \frac{\partial^2 V}{\partial r^2} + \frac{n-1}{r}\frac{\partial V}{\partial r} = \nabla_{x}^{2} V
 \end{equation} 
-where $\nabla_{x}^{2}$ is the Laplace-Beltrami operator, a generaliation of the laplace operator in n-diminsional spherical coordinates.
+where $\nabla_{x}^{2}$ is the Laplace-Beltrami operator, a generalization of the Laplace operator in n-dimensional spherical coordinates.
 \par
 we will start by defining the unit vector $\xi$ such that the vector is normal to the surface.
 \begin{center}
@@ -1003,13 +1003,13 @@ at $r = 0$.
 \begin{equation}
 M_{f}(x,0) = \frac{f(x)}{\omega_{n}} \int_{|\xi|=1} dS_\xi = f(x)
 \end{equation}
-the intgral $\displaystyle \int_{|\xi|=1} dS_\xi$ is the surface area of a unit sphere in n diminsions which is equale to $\omega_n$
+the integral $\displaystyle \int_{|\xi|=1} dS_\xi$ is the surface area of a unit sphere in n dimensions which is equal to $\omega_n$
 
 from (3) and remembering that $y$, $x$, and $\xi$ are all vectors, then we can write their components as.
 \[
     y_i = x_i + \xi_i r    
 \]
-using this vector notation to differntiate (4) with respect to r.
+using this vector notation to differentiate (4) with respect to r.
 \begin{align*}
 \frac{\partial M_f (x,r)}{\partial r} &= \frac{1}{\omega_n} \int_{|\xi|=1} \frac{\partial f(y)}{\partial r}dS_\xi
 \\
@@ -1026,7 +1026,7 @@ using the chain rule one more time.$\displaystyle \frac{\partial f(y)}{\partial 
 \frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n r} \int_{|\xi|=1} \sum_{i=1}^{n} \frac{\partial f(y)}{\partial \xi_i}\xi_i dS_\xi
 \end{equation}
 \begin{theorem}[Divergence Theorem]
-    Also called Green-Gauss-Ostrogradsky theorem realtes the volume intgral to the surface intgral under some conditions, more precisely, the surface integral of a vector field over a closed surface (flux) is equal to the volume integral of the divergence over the region. We will use this later in our treatment.
+    Also called Green-Gauss-Ostrogradsky theorem relates the volume integral to the surface integral under some conditions, more precisely, the surface integral of a vector field over a closed surface (flux) is equal to the volume integral of the divergence over the region. We will use this later in our treatment.
     \[
         \int\int\int_{Volume} \frac{\partial \textbf{F}(x,y,z)}{\partial x}dV = \int\int_{Surface} \textbf{F}(x,y,z)\cos(\angle x,\vec{n}) dS    
     \]
@@ -1038,7 +1038,7 @@ using the chain rule one more time.$\displaystyle \frac{\partial f(y)}{\partial 
     \includegraphics[scale=0.6]{div.png}
     \end{center}
 \end{theorem}
-comparing the form we have with the divergence theorem we see that the sum we have is the dot product of our vector function with $\xi$\footnote{the components $\xi_i$ are dirction cosines, i.e $\xi_{1}^{2}+\xi_{2}^{2}+...+\xi_{n}^{2} = 1$} which is the unit vector always normal to the surface of the sphere by our definition, and we can transform our integral to a volume integral.
+comparing the form we have with the divergence theorem we see that the sum we have is the dot product of our vector function with $\xi$\footnote{the components $\xi_i$ are direction cosines, i.e $\xi_{1}^{2}+\xi_{2}^{2}+...+\xi_{n}^{2} = 1$} which is the unit vector always normal to the surface of the sphere by our definition, and we can transform our integral to a volume integral.
 \[
     \frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n r} \int_{|\xi|\leq 1} \sum_{i=1}^{n} \frac{\partial^2 f(y)}{\partial \xi_{i}^{2}} d\xi    
 \]
@@ -1072,13 +1072,13 @@ notice that on the right hand side an expression the same as the spherical mean 
 \[
     r^{n-1} \frac{\partial M_f (x,r)}{\partial r} = \nabla_{x}^{2}\int_{\rho = 0}^{r} \rho^{n-1} M_{f}(x,r) d\rho    
 \]
-diffrentiating the expression with respect to r.
+differentiating the expression with respect to r.
 \begin{align*}
 \frac{\partial}{\partial r}\left( r^{n-1} \frac{\partial M_f (x,r)}{\partial r}\right) &= \nabla_{x}^{2} \frac{\partial}{\partial r}\int_{\rho = 0}^{r} \rho^{n-1} M_{f}(x,r) d\rho
 \\
 r^{n-1} \frac{\partial^2 M_f (x,r)}{\partial r^2} + (n-1)r^{n-2}r^{n-1} \frac{\partial M_f (x,r)}{\partial r} &= \nabla_{x}^{2} r^{n-1} M_f (x,r)
 \end{align*}
-rearranging and simplifying we finally arive at Darboux's equation (2) where $ V=M_f (x,r) $.
+rearranging and simplifying we finally arrive at Darboux's equation (2) where $ V=M_f (x,r) $.
 \[
     \frac{\partial^2 M_f (x,r)}{\partial r^2} + \frac{n-1}{r} \frac{\partial M_f (x,r)}{\partial r} = \nabla_{x}^{2} M_f (x,r)    
 \]
@@ -1099,9 +1099,9 @@ rearranging and simplifying we finally arive at Darboux's equation (2) where $ V
 \setcounter{equation}{0}
 \setcounter{footnote}{0}
 \subsection{Kirchhoff's Formula}
-We have seen how formula d'Almbert can solve the one dimensional wave equation cauchy problem but the solution of the wave equation in dimensions higher than one shows to be more complicated. 
+We have seen how formula d'Almbert can solve the one dimensional wave equation Cauchy problem but the solution of the wave equation in dimensions higher than one shows to be more complicated. 
 Our attempt to solve the three dimensional wave equation 
-we will use the results of the spherical mean and Darboux's equation to develop an effective formula to solve three diminsional wave equation Cahuchy problems called Kircchoff's formula.
+we will use the results of the spherical mean and Darboux's equation to develop an effective formula to solve three dimensional wave equation Cauchy problems called Kircchoff's formula.
 \par
 Consider the following three dimensional wave equation Cauchy problem.
 \begin{equation}
@@ -1116,7 +1116,7 @@ Consider the following three dimensional wave equation Cauchy problem.
     \displaystyle \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
     \end{cases}
 \end{equation}
-where $x = (x_1,x_2,x_3)$ is a three diminsional vector.
+where $x = (x_1,x_2,x_3)$ is a three dimensional vector.
 \par
 we start by considering Darboux's equation (54) in n = 3.
 \begin{align}
@@ -1156,14 +1156,14 @@ from (5) we get.
 
 \newpage 
 
-the intial conditions will be.
+the initial conditions will be.
 \begin{equation}
 rM_{u}(x,0,r) = rM_\phi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\phi(y)dS_y
 \end{equation}
 \begin{equation}
 \frac{\partial}{\partial t}\left(rM_{u}(x,0,r)\right) = rM_\psi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\psi(y)dS_y
 \end{equation}
-we notice that this is a one diminsional wave equation that can be solved using the method developed earlier d'Alembert formula.
+we notice that this is a one dimensional wave equation that can be solved using the method developed earlier d'Alembert formula.
 \[
     rM_u(x,t,r) = \frac{1}{2}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2c}\int_{x-ct}^{x+ct} sM_\psi(x,s)ds    
 \]
@@ -1184,7 +1184,7 @@ the first limit can be rearranged to.
 \[
     \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+ctM_\phi(x,r+ct)+rM_\phi(x,r-ct)-ctM_\phi(x,r-ct)\right]    
 \]
-rearranging one more time and noting that the spherical mean function is an even function $\displaystyle M_f(r)=M_f(-r)$ thus we can multiplay the r varialble by negative one.
+rearranging one more time and noting that the spherical mean function is an even function $\displaystyle M_f(r)=M_f(-r)$ thus we can multiply the r variable by negative one.
 \begin{align*}
     \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+rM_\phi(x,r-ct)\right] & +\lim_{r\to 0} \frac{1}{2r}ct\left[M_\phi(x,r+ct)-M_\phi(x,ct-r)\right]
     \\
@@ -1192,7 +1192,7 @@ rearranging one more time and noting that the spherical mean function is an even
     \\
     \frac{1}{2} \left[M_\phi(x,ct)+M_\phi(x,-ct)\right] & + ct \frac{\partial M_\phi(x,ct)}{\partial ct}
 \end{align*}
-the first limit is equale to $M_\phi(x,ct)$ due to the fnction being even and we notice that the second limit is the defenition of the derivative$\displaystyle f'(x) = \lim_{h\to 0} \frac{f(x+h) - f(x-h)}{2h}$ with respect to $ct$ thus the limit is finally evaluted to.
+the first limit is equal to $M_\phi(x,ct)$ due to the function being even and we notice that the second limit is the definition of the derivative$\displaystyle f'(x) = \lim_{h\to 0} \frac{f(x+h) - f(x-h)}{2h}$ with respect to $ct$ thus the limit is finally evaluated to.
 \[
     \lim_{r\to 0}\frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right] = M_\phi(x,ct) + ct\frac{\partial}{\partial ct}(M_\phi(x,ct))    
 \]
@@ -1207,7 +1207,7 @@ now considering the second limit.
 \[
     \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds    
 \]
-direct substitution will result in an indetermined form $\frac{0}{0}$ since the function inside the intgral is an odd function thus the symmetrical intgral will vanish thus we will utalize l'Hopital's rule to find the limit.
+direct substitution will result in an undetermined form $\frac{0}{0}$ since the function inside the integral is an odd function thus the symmetrical integral will vanish thus we will utilize l'Hopital's rule to find the limit.
 \begin{enrichment*}{l'Hopital's rule}
     \[
         \lim_{{x \to c}} \frac{{f(x)}}{{g(x)}} = \lim_{{x \to c}} \frac{{f'(x)}}{{g'(x)}}    
@@ -1216,7 +1216,7 @@ direct substitution will result in an indetermined form $\frac{0}{0}$ since the 
 \[
     \lim_{r\to 0}\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds = \lim_{r\to 0}\frac{1}{2c}\frac{\partial}{\partial r}\left[\int_{r-ct}^{r+ct} sM_\psi(x,s)ds\right]    
 \]
-to find the derivative of the intgral we use Libenz rule.
+to find the derivative of the integral we use Libenz rule.
 \begin{enrichment*}{Libenz rule}
     \[
         \frac{d}{dx}\int_{a(x)}^{b(x)} f(x,y)dy = \frac{db(x)}{dx}f(x,b(x))-\frac{da(x)}{dx}f(x,a(x)) + \int_{a(x)}^{b(x)} \frac{\partial f(x,y)}{\partial x} dy    
@@ -1241,7 +1241,7 @@ we now finally substitute the first and the second limit in (10).
 \[
     u(x,t) = \lim_{r\to 0} M_u(x,t,r) = \frac{\partial}{\partial t}[tM_\phi(x,ct)] + tM_\psi(x,ct)    
 \]
-using the defenition of spherical mean with $r=ct$ our final formula becomes.
+using the definition of spherical mean with $r=ct$ our final formula becomes.
 \begin{figure*}[b]
     \begin{enrichment}{Gustav Kirchhoff}{Kirchhoff.jpg}{2.4}{.8}{.17}
         Gustav Kirchhoff (1824-1887) was a prominent German physicist
@@ -1256,35 +1256,240 @@ which is called Kirchhoff's Formula.
 
 
 \section{Laplace's Equation}
-Laplace's equation is one of the most important PDE in matheatical physics most notably in the study of electromagnetism. Our first stem is get accustomed to some termnology. Consider the following problem.
+Laplace's equation is one of the most important PDE in mathematical physics most notably in the study of electromagnetism. Our first stem is get accustomed to some terminology. Consider the following problem.
 \[
     \nabla^2 u(x,y)= \frac{\partial^2 u(x,y,z)}{\partial x^2}+\frac{\partial^2 u(x,y,z)}{\partial y^2} = 0 \;\;\;\; , (x,y) \in G    
 \]
-where G is a simply bounded connected domain whose boundry $\gamma$ is a contor.
+where G is a simply bounded connected domain whose boundary $\gamma$ is a contour.
 \\
-the boundry condition for this problem is.
+the boundary condition for this problem is.
 \[
     u(x,y)|_\gamma = f(x,y)    
 \]
 \begin{center}
 \includegraphics[scale=0.1]{domain.png}
 \end{center}
-we can see that this is a Dirchlet problem.
+we can see that this is a Dirichlet problem.
 \par
-if the function $u$ that satisfy the laplace eqution and is in the set of two dimensional contineous functions on the domain G $u \in C^2(G)$, 
+if the function $u$ that satisfy the Laplace equation and is in the set of two dimensional continuous functions on the domain G $u \in C^2(G)$, 
 i.e. all of $u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
-are contineous finctions on G, then the function $u$ is called a harmonic function on G.
+are continuous functions on G, then the function $u$ is called a harmonic function on G.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%              continue laplace    
+%              continue    
 %   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\setcounter{equation}{0}
+\subsection{Solution of Laplace's Equation on a Circle}
+\begin{center}
+\includegraphics[scale=0.1]{circle.png}
+\end{center}
+\begin{align*}
+G &= \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace
+\\
+\gamma &= \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace
+\end{align*}
+consider the partial differential equation
+\begin{equation}
+\nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \;\;\; \forall (x,y) \in G
+\end{equation}
+with boundary condition
+\begin{equation}
+u(x,y)|_\gamma = f(x,y)
+\end{equation}
+we start by utilizing the spherical symmetry of the problem and express the laplacian operator in the polar form, with some work we can express (73) as.
+\begin{equation}
+r^2 \frac{\partial^2 u(r,\theta)}{\partial r^2} + r \frac{\partial u(r,\theta)}{\partial r} + \frac{\partial^2 u(r,\theta)}{\partial \theta^2} = 0
+\end{equation}
+and the boundary condition and choosing $R=1$ for simplifying.
+\begin{equation}
+u(r,\theta)|_\gamma = u(R,\theta) = f(R\;cos\theta, R\;sin\theta) = f(cos\theta,sin\theta)
+\end{equation}
+\\
+notice from (75) that the derivatives of $r$ and $\theta$ can be separated thus utilizing the separation of variables method.
+\\
+\begin{align*}
+u(r,\theta) &= V(r)F(\theta)
+\\
+\\
+\frac{\partial u}{\partial r} &= \frac{d V(r)}{dr}F(\theta)
+\\
+\\
+\frac{\partial^2 u}{\partial r^2} &= \frac{d^2 V(r)}{dr^2}F(\theta)
+\\
+\\
+\frac{\partial^2 u}{\partial \theta^2} &= V(r)\frac{d^2 F(\theta)}{d\theta^2}
+\end{align*}
+thus we get.
+\begin{equation}
+r^2F(\theta)\frac{d^2 V(r)}{dr^2} +rF(\theta)\frac{d V(r)}{dr} + V(r)\frac{d^2 F(\theta)}{d\theta^2} = 0
+\end{equation}
+\\
+dividing (77) by $V(r)F(\theta)$ we get.
+\begin{equation}
+\frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} + \frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2} = 0
+\end{equation}
+\\
+\begin{align*}
+\frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} = n^2 = -\frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2}
+\end{align*}
+we start solving for the $F(\theta)$. 
+\\
+\begin{align*}
+\frac{d^2 F(\theta)}{d\theta^2} = -n^2F(\theta)
+\end{align*}
+the solution will be. 
+\begin{equation}
+F(\theta) = A\;\cos(n\theta)+B\;\sin(n\theta)
+\end{equation}
+\\
+then solving for $V(r)$.
+\\
+\begin{align*}
+r^2\frac{d^2 V(r)}{dr^2} +r\frac{d V(r)}{dr} = n^2V(r)
+\end{align*}
+\\
+we can see that this is a homogeneous Cauchy-Euler ordinary differential equation\footnote{Cauchy-euler homogeneous equation: $ax^2y''+bxy'+cy = 0$}, that has a solution starting with its auxiliary equation\footnote{auxiliary equation: $am(m-1)+bm +c=0$}.
+\\
+\begin{align*}
+m(m-1)+m -n^2 &=0
+\\
+\\
+m &= \pm n \;\;\; \Rightarrow \;\;\; m_1 =n\;,\;m_2=-n
+\end{align*}
+\\
+and the solution is.
+\\
+\begin{equation}
+V(r) = Cr^{m_1}+Dr^{m_2} = Cr^n+Dr^{-n}
+\end{equation}
+\\
+a more detailed solution.
+\\
+\begin{align*}
+r &= e^t
+\\
+\\
+\frac{dV(r)}{dr} &= \frac{dV(r)}{dt}\frac{dt}{dr} = e^{-t} \frac{dV(r)}{dt}\;\Rightarrow  r \frac{dV(r)}{dr}=\frac{dV(r)}{dt}
+\\
+\\
+\frac{d^2V(r)}{dr^2} &= \frac{d}{dr}\left[e^{-t} \frac{dV(r)}{dt}\right]
+\\
+\\
+&=  \frac{d}{dt}\left[e^{-t} \frac{dV(r)}{dt}\right] \frac{dt}{dr} 
+\\
+\\
+&= \frac{d}{dt}\left[e^{-t} \frac{dV(r)}{dt}\right] e^{-t}
+\\
+\\
+&= e^{-2t}\left[-\frac{dV(r)}{dt}+\frac{d^2V(r)}{dt^2}\right] \;\Rightarrow\; r^2\frac{d^2V(r)}{dr^2} = \frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}
+\end{align*}
+substituting will result in.
+\begin{align*}
+\frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}+\frac{dV(r)}{dt}&=n^2V(r)
+\\
+\\
+\frac{d^2V(r)}{dt^2} &= n^2V(r) \;\;\Rightarrow\;\; V(r) = Ce^{nt}+De^{-nt} = Cr^n+Dr^{-n}
+\end{align*}
+substituting V and F in u.
+\begin{align*}
+u(r,\theta) = [Cr^n+Dr^{-n}][A\;cos(n\theta)+B\;sin(n\theta)]
+\end{align*}
+to maintain the continuity of the function we put D=0.
+\begin{equation}
+u(r,\theta) = r^n[A\;cos(n\theta)+B\;sin(n\theta)]
+\end{equation}
+from this the boundary condition becomes a function only in $\theta$.
+\begin{equation}
+u|_\gamma = H(\theta)
+\end{equation}
+\\
+taking the sum of all solutions we get.
+\\
+\begin{align*}
+u(r,\theta) &= \frac{A_o}{2} + \sum_{n=1}^{\infty} r^n[A_n\;cos(n\theta)+B_n\;sin(n\theta)]
+\end{align*}
+\\
+at r = R = 1.
+\\
+\begin{align*}
+H(\theta) = \frac{A_o}{2} + \sum_{n=1}^{\infty} A_n\;cos(n\theta)+B_n\;sin(n\theta)
+\end{align*} 
+\\ 
+thus we can find the Fourier coefficients.
+\\
+\begin{align*}
+A_o &= \frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) d\alpha
+\\
+\\
+A_n &=\frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) cos(n\alpha) d\alpha
+\\
+\\
+B_n &= A_n =\frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) \sin(n\alpha) d\alpha
+\end{align*}
+\\
+then we get.
+\\
+\begin{align*}
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\sum_{n=1}^{\infty} r^n \int_{0}^{2\pi} H(\alpha)[\cos(n\alpha)\cos(n\theta) + \sin(n\alpha)\sin(n\theta)]d\alpha
+\\
+\\
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\sum_{n=1}^{\infty}r^n\int_{0}^{2\pi} H(\alpha)\cos[n(\alpha - \theta)]d\alpha
+\end{align*}
+\\
+from the value of the exponential series we can get.
+\\
+\begin{align*}
+S_1 = \sum_{n=1}^{\infty} r^n \cos(n\phi),\;\;\; S_2 & =\sum_{n=1}^{\infty}r^n \sin(n\phi), \;\;\; \phi = \alpha - \theta
+\\
+\\
+S_1 + i S_2 = \sum_{n=0}^{\infty} r^n e^{in\phi} &= \frac{r e^{i\phi}}{1- r e^{i\phi}}
+\end{align*}
+\\
+we now manipulate the expression to obtain the real part.
+\\
+\begin{align*}
+\frac{r^n e^{i\phi}}{1- r^n e^{i\phi}} &= \frac{r(cos\phi+isin\phi)}{1-r(cos\phi+isin\phi}
+\\
+\\
+&= \frac{r(cos\phi+isin\phi)}{(1-rcos\phi)-irsin\phi} \cdot \frac{(1-rcos\phi)+irsin\phi}{(1-rcos\phi)+irsin\phi}
+\\
+\\
+&= \frac{rcos\phi - r^2 + i (\;.\;\;.\;\;.\;)}{1-2rcos\phi+r^2}
+\end{align*}
+\\
+thus we find that.
+\\
+\begin{align*}
+S_1 = \frac{rcos\phi - r^2}{1-2rcos\phi+r^2}
+\end{align*}
+substituting in the expression for u we get.
+\begin{align*}
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\int_{0}^{2\pi} H(\alpha)\frac{rcos(\alpha -\theta) - r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
+\\
+\\
+&= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha)\frac{2rcos(\alpha -\theta) - 2r^2+1-2rcos(\alpha -\theta)+r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
+\end{align*}
+simplify.
+\begin{equation}
+u(r,\theta) = \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha)\frac{1-r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
+\end{equation}
+\\
+and for a circle of radius R we get Poisson's Formula.
+\\
+\begin{equation}
+u(r,\theta) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2}d\beta \;\;\;, \;\;\;\; \beta = R\alpha
+\end{equation}
+\\
+we can easily find u in terms of x and y, the two forms are equivalent.
 
 \subsection{Harmonic Functions}
 we will discuss some properties or theorems of the harmonic function
@@ -1331,7 +1536,7 @@ we will discuss some properties or theorems of the harmonic function
 \end{proof}
 
 \begin{theorem}[Regularity Theorem]
-    If u is a harmonic and contineous function on G and its boundry $\gamma$, then u is analytic at every point on G, i.e. can be represented as as a power series and can be diffrentiated infinit times.    
+    If u is a harmonic and continuous function on G and its boundary $\gamma$, then u is analytic at every point on G, i.e. can be represented as as a power series and can be differentiated infinite times.    
 \end{theorem}
 \begin{proof}
     we know that.       
@@ -1362,7 +1567,7 @@ we will discuss some properties or theorems of the harmonic function
 
 \begin{enrichment*}{Analytic Function}
     is a Function that can be represented by a convergent power series in a region around each point within its domain. It is a function that is differentiable at every point within this region, and its derivative exists everywhere in that domain. 
-    and it can be differntiated nth time for $n \in \mathbb{N}$
+    and it can be differentiated nth time for $n \in \mathbb{N}$
     \\
     example (any Polynomial functions , Exponential function , Trigonometric functions ,etc.)
 \end{enrichment*}
@@ -1375,7 +1580,7 @@ we will discuss some properties or theorems of the harmonic function
 
 \begin{theorem}[Uniqueness of Drichlet Problem]
     if there exist a solution of Laplace's equation 
-    with a boundery condition (Drichlet problem)
+    with a boundary condition (Drichlet problem)
     \[
     \exists u \in C^2(G), u \in C(G \cup \gamma),\;\; \text{such that} \;\;\; \nabla^2 u =0 \;\;\; \text{and} \;\;\; u|_\gamma = f
     \]
@@ -1383,7 +1588,7 @@ we will discuss some properties or theorems of the harmonic function
 \end{theorem}
 
 \begin{proof}
-assuming the two function $u_1$ and $u_2$ are harmonic functions on G with boundry $\gamma$, i.e. 
+assuming the two function $u_1$ and $u_2$ are harmonic functions on G with boundary $\gamma$, i.e. 
 \[
     u_1 ,u_2 \in C^2(G), u_1 , u_2 \in C(G \cup \gamma), \nabla^2 u_1 =0, \nabla^2 u_2 =0, u_1|_\gamma = f, u_2|_\gamma = f    
 \]
@@ -1391,14 +1596,14 @@ we define the function $w$ as follow
 \[
     w = u_1-u_2 \Rightarrow w\in C^2(G), w \in C(G \cup \gamma), \nabla^2 w =0, w|_\gamma = f-f = 0    
 \]
-the value of the function attains its maximum or minimum value on its boundry according to the maximum principle thus we have
+the value of the function attains its maximum or minimum value on its boundary according to the maximum principle thus we have
 \[
     \min(w) = 0 \leq w(x) \leq 0= \max(w) \forall x \in G \;\;\;\; thus \;\;\;\; w = 0 \Rightarrow u_1 = u_2     
 \]
 \end{proof}
 
 \begin{theorem}[Stability Theorem]
-    supposing the two functions $u_1$, $u_2$, are harmonic on domain G with boundry $\gamma$, and have the boundry conditions, 
+    supposing the two functions $u_1$, $u_2$, are harmonic on domain G with boundary $\gamma$, and have the boundary conditions, 
     \\
     $u_1|_\gamma = f_1$ and $u_2|_\gamma = f_2$, if $|f_1 - f_2| \leq \epsilon  \;\;\; \forall \epsilon > 0$ then $|u_1(x) - u_2(x)| \leq \epsilon \;\;\; \forall x \in G \cup \gamma $
 \end{theorem}
@@ -1412,7 +1617,7 @@ the value of the function attains its maximum or minimum value on its boundry ac
 
 
 \begin{theorem}[Oleinik's Theorem (maximum principle)]
-    if u is a harmonic function on G and u is contineous on $G \cup \gamma$, then u attains its maximum or minimum value on $\gamma$    
+    if u is a harmonic function on G and u is continuous on $G \cup \gamma$, then u attains its maximum or minimum value on $\gamma$    
 \end{theorem}
 \begin{proof}
     suppose that the maximum value of u on $G \cup \gamma$ is M, and the minimum value of u on $G \cup \gamma$ is m, then it is clear that $M \geq m$.
@@ -1445,7 +1650,7 @@ the value of the function attains its maximum or minimum value on its boundry ac
     \[
         \therefore  \nabla^2 v(x_2,y_2) =  \frac{\partial^2 v(x_2,y_2)}{\partial x^2}+\frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
     \]
-    from the defenition of v e obtain
+    from the definition of v e obtain
     \begin{align*}
         \frac{\partial^2 v}{\partial x^2} &= \frac{\partial^2 u}{\partial x^2} + \frac{M-m}{d^2}
         \\
@@ -1455,7 +1660,7 @@ the value of the function attains its maximum or minimum value on its boundry ac
         \\
         \nabla^2 v &= \frac{2(M-m)}{d^2} > 0
     \end{align*}
-    which is a contradiction thus M must equale m 
+    which is a contradiction thus M must equal m 
 \end{proof}
 
 
