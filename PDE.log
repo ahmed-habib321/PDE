@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  22 JUL 2023 22:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  23 JUL 2023 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,46 +23,7 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
- (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) (H_structue.tex (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+) (H_structue.tex (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \ttl@box=\box51
 \beforetitleunit=\skip50
@@ -628,7 +589,46 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count339
 \@lastruleclass=\count340
 \@thisrulewidth=\dimen311
-) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
+) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+ (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2021/07/05 v2.14 TOC entries
 \ttl@leftsep=\dimen312
 ) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
@@ -781,24 +781,24 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen320
 \Gm@dimlist=\toks49
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 11.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 8.
  (PDE.aux)
 \openout1 = `PDE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count357
@@ -823,7 +823,7 @@ Package caption Info: End \AtBeginDocument code.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 11.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 8.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -859,14 +859,14 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 19.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 16.
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 <Cover1.jpg, id=4, 3126.68124pt x 4111.36pt>
 File: Cover1.jpg Graphic file (type jpg)
 <use Cover1.jpg>
-Package pdftex.def Info: Cover1.jpg  used on input line 37.
+Package pdftex.def Info: Cover1.jpg  used on input line 34.
 (pdftex.def)             Requested size: 597.51068pt x 845.02997pt.
  [1
 
@@ -875,77 +875,77 @@ Package pdftex.def Info: Cover1.jpg  used on input line 37.
 \openout5 = `PDE.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 57.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 57.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 57.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 57.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 57.
+(Font)              <10> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 57.
+(Font)              <7> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 57.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 57.
+(Font)              <5> on input line 54.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 100.
+(mdframed)              on input line 97.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 103.
+(mdframed)              on input line 100.
 <laplacecircle.png, id=24, 1580.90625pt x 1036.62282pt>
 File: laplacecircle.png Graphic file (type png)
 <use laplacecircle.png>
-Package pdftex.def Info: laplacecircle.png  used on input line 114.
+Package pdftex.def Info: laplacecircle.png  used on input line 111.
 (pdftex.def)             Requested size: 158.09988pt x 103.66835pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 119.
+(mdframed)              on input line 116.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 124.
+(mdframed)              on input line 121.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 134.
+(mdframed)              on input line 131.
  [4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png>] [5] [6] [7] [8] [9]
 <Cauchy.jpg, id=53, 331.2375pt x 331.2375pt>
 File: Cauchy.jpg Graphic file (type jpg)
 <use Cauchy.jpg>
-Package pdftex.def Info: Cauchy.jpg  used on input line 475.
+Package pdftex.def Info: Cauchy.jpg  used on input line 472.
 (pdftex.def)             Requested size: 68.28644pt x 68.28319pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 475--475
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 472--472
 [][] 
  []
 
 [10 <./Cauchy.jpg>] [11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 553.
+(mdframed)              on input line 550.
  [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 666--668
+Underfull \hbox (badness 10000) in paragraph at lines 663--665
 
  []
 
@@ -953,65 +953,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 666--668
 <d_Alembert.jpg, id=81, 1177.39874pt x 1504.8722pt>
 File: d_Alembert.jpg Graphic file (type jpg)
 <use d_Alembert.jpg>
-Package pdftex.def Info: d_Alembert.jpg  used on input line 880.
+Package pdftex.def Info: d_Alembert.jpg  used on input line 877.
 (pdftex.def)             Requested size: 68.28644pt x 87.25739pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 880--880
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 877--877
 [][] 
  []
 
 
-Overfull \hbox (2.2179pt too wide) detected at line 920
+Overfull \hbox (2.2179pt too wide) detected at line 917
 []
  []
 
 [17 <./d_Alembert.jpg>] [18]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 973.
+(Font)              <8> on input line 970.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 973.
+(Font)              <6> on input line 970.
 
-Overfull \hbox (6.36252pt too wide) in paragraph at lines 978--980
+Overfull \hbox (6.36252pt too wide) in paragraph at lines 975--977
 \T1/lmr/m/n/10 where $\OMS/lmsy/m/n/10 r[]$ \T1/lmr/m/n/10 is the Laplace-Beltrami op-er-a-tor, a gen-er-al-iza-tion of the Laplace op-er-a-tor in n-dimensional
  []
 
 <xi.png, id=88, 1252.68pt x 1023.825pt>
 File: xi.png Graphic file (type png)
 <use xi.png>
-Package pdftex.def Info: xi.png  used on input line 983.
+Package pdftex.def Info: xi.png  used on input line 980.
 (pdftex.def)             Requested size: 125.27533pt x 102.38849pt.
 [19 <./xi.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1028.
+(mdframed)              on input line 1025.
 <div.png, id=99, 188.20313pt x 141.52875pt>
 File: div.png Graphic file (type png)
 <use div.png>
-Package pdftex.def Info: div.png  used on input line 1038.
+Package pdftex.def Info: div.png  used on input line 1035.
 (pdftex.def)             Requested size: 112.92273pt x 84.9179pt.
  [20 <./div.png>]
 <Darboux.jpg, id=105, 458.71375pt x 601.24625pt>
 File: Darboux.jpg Graphic file (type jpg)
 <use Darboux.jpg>
-Package pdftex.def Info: Darboux.jpg  used on input line 1094.
+Package pdftex.def Info: Darboux.jpg  used on input line 1091.
 (pdftex.def)             Requested size: 68.28644pt x 89.50414pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1094--1094
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1091--1091
 [][] 
  []
 
 [21 <./Darboux.jpg>] [22] [23]
-Underfull \hbox (badness 1584) in paragraph at lines 1247--1250
+Underfull \hbox (badness 1584) in paragraph at lines 1244--1247
 []\T1/lmr/m/n/10 Gustav Kirch-hoff (1824-1887) was a promi-nent Ger-man physi-cist
  []
 
 <Kirchhoff.jpg, id=115, 426.59375pt x 601.24625pt>
 File: Kirchhoff.jpg Graphic file (type jpg)
 <use Kirchhoff.jpg>
-Package pdftex.def Info: Kirchhoff.jpg  used on input line 1250.
+Package pdftex.def Info: Kirchhoff.jpg  used on input line 1247.
 (pdftex.def)             Requested size: 68.28644pt x 96.23805pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1250--1250
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1247--1247
 [][] 
  []
 
@@ -1019,136 +1019,78 @@ Overfull \hbox (1.51756pt too wide) in paragraph at lines 1250--1250
 <domain.png, id=119, 1657.69313pt x 1041.8925pt>
 File: domain.png Graphic file (type png)
 <use domain.png>
-Package pdftex.def Info: domain.png  used on input line 1270.
+Package pdftex.def Info: domain.png  used on input line 1267.
 (pdftex.def)             Requested size: 165.77902pt x 104.19534pt.
 <circle.png, id=120, 1181.91562pt x 1181.91562pt>
 File: circle.png Graphic file (type png)
 <use circle.png>
-Package pdftex.def Info: circle.png  used on input line 1293.
-(pdftex.def)             Requested size: 118.19849pt x 118.19849pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1315--1319
-
- []
-
-[25 <./domain.png> <./circle.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1339--1341
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1343--1346
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1362
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1371
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1373--1377
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1413--1417
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1419--1423
+Package pdftex.def Info: circle.png  used on input line 1287.
+(pdftex.def)             Requested size: 200.92299pt x 200.92299pt.
+ [25 <./domain.png> <./circle.png>] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1399--1402
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1425--1429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1437--1441
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1446--1450
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1459
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1467--1471
-
- []
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1488
-
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1504.
+(mdframed)              on input line 1441.
 
-Overfull \hbox (36.98698pt too wide) detected at line 1526
+Overfull \hbox (37.42564pt too wide) detected at line 1463
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
  []
 
+[28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1538.
-Package mdframed Info: Not enough space on this page on input line 1540.
-[29]
-Package mdframed Info: Not enough space on this page on input line 1540.
- [30]
+(mdframed)              on input line 1475.
+ [29]
+<green.png, id=140, 1580.90625pt x 1036.62282pt>
+File: green.png Graphic file (type png)
+<use green.png>
+Package pdftex.def Info: green.png  used on input line 1520.
+(pdftex.def)             Requested size: 316.17564pt x 207.32089pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1581.
-Package mdframed Info: Not enough space on this page on input line 1588.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1605.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1619.
+(mdframed)              on input line 1555.
+ [30 <./green.png>]
+Package mdframed Info: Not enough space on this page on input line 1557.
 <diameter.png, id=145, 1621.55812pt x 1041.8925pt>
 File: diameter.png Graphic file (type png)
 <use diameter.png>
-Package pdftex.def Info: diameter.png  used on input line 1632.
+Package pdftex.def Info: diameter.png  used on input line 1570.
 (pdftex.def)             Requested size: 162.16531pt x 104.19534pt.
- [31 <./diameter.png>] [32] (PDE.aux)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1608.
+ [31 <./diameter.png>]
+Package mdframed Info: Not enough space on this page on input line 1615.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1631.
+<rep.png, id=151, 1580.90625pt x 877.77937pt>
+File: rep.png Graphic file (type png)
+<use rep.png>
+Package pdftex.def Info: rep.png  used on input line 1668.
+(pdftex.def)             Requested size: 237.1257pt x 131.66122pt.
+ [32] [33 <./rep.png>] [34] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26040 strings out of 476048
- 566174 string characters out of 5780228
+ 26086 strings out of 476048
+ 567115 string characters out of 5780228
  1885753 words of memory out of 5000000
- 46261 multiletter control sequences out of 15000+600000
+ 46307 multiletter control sequences out of 15000+600000
  592856 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,13n,96p,1239b,579s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (32 pages, 4132993 bytes).
+ 89i,14n,96p,1239b,737s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on PDE.pdf (34 pages, 4238405 bytes).
 PDF statistics:
  273 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

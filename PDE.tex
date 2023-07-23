@@ -1,13 +1,10 @@
 \documentclass[]{article}
 
-\usepackage{lmodern}
-\usepackage[T1]{fontenc}
+
 \input{H_structue}
 \usepackage[a4paper, margin=1.2in]{geometry}
 \definecolor{cover}{RGB}{230, 194, 24}
-\newcommand{\dquad}{\quad\quad}
-\newcommand{\tquad}{\quad\quad\quad}
-\newcommand{\fquad}{\quad\quad\quad\quad}
+
 \begin{document}
 
 
@@ -1275,120 +1272,71 @@ if the function $u$ that satisfy the Laplace equation and is in the set of two d
 i.e. all of $u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
 are continuous functions on G, then the function $u$ is called a harmonic function on G.
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%              continue    
-%   
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \setcounter{equation}{0}
 \subsection{Solution of Laplace's Equation on a Circle}
+
+consider the partial differential equation
+\begin{equation}
+\nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \;\;\; \forall (x,y) \in G
+\end{equation}
+\begin{equation}
+\text{I.C} \quad \Longrightarrow \quad u(x,y)|_\gamma = f(x,y)
+\end{equation}
+
 \begin{center}
-\includegraphics[scale=0.1]{circle.png}
+\includegraphics[scale=0.17]{circle.png}
 \end{center}
 \begin{align*}
 G &= \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace
 \\
 \gamma &= \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace
 \end{align*}
-consider the partial differential equation
-\begin{equation}
-\nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \;\;\; \forall (x,y) \in G
-\end{equation}
-with boundary condition
-\begin{equation}
-u(x,y)|_\gamma = f(x,y)
-\end{equation}
-we start by utilizing the spherical symmetry of the problem and express the laplacian operator in the polar form, with some work we can express (73) as.
+buy puting $x = r cos(\theta)$ and $y = r sin(\theta)$ and recreate equation (1) using chain rule we can express (1) as.
 \begin{equation}
 r^2 \frac{\partial^2 u(r,\theta)}{\partial r^2} + r \frac{\partial u(r,\theta)}{\partial r} + \frac{\partial^2 u(r,\theta)}{\partial \theta^2} = 0
 \end{equation}
-and the boundary condition and choosing $R=1$ for simplifying.
-\begin{equation}
-u(r,\theta)|_\gamma = u(R,\theta) = f(R\;cos\theta, R\;sin\theta) = f(cos\theta,sin\theta)
-\end{equation}
-\\
-notice from (75) that the derivatives of $r$ and $\theta$ can be separated thus utilizing the separation of variables method.
-\\
+notice from (3) that the derivatives of $r$ and $\theta$ can be separated thus utilizing the separation of variables method.
 \begin{align*}
 u(r,\theta) &= V(r)F(\theta)
 \\
-\\
 \frac{\partial u}{\partial r} &= \frac{d V(r)}{dr}F(\theta)
-\\
 \\
 \frac{\partial^2 u}{\partial r^2} &= \frac{d^2 V(r)}{dr^2}F(\theta)
 \\
-\\
 \frac{\partial^2 u}{\partial \theta^2} &= V(r)\frac{d^2 F(\theta)}{d\theta^2}
 \end{align*}
-thus we get.
+therefore we get.
 \begin{equation}
 r^2F(\theta)\frac{d^2 V(r)}{dr^2} +rF(\theta)\frac{d V(r)}{dr} + V(r)\frac{d^2 F(\theta)}{d\theta^2} = 0
 \end{equation}
-\\
-dividing (77) by $V(r)F(\theta)$ we get.
+dividing (4) by $V(r)F(\theta)$ we get.
 \begin{equation}
 \frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} + \frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2} = 0
 \end{equation}
-\\
-\begin{align*}
-\frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} = n^2 = -\frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2}
-\end{align*}
+\[
+    \frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} = n^2 = -\frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2}    
+\]
 we start solving for the $F(\theta)$. 
-\\
-\begin{align*}
-\frac{d^2 F(\theta)}{d\theta^2} = -n^2F(\theta)
-\end{align*}
+\[
+    \frac{d^2 F(\theta)}{d\theta^2} = -n^2F(\theta)    
+\]
 the solution will be. 
 \begin{equation}
 F(\theta) = A\;\cos(n\theta)+B\;\sin(n\theta)
 \end{equation}
-\\
 then solving for $V(r)$.
-\\
+\[
+r^2\frac{d^2 V(r)}{dr^2} +r\frac{d V(r)}{dr} = n^2V(r)    
+\]
+by puting $r = e^t$
 \begin{align*}
-r^2\frac{d^2 V(r)}{dr^2} +r\frac{d V(r)}{dr} = n^2V(r)
-\end{align*}
-\\
-we can see that this is a homogeneous Cauchy-Euler ordinary differential equation\footnote{Cauchy-euler homogeneous equation: $ax^2y''+bxy'+cy = 0$}, that has a solution starting with its auxiliary equation\footnote{auxiliary equation: $am(m-1)+bm +c=0$}.
-\\
-\begin{align*}
-m(m-1)+m -n^2 &=0
-\\
-\\
-m &= \pm n \;\;\; \Rightarrow \;\;\; m_1 =n\;,\;m_2=-n
-\end{align*}
-\\
-and the solution is.
-\\
-\begin{equation}
-V(r) = Cr^{m_1}+Dr^{m_2} = Cr^n+Dr^{-n}
-\end{equation}
-\\
-a more detailed solution.
-\\
-\begin{align*}
-r &= e^t
-\\
-\\
 \frac{dV(r)}{dr} &= \frac{dV(r)}{dt}\frac{dt}{dr} = e^{-t} \frac{dV(r)}{dt}\;\Rightarrow  r \frac{dV(r)}{dr}=\frac{dV(r)}{dt}
-\\
 \\
 \frac{d^2V(r)}{dr^2} &= \frac{d}{dr}\left[e^{-t} \frac{dV(r)}{dt}\right]
 \\
-\\
 &=  \frac{d}{dt}\left[e^{-t} \frac{dV(r)}{dt}\right] \frac{dt}{dr} 
 \\
-\\
 &= \frac{d}{dt}\left[e^{-t} \frac{dV(r)}{dt}\right] e^{-t}
-\\
 \\
 &= e^{-2t}\left[-\frac{dV(r)}{dt}+\frac{d^2V(r)}{dt^2}\right] \;\Rightarrow\; r^2\frac{d^2V(r)}{dr^2} = \frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}
 \end{align*}
@@ -1396,14 +1344,16 @@ substituting will result in.
 \begin{align*}
 \frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}+\frac{dV(r)}{dt}&=n^2V(r)
 \\
-\\
-\frac{d^2V(r)}{dt^2} &= n^2V(r) \;\;\Rightarrow\;\; V(r) = Ce^{nt}+De^{-nt} = Cr^n+Dr^{-n}
+\frac{d^2V(r)}{dt^2} &= n^2V(r)
 \end{align*}
-substituting V and F in u.
-\begin{align*}
-u(r,\theta) = [Cr^n+Dr^{-n}][A\;cos(n\theta)+B\;sin(n\theta)]
-\end{align*}
+\[
+\therefore V(r) = Ce^{nt}+De^{-nt} = Cr^n+Dr^{-n}    
+\]
 to maintain the continuity of the function we put D=0.
+\[
+\therefore V(r) = Cr^n
+\]
+substituting V and F in u.
 \begin{equation}
 u(r,\theta) = r^n[A\;cos(n\theta)+B\;sin(n\theta)]
 \end{equation}
@@ -1411,84 +1361,71 @@ from this the boundary condition becomes a function only in $\theta$.
 \begin{equation}
 u|_\gamma = H(\theta)
 \end{equation}
-\\
 taking the sum of all solutions we get.
-\\
+\[
+    u(r,\theta) = a_o + \sum_{n=1}^{\infty} r^n[a_n\;cos(n\theta)+b_n\;sin(n\theta)]    
+\]
+at $\gamma \longrightarrow $ r = 1.
+\[
+    H(\theta) = a_o + \sum_{n=1}^{\infty} a_n\;cos(n\theta)+b_n\;sin(n\theta) 
+\]
+then we find the Fourier coefficients.
 \begin{align*}
-u(r,\theta) &= \frac{A_o}{2} + \sum_{n=1}^{\infty} r^n[A_n\;cos(n\theta)+B_n\;sin(n\theta)]
+a_o &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi ) d\psi 
+\\
+a_n &=\frac{1}{\pi}\int_{0}^{2\pi} H(\psi ) cos(n\psi ) d\psi 
+\\
+a_n &=\frac{1}{\pi}\int_{0}^{2\pi} H(\psi ) \sin(n\psi ) d\psi 
 \end{align*}
-\\
-at r = R = 1.
-\\
-\begin{align*}
-H(\theta) = \frac{A_o}{2} + \sum_{n=1}^{\infty} A_n\;cos(n\theta)+B_n\;sin(n\theta)
-\end{align*} 
-\\ 
-thus we can find the Fourier coefficients.
-\\
-\begin{align*}
-A_o &= \frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) d\alpha
-\\
-\\
-A_n &=\frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) cos(n\alpha) d\alpha
-\\
-\\
-B_n &= A_n =\frac{1}{\pi}\int_{0}^{2\pi} H(\alpha) \sin(n\alpha) d\alpha
-\end{align*}
-\\
 then we get.
-\\
 \begin{align*}
-u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\sum_{n=1}^{\infty} r^n \int_{0}^{2\pi} H(\alpha)[\cos(n\alpha)\cos(n\theta) + \sin(n\alpha)\sin(n\theta)]d\alpha
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi ) d\psi  + \frac{1}{\pi}\sum_{n=1}^{\infty} r^n \int_{0}^{2\pi} H(\psi )[\cos(n\psi )\cos(n\theta) + \sin(n\psi )\sin(n\theta)]d\psi 
 \\
-\\
-u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\sum_{n=1}^{\infty}r^n\int_{0}^{2\pi} H(\alpha)\cos[n(\alpha - \theta)]d\alpha
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi ) d\psi  + \frac{1}{\pi}\sum_{n=1}^{\infty}r^n\int_{0}^{2\pi} H(\psi )\cos[n(\psi  - \theta)]d\psi 
 \end{align*}
-\\
+\begin{enrichment*}{}
+    $\cos[A-B] = \cos(A)\cos(B) + \sin(A)\sin(B)$
+\end{enrichment*}
 from the value of the exponential series we can get.
-\\
-\begin{align*}
-S_1 = \sum_{n=1}^{\infty} r^n \cos(n\phi),\;\;\; S_2 & =\sum_{n=1}^{\infty}r^n \sin(n\phi), \;\;\; \phi = \alpha - \theta
-\\
-\\
-S_1 + i S_2 = \sum_{n=0}^{\infty} r^n e^{in\phi} &= \frac{r e^{i\phi}}{1- r e^{i\phi}}
-\end{align*}
-\\
+\[
+    S_1 = \sum_{n=1}^{\infty} r^n \cos(n\phi),\;\;\; S_2 =\sum_{n=1}^{\infty}r^n \sin(n\phi), \;\;\; \phi = \psi  - \theta    
+\]
+\[
+    S_1 + i S_2 = \sum_{n=0}^{\infty} r^n e^{in\phi}    
+\]
+this is the form of a geometric series the value of the summition is
+\[
+    \sum_{n=0}^{\infty} r^n e^{in\phi} = \frac{r e^{i\phi}}{1- r e^{i\phi}}
+\]
 we now manipulate the expression to obtain the real part.
 \\
 \begin{align*}
-\frac{r^n e^{i\phi}}{1- r^n e^{i\phi}} &= \frac{r(cos\phi+isin\phi)}{1-r(cos\phi+isin\phi}
-\\
+\frac{r^n e^{i\phi}}{1- r^n e^{i\phi}} &= \frac{r(cos\phi+isin\phi)}{1-r(cos\phi+isin\phi)}
 \\
 &= \frac{r(cos\phi+isin\phi)}{(1-rcos\phi)-irsin\phi} \cdot \frac{(1-rcos\phi)+irsin\phi}{(1-rcos\phi)+irsin\phi}
 \\
+&= \frac{rcos\phi - r^2 + ir \sin\phi}{1-2rcos\phi+r^2}
 \\
-&= \frac{rcos\phi - r^2 + i (\;.\;\;.\;\;.\;)}{1-2rcos\phi+r^2}
+&= \frac{rcos\phi - r^2}{1-2rcos\phi+r^2} + i \frac{\sin\phi}{1-2rcos\phi+r^2}
 \end{align*}
-\\
-thus we find that.
-\\
-\begin{align*}
-S_1 = \frac{rcos\phi - r^2}{1-2rcos\phi+r^2}
-\end{align*}
+we find that.
+\[
+    S_1 = \frac{rcos\phi - r^2}{1-2rcos\phi+r^2}    
+\]
 substituting in the expression for u we get.
 \begin{align*}
-u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha) d\alpha + \frac{1}{\pi}\int_{0}^{2\pi} H(\alpha)\frac{rcos(\alpha -\theta) - r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
+u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi ) d\psi  + \frac{1}{\pi}\int_{0}^{2\pi} H(\psi )\frac{rcos(\psi  -\theta) - r^2}{1-2rcos(\psi  -\theta)+r^2}d\psi 
 \\
-\\
-&= \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha)\frac{2rcos(\alpha -\theta) - 2r^2+1-2rcos(\alpha -\theta)+r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
+            &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi )\frac{2rcos(\psi  -\theta) - 2r^2+1-2rcos(\psi  -\theta)+r^2}{1-2rcos(\psi  -\theta)+r^2}d\psi 
 \end{align*}
 simplify.
-\begin{equation}
-u(r,\theta) = \frac{1}{2\pi}\int_{0}^{2\pi} H(\alpha)\frac{1-r^2}{1-2rcos(\alpha -\theta)+r^2}d\alpha
-\end{equation}
-\\
+\[
+    u(r,\theta) = \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi )\frac{1-r^2}{1-2rcos(\psi  -\theta)+r^2}d\psi     
+\]
 and for a circle of radius R we get Poisson's Formula.
-\\
-\begin{equation}
-u(r,\theta) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2}d\beta \;\;\;, \;\;\;\; \beta = R\alpha
-\end{equation}
-\\
+\[
+    u(r,\theta) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2}d\beta \;\;\;, \;\;\;\; \beta = R\psi     
+\]
 we can easily find u in terms of x and y, the two forms are equivalent.
 
 \subsection{Harmonic Functions}
@@ -1497,7 +1434,7 @@ we will discuss some properties or theorems of the harmonic function
 \begin{observation}
     u(x,y) at the center of the circle where r=0 that is when x=0 and y=0 is
     \[
-        u(0,0) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\alpha -\theta)+(0)^2}d\beta =\frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)d\beta     
+        u(0,0) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\psi  -\theta)+(0)^2}d\beta =\frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)d\beta     
     \]
 \end{observation}    
 
@@ -1514,15 +1451,15 @@ we will discuss some properties or theorems of the harmonic function
     we know that $ -1 \leq cos(\theta) \leq 1$
     \begin{align*}
         \therefore
-        \frac{R^2-r^2}{R^2+2Rr+r^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{R^2-r^2}{R^2-2Rr+r^2}
+        \frac{R^2-r^2}{R^2+2Rr+r^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2} \leq \frac{R^2-r^2}{R^2-2Rr+r^2}
         \\
-        \frac{(R-r)(R+r)}{{(R+r)}^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{(R-r)(R+r)}{{(R-r)}^2}
+        \frac{(R-r)(R+r)}{{(R+r)}^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2} \leq \frac{(R-r)(R+r)}{{(R-r)}^2}
         \\
-        \frac{R-r}{R+r} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\alpha -\theta)+r^2} \leq \frac{R+r}{R-r}
+        \frac{R-r}{R+r} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2} \leq \frac{R+r}{R-r}
     \end{align*}
     therefore
     \[
-        \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R-r}{R+r} d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\alpha -\theta)+(0)^2}d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R+r}{R-r} d\beta    
+        \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R-r}{R+r} d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\psi  -\theta)+(0)^2}d\beta \leq \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R+r}{R-r} d\beta    
     \]
     and from observation 5.1 
     \[
@@ -1564,20 +1501,110 @@ we will discuss some properties or theorems of the harmonic function
     \]
     therefore the function can be represented as a power series at any point, i.e. is analytical.
 \end{proof}
-
+\begin{figure*}[b]
 \begin{enrichment*}{Analytic Function}
     is a Function that can be represented by a convergent power series in a region around each point within its domain. It is a function that is differentiable at every point within this region, and its derivative exists everywhere in that domain. 
     and it can be differentiated nth time for $n \in \mathbb{N}$
     \\
     example (any Polynomial functions , Exponential function , Trigonometric functions ,etc.)
-\end{enrichment*}
+\end{enrichment*}    
+\end{figure*}
 
 
 \newpage
 
+\setcounter{equation}{0}
+\subsection{Green's Identity}
+we will study Green's intgral in three dimensions but it can be also applied to n dimensions.
+\begin{center}
+\includegraphics[scale=0.2]{green.png}
+\end{center}
+for any domain $G$ in three dimensions with boundry $\Gamma$, where the volume element is $dx = dx_1 dx_2 dx_3$, the surface element is $d\sigma$, and $\vec{n}$ is the normal to the surface, let $v(x_1,x_2,x_3)$, $u(x_1,x_2,x_3)$ be functions such that $v,u\in C^3(G)$ and $v,u\in C^2(G\cup \Gamma)$.
+\par
+now we start our treatment by studying the following diffrentitation. 
+\begin{align*}
+\frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) &= v\frac{\partial^2 u}{\partial x_{i}^{2}} + \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i}
+\\
+v\frac{\partial^2 u}{\partial x_{i}^{2}} &= \frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) - \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i}
+\end{align*}
+intgrating over volume.
+\[
+    \int_G v\frac{\partial^2 u}{\partial x_{i}^{2}} dx = \int_G \frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) dx - \int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx    
+\]
+from the divergance theorem we can transform the first integral on the right hand side to a surface integral.
+\[
+    \int_G v\frac{\partial^2 u}{\partial x_{i}^{2}} dx = \int_\Gamma v\frac{\partial u}{\partial x_i}cos(\vec{n},x_i) d\sigma - \int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx    
+\]
+summing over i.
+\begin{align}
+\int_G v\sum_{i=1}^{3}\frac{\partial^2 u}{\partial x_{i}^{2}} dx &= \int_\Gamma v\sum_{i=1}^{3}\frac{\partial u}{\partial x_i}cos(\vec{n},x_i) d\sigma - \sum_{i=1}^{3}\int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx 
+\nonumber
+\\ 
+\int_G v\nabla^2 u dx &= \int_\Gamma v\frac{\partial u}{\partial \vec{n}} d\sigma - \sum_{i=1}^{3}\int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx
+\end{align}
+in the same manner we can find.
+\begin{equation}
+\int_G u\nabla^2 v dx = \int_\Gamma u\frac{\partial v}{\partial \vec{n}} d\sigma - \sum_{i=1}^{3}\int_G \frac{\partial u}{\partial x_i}\frac{\partial v}{\partial x_i} dx
+\end{equation}
+substracting (2) from (1) results in.
+\[
+    \int_G \left[v\nabla^2 u - u\nabla^2 v\right]dx = \int_\Gamma \left[v\frac{\partial u}{\partial \vec{n}}-u\frac{\partial v}{\partial \vec{n}}\right] d\sigma    
+\]
+this equation is Green's Identity.
 
-
-
+\begin{theorem}[Oleinik's Theorem (maximum principle)]
+    if $u(x,y)$ is a harmonic function on G and $u(x,y)$ is continuous on $G \cup \gamma$, then $u(x,y)$ attains its maximum or minimum value on $\gamma$    
+\end{theorem}
+\begin{proof}
+    suppose that the maximum value of u on $G \cup \gamma$ is M, and the minimum value of u on $G \cup \gamma$ is m, then it is clear that $M \geq m$.
+    \par
+    we want t proof that $M = m$ 
+    \par
+    suppose that $M > m$ 
+    \par
+    we first define
+    \[
+        v(x,y) = u(x,y) + \frac{M-m}{2d^2}\left[(x-x_{1})^2+(y-y_{1})^2\right]    
+    \]
+    \begin{center}
+        \includegraphics[scale=0.1]{diameter.png}
+    \end{center}
+    where d is the diameter of the domain G or the longest distance between two point, 
+    and $(x_1,y_1)$ is a point inside G such that, $u(x_1,y_1) = M$, thus we have.
+    \[
+        v(x_1,y_1) = u(x_1,y_1) = M    
+    \]
+    and on $\gamma$ we find
+    \begin{align*}
+        v(x,y) &\leq m+\frac{M-m}{2}
+        \\
+        &\leq \frac{M+m}{2} < \frac{M+M}{2}
+        \\
+        &< M
+    \end{align*}
+    this means that v attains a maximum value at a point call it $(x_2,y_2)$ inside G thus we have.
+    \[
+        \frac{\partial^2 v(x_2,y_2)}{\partial x^2} \leq 0 \;\;\;\;\; \text{and} \;\;\;\;\; \frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
+    \]
+    \[
+        \therefore  \nabla^2 v(x_2,y_2) =  \frac{\partial^2 v(x_2,y_2)}{\partial x^2}+\frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0 \dquad \Longrightarrow \circled{1}
+    \]
+    from the definition of v we obtain
+    \begin{align*}
+        \frac{\partial^2 v}{\partial x^2} &= \frac{\partial^2 u}{\partial x^2} + \frac{M-m}{d^2}
+        \\
+        \frac{\partial^2 v}{\partial y^2} &= \frac{\partial^2 u}{\partial y^2} + \frac{M-m}{d^2}
+        \\
+        \nabla^2 v = \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial x^2} &= \nabla^2 u + \frac{2(M-m)}{d^2}
+        \\
+        \because u(x,y) &\text{ is harmonic}\dquad \Longrightarrow \therefore \nabla^2 u = 0
+        \\
+        \nabla^2 v &= \frac{2(M-m)}{d^2} > 0 \dquad \Longrightarrow \circled{2}
+    \end{align*}
+    which is a contradiction from \circled{1} and \circled{2} 
+    \\
+    therefore M $\ngtr$ m therefore M must equal m 
+\end{proof}
 \begin{theorem}[Uniqueness of Drichlet Problem]
     if there exist a solution of Laplace's equation 
     with a boundary condition (Drichlet problem)
@@ -1586,7 +1613,6 @@ we will discuss some properties or theorems of the harmonic function
     \]
     then the solution is unique.
 \end{theorem}
-
 \begin{proof}
 assuming the two function $u_1$ and $u_2$ are harmonic functions on G with boundary $\gamma$, i.e. 
 \[
@@ -1608,65 +1634,97 @@ the value of the function attains its maximum or minimum value on its boundary a
     $u_1|_\gamma = f_1$ and $u_2|_\gamma = f_2$, if $|f_1 - f_2| \leq \epsilon  \;\;\; \forall \epsilon > 0$ then $|u_1(x) - u_2(x)| \leq \epsilon \;\;\; \forall x \in G \cup \gamma $
 \end{theorem}
 \begin{proof}
-    according to he maximum principle 
-    \[
-        -\epsilon \leq u_1 - u_2 \leq \epsilon \;\;\; \Rightarrow \;\;\; |u_1 - u_2| \leq \epsilon    
-    \]
+    according to he maximum principle $-\epsilon \leq u_1 - u_2 \leq \epsilon \;\;\; \Rightarrow \;\;\; |u_1 - u_2| \leq \epsilon$
 \end{proof}
 
+\begin{enrichment*}{Potential Function}
+    The inverse square law's occurrence is frequent in physics, most notably in the classical theory of gravitation where the gravitational force is inversly proportional to the square of the sepration between two masses.
+\[
+    F_g = G\frac{m_1 m_2}{r^2}    
+\]
+and in classical electrostatics where cloumb's law for the electrical force between stationary charges is.
+\[
+    F_e = K\frac{q_1 q_2}{r^2}    
+\]
+in general we find that $F \propto \frac{1}{r^2}$ is frequently occuring in physics and since the potential energy is the intgration of force
+= $\displaystyle -\int F dr$ we find that potential energy is porportioanl to the inverse of or sepration distance $PE \propto \frac{1}{r}$, thus the need for studying such functions is as important as potential energy which showed to be very important.
+\par
+now we define a general function called E which is porportioanl to the inverse of or sepration, the most general will be.
+\[
+    E(x,y) = \frac{1}{r}\;\;,\;\;\;\;\;\;\; where\;\;\;\;\; r = \sqrt{(y_1-x_1)^2 + (y_2-x_2)^2 + (y_2-x_2)^2}    
+\]
+It is easy to show that E is harmonic on $\mathbb{R}^3$.
+\[
+    \nabla_{x}^{2} E(x,y) = 0 \tquad \text{and} \tquad \nabla_{y}^{2} E(x,y) = 0    
+\]
+where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the laplacean with resprect to x and y respectivly
+\end{enrichment*}
 
-
-\begin{theorem}[Oleinik's Theorem (maximum principle)]
-    if u is a harmonic function on G and u is continuous on $G \cup \gamma$, then u attains its maximum or minimum value on $\gamma$    
-\end{theorem}
-\begin{proof}
-    suppose that the maximum value of u on $G \cup \gamma$ is M, and the minimum value of u on $G \cup \gamma$ is m, then it is clear that $M \geq m$.
-    \par
-    suppose that $M > m$ 
-    \par
-    we first define
-    \[
-        v(x,y) = u(x,y) + \frac{M-m}{2d^2}\left[(x-x_{1})^2+(y-y_{1})^2\right]    
-    \]
-    \begin{center}
-        \includegraphics[scale=0.1]{diameter.png}
-    \end{center}
-    where d is the diameter of the domain G, and $(x_1,y_1)$ is a point inside G such that, $u(x_1,y_1) = M$, thus we have.
-    \[
-        v(x_1,y_1) = u(x_1,y_1) = M    
-    \]
-    and on $\gamma$ we find
-    \begin{align*}
-        v(x,y) &\leq m+\frac{M-m}{2}
-        \\
-        v(x,y) &\leq \frac{M+m}{2} < \frac{M+M}{2} = M
-        \\
-        v(x,y) &< M
-    \end{align*}
-    this means that v attains a maximum value at a point call it $(x_2,y_2)$ inside G thus we have.
-    \[
-        \frac{\partial^2 v(x_2,y_2)}{\partial x^2} \leq 0 \;\;\;\;\; \text{and} \;\;\;\;\; \frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
-    \]
-    \[
-        \therefore  \nabla^2 v(x_2,y_2) =  \frac{\partial^2 v(x_2,y_2)}{\partial x^2}+\frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
-    \]
-    from the definition of v e obtain
-    \begin{align*}
-        \frac{\partial^2 v}{\partial x^2} &= \frac{\partial^2 u}{\partial x^2} + \frac{M-m}{d^2}
-        \\
-        \frac{\partial^2 v}{\partial y^2} &= \frac{\partial^2 u}{\partial y^2} + \frac{M-m}{d^2}
-        \\
-        \nabla^2 v = \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial x^2} &= \nabla^2 u + \frac{2(M-m)}{d^2} =  \frac{2(M-m)}{d^2}
-        \\
-        \nabla^2 v &= \frac{2(M-m)}{d^2} > 0
-    \end{align*}
-    which is a contradiction thus M must equal m 
-\end{proof}
-
-
-
-
-
+\setcounter{equation}{0}
+\subsection{Representation formula}
+We will utilize Green's identity and the potential function for solving Laplace's equation Drichlet problem. Due to the singularity of the potential function an issue arises, thus we will apply the identity to the pair of functions u and E on the region G with a sphere of radius $\epsilon$ cutout with the singularity being the center of the sphere, then take the limit of $\epsilon$ to zero to find our final answer.
+\begin{figure}[h]
+\begin{center}
+\includegraphics[scale=0.15]{rep.png}
+\captionlabelfalse
+\caption{the domian}
+\end{center}
+\end{figure}
+the domain $G$ is any contineous closed volume, with surface $S$, the domain $G_\epsilon$ is a sphere inside our volume, i.e. $G_\epsilon \in G$, with its center $x = (x_1,x_2,x_3)$, radius $\epsilon$, and surface $S_\epsilon$. 
+\begin{align}
+\nabla_{y}^{2} u(y) =0
+\end{align}
+where
+\begin{align}
+u(y) \in C^3(G)\;,\;\;\; u(y) \in C^2(G\cup S)
+\end{align}
+from (2) the condition for using Green's identity between the pair of function u and the potential function E is satisfyed since they are both contineous on our domain. Thus using the identity yeilds.
+\[
+    \int_G \left[E(x,y)\nabla_{y}^{2} u(y) - u(y)\nabla_{y}^{2} E(x,y)\right]dx = \int_\Gamma \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma    
+\]
+\[
+  \because \nabla_{y}^{2} E(x,y) = 0    
+\]
+and from (1) we get that the left hand side is zero then we get.
+\[
+    \int_\Gamma \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma = 0    
+\]
+since a sphere cutout was proposed then our region of study has two surfaces with the normal being opposite in direction thus the surface integral at hand can be split in two and we get.
+\[
+    \int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma - \int_{S_\epsilon} \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n_\epsilon}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n_\epsilon}}\right] d\sigma_\epsilon  = 0    
+\]
+the first term in the second intgral vanishes due to spherical symmetry, 
+\\and on $S_\epsilon$ we have $r=\epsilon$ then $E = \frac{1}{\epsilon}$ therefore $\displaystyle \frac{\partial E(x,y)}{\partial \vec{n_\epsilon}} = \frac{\partial}{\partial \epsilon}\frac{1}{\epsilon} = -\frac{1}{\epsilon^2}$
+thus we are left with.
+\[
+    \int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma  = \frac{1}{\epsilon^2} \int_{S_\epsilon} u(y) d\sigma_\epsilon    
+\]
+by adding and subtracting $\displaystyle \frac{1}{\epsilon^2} \int_{S_\epsilon} u(x) d\sigma_\epsilon$ the following term from the right hand side.
+\begin{align}
+\int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma  &= \frac{1}{\epsilon^2} \left[\int_{S_\epsilon} (u(y) - u(x)) d\sigma_\epsilon + \int_{S_\epsilon} u(x) d\sigma_\epsilon\right]
+\end{align}
+we now show that the first integral on the right hand side vanishes as $\epsilon \to 0$.
+\[
+    \left|\int_{S_\epsilon} u(y)-u(x) d\sigma_\epsilon \right| \leq \int_{S_\epsilon} |u(y)-u(x)| d\sigma_\epsilon \leq \delta(\epsilon)\int_{S_\epsilon} d\sigma_\epsilon \leq 4\pi \delta(\epsilon)    
+\]
+as $\epsilon \to 0$ , $\delta(\epsilon) \to 0$
+\\because the absolute value of the integral is $\leq$ 0 then it's equal 0. Now we evalute the second integral.
+\[
+    \int_{S_\epsilon} u(x)d\sigma_\epsilon = u(x)\int_{S_\epsilon}d\sigma_\epsilon = u(x) 4\pi\epsilon^2
+\]
+substituting in (3) we finally get the representation formula
+\[
+    u(x) = \frac{1}{4\pi} \int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma    
+\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%             end of the finished
+%   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \end{document}

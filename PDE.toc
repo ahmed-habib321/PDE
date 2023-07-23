@@ -19,5 +19,7 @@
 \contentsline {subsection}{\numberline {4.4}Kirchhoff's Formula}{22}{}%
 \contentsline {section}{\numberline {5}Laplace's Equation}{25}{}%
 \contentsline {subsection}{\numberline {5.1}Solution of Laplace's Equation on a Circle}{25}{}%
-\contentsline {subsection}{\numberline {5.2}Harmonic Functions}{29}{}%
+\contentsline {subsection}{\numberline {5.2}Harmonic Functions}{28}{}%
+\contentsline {subsection}{\numberline {5.3}Green's Identity}{30}{}%
+\contentsline {subsection}{\numberline {5.4}Representation formula}{33}{}%
 \contentsfinish 
