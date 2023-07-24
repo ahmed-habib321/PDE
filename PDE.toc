@@ -27,4 +27,5 @@
 \contentsline {section}{\numberline {7}Integral Equations}{37}{}%
 \contentsline {subsection}{\numberline {7.1}Successive Approximation}{37}{}%
 \contentsline {subsection}{\numberline {7.2}Fredholm's Integral Equation}{39}{}%
+\contentsline {subsection}{\numberline {7.3}Volttera Integral Equation}{41}{}%
 \contentsfinish 

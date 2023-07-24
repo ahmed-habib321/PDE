@@ -2086,8 +2086,59 @@ if $|\lambda|M(b-a) < 1$ then the series converges absolutly and uniformally
     u(x) = \frac{3}{3-\lambda}x, \quad  |\lambda| < 3,\lambda \neq 0
     \]
 \end{example}
+\subsection{Volttera Integral Equation}
+Volterra integral equations have wide applications in areas like control theory, population dynamics, signal processing, and modeling dynamic systems. Different forms of the equation, such as Volterra integral equations of the second kind, exist to address specific scenarios and applications.
+\par 
+consider the following  integral equation.
+\[
+u(x) = f(x) + \int_{0}^{x} K(x,y) u(y)dy
+\]
+where the functions $f(x)$ is a given function, often called the "forcing function" or "input function."
+and $k(x,y)$ is a given kernel function
+\\
+To solve this equation we use, as we did with Fredholm's intergral equation, the method f succssive approximation. We first define a sequence.
+\[
+u_n(x) = f(x) + \int_{0}^{x} K(x,y) u_{n-1}(y)dy    
+\]
+we can choose our first term arbitrarly but here we choose it to be $u_0(x) = f(x)$ then we getting.
+\begin{align*}
+u_1(x) &= u_0(x) + \int_{0}^{x} K(x,y) u_0(y)dy
+\\
+u_1(x) - u_0(x) &= \int_{0}^{x} K(x,y) f(y)dy
+\end{align*}
+from this as before we can see that.
+\[
+|u_1(x) - u_0(x)| \leq mMx
+\]
+\[
+\because M=\sup|K(x,y)| \quad , \quad m=\sup |f(x)|        
+\]
+then we continue in the same way.
+\begin{align*}
+u_2(x) - u_1(x) &= \int_{0}^{x} k(x,y) [u_1(x) - u_0(x)] dy
+\\
+|u_2(x) - u_1(x)| &\leq mM^2\frac{x^2}{2}
+\end{align*}
+and by induction we find that.
+\[
+|u_n(x) - u_{n-1}(x)| \leq mM^n\frac{x^n}{n!}    
+\]
+now we study the series.
+\begin{align*}
+u_0 + \sum_{k=1}^{n} [u_k-u_{k-1}] &= u_0 + u_1 - u_0 +u_2 - u_1 + \cdots +u_{n-1}-u_{n-2}+ u_n - u_{n-1} 
+\\
+&= u_n
+\end{align*}
+taking the limit as n approches infinity
+\begin{align*}
+u(x) = \lim_{n\to \infty} u_n(x) &= u_0 + \sum_{k=1}^{\infty} [u_k-u_{k-1}]    
+\\
+& \leq m\sum_{k=1}^{\infty} \frac{{(xM)}^n}{n!}
+\end{align*}
 
-
-
+ and we can deduce that the sum is uniformally convergent and we can find u.
+\begin{align*}
+u(x) = \lim_{n\rightarrow\infty} u_n(x) = u_0(x) + \sum_{k=1}^{n} [u_k(x) -u_{k-1}(x)]
+\end{align*}
 
 \end{document}
