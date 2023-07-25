@@ -28,4 +28,8 @@
 \contentsline {subsection}{\numberline {7.1}Successive Approximation}{37}{}%
 \contentsline {subsection}{\numberline {7.2}Fredholm's Integral Equation}{39}{}%
 \contentsline {subsection}{\numberline {7.3}Volttera Integral Equation}{41}{}%
+\contentsline {subsection}{\numberline {7.4}Abel Integral equation}{43}{}%
+\contentsline {section}{\numberline {8}Energy Integral}{44}{}%
+\contentsline {subsection}{\numberline {8.1}Energy Conservation For a Wave in 1D}{44}{}%
+\contentsline {subsection}{\numberline {8.2}Energy conservation for the 3d wave equation}{46}{}%
 \contentsfinish 

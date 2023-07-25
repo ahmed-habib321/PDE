@@ -2135,10 +2135,180 @@ u(x) = \lim_{n\to \infty} u_n(x) &= u_0 + \sum_{k=1}^{\infty} [u_k-u_{k-1}]
 \\
 & \leq m\sum_{k=1}^{\infty} \frac{{(xM)}^n}{n!}
 \end{align*}
+and we can deduce that the sum is uniformally convergent and we can find u because the factorial is more powerful that the exponential.
 
- and we can deduce that the sum is uniformally convergent and we can find u.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+
+\subsection{Abel Integral equation}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Energy Integral}
+\
+\begin{definition} [The Energy Integral]
+    is a mathematical expression that represents the total energy of a vibrating string.
+\end{definition}
+$E(t)$ in 1-dimension is defined as :
+\[
+E(t)  =  \frac{\rho}{2} \int {\left(\frac{\partial u}{\partial t}\right)}^2 dx + \frac{\mu}{2} \int {\left(\frac{\partial u}{\partial x}\right)}^2 dx
+\] 
+\begin{itemize}
+    \item $\rho$ is the constant density
+    \item $\mu$ is the coefficient of tension of the string
+    \item $\displaystyle \frac{\rho}{2} \int {\left(\frac{\partial u}{\partial t}\right)}^2 dx $ corresponds to the "kinetic energy" of the body (in analogy with $\frac{1}{2}mv^2$, the kinetic energy of a particle of mass m and velocity v)
+    \item $\displaystyle \frac{\mu}{2} \int {\left(\frac{\partial u}{\partial x}\right)}^2 dx $ corresponds to the "potential energy".
+\end{itemize}
+
+The energy integral is essential because it helps us understand how energy is distributed in the wave as it propagates through space and time. It also plays a crucial role in analyzing the behavior of waves, their interactions with other waves or boundaries, and studying the overall dynamics of wave phenomena in various physical systems.
+
+\subsection{Energy Conservation For a Wave in 1D}
+To prove that the energy integral is conservative over the wave equation in 1D,
+we need to show that the total energy of the system remains constant over time, i.e., the derivative of the energy with respect to time is zero.
+\par
+let's consider the wave equation
+\[
+    \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \tquad c^2 = \frac{\mu}{\rho} \tquad x : a\to b \text{ (string length)}
+\]
+\begin{theorem}
+    let $g : \mathbb{R}\times\mathbb{R} \to \mathbb{R}$ be a contineous function such that $\displaystyle \frac{\partial g(x,t)}{\partial t}$ exist and is continous.
+    \\
+    Suppose $\displaystyle \int_{-\infty}^{\infty} |g(x,t)| dx $  and   $\displaystyle \int_{-\infty}^{\infty} |\frac{\partial g(x,t)}{\partial t}| dx $ exists for each $t$
+    and that $\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$ uniformally in $t$ on every interval $[a,b]$.\
+    \\
+    Then $\displaystyle \int_{-\infty}^{\infty} g(x,t) dx $ is differentiable with :
+    \[
+        \frac{\partial}{\partial t} \int_{-\infty}^{\infty} g(x,t) dx = \int_{-\infty}^{\infty} \frac{\partial g(x,t)}{\partial t} dx
+    \]
+\end{theorem}
+by differentiate $E(t)$
+\[
+E'(t) = \frac{\rho}{2} \int_{a}^{b} 2\frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx + \frac{\mu}{2} \int_{a}^{b} 2\frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial t\partial x} dx    
+\]
+by integrating by parts for the second integral 
+\[
+E'(t) = \rho \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx +\mu\left[\frac{\partial u}{\partial x}\frac{\partial u}{\partial t}\right]_{a}^{b} -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
+\]
+\newpage 
+assuming that initial conditions on the derivatives are
+$\displaystyle \frac{\partial u(a,t)}{\partial t} = \frac{\partial u(b,t)}{\partial t} = 0$
+in other words the ends are fixed so there is no movement and hence no velocity
+\[
+\therefore E'(t) = \rho \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
+\]
+from the wave equation we get 
 \begin{align*}
-u(x) = \lim_{n\rightarrow\infty} u_n(x) = u_0(x) + \sum_{k=1}^{n} [u_k(x) -u_{k-1}(x)]
+    E'(t) &= \rho c^2 \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
+    \\
+    &= \mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx = 0
 \end{align*}
+that shows us that $E(t)$ is constant for all $t$
+\par
+in a more general context by starting with the kinetic energy
+\[
+K.E = \frac{\rho}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx    
+\]
+To get convergence of the integral we have to assume that the integrand vanishes
+outside of some large interval $|x| \leq R$.
+To see whether the K.E is conserved in time
+we differentiate with respect to time and we get
+\[
+\frac{d}{dt}K.E = \frac{\rho}{2} \int_{-\infty}^{\infty} 2\frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx = \mu \int_{-\infty}^{\infty} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx
+\]
+The final integral does not look like it would be zero but if we integrate by
+parts we come up with something useful:
+\[
+    \mu \int_{-\infty}^{\infty} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx = \mu \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{-\infty}^{\infty} - \mu \int_{-\infty}^{\infty} \frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial x \partial t} dx
+\]
+now $\displaystyle \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{-\infty}^{\infty} $ should vanish because the derivatives ought to approach zero in the limit. So we are left with:
+\[
+\frac{d}{dt}K.E = -\frac{d}{dt}\left(\frac{\mu}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx\right)
+\]
+and because the potential Energy is defined as 
+\[
+P.E = \frac{\mu}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx
+\]
+then 
+\[
+   \frac{d}{dt}K.E = \frac{d}{dt}P.E 
+\]
+or 
+\[
+\frac{d}{dt} \left(K.E + P.E \right) = 0    
+\]
+then that says that the total energy $E(t)$ is conservative
+
+\subsubsection*{Differentiating Under Integral}
+As can be seen from the Theorem, we need continuity of 
+$\displaystyle \frac{\partial g(x, t)}{\partial t}$
+where $g(x,t)$ is 
+$\displaystyle {\left(\frac{\partial u}{\partial t}\right)}^2$
+and
+$\displaystyle {\left(\frac{\partial u}{\partial x}\right)}^2$. 
+From physical considerations the energy is finite so that we should have existence of
+$\displaystyle \int_{a}^{b} |g(x,t)|dx$. As for the integral
+$\displaystyle \int_{-\infty}^{\infty} \left|\frac{\partial g(x,t)}{\partial x}\right|dx$
+, it has to exist for each $t$. In our case there is a finite spatial interval of integration
+[a, b] so that given the continuity of the derivatives on this interval there ought
+to be no blow ups so we can assume this condition is satisfied for all t. 
+The final condition in the theorem requires
+$\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$
+and since we are dealing with a finite spatial interval this should also be satisfied.
+Hence, differentiating under the integral sign is accepetable.
+
+\subsection{Energy conservation for the 3d wave equation}
+let's consider the wave equation in 3d
+\[
+u_{tt} = \nabla_x^2 u \tquad B.C \to u|_{\Gamma} = 0
+\]
+the Energy Integral will be as following
+\[
+    E = \iiint_{D}(u_t^2 + |\nabla_x u|^2) dx
+\]
+Suppose u is smooth so that $u_{x_{i}t}=u_{t x_{i}}$, 
+and the energy is bounded, then we can put the differentiation inside the integral sign:
+\[
+\frac{dE}{dt} = \iiint_{D}(  2 u_t u_{tt} + 2 \nabla_x u \cdot (\nabla_x u)_t) dx
+\]
+now because $u_{tt} = \nabla_x^2 u$ then
+\[
+    \frac{dE}{dt} = \iiint_{D}(  2 u_t \nabla_x^2 u + 2 \nabla_x u \cdot (\nabla_x u)_t) dx
+\]
+Use Green's identities (integration by parts using divergence theorem):
+\[
+    \iiint_{D} \psi \nabla^2 \phi dx = -\iiint_{D} \nabla \psi \cdot \nabla \phi dx + \iint \psi (\nabla \phi \cdot n )dS
+\]
+where $\psi = u_t $ and  $\phi = u$
+\[
+    \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2\nabla_x u \cdot (\nabla_x u)_t) dx  + \iint u_t(\nabla_x u \cdot n )dS
+\]
+For the boundary condition u=0 on boundary then 
+\[
+    u_t(\nabla_x u \cdot n ) = 0
+\]
+\[
+  \therefore  \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2\nabla_x u \cdot (\nabla_x u)_t) dx
+\]
+and because u is smooth thus $\nabla_x (u_t) =(\nabla_x u)_t$
+\[
+  \therefore  \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2 \nabla_x u \cdot \nabla_x (u_t)) dx
+\]
+\[
+    \therefore  \frac{dE}{dt} = 0
+\]
+therefore the energy $E(t)$ is conservative on 3D wave equation and same method can be applied with n-th dimension
 
 \end{document}
