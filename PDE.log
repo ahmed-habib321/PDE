@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  25 JUL 2023 18:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  25 JUL 2023 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -949,186 +949,186 @@ Underfull \hbox (badness 10000) in paragraph at lines 663--665
 
  []
 
-[14] [15] [16]
-<d_Alembert.jpg, id=81, 1177.39874pt x 1504.8722pt>
+[14] [15] [16] [17]
+<d_Alembert.jpg, id=84, 1177.39874pt x 1504.8722pt>
 File: d_Alembert.jpg Graphic file (type jpg)
 <use d_Alembert.jpg>
-Package pdftex.def Info: d_Alembert.jpg  used on input line 877.
+Package pdftex.def Info: d_Alembert.jpg  used on input line 982.
 (pdftex.def)             Requested size: 68.28644pt x 87.25739pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 877--877
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 982--982
 [][] 
  []
 
-
-Overfull \hbox (2.2179pt too wide) detected at line 917
+[18]
+Overfull \hbox (2.2179pt too wide) detected at line 1022
 []
  []
 
-[17 <./d_Alembert.jpg>] [18]
+[19 <./d_Alembert.jpg>] [20]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 970.
+(Font)              <8> on input line 1075.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 970.
+(Font)              <6> on input line 1075.
 
-Overfull \hbox (6.36252pt too wide) in paragraph at lines 975--977
+Overfull \hbox (6.36252pt too wide) in paragraph at lines 1080--1082
 \T1/lmr/m/n/10 where $\OMS/lmsy/m/n/10 r[]$ \T1/lmr/m/n/10 is the Laplace-Beltrami op-er-a-tor, a gen-er-al-iza-tion of the Laplace op-er-a-tor in n-dimensional
  []
 
-<xi.png, id=88, 1252.68pt x 1023.825pt>
+<xi.png, id=95, 1252.68pt x 1023.825pt>
 File: xi.png Graphic file (type png)
 <use xi.png>
-Package pdftex.def Info: xi.png  used on input line 980.
+Package pdftex.def Info: xi.png  used on input line 1085.
 (pdftex.def)             Requested size: 125.27533pt x 102.38849pt.
-[19 <./xi.png>]
+[21 <./xi.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1025.
-<div.png, id=99, 188.20313pt x 141.52875pt>
+(mdframed)              on input line 1130.
+<div.png, id=105, 188.20313pt x 141.52875pt>
 File: div.png Graphic file (type png)
 <use div.png>
-Package pdftex.def Info: div.png  used on input line 1035.
+Package pdftex.def Info: div.png  used on input line 1140.
 (pdftex.def)             Requested size: 112.92273pt x 84.9179pt.
- [20 <./div.png>]
-<Darboux.jpg, id=105, 458.71375pt x 601.24625pt>
+ [22 <./div.png>]
+<Darboux.jpg, id=111, 458.71375pt x 601.24625pt>
 File: Darboux.jpg Graphic file (type jpg)
 <use Darboux.jpg>
-Package pdftex.def Info: Darboux.jpg  used on input line 1091.
+Package pdftex.def Info: Darboux.jpg  used on input line 1196.
 (pdftex.def)             Requested size: 68.28644pt x 89.50414pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1091--1091
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1196--1196
 [][] 
  []
 
-[21 <./Darboux.jpg>] [22] [23]
-Underfull \hbox (badness 1584) in paragraph at lines 1244--1247
+[23 <./Darboux.jpg>] [24] [25]
+Underfull \hbox (badness 1584) in paragraph at lines 1349--1352
 []\T1/lmr/m/n/10 Gustav Kirch-hoff (1824-1887) was a promi-nent Ger-man physi-cist
  []
 
-<Kirchhoff.jpg, id=115, 426.59375pt x 601.24625pt>
+<Kirchhoff.jpg, id=122, 426.59375pt x 601.24625pt>
 File: Kirchhoff.jpg Graphic file (type jpg)
 <use Kirchhoff.jpg>
-Package pdftex.def Info: Kirchhoff.jpg  used on input line 1247.
+Package pdftex.def Info: Kirchhoff.jpg  used on input line 1352.
 (pdftex.def)             Requested size: 68.28644pt x 96.23805pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1247--1247
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1352--1352
 [][] 
  []
 
-[24 <./Kirchhoff.jpg>]
-<domain.png, id=119, 1657.69313pt x 1041.8925pt>
+[26 <./Kirchhoff.jpg>]
+<domain.png, id=126, 1657.69313pt x 1041.8925pt>
 File: domain.png Graphic file (type png)
 <use domain.png>
-Package pdftex.def Info: domain.png  used on input line 1267.
+Package pdftex.def Info: domain.png  used on input line 1372.
 (pdftex.def)             Requested size: 165.77902pt x 104.19534pt.
-<circle.png, id=120, 1181.91562pt x 1181.91562pt>
+<circle.png, id=127, 1181.91562pt x 1181.91562pt>
 File: circle.png Graphic file (type png)
 <use circle.png>
-Package pdftex.def Info: circle.png  used on input line 1287.
+Package pdftex.def Info: circle.png  used on input line 1392.
 (pdftex.def)             Requested size: 200.92299pt x 200.92299pt.
- [25 <./domain.png> <./circle.png>] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1399--1402
+ [27 <./domain.png> <./circle.png>] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1504--1507
 
  []
 
-[27]
+[29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1441.
+(mdframed)              on input line 1546.
 
-Overfull \hbox (37.42564pt too wide) detected at line 1463
+Overfull \hbox (37.42564pt too wide) detected at line 1568
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
  []
 
-[28]
+[30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1475.
- [29]
-<green.png, id=140, 1580.90625pt x 1036.62282pt>
+(mdframed)              on input line 1580.
+ [31]
+<green.png, id=147, 1580.90625pt x 1036.62282pt>
 File: green.png Graphic file (type png)
 <use green.png>
-Package pdftex.def Info: green.png  used on input line 1520.
+Package pdftex.def Info: green.png  used on input line 1625.
 (pdftex.def)             Requested size: 316.17564pt x 207.32089pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1555.
- [30 <./green.png>]
-Package mdframed Info: Not enough space on this page on input line 1557.
-<diameter.png, id=145, 1621.55812pt x 1041.8925pt>
+(mdframed)              on input line 1660.
+ [32 <./green.png>]
+Package mdframed Info: Not enough space on this page on input line 1662.
+<diameter.png, id=152, 1621.55812pt x 1041.8925pt>
 File: diameter.png Graphic file (type png)
 <use diameter.png>
-Package pdftex.def Info: diameter.png  used on input line 1570.
+Package pdftex.def Info: diameter.png  used on input line 1675.
 (pdftex.def)             Requested size: 162.16531pt x 104.19534pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1608.
- [31 <./diameter.png>]
-Package mdframed Info: Not enough space on this page on input line 1615.
+(mdframed)              on input line 1713.
+ [33 <./diameter.png>]
+Package mdframed Info: Not enough space on this page on input line 1720.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1631.
-<rep.png, id=151, 1580.90625pt x 877.77937pt>
+(mdframed)              on input line 1736.
+<rep.png, id=157, 1580.90625pt x 877.77937pt>
 File: rep.png Graphic file (type png)
 <use rep.png>
-Package pdftex.def Info: rep.png  used on input line 1668.
+Package pdftex.def Info: rep.png  used on input line 1773.
 (pdftex.def)             Requested size: 237.1257pt x 131.66122pt.
- [32] [33 <./rep.png>] [34] [35] [36]
+ [34] [35 <./rep.png>] [36] [37] [38]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1878.
+(mdframed)              on input line 1983.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1885.
- [37]
-Overfull \hbox (1.66159pt too wide) in paragraph at lines 1911--1912
+(mdframed)              on input line 1990.
+ [39]
+Overfull \hbox (1.66159pt too wide) in paragraph at lines 2016--2017
 []\T1/lmr/m/n/10 The suc-ces-sive ap-prox-i-ma-tion method is an it-er-a-tive ap-proach that al-lows us to find an ap-prox-i-mate
  []
 
 
-Overfull \hbox (4.82407pt too wide) in paragraph at lines 1914--1915
+Overfull \hbox (4.82407pt too wide) in paragraph at lines 2019--2020
 []\T1/lmr/bx/n/10 Formulate the In-te-gral Equa-tion\T1/lmr/m/n/10 : Write down the in-te-gral equa-tion in the form men-tioned
  []
 
 
-Overfull \hbox (7.11365pt too wide) in paragraph at lines 1921--1922
+Overfull \hbox (7.11365pt too wide) in paragraph at lines 2026--2027
 []\T1/lmr/bx/n/10 Repeat the Pro-cess\T1/lmr/m/n/10 : Use $\OML/lmm/m/it/10 ^^^[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \T1/lmr/m/n/10 as the new ap-prox-i-ma-tion and re-peat the pro-cess. Sub-sti-tute
  []
 
-[38] [39] [40]
-Overfull \hbox (1.5514pt too wide) in paragraph at lines 2090--2091
+[40] [41] [42]
+Overfull \hbox (1.5514pt too wide) in paragraph at lines 2195--2196
 \T1/lmr/m/n/10 Volterra in-te-gral equa-tions have wide ap-pli-ca-tions in ar-eas like con-trol the-ory, pop-u-la-tion dy-nam-ics,
  []
 
-[41] [42] [43]
+[43] [44] [45] [46]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2162.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2170.
+(mdframed)              on input line 2323.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2331.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2186.
- [44{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [45] [46] (PDE.aux)
+(mdframed)              on input line 2347.
+ [47{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [48] [49] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26130 strings out of 476048
- 568226 string characters out of 5780228
+ 26131 strings out of 476048
+ 568242 string characters out of 5780228
  1885753 words of memory out of 5000000
- 46346 multiletter control sequences out of 15000+600000
+ 46347 multiletter control sequences out of 15000+600000
  593221 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,14n,96p,1239b,737s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (46 pages, 4286538 bytes).
+Output written on PDE.pdf (49 pages, 4298962 bytes).
 PDF statistics:
- 317 PDF objects out of 1000 (max. 8388607)
+ 327 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -768,7 +768,112 @@ T_n(0) = c
 \]
 now by substitute $T_n (t)$ in (7) we get $v$ then we can obtain $u$ by $u = v + u_E$.
 
-
+\setcounter{equation}{0}
+\subsection{cauchy in-homogeneous Problem}
+also know as Heat with a source cauchy problem
+\\
+consider the inhomogeneous heat equation on the whole line
+\begin{equation}
+    \begin{cases}
+        \frac{\partial u\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t),\quad c\neq 0,\quad-\infty<x<\infty,\quad t>0
+        \\
+        u\left(x,0 \right) = \phi\left(x\right)
+    \end{cases}
+\end{equation}
+where $f(x, t)$ and $\phi(x)$ are arbitrary given functions. 
+$f(x, t)$, is called the source term, and measures the physical effect of an external heat source.
+\par
+From the superposition principle, we know that the solution of the inhomogeneous equation can
+be written as the sum of the solution of the homogeneous equation, and a particular solution of the
+inhomogeneous equation. We can thus break problem (1) into the following two problems
+\begin{equation}
+    \begin{cases}
+        \frac{\partial u^h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^h(x,t)}{\partial x^2}
+        \\
+        u^h\left(x,0 \right) = \phi\left(x\right)
+    \end{cases}
+\end{equation}
+\begin{equation}
+    \begin{cases}
+        \frac{\partial u^p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^p(x,t)}{\partial x^2}+ f(x,t)
+        \\
+        u^p\left(x,0 \right) = 0
+    \end{cases}
+\end{equation}
+Obviously, $u = u^h + u^p$ will solve the original problem (1).
+\\
+We have solved problem (2) before, and arrived at the solution
+\begin{equation}
+    u^h(x,t) = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy        
+\end{equation}
+where $S(x,t)$ is the heat kernel and it's equal to $\displaystyle \frac{e^{-\frac{x^2}{4tc^2}}}{2\sqrt{\pi tc^2}}$.
+\\
+Notice that the physical meaning of expression (4) is that the heat
+kernel averages out the initial temperature distribution along the entire rod.
+\par
+Since $f(x, t)$ plays the role of an external heat source, it is clear that this heat contribution must be averaged out too. 
+But in this case one needs to average not only over the entire rod, but over time as well, 
+since the heat contribution at an earlier time will effect the temperatures at all later times. 
+We claim that the solution to (3) is given by
+\begin{equation}
+    u^p(x,t) = \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+\end{equation}
+Combining (4) and (5) we obtain the following solution to the IVP (1)
+\begin{equation}
+    u(x,t)  = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy + \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+\end{equation}
+now substitute the heat kernel
+\[
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
+\]
+One can draw parallels between formula (6) and the solution to the inhomogeneous ODE analogous
+to the heat equation. Indeed, consider the IVP for the following ODE.
+\begin{equation}
+    \begin{cases}
+        \frac{du(t)}{dt} - A u(t) = f(x,t)
+        \\
+        u(0) = \phi
+    \end{cases}
+\end{equation}
+Using an integrating factor $e^{-At}$,the ODE in (7) yields
+\[
+\frac{d}{dt}\left(e^{-At}u\right)= e^{-At} \frac{du}{dt} - Ae^{-At} u  = e^{-At}(u'-Au) = e^{-At} f(t)
+\]
+then
+\[
+    e^{-At}u = \int_{0}^{t} e^{-As} f(s)ds + C
+\]
+at $t=0$
+\[
+c = \phi    
+\]
+\[
+    u = e^{At}\phi + \int_{0}^{t} e^{A(t-s)} f(s)ds
+\]
+We now show that (6) indeed solves problem (1) by a direct substitution. 
+Since we have solved the homogeneous equation before, it suffices to show that $u^p$ given by (5) solves problem (3). 
+\par
+by differentiating (5) with respect to t gives
+\[
+    \frac{\partial u^p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,s) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
+\]
+the heat kernel solves the heat equation and has the Dirac delta function as its initial
+means that $S_t =c^2 S_{xx}$ and $S(x-y,0) = \delta(x-y)$ hence,
+\begin{align*}
+    \frac{\partial u^p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,s) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
+    \\
+    &= f(y,s) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+    = f(y,s) + c^2 \frac{\partial^2 u^p}{\partial x^2}
+\end{align*}
+which shows that up solves the inhomogeneous heat equation. It is also clear that
+\[
+\lim_{t \to 0} u^p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
+\]
+thus $u^p$ given by (5), indeed solves problem (3), which finishes the proof that (6) solves the original IVP (1).
+\begin{enrichment*}{Duhamel's principle}
+    If one can solve an initial value problem for a homogeneous linear differential equation then an inhomogeneous linear differential equation can be solved as well.
+\end{enrichment*}
+\setcounter{equation}{0}
 \section{Wave Equation}
 The wave equation is the prototypical example for hyperbolic PDE's, it is a second order linear PDE that is used extensively in physics in studying the propagation of waves and wave fields. The general form of the wave equation is.
 \[
@@ -2137,24 +2242,80 @@ u(x) = \lim_{n\to \infty} u_n(x) &= u_0 + \sum_{k=1}^{\infty} [u_k-u_{k-1}]
 \end{align*}
 and we can deduce that the sum is uniformally convergent and we can find u because the factorial is more powerful that the exponential.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \newpage
 
 
 \subsection{Abel Integral equation}
+Abel integral equation belongs to the class of Volterra equations of the first kind
+it's expressed in the following general form:
+\[
+f(x) = \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau )}^\alpha} d\tau
+\]
+where $0<\alpha<1$ is known constants, $f(x)$ is a known function and $\phi(\tau)$ is unknown function,
+The expression ${(x-\tau )}^\alpha$  is called the kernel of the Abel integral equation, or Abel kernel
+by multiplying both sides with $\displaystyle \frac{1}{{(t-x)}^{1-\alpha}}$
+\[
+\frac{f(x)}{{(t-x)}^{1-\alpha}} = \frac{1}{{(t-x)}^{1-\alpha}} \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau)}^\alpha} d\tau
+\]
+and integrating with respect to $x$ from $0 \to t$
+\[
+\int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx=  \int_{0}^{t} \frac{1}{{(t-x)}^{1-\alpha}} \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau)}^\alpha} d\tau dx
+\]
+by switching the order of the integration 
+\[
+\int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx= \int_{0}^{t}\int_{\tau}^{t} \frac{1}{{(t-x)}^{1-\alpha}{(x-\tau)}^\alpha} dx \phi(\tau) d\tau
+\]
+taking the inner integral and put $x = \tau + (t-\tau)\xi \Longrightarrow dx = (t-\tau)d\xi$
+\begin{align*}
+    \int_{0}^{1} \frac{(t-\tau)}{{(t-\tau)}^\alpha \xi^\alpha {(t-\tau-(t-\tau)\xi)}^{1-\alpha}} d\xi 
+    &= \int_{0}^{1} \frac{(t-\tau)}{{(t-\tau)}^\alpha \xi^\alpha {(t-\tau)}^{-\alpha}{(1-\xi)}^{1-\alpha}} d\xi
+    \\
+    &= \int_{0}^{1} \frac{1}{\xi^{\alpha} {(1-\xi)}^{1-\alpha} } d\xi
+    \\
+    \text{this is the form of the } &\beta \text{ function }    
+    \\
+    &=\beta (1-\alpha,\alpha) = \frac{\pi}{\sin(\alpha\pi)}
+\end{align*}
+then
+\[
+\int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx = \int_{0}^{t} \frac{\pi}{\sin(\alpha\pi)} \phi(\tau) d\tau
+\]
+taking the derivative for t 
+\[
+\frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx = \frac{\pi}{\sin(\alpha\pi)} \phi(t)
+\]
+therefore $\phi(t)$ can be writen as 
+\[
+\phi(t) = \frac{\sin(\alpha\pi)}{\pi}  \frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx
+\]
+this is the solution of Abel Integral equation
+
+\subsection{}
+
+solve the following cauchy problem 
+\[
+\frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial t^2} + f(u)
+\]
+\[
+u(x,0) = \phi(x)
+\]
+$\phi$ is continous and bounded on $(-\infty,\infty)$ and f(u) satisfies the lipshitz 
+
+\[
+|f(u_1)-f(u_2)| \leq k |u_1-u_2| 
+\]
+$k>0$ is constant 
+
+we know that from poission formula that 
+\[
+u(x,t) = \frac{1}{\sqrt{4\pi (t-s)}} 
+\]
 
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \newpage
 
 \section{Energy Integral}
