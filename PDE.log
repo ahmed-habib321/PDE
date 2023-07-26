@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  25 JUL 2023 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.6.18)  26 JUL 2023 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -956,7 +956,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 17
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Cover1.jpg, id=146, 3126.68124pt x 4111.36pt>
+<Cover1.jpg, id=142, 3126.68124pt x 4111.36pt>
 File: Cover1.jpg Graphic file (type jpg)
 <use Cover1.jpg>
 Package pdftex.def Info: Cover1.jpg  used on input line 35.
@@ -968,193 +968,192 @@ Package pdftex.def Info: Cover1.jpg  used on input line 35.
 \openout6 = `PDE.toc'.
 
  [2]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 55.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 55.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 55.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 55.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 55.
+(Font)              <10> on input line 56.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 55.
+(Font)              <7> on input line 56.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 55.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 55.
+(Font)              <5> on input line 56.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 55.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 98.
+(mdframed)              on input line 99.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 101.
-<laplacecircle.png, id=242, 1580.90625pt x 1036.62282pt>
+(mdframed)              on input line 102.
+<laplacecircle.png, id=236, 1580.90625pt x 1036.62282pt>
 File: laplacecircle.png Graphic file (type png)
 <use laplacecircle.png>
-Package pdftex.def Info: laplacecircle.png  used on input line 112.
+Package pdftex.def Info: laplacecircle.png  used on input line 113.
 (pdftex.def)             Requested size: 158.09988pt x 103.66835pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 117.
+(mdframed)              on input line 118.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 122.
+(mdframed)              on input line 123.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 132.
- [4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png>] [5] [6] [7] [8] [9]
-<Cauchy.jpg, id=295, 331.2375pt x 331.2375pt>
-File: Cauchy.jpg Graphic file (type jpg)
-<use Cauchy.jpg>
-Package pdftex.def Info: Cauchy.jpg  used on input line 473.
-(pdftex.def)             Requested size: 68.28644pt x 68.28319pt.
+(mdframed)              on input line 133.
+<Dirichlet.jpg, id=238, 241.90375pt x 327.2225pt>
+File: Dirichlet.jpg Graphic file (type jpg)
+<use Dirichlet.jpg>
+Package pdftex.def Info: Dirichlet.jpg  used on input line 138.
+(pdftex.def)             Requested size: 68.28644pt x 92.37062pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 473--473
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 138--138
 [][] 
  []
 
-[10
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.494 \end{equation}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.494 \end{equation}
-                    
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.494 \end{equation}
-                     <./Cauchy.jpg>] [11]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 551.
+[4{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} <./laplacecircle.png> <./Dirichlet.jpg>] [5] [6] [7] [8] [9]
+<Cauchy.jpg, id=285, 331.2375pt x 331.2375pt>
+File: Cauchy.jpg Graphic file (type jpg)
+<use Cauchy.jpg>
+Package pdftex.def Info: Cauchy.jpg  used on input line 460.
+(pdftex.def)             Requested size: 68.28644pt x 68.28319pt.
 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.555 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.558 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.561 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.565 \begin{equation}
-                       [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 664--666
-
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 460--460
+[][] 
  []
 
+[10]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.476 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.480 \begin{equation}
+                       [11
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.520 \end{align*}
+                   <./Cauchy.jpg>]
+Underfull \hbox (badness 1242) in paragraph at lines 540--542
+\T1/lmr/m/n/10 was math-e-mati-cian, en-gi-neer, and physi-cist who made sig-nif-i-cant
+ []
+
+<Poisson.jpg, id=305, 336.50719pt x 401.24907pt>
+File: Poisson.jpg Graphic file (type jpg)
+<use Poisson.jpg>
+Package pdftex.def Info: Poisson.jpg  used on input line 542.
+(pdftex.def)             Requested size: 68.28644pt x 81.42392pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 542--542
+[][] 
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 548.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.666 \begin{equation}
+l.552 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.669 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.701 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.715 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.718 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.728 \end{align}
-                 
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.730 \begin{equation}
-                       [14]
+l.562 \begin{equation}
+                       [12 <./Poisson.jpg>] [13]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.777 \begin{equation}
+l.661 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.790 \begin{equation}
-                      
+l.680 \begin{equation}
+                       [14]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.797 \begin{equation}
+l.696 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.807 \begin{equation}
-                       [15]
+l.710 \begin{equation}
+                      
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.819 \begin{equation}
+l.725 \begin{equation}
                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.823 \begin{equation}
+l.729 \begin{equation}
                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.3.7}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.832 \begin{equation}
-                       [16] [17]
-<d_Alembert.jpg, id=350, 1177.39874pt x 1504.8722pt>
+l.772 \begin{equation}
+                       [15]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.785 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.792 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.802 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.814 \begin{equation}
+                      
+pdfTeX warning (ext4): destination with the same identifier (name{equation.3.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.818 \begin{equation}
+                       [16] [17] [18]
+<d_Alembert.jpg, id=347, 1177.39874pt x 1504.8722pt>
 File: d_Alembert.jpg Graphic file (type jpg)
 <use d_Alembert.jpg>
-Package pdftex.def Info: d_Alembert.jpg  used on input line 983.
+Package pdftex.def Info: d_Alembert.jpg  used on input line 998.
 (pdftex.def)             Requested size: 68.28644pt x 87.25739pt.
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 983--983
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 998--998
 [][] 
  []
 
@@ -1162,314 +1161,288 @@ Overfull \hbox (1.51756pt too wide) in paragraph at lines 983--983
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.989 \begin{equation}
-                      
+l.1004 \begin{equation}
+                        [19 <./d_Alembert.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.992 \begin{equation}
-                      
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1000 \begin{equation}
-                        [18]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1011 \end{align}
+l.1026 \end{align}
                   
-Overfull \hbox (2.2179pt too wide) detected at line 1023
+Overfull \hbox (2.2179pt too wide) detected at line 1038
 []
  []
 
-[19 <./d_Alembert.jpg>] [20]
+[20]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1073 \begin{equation}
+l.1084 \begin{equation}
                        
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 1076.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 1076.
-
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1079 \begin{equation}
+l.1090 \begin{equation}
                        
-Overfull \hbox (6.36252pt too wide) in paragraph at lines 1081--1083
+Overfull \hbox (6.36252pt too wide) in paragraph at lines 1092--1094
 \T1/lmr/m/n/10 where $\OMS/lmsy/m/n/10 r[]$ \T1/lmr/m/n/10 is the Laplace-Beltrami op-er-a-tor, a gen-er-al-iza-tion of the Laplace op-er-a-tor in n-dimensional
  []
 
-<xi.png, id=371, 1252.68pt x 1023.825pt>
+<Darboux.jpg, id=361, 458.71375pt x 601.24625pt>
+File: Darboux.jpg Graphic file (type jpg)
+<use Darboux.jpg>
+Package pdftex.def Info: Darboux.jpg  used on input line 1103.
+(pdftex.def)             Requested size: 68.28644pt x 89.50414pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1103--1103
+[][] 
+ []
+
+<xi.png, id=362, 1252.68pt x 1023.825pt>
 File: xi.png Graphic file (type png)
 <use xi.png>
-Package pdftex.def Info: xi.png  used on input line 1086.
+Package pdftex.def Info: xi.png  used on input line 1107.
 (pdftex.def)             Requested size: 125.27533pt x 102.38849pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1091 \begin{equation}
-                       
+l.1112 \begin{equation}
+                        [21 <./xi.png> <./Darboux.jpg>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1102 \begin{equation}
+l.1123 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1106 \begin{equation}
-                        [21 <./xi.png>]
+l.1127 \begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1128 \begin{equation}
+l.1149 \begin{equation}
                        
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1131.
-<div.png, id=383, 188.20313pt x 141.52875pt>
-File: div.png Graphic file (type png)
-<use div.png>
-Package pdftex.def Info: div.png  used on input line 1141.
-(pdftex.def)             Requested size: 112.92273pt x 84.9179pt.
- [22 <./div.png>]
-<Darboux.jpg, id=394, 458.71375pt x 601.24625pt>
-File: Darboux.jpg Graphic file (type jpg)
-<use Darboux.jpg>
-Package pdftex.def Info: Darboux.jpg  used on input line 1197.
-(pdftex.def)             Requested size: 68.28644pt x 89.50414pt.
+(mdframed)              on input line 1152.
+ [22] [23]
+Underfull \hbox (badness 1584) in paragraph at lines 1227--1230
+[]\T1/lmr/m/n/10 Gustav Kirch-hoff (1824-1887) was a promi-nent Ger-man physi-cist
+ []
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1197--1197
+<Kirchhoff.jpg, id=377, 426.59375pt x 601.24625pt>
+File: Kirchhoff.jpg Graphic file (type jpg)
+<use Kirchhoff.jpg>
+Package pdftex.def Info: Kirchhoff.jpg  used on input line 1230.
+(pdftex.def)             Requested size: 68.28644pt x 96.23805pt.
+
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1230--1230
 [][] 
  []
 
-[23 <./Darboux.jpg>]
+
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1210 \begin{equation}
+l.1233 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1213 \begin{equation}
-                       
+l.1252 \end{align}
+                  
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1229 \end{align}
-                  
+l.1259 \begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1236 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1240 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.6}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1256 \begin{equation}
-                        [24]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1263 \begin{equation}
                        
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1279 \begin{equation}
+                        [24 <./Kirchhoff.jpg>]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1283 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.4.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1286 \begin{equation}
+                       
 pdfTeX warning (ext4): destination with the same identifier (name{equation.4.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1266 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.4.9}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1273 \begin{equation}
-                        [25]
-Underfull \hbox (badness 1584) in paragraph at lines 1350--1353
-[]\T1/lmr/m/n/10 Gustav Kirch-hoff (1824-1887) was a promi-nent Ger-man physi-cist
- []
-
-<Kirchhoff.jpg, id=412, 426.59375pt x 601.24625pt>
-File: Kirchhoff.jpg Graphic file (type jpg)
-<use Kirchhoff.jpg>
-Package pdftex.def Info: Kirchhoff.jpg  used on input line 1353.
-(pdftex.def)             Requested size: 68.28644pt x 96.23805pt.
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1353--1353
-[][] 
- []
-
-[26 <./Kirchhoff.jpg>]
-<domain.png, id=417, 1657.69313pt x 1041.8925pt>
+l.1306 \begin{equation}
+                        [25] [26]
+<domain.png, id=392, 1657.69313pt x 1041.8925pt>
 File: domain.png Graphic file (type png)
 <use domain.png>
-Package pdftex.def Info: domain.png  used on input line 1373.
+Package pdftex.def Info: domain.png  used on input line 1398.
 (pdftex.def)             Requested size: 165.77902pt x 104.19534pt.
-<circle.png, id=418, 1181.91562pt x 1181.91562pt>
+<circle.png, id=393, 1181.91562pt x 1181.91562pt>
 File: circle.png Graphic file (type png)
 <use circle.png>
-Package pdftex.def Info: circle.png  used on input line 1393.
+Package pdftex.def Info: circle.png  used on input line 1418.
 (pdftex.def)             Requested size: 200.92299pt x 200.92299pt.
  [27 <./domain.png> <./circle.png>] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1505--1508
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1533
 
  []
 
 [29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1547.
+(mdframed)              on input line 1572.
 
-Overfull \hbox (37.42564pt too wide) detected at line 1569
+Overfull \hbox (37.42564pt too wide) detected at line 1594
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
  []
 
 [30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1581.
+(mdframed)              on input line 1606.
  [31]
-<green.png, id=454, 1580.90625pt x 1036.62282pt>
+<green.png, id=429, 1580.90625pt x 1036.62282pt>
 File: green.png Graphic file (type png)
 <use green.png>
-Package pdftex.def Info: green.png  used on input line 1626.
+Package pdftex.def Info: green.png  used on input line 1651.
 (pdftex.def)             Requested size: 316.17564pt x 207.32089pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1650 \end{align}
+l.1675 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1652 \begin{equation}
+l.1677 \begin{equation}
                        
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1661.
+(mdframed)              on input line 1686.
  [32 <./green.png>]
-Package mdframed Info: Not enough space on this page on input line 1663.
-<diameter.png, id=460, 1621.55812pt x 1041.8925pt>
+Package mdframed Info: Not enough space on this page on input line 1688.
+<diameter.png, id=435, 1621.55812pt x 1041.8925pt>
 File: diameter.png Graphic file (type png)
 <use diameter.png>
-Package pdftex.def Info: diameter.png  used on input line 1676.
+Package pdftex.def Info: diameter.png  used on input line 1701.
 (pdftex.def)             Requested size: 162.16531pt x 104.19534pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1714.
+(mdframed)              on input line 1739.
  [33 <./diameter.png>]
-Package mdframed Info: Not enough space on this page on input line 1721.
+Package mdframed Info: Not enough space on this page on input line 1746.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1737.
-<rep.png, id=467, 1580.90625pt x 877.77937pt>
+(mdframed)              on input line 1762.
+<rep.png, id=442, 1580.90625pt x 877.77937pt>
 File: rep.png Graphic file (type png)
 <use rep.png>
-Package pdftex.def Info: rep.png  used on input line 1774.
+Package pdftex.def Info: rep.png  used on input line 1799.
 (pdftex.def)             Requested size: 237.1257pt x 131.66122pt.
  [34]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1782 \end{align}
+l.1807 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1786 \end{align}
+l.1811 \end{align}
                   
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1811 \end{align}
+l.1836 \end{align}
                    [35 <./rep.png>]
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1847 \begin{equation}
+l.1872 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1850 \begin{equation}
+l.1875 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1853 \begin{equation}
+l.1878 \begin{equation}
                        
 pdfTeX warning (ext4): destination with the same identifier (name{equation.5.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1862 \begin{equation}
+l.1887 \begin{equation}
                         [36] [37] [38]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1984.
+(mdframed)              on input line 2009.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1991.
+(mdframed)              on input line 2016.
  [39]
-Overfull \hbox (1.66159pt too wide) in paragraph at lines 2017--2018
+Overfull \hbox (1.66159pt too wide) in paragraph at lines 2042--2043
 []\T1/lmr/m/n/10 The suc-ces-sive ap-prox-i-ma-tion method is an it-er-a-tive ap-proach that al-lows us to find an ap-prox-i-mate
  []
 
 
-Overfull \hbox (4.82407pt too wide) in paragraph at lines 2020--2021
+Overfull \hbox (4.82407pt too wide) in paragraph at lines 2045--2046
 []\T1/lmr/bx/n/10 Formulate the In-te-gral Equa-tion\T1/lmr/m/n/10 : Write down the in-te-gral equa-tion in the form men-tioned
  []
 
 
-Overfull \hbox (7.11365pt too wide) in paragraph at lines 2027--2028
+Overfull \hbox (7.11365pt too wide) in paragraph at lines 2052--2053
 []\T1/lmr/bx/n/10 Repeat the Pro-cess\T1/lmr/m/n/10 : Use $\OML/lmm/m/it/10 ^^^[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \T1/lmr/m/n/10 as the new ap-prox-i-ma-tion and re-peat the pro-cess. Sub-sti-tute
  []
 
 [40] [41] [42]
-Overfull \hbox (1.5514pt too wide) in paragraph at lines 2196--2197
+Overfull \hbox (1.5514pt too wide) in paragraph at lines 2221--2222
 \T1/lmr/m/n/10 Volterra in-te-gral equa-tions have wide ap-pli-ca-tions in ar-eas like con-trol the-ory, pop-u-la-tion dy-nam-ics,
  []
 
 [43] [44] [45]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2298.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2306.
+(mdframed)              on input line 2323.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2331.
  (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2322.
+(mdframed)              on input line 2347.
  [46{C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [47] [48] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
 Package rerunfilecheck Info: File `PDE.out' has not changed.
-(rerunfilecheck)             Checksum: 5D1B72FD5A7D23B692821315ABB193E7;5905.
+(rerunfilecheck)             Checksum: 62C3A61C3F3B7DF87DC1501F464BC5F2;5673.
  ) 
 Here is how much of TeX's memory you used:
- 32364 strings out of 476048
- 662570 string characters out of 5780228
- 1885753 words of memory out of 5000000
- 52341 multiletter control sequences out of 15000+600000
- 593221 words of font info for 85 fonts, out of 8000000 for 9000
+ 32341 strings out of 476048
+ 662447 string characters out of 5780228
+ 1886753 words of memory out of 5000000
+ 52336 multiletter control sequences out of 15000+600000
+ 578893 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,14n,96p,1239b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on PDE.pdf (48 pages, 4339050 bytes).
+ 89i,15n,96p,1239b,1048s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam5.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Ahmed/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on PDE.pdf (48 pages, 4368864 bytes).
 PDF statistics:
- 712 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
- 358 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 355 words of extra memory for PDF output out of 10000 (max. 10000000)
 

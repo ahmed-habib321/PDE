@@ -4,18 +4,17 @@
 \contentsline {subsection}{\numberline {1.3}Homogeneity}{3}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Boundary Conditions}{4}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Initial Condition}{4}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Equations of Mathematical Physics}{4}{subsection.1.6}%
 \contentsline {section}{\numberline {2}Canonical Form}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Examples}{6}{subsection.2.1}%
-\contentsline {section}{\numberline {3}Heat Equation}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Fourier Transform}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Cauchy Problem}{10}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Heat Equation}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fourier Transform}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Cauchy Problem}{11}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Mixed Homogeneous Problem}{12}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Mixed In-homogeneous Problem}{14}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}cauchy In-homogeneous Problem}{15}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Wave Equation}{17}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{17}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{19}{subsection.4.2}%
+\contentsline {subsection}{\numberline {3.5}Cauchy In-homogeneous Problem}{16}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Wave Equation}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{18}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{20}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Spherical Mean and Darboux's Equation}{21}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Kirchhoff's Formula}{24}{subsection.4.4}%
 \contentsline {section}{\numberline {5}Laplace's Equation}{27}{section.5}%

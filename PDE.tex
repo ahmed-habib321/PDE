@@ -32,11 +32,12 @@
 \fontsize{22pt}{0}\selectfont Ahmed.M.Habib\par
 \endgroup
 
-\newpage
+\newpage 
 
 \tableofcontents
 
 \newpage
+
 
 \section{Introduction}
 The main goal of many scientific disciplines can be summarized to the following:
@@ -101,7 +102,7 @@ if $f = 0$ then the equation is homogeneous, otherwise it is in-homogeneous.
 \begin{definition}[Boundary Value Problem]
     BVP is a differential equation to be solved in a domain on whose boundary the function is known.
 \end{definition}
-We will be interested in one type of boundary conditions in this course which is the Drichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with drichlet condition will be.
+We will be interested in one type of boundary conditions in this course which is the Dirichlet Conditions, specifies the value that the unknown function needs to take on along the boundary of the domain. For example, the Laplace equation on a circle with Dirichlet condition will be.
 \[
     \nabla^2 u(x) = 0 \quad \forall x \in G    
 \]
@@ -114,8 +115,8 @@ We will be interested in one type of boundary conditions in this course which is
 \[
     G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
-\begin{definition}[Drichlet problems]
-    are problems that has only boundary conditions
+\begin{definition}[Dirichlet problems]
+    or Initial Value Problem IVP are problems that has only boundary conditions
 \end{definition}
 \subsection{Initial Condition}
 \
@@ -132,24 +133,9 @@ An example is the heat equation with initial condition.
 \begin{definition}[Cauchy problems]
     are problems that has only initial conditions
 \end{definition}
-\subsection{Equations of Mathematical Physics}
-The most frequently encountered equations in physics are the following
-\begin{enumerate}
-\item Heat Equation
-\[
-    \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}    
-\]
-\item Wave Equation 
-\[
-    \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}    
-\]
-\item Laplace's Equation
-\[
-    \nabla^2 u(x) = \frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \cdots = 0    
-\]
-\end{enumerate}
-
-\newpage
+\begin{enrichment}{Dirichlet}{Dirichlet.jpg}{2.4}{.8}{.17}
+    Peter Gustav Lejeune Dirichlet (1805-1859)  Born in Düren, Germany, Dirichlet's work on boundary value problems, particularly for the Poisson equation, laid the foundation for modern PDE theory. Dirichlet introduced "Dirichlet boundary conditions," enabling unique solutions and influencing various scientific and engineering disciplines. His principle for potential theory remains vital in mathematical physics, making him a prominent figure in PDE history.
+\end{enrichment}
 
 \section{Canonical Form}
 Consider the following PDE with variable coefficients. We are aiming to transform this equation into its canonical form
@@ -179,7 +165,7 @@ adding similar terms and simplifying
 \frac{\partial^2 u}{\partial x^2} = {(\frac{\partial\xi}{\partial x})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial x})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
 \end{equation}
 
-and in similar fashion we can get.
+and in similar way we can get.
 
 \begin{equation}
 \frac{\partial^2 u}{\partial y^2} = {(\frac{\partial\xi}{\partial y})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial y})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
@@ -225,7 +211,7 @@ now using the quadratic formula to solve for $\frac{\partial y}{\partial x}$.
 this is called the characteristic equation.
 
 \begin{enrichment*}{Equations Classification}
-Equations are classified based on the value of the expression under the root
+PDEs are classified based on the value of the expression under the root
 
 $B^2 > AC \;\;\;\;\;\; \forall x,y\in G$, Hyperbolic PDE (the general case of the wave equation) 
 
@@ -411,6 +397,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \end{align*}
 \end{observation}
 
+\newpage
 
 \section{Heat Equation}
 The heat equation is a prototypical example for a parabolic equation. The general form of the heat equation is the following.
@@ -475,10 +462,11 @@ and in general
 
 Consider the following one dimensional heat equation Cauchy problem
 \begin{equation}
-\frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \;\;\;\;\; c\neq0, \;\;\;\;\; -\infty < x< \infty
-\end{equation}
-\begin{equation}
-u(x,0) = \phi (x)
+    \begin{cases}
+        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \quad c \neq 0 , \quad -\infty < x< \infty
+        \\
+        u(x,0) = \phi (x)
+    \end{cases}
 \end{equation}
 the Fourier transform of u is
 \[
@@ -492,21 +480,21 @@ and the new initial condition.
 \begin{equation}
 \mathscr{F}[u(x,0)] = \nu(\xi,0) =\mathscr{F}[\phi(x)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}\phi\left(x\right)dx = \psi(\xi)
 \end{equation}
-the solution of (3) is.
+the solution of (2) is.
 \[
     \nu(\xi,t) = Ae^{-c^2 \xi^2 t}    
 \]
-and A can be found from (4). 
+and A can be found from using new initial condition. 
 \begin{equation}
 \nu(\xi,t)= \psi(\xi)e^{-c^2 \xi^2 t}
 \end{equation}
-to find u we preform the inverse Fourier transform on (5).
+to find u we preform the inverse Fourier transform on (4).
 \begin{align*}
 u(x,t) &= \mathscr{F}^{-1}[\nu(\xi,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}\nu(\xi,t)d\xi
 \\
 &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\psi(\xi)d\xi
 \end{align*}
-substituting the value of $\psi$ from (4) and renaming the variable of integration to y.
+substituting the value of $\psi$ from (3) and renaming the variable of integration to y.
 \[
     u(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\left[\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{iy\xi}\phi\left(y\right)dy\right]d\xi    
 \]
@@ -524,42 +512,51 @@ iy\xi -ix\xi - c^2 \xi^2 t &= -tc^2\left(\xi^2-\frac{i\xi}{tc^2}(y-x)\right)
 \\
 &= -tc^2\left({(\xi-\frac{i}{tc^2}(y-x))}^2 + \frac{{(y-x)}^2}{4t^2 c^4}\right)
 \end{align*}
-substituting in (7)
+substituting in (6)
 \begin{align*}
 J   &= \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{-tc^2\frac{{(y-x)}^2}{4t^2 c^4}} d\xi
 \\
     &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
 \end{align*}
-shift the function by $\frac{i}{tc^2}(y-x)$ to the left and since the limits of integration are infinity the value of the integral is the same.
-\begin{align*}
-J = &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\xi^2} d\xi
-\end{align*}
+substitute  $\eta$ where 
+\[
+    \eta = \xi-\frac{i}{tc^2}(y-x)   \tquad \Longrightarrow d\eta = d\xi   
+\]
+\[
+    J =e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\eta^2} d\eta 
+\]
 it is now clear that J is a Gaussian integral that we can easily find its value.
-\begin{align*}
-J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}
-\end{align*}
-substituting in (6) we finally get u.
+\[
+    J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}    
+\]
+substituting in (5) we finally get u.
 \[
     u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
 \]
 this equation is called Poisson's Formula.
 
-\newpage
+\begin{figure*}[b]
+    \begin{enrichment}{Siméon Poisson}{Poisson.jpg}{2.4}{.8}{.17}
+        Siméon Denis Poisson (1781-1840) Born in Pithiviers, France, Poisson was mathematician, engineer, and physicist who made significant contributions to various fields of mathematics and science. 
+        His work on the Poisson equation, which describes potential fields like electricity and gravity, has widespread applications in physics and engineering. Poisson's legacy continues through various mathematical concepts named after him, making him a prominent figure in 19th-century mathematics and physics.
+    \end{enrichment}    
+\end{figure*}
+
 \setcounter{equation}{0}
 \subsection{Mixed Homogeneous Problem}
 \ 
 \begin{definition}[Mixed Problem]
-    is a problem that has both Drichlet boundary condition and Cauchy initial condition
+    is a problem that has both Dirichlet boundary condition and Cauchy initial condition
 \end{definition}
 Consider the following one dimensional heat equation 
 \begin{equation}
-\frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \;\;\;\;\; c\neq0, \;\;\;\;\; 0<x<L
-\end{equation}
-\begin{equation}
-\text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
-\end{equation}
-\begin{equation}
-\text{B.C} \quad \Longrightarrow \quad u(0,t) = u(L,t) = 0
+    \begin{cases}
+        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \;\;\;\;\; c\neq0, \;\;\;\;\; 0<x<L
+        \\
+        \text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
+        \\
+        \text{B.C} \quad \Longrightarrow \quad u(0,t) = u(L,t) = 0
+    \end{cases}
 \end{equation}
 using the separation of variables method.
 \begin{equation}
@@ -615,7 +612,7 @@ now if B = 0 it gives trivial solution then $\sin(\sqrt{\lambda}L) = 0$
     \therefore \sqrt{\lambda} L &= n \pi \\
     \lambda &= \frac{n^2 \pi^2}{L^2}
 \end{align*}
-and to make sure it is a negative number we will add a negative sign to it
+because the right hand side is all square then we sure it's positive to make it negative number we will add a negative sign to it
 \[
     -\lambda = -\frac{n^2 \pi^2}{L^2}
 \]
@@ -632,7 +629,7 @@ now solving for $T(t)$ using our constant.
 \\
 T(t) &= Ae^{-\frac{c^2 n^2 \pi^2}{L^2}}
 \end{align*}
-substituting in (4).
+substituting in (2).
 \[
     u(x,t) = \sum_{n=1}^{\infty} b_n e^{-\frac{c^2 n^2 \pi^2}{L^2}}\sin\left(\frac{n\pi x}{L}\right)    
 \]
@@ -640,7 +637,7 @@ using the initial condition.
 \[
     u(x,0) = \phi(x) = \sum_{n=1}^{\infty} b_n \sin\left(\frac{n\pi x}{L}\right)    
 \]
-we found Fourier coefficient which is our final step to determine u.
+now we found Fourier coefficient which is our final step to determine u.
 \begin{enrichment*}{Fourier Coefficient}
     \[
         f(x) = a_0  + \sum_{n=1}^{\infty}\left[a_n \cos\left(\frac{n\pi x}{L}\right) + b_n \sin\left(\frac{n\pi x}{L}\right) \right]
@@ -656,52 +653,50 @@ we found Fourier coefficient which is our final step to determine u.
     \]
 \end{enrichment*}
 
-\newpage
-
 \setcounter{equation}{0}
 \subsection{Mixed In-homogeneous Problem}
 
 Consider a more general heat equation than the previous one. Notice that the boundary conditions are functions not zeros as before.
-\\
+
 \begin{equation}
-\frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t), \;\;\;\;\; c\neq 0, \;\;\;\; 0<x<L
-\end{equation}
-\begin{equation}
-\text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
-\end{equation}
-\[
-    \text{B.C} \quad \Longrightarrow \quad
     \begin{cases}
-        u(0,t) = A(t)
+        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t), \;\;\;\;\; c\neq 0, \;\;\;\; 0<x<L
         \\
-        u(L,t) = B(t)        
-    \end{cases}    
-\]
+        \text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
+        \\
+        \text{B.C} \quad \Longrightarrow \quad
+        \begin{cases}
+            u(0,t) = A(t)
+            \\
+            u(L,t) = B(t)        
+        \end{cases}  
+    \end{cases}
+\end{equation}
 we start by defining a new function $v$ as.
 \[
 v(x,t) = u(x,t) - u_E(x,t)    
 \]
 we find the equilibrium temperature $u_E(x,t)$ by solving 
-\[
-    \frac{\partial^2 u_E(x,t)}{\partial x^2}  = 0
-\]
-\[
-    \text{B.C} \quad \Longrightarrow \quad
+\begin{equation}
     \begin{cases}
-        u_E(0,t) = A(t)
+        \displaystyle \frac{\partial^2 u_E(x,t)}{\partial x^2}  = 0
         \\
-        u_E(L,t) = B(t)        
-    \end{cases}    
-\]
+        \text{B.C} \quad \Longrightarrow \quad
+            \begin{cases}
+                u_E(0,t) = A(t)
+                \\
+                u_E(L,t) = B(t)        
+            \end{cases} 
+    \end{cases}
+\end{equation}
 we get that $u_E(x,t) = c_1 x + c_2$ and by using the B.C we can find $c_1,c_2$ as following
 \[
 u_E(x,t) = \frac{x}{L}[B(t)-A(t)] +A(t)    
 \]
-thus we have.
 \begin{equation}
-v(x,t) = u(x,t) -  \frac{x}{L}[B(t)-A(t)] -A(t)
+\therefore v(x,t) = u(x,t) -  \frac{x}{L}[B(t)-A(t)] -A(t)
 \end{equation}
-thus we have the new equation.
+therefore we have the new equation.
 \begin{align*}
 \frac{\partial v(x,t)}{\partial t} &= \frac{\partial u(x,t)}{\partial t} - \frac{\partial R(x,t)}{\partial t}
 \\
@@ -711,21 +706,21 @@ thus we have the new equation.
 \\
 &= f(x,t) - \frac{\partial R(x,t)}{\partial t} = g(x,t)
 \end{align*}
-we finally have the new equation.
+we finally have the new problem.
 \begin{equation}
-\frac{\partial v(x,t)}{\partial t} = c^2 \frac{\partial^2 v(x,t)}{\partial x^2} + g(x,t)
-\end{equation}
-\begin{equation}
-    \text{I.C} \quad \Longrightarrow \quad v(x,0) = \phi(x) - \frac{x}{L}[B(0)-A(0)] -A(0)= \psi(x)
-\end{equation}
-\begin{align}
-    \text{B.C} \quad \Longrightarrow \quad
     \begin{cases}
-        v(0,t) = u(0,t) - A(t) = 0
+        \displaystyle \frac{\partial v(x,t)}{\partial t} = c^2 \frac{\partial^2 v(x,t)}{\partial x^2} + g(x,t)
         \\
-        v(L,t)= u(L,t) - B(t) = 0        
-    \end{cases}    
-\end{align}
+        \text{I.C} \quad \Longrightarrow \quad v(x,0) = \phi(x) - \frac{x}{L}[B(0)-A(0)] -A(0)= \psi(x)
+        \\
+        \text{B.C} \quad \Longrightarrow \quad
+            \begin{cases}
+                v(0,t) = u(0,t) - A(t) = 0
+                \\
+                v(L,t)= u(L,t) - B(t) = 0        
+            \end{cases}    
+    \end{cases}
+\end{equation}
 we have solved a similar problem before and know that the solution for the homogeneous equation in $v$ will be of the form.
 \begin{equation}
 v(x,t) = \sum_{n=0}^{\infty} T_n (t) \sin\left(\frac{n\pi x}{L}\right)
@@ -734,18 +729,18 @@ similarly
 \begin{equation}
     g(x,t) = \sum_{n=0}^{\infty} g_n (t) \sin\left(\frac{n\pi x}{L}\right)
 \end{equation}
-substitute (7) , (8) in (4)
+substitute (5) , (6) in (4)
 \[
     \sum_{n=1}^{\infty} \frac{d T_n (t)}{dt}\sin\left(\frac{n\pi x}{L}\right) 
     = c^2 \sum_{n=1}^{\infty} \left(-\frac{n^2 \pi^2}{L^2}\right) T_n(t)\sin\left(\frac{n\pi x}{L}\right)
     + \sum_{n=0}^{\infty} g_n (t) \sin\left(\frac{n\pi x}{L}\right)
 \]
-by comparing the coefficients of $\sin\left(\frac{n\pi x}{L}\right)$ in both sides we get that 
+by comparing the coefficients of $\displaystyle \sin\left(\frac{n\pi x}{L}\right)$ in both sides we get that 
 \[
     \frac{d T_n (t)}{dt}+c^2\frac{n^2 \pi^2}{L^2} T_n(t)
     =g_n(t)
 \]
-this is an linear ODE and it's solution like
+this is an linear ODE in the form of 
 \[
     y'+f(x)y = g(x)
 \]
@@ -767,36 +762,36 @@ T_n(0) = c
 \[
   \therefore  T_n (t) = e^{-\frac{n^2 c^2 \pi^2}{L^2}t}T_n(0) +\int_{0}^{t} e^{\frac{n^2 c^2 \pi^2}{L^2}(s-t)} G(s) ds    
 \]
-now by substitute $T_n (t)$ in (7) we get $v$ then we can obtain $u$ by $u = v + u_E$.
+now by substitute $T_n (t)$ in (5) we get $v$ then we can obtain $u$ by $u = v + u_E$.
 
 \setcounter{equation}{0}
-\subsection{cauchy In-homogeneous Problem}
+\subsection{Cauchy In-homogeneous Problem}
 also know as Heat with a source cauchy problem
 \\
 consider the inhomogeneous heat equation on the whole line
 \begin{equation}
     \begin{cases}
-        \frac{\partial u\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t),\quad c\neq 0,\quad-\infty<x<\infty,\quad t>0
+        \displaystyle \frac{\partial u\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t),\quad c\neq 0,\quad-\infty<x<\infty,\quad t>0
         \\
         u\left(x,0 \right) = \phi\left(x\right)
     \end{cases}
 \end{equation}
 where $f(x, t)$ and $\phi(x)$ are arbitrary given functions. 
-$f(x, t)$, is called the source term, and measures the physical effect of an external heat source.
+\\$f(x, t)$ is called the source term, and it measures the physical effect of an external heat source.
 \par
 From the superposition principle, we know that the solution of the inhomogeneous equation can
 be written as the sum of the solution of the homogeneous equation, and a particular solution of the
 inhomogeneous equation. We can thus break problem (1) into the following two problems
 \begin{equation}
     \begin{cases}
-        \frac{\partial u^h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^h(x,t)}{\partial x^2}
+        \displaystyle \frac{\partial u^h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^h(x,t)}{\partial x^2}
         \\
         u^h\left(x,0 \right) = \phi\left(x\right)
     \end{cases}
 \end{equation}
 \begin{equation}
     \begin{cases}
-        \frac{\partial u^p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^p(x,t)}{\partial x^2}+ f(x,t)
+        \displaystyle \frac{\partial u^p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^p(x,t)}{\partial x^2}+ f(x,t)
         \\
         u^p\left(x,0 \right) = 0
     \end{cases}
@@ -828,10 +823,10 @@ now substitute the heat kernel
     u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
 \]
 One can draw parallels between formula (6) and the solution to the inhomogeneous ODE analogous
-to the heat equation. Indeed, consider the IVP for the following ODE.
+to the heat equation. consider the IVP for the following ODE.
 \begin{equation}
     \begin{cases}
-        \frac{du(t)}{dt} - A u(t) = f(x,t)
+        \displaystyle \frac{du(t)}{dt} - A u(t) = f(x,t)
         \\
         u(0) = \phi
     \end{cases}
@@ -844,36 +839,51 @@ then
 \[
     e^{-At}u = \int_{0}^{t} e^{-As} f(s)ds + C
 \]
-at $t=0$
+using the initial condition to get $C$ at $t=0$
 \[
-c = \phi    
+C = \phi    
 \]
 \[
     u = e^{At}\phi + \int_{0}^{t} e^{A(t-s)} f(s)ds
 \]
-We now show that (6) indeed solves problem (1) by a direct substitution. 
-Since we have solved the homogeneous equation before, it suffices to show that $u^p$ given by (5) solves problem (3). 
+We now need to show that (6) indeed solves problem (1) by a direct substitution. 
+Since we have solved the homogeneous equation before, it suffices to show that $u^p$ given by solves problem (3). 
 \par
 by differentiating (5) with respect to t gives
 \[
-    \frac{\partial u^p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,s) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
+    \frac{\partial u^p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
 \]
-the heat kernel solves the heat equation and has the Dirac delta function as its initial
-means that $S_t =c^2 S_{xx}$ and $S(x-y,0) = \delta(x-y)$ hence,
-\begin{align*}
-    \frac{\partial u^p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,s) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
+\begin{enrichment*}{}
+    the heat kernel solves the heat equation and has the Dirac delta function as its initial
+    means that $S_t =c^2 S_{xx}$ and $S(x-y,0) = \delta(x-y)$
     \\
-    &= f(y,s) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
-    = f(y,s) + c^2 \frac{\partial^2 u^p}{\partial x^2}
+    when integrating the Dirac Delta function we would get
+    \[
+        \int_{-\infty}^{\infty}\delta(x-y) dy = 1
+    \]
+    if we have another function $f(y,t)$ multiplied to the Dirac Delta function and integrating them we would get
+    \[
+        \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dx = f(x,t)\int_{-\infty}^{\infty}\delta(x-y) dx = f(x,t) 
+    \]
+\end{enrichment*}
+\begin{align*}
+    \frac{\partial u^p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
+    \\
+    &= f(x,t) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+    = f(x,t) + c^2 \frac{\partial^2 u^p}{\partial x^2}
 \end{align*}
 which shows that up solves the inhomogeneous heat equation. It is also clear that
 \[
 \lim_{t \to 0} u^p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
 \]
-thus $u^p$ given by (5), indeed solves problem (3), which finishes the proof that (6) solves the original IVP (1).
+therefore $u^p$ indeed solves problem (3), 
+\\
+which finishes the proof that (6) solves the original IVP (1).
 \begin{enrichment*}{Duhamel's principle}
     If one can solve an initial value problem for a homogeneous linear differential equation then an inhomogeneous linear differential equation can be solved as well.
 \end{enrichment*}
+
+\newpage
 \setcounter{equation}{0}
 \section{Wave Equation}
 The wave equation is the prototypical example for hyperbolic PDE's, it is a second order linear PDE that is used extensively in physics in studying the propagation of waves and wave fields. The general form of the wave equation is.
@@ -884,24 +894,21 @@ we will be studying one dimensional and three dimensional wave equations.
 \setcounter{equation}{0}
 \subsection{Cauchy Problem (1D)}
 Consider the following one dimensional wave equation Cauchy problem.
-
 \begin{equation}
-\frac{\partial^2 u\left(x,t \right)}{\partial t^2} = c^2\frac{\partial^2 u\left(x,t \right)}{\partial x^2},\;\;\; c\neq 0,\;\;\; t>0
-\end{equation}
-\begin{equation}
-    \text{I.C} \quad \Longrightarrow \quad 
     \begin{cases}
-    u\left(x,0 \right) = \phi\left(x\right)
-    \\
-    \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+        \displaystyle \frac{\partial^2 u\left(x,t \right)}{\partial t^2} = c^2\frac{\partial^2 u\left(x,t \right)}{\partial x^2},\;\;\; c\neq 0,\;\;\; t>0
+        \\
+        \text{I.C} \quad \Longrightarrow \quad 
+        \begin{cases}
+            u\left(x,0 \right) = \phi\left(x\right)
+            \\
+            \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+        \end{cases}
     \end{cases}
 \end{equation}
 we start by preforming a change of variables such that.
 \[
     \xi = x+ct \quad , \quad \eta = x-ct    
-\]
-\[
-    u\left(\xi , \eta \right)    
 \]
 \begin{align*}
 \frac{\partial u}{\partial t} &= \frac{\partial u}{\partial \xi}\frac{\partial \xi}{\partial t} + \frac{\partial u}{\partial \eta} \frac{\partial \eta}{\partial t}
@@ -923,11 +930,13 @@ in similar manner.
 \begin{equation}
 \frac{\partial^2 u}{\partial x^2} = \frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial^2 u}{\partial\eta^2}
 \end{equation}
-substituting (3) and (4) in (1).
+substituting (2) and (3) in (1).
 \[
 c^2\frac{\partial^2 u}{\partial\xi^2}-2c^2\frac{\partial^2 u}{\partial\xi\partial\eta}+c^2\frac{\partial^2 u}{\partial\eta^2} = c^2\left[\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial^2 u}{\partial\eta^2}\right]    
 \]
-simplify.
+\[
+    4c^2 \frac{\partial^2 u}{\partial\xi\partial\eta} =0    
+\]
 \[
     \frac{\partial^2 u}{\partial\xi\partial\eta} = \frac{\partial}{\partial\eta}\left(\frac{\partial u}{\partial\xi}\right)= 0    
 \]
@@ -939,7 +948,7 @@ u\left(x,t\right)&=f\left(x+ct\right)+g\left(x-ct\right)
 \\
 \frac{\partial u\left(x,t\right)}{\partial t} &= cf'\left(x+ct\right)-cg'\left(x-ct\right)\notag
 \end{align}
-from the initial conditions (2).
+from the initial conditions.
 \begin{align}
 \phi\left(x\right) &= u\left(x,0\right)= f\left(x\right)+g\left(x\right)\notag
 \\ 
@@ -947,19 +956,25 @@ from the initial conditions (2).
 \\ 
 \psi\left(x\right)&=\frac{\partial u\left(x,0\right)}{\partial t} = cf'\left(x\right)-cg'\left(x\right)
 \end{align}
-multiplying (6) by c and adding to (7).
+
+multiplying (5) by c and adding to (6).
+
 \begin{align}
 f'\left(x\right) &= \frac{1}{2c}\left(c\phi'\left(x\right)+\psi\left(x\right)\right)\notag
 \\ 
 f\left(x\right) &= \frac{1}{2c}\left[c\phi\left(x\right)+\int_0^x \psi\left(s\right)ds\right]+A
 \end{align}
-multiplying (6) by c and subtracting (7) from it.
+
+multiplying (5) by c and subtracting (6) from it.
+
 \begin{align}
 g'\left(x\right) &= \frac{1}{2c}\left(c\phi'\left(x\right)-\psi\left(x\right)\right)\notag
 \\ 
 g\left(x\right) &= \frac{1}{2c}\left[c\phi\left(x\right)-\int_0^x \psi\left(s\right)ds\right]+B
 \end{align}
-substituting (8) and (9) in (5)
+
+substituting (7) and (8) in (4)
+
 \[
     u\left(x,t\right) = \frac{1}{2c}\left[c\phi\left(x+ct\right)+\int_{0}^{x+ct} \psi\left(s\right)ds\right]+\frac{1}{2c}\left[c\phi\left(x-ct\right)-\int_{0}^{x-ct} \psi\left(s\right)ds\right]+K    
 \]
@@ -987,22 +1002,22 @@ this Equation is called d'Alembert formula.
 \subsection{Mixed Problem (1D)}
 Consider the following one dimensional wave equation mixed problem.
 \begin{equation}
-\frac{\partial^2 u\left(x,t\right)}{\partial t^2}=\frac{\partial^2 u\left(x,t\right)}{\partial x^2}
-\end{equation}
-\begin{equation}
-    \text{I.C} \quad \Longrightarrow \quad 
     \begin{cases}
-    u\left(x,0 \right) = \phi\left(x\right)
-    \\
-    \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
-    \end{cases}
-\end{equation}
-\begin{equation}
-    \text{B.C} \quad \Longrightarrow \quad 
-    \begin{cases}
-    u\left(0,t \right) = 0
-    \\
-    u\left(\pi,t\right)=0
+        \displaystyle \frac{\partial^2 u\left(x,t\right)}{\partial t^2}=\frac{\partial^2 u\left(x,t\right)}{\partial x^2}
+        \\
+        \text{I.C} \quad \Longrightarrow \quad 
+        \begin{cases}
+            u\left(x,0 \right) = \phi\left(x\right)
+            \\
+            \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+        \end{cases}
+        \\
+        \text{B.C} \quad \Longrightarrow \quad 
+        \begin{cases}
+            u\left(0,t \right) = 0
+            \\
+            u\left(\pi,t\right)=0
+        \end{cases}   
     \end{cases}
 \end{equation}
 we start our solution by separating the variables.
@@ -1021,19 +1036,17 @@ X''\left(x\right)&=-n^2 X\left(x\right)
 \\
 \ddot{T}\left(t\right) &= -n^2 T\left(t\right)
 \end{align*}
-
-\newpage
-this is an equation in the form of simple harmonic motion thus the solution is.
+this is an equation in the form of simple harmonic motion therefore the solution is.
 \begin{align*}
 X\left(x\right) &= Asin\left(nx\right)+Bcos\left(nx\right)
 \\
 T\left(t\right) &= Csin\left(nt\right)+Dcos\left(nt\right)
 \end{align*}
-substituting in (4).
+substituting in (2).
 \[
     u\left(x,t\right) = \left[Asin\left(nx\right)+Bcos\left(nx\right)\right]\left[Csin\left(nt\right)+Dcos\left(nt\right)\right]    
 \]
-using the boundary condition (3).
+using the boundary condition.
 \[
     B\left[Csin\left(nt\right)+Dcos\left(nt\right)\right]=0    
 \]
@@ -1041,7 +1054,7 @@ and we choose $B=0$, the general solution for all n will then be.
 \[
     u\left(x,t\right) = \sum_{n=0}^{\infty}\left[a_{n}\sin\left(nt\right)+b_{n}\cos\left(nt\right)\right]\sin\left(nx\right)    
 \]
-using the initial condition $u(x,0)$ (2) to find the constants.
+using the initial condition $u(x,0)$ to find the constants.
 \[
     u\left(x,0\right) = \phi\left(x\right) = \sum_{n=0}^{\infty}b_{n}\sin\left(nx\right)    
 \]
@@ -1065,15 +1078,13 @@ using the initial condition for the derivative.
 \]
 substitute $a_n$ and $b_n$ to get $u\left(x,t\right)$
 
-\newpage 
-
 \setcounter{equation}{0}
 \subsection{Spherical Mean and Darboux's Equation}
 The spherical mean of a function $f$ is defined as.
 \begin{equation}
 M_{f}(x,r) = \frac{1}{\omega_{n}r^{n-1}} \int_{|y-x|=r} f(y)dS_y
 \end{equation}
-where $\omega_{n}$ is the surface area of an n-dimensional unit sphere\footnote{for n =3 or the three dimensional case $\omega_{3} = 4\pi$}, thus the amount $\omega_{n}r^{n-1}$ is the surface area of an n-dimensional sphere of radius $r$, $dS_y$ is the element of integration on the surface of the sphere, $x = (x_{1},x_{2}, \dots,x_{n})$ and $y = (y_{1},y_{2}, \dots,y_{n})$ are vectors in n-dimensions, where $x$ is the center of the sphere and $y$ is any point of the surface on the sphere, thus we have $|y-x|^2 = {(y_{1}-x_{1})}^2 + {(y_{2}-x_{2})}^2 + \dots + {(y_{n}-x_{n})}^2 = r^2$, and the integral is over the whole surface of the sphere.
+where $\omega_{n}$ is the surface area of an n-dimensional unit sphere, thus the amount $\omega_{n}r^{n-1}$ is the surface area of an n-dimensional sphere of radius $r$, $dS_y$ is the element of integration on the surface of the sphere, $x = (x_{1},x_{2}, \dots,x_{n})$ and $y = (y_{1},y_{2}, \dots,y_{n})$ are vectors in n-dimensions, where $x$ is the center of the sphere and $y$ is any point of the surface on the sphere, thus we have $|y-x|^2 = {(y_{1}-x_{1})}^2 + {(y_{2}-x_{2})}^2 + \dots + {(y_{n}-x_{n})}^2 = r^2$, and the integral is over the whole surface of the sphere.
 
 we will show that this function satisfy an important partial differential equation, which is the Euler-Poisson-Darboux equation or just Darboux's equation.
 \begin{equation}
@@ -1081,6 +1092,16 @@ we will show that this function satisfy an important partial differential equati
 \end{equation} 
 where $\nabla_{x}^{2}$ is the Laplace-Beltrami operator, a generalization of the Laplace operator in n-dimensional spherical coordinates.
 \par
+\begin{figure*}[b]
+    \begin{enrichment}{Jean Gaston Darboux}{Darboux.jpg}{2.4}{.8}{.17}
+        Born in Nimes Jean Gaston Darboux (1842-1917) was a renowned 
+        French mathematician who made significant contributions to Partial Differential Equations (PDEs). 
+        Darboux's work centered on the theory of linear and nonlinear partial differential equations, 
+        which are fundamental to understanding various physical phenomena and mathematical models. 
+        He tackled important questions related to the existence, uniqueness, and regularity of solutions to these equations, 
+        laying the groundwork for future investigations in the field.
+    \end{enrichment}    
+\end{figure*}
 we will start by defining the unit vector $\xi$ such that the vector is normal to the surface.
 \begin{center}
 \includegraphics[scale=0.1]{xi.png}
@@ -1107,7 +1128,7 @@ at $r = 0$.
 M_{f}(x,0) = \frac{f(x)}{\omega_{n}} \int_{|\xi|=1} dS_\xi = f(x)
 \end{equation}
 the integral $\displaystyle \int_{|\xi|=1} dS_\xi$ is the surface area of a unit sphere in n dimensions which is equal to $\omega_n$
-
+\\
 from (3) and remembering that $y$, $x$, and $\xi$ are all vectors, then we can write their components as.
 \[
     y_i = x_i + \xi_i r    
@@ -1137,11 +1158,13 @@ using the chain rule one more time.$\displaystyle \frac{\partial f(y)}{\partial 
     \[
         \int\int\int_{Volume} \nabla \cdot \textbf{F} dV = \int\int_{Surface} \textbf{F}\cdot \vec{n} dS
     \]
-    \begin{center}
-    \includegraphics[scale=0.6]{div.png}
-    \end{center}
 \end{theorem}
-comparing the form we have with the divergence theorem we see that the sum we have is the dot product of our vector function with $\xi$\footnote{the components $\xi_i$ are direction cosines, i.e $\xi_{1}^{2}+\xi_{2}^{2}+...+\xi_{n}^{2} = 1$} which is the unit vector always normal to the surface of the sphere by our definition, and we can transform our integral to a volume integral.
+
+comparing the form we have with the divergence theorem we see that the sum we have is the dot product of our vector function with $\xi$
+which is the unit vector always normal to the surface of the sphere by our definition, and we can transform our integral to a volume integral.
+\begin{enrichment*}{}
+    the components $\xi_i$ are direction cosines, i.e $\xi_{1}^{2}+\xi_{2}^{2}+...+\xi_{n}^{2} = 1$
+\end{enrichment*}
 \[
     \frac{\partial M_f (x,r)}{\partial r} = \frac{1}{\omega_n r} \int_{|\xi|\leq 1} \sum_{i=1}^{n} \frac{\partial^2 f(y)}{\partial \xi_{i}^{2}} d\xi    
 \]
@@ -1155,7 +1178,12 @@ notice that .
 \[
     \frac{\partial M_f (x,0)}{\partial r} = 0    
 \]
-now we will change our volume element from the relation (3).\footnote{remember that y is a vector thus $dy = dy_1 dy_2 dy_3 ...dy_n$ and since $dy_i = rd\xi_i$ then $dy = rrr...d\xi_1 d\xi_2 d\xi_3 ...$}
+now we will change our volume element from the relation (3).
+\begin{enrichment*}{}
+    remember that y is a vector thus $dy = dy_1 dy_2 dy_3 ...dy_n$ and since $dy_i = rd\xi_i$ 
+    \\
+    then $dy = rrr...d\xi_1 d\xi_2 d\xi_3 ...$
+\end{enrichment*}
 \[
     d\xi = \frac{1}{r^n}dy    
 \]
@@ -1186,18 +1214,6 @@ rearranging and simplifying we finally arrive at Darboux's equation (2) where $ 
     \frac{\partial^2 M_f (x,r)}{\partial r^2} + \frac{n-1}{r} \frac{\partial M_f (x,r)}{\partial r} = \nabla_{x}^{2} M_f (x,r)    
 \]
 
-\begin{figure*}[b]
-    \begin{enrichment}{Jean Gaston Darboux}{Darboux.jpg}{2.4}{.8}{.17}
-        Born in Nimes Jean Gaston Darboux (1842-1917) was a renowned 
-        French mathematician who made significant contributions to Partial Differential Equations (PDEs). 
-        Darboux's work centered on the theory of linear and nonlinear partial differential equations, 
-        which are fundamental to understanding various physical phenomena and mathematical models. 
-        He tackled important questions related to the existence, uniqueness, and regularity of solutions to these equations, 
-        laying the groundwork for future investigations in the field.
-    \end{enrichment}    
-\end{figure*}
-
-\newpage
 
 \setcounter{equation}{0}
 \setcounter{footnote}{0}
@@ -1206,22 +1222,29 @@ We have seen how formula d'Almbert can solve the one dimensional wave equation C
 Our attempt to solve the three dimensional wave equation 
 we will use the results of the spherical mean and Darboux's equation to develop an effective formula to solve three dimensional wave equation Cauchy problems called Kircchoff's formula.
 \par
+\begin{figure*}[b]
+    \begin{enrichment}{Gustav Kirchhoff}{Kirchhoff.jpg}{2.4}{.8}{.17}
+        Gustav Kirchhoff (1824-1887) was a prominent German physicist
+        Kirchhoff made significant advancements in the understanding of wave phenomena and the mathematical modeling of physical systems using PDEs.
+        One of Kirchhoff's most notable contributions in PDEs is his formulation of the Kirchhoff equations, which describe the propagation of waves in elastic materials, such as solids and thin plates. These equations are fundamental to the study of vibrations, acoustics, and the behavior of mechanical systems subjected to dynamic loads.
+    \end{enrichment}    
+\end{figure*}
 Consider the following three dimensional wave equation Cauchy problem.
 \begin{equation}
-\frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \nabla_{x}^{2}u(x,t), \;\;\;\;\;\; c\neq 0 ,\;\;\; t > 0
-\end{equation}
-\begin{equation}
-    \text{I.C} \quad \Longrightarrow \quad 
     \begin{cases}
-    u\left(x,0 \right) = \phi\left(x\right)
-    \\
-    \\
-    \displaystyle \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+        \displaystyle \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \nabla_{x}^{2}u(x,t), \;\;\;\;\;\; c\neq 0 ,\;\;\; t > 0
+        \\
+        \text{I.C} \quad \Longrightarrow \quad 
+        \begin{cases}
+            u\left(x,0 \right) = \phi\left(x\right)
+            \\
+            \displaystyle \frac{\partial u\left(x,0 \right)}{\partial t} = \psi\left(x\right)
+        \end{cases} 
     \end{cases}
 \end{equation}
 where $x = (x_1,x_2,x_3)$ is a three dimensional vector.
 \par
-we start by considering Darboux's equation (54) in n = 3.
+we start by considering Darboux's equation in n = 3.
 \begin{align}
 \frac{\partial^2 M_f (x,r)}{\partial r^2} + \frac{2}{r} \frac{\partial M_f (x,r)}{\partial r} &= \nabla_{x}^{2} M_f (x,r) \notag
 \\ 
@@ -1236,11 +1259,11 @@ we notice that.
 \begin{equation}
 \frac{\partial^2 }{\partial r^2}\left(rM_f (x,r) \right) = r\frac{\partial^2 M_f(x,r)}{\partial r^2} + 2\frac{\partial M_f(x,r)}{\partial r}
 \end{equation}
-substituting (4) in (3).
+substituting (3) in (2).
 \begin{equation}
 \frac{\partial^2 }{\partial r^2}\left(rM_f (x,r) \right) = r\nabla_{x}^{2} M_f (x,r)
 \end{equation}
-we now consider the spherical mean of the function $u$ where n = 3.\footnote{when n = 3 then $\omega_3 = 4\pi$ the surface area of a 3d sphere}
+we now consider the spherical mean of the function $u$ where n = 3 then $\omega_3 = 4\pi$ the surface area of a 3d sphere
 \[
     M_{u}(x,t,r) = \frac{1}{4\pi r^2} \int_{|y-x|=r} f(y)dS_y    
 \]
@@ -1252,13 +1275,10 @@ multiply by r.
 \[
     \frac{\partial^2}{\partial t^2} r M_{u}(x,t,r) = c^2 r\nabla_{x}^{2}M_{u}(x,t,r)    
 \]
-from (5) we get.
+from (4) we get.
 \begin{equation}
     \frac{\partial^2}{\partial t^2} \left[r M_u (x,t,r) \right] = c^2 \frac{\partial^2 }{\partial r^2}\left[r M_u (x,t,r) \right]    
-\end{equation}
-
-\newpage 
-
+\end{equation} 
 the initial conditions will be.
 \begin{equation}
 rM_{u}(x,0,r) = rM_\phi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\phi(y)dS_y
@@ -1266,12 +1286,25 @@ rM_{u}(x,0,r) = rM_\phi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\phi(y)dS_y
 \begin{equation}
 \frac{\partial}{\partial t}\left(rM_{u}(x,0,r)\right) = rM_\psi(x,r) = \frac{r}{4\pi r^2} \int_{|y-x|=r}\psi(y)dS_y
 \end{equation}
-we notice that this is a one dimensional wave equation that can be solved using the method developed earlier d'Alembert formula.
+we notice that this is a one dimensional wave equation 
 \[
-    rM_u(x,t,r) = \frac{1}{2}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2c}\int_{x-ct}^{x+ct} sM_\psi(x,s)ds    
+    \begin{cases}
+        \displaystyle \frac{\partial^2}{\partial t^2} \left[r M_u (x,t,r) \right] = c^2 \frac{\partial^2 }{\partial r^2}\left[r M_u (x,t,r) \right]    
+        \\
+        \text{I.C} \quad \Longrightarrow \quad 
+        \begin{cases}
+            rM_{u}(x,0,r) = rM_\phi(x,r)
+            \\
+            \frac{\partial}{\partial t}\left(rM_{u}(x,0,r)\right) = rM_\psi(x,r)
+        \end{cases}
+    \end{cases}
+\]
+that can be solved using the method developed earlier d'Alembert formula.
+\[
+    rM_u(x,t,r) = \frac{1}{2}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2c}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds    
 \]
 \begin{equation}
-M_u(x,t,r) = \frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2cr}\int_{x-ct}^{x+ct} sM_\psi(x,s)ds
+M_u(x,t,r) = \frac{1}{2r}\left[(r+ct)M_\phi(x,r+ct)+(r-ct)M_\phi(x,r-ct)\right]+\frac{1}{2cr}\int_{r-ct}^{r+ct} sM_\psi(x,s)ds
 \end{equation}
 we note that.
 \[
@@ -1345,18 +1378,10 @@ we now finally substitute the first and the second limit in (10).
     u(x,t) = \lim_{r\to 0} M_u(x,t,r) = \frac{\partial}{\partial t}[tM_\phi(x,ct)] + tM_\psi(x,ct)    
 \]
 using the definition of spherical mean with $r=ct$ our final formula becomes.
-\begin{figure*}[b]
-    \begin{enrichment}{Gustav Kirchhoff}{Kirchhoff.jpg}{2.4}{.8}{.17}
-        Gustav Kirchhoff (1824-1887) was a prominent German physicist
-        Kirchhoff made significant advancements in the understanding of wave phenomena and the mathematical modeling of physical systems using PDEs.
-        One of Kirchhoff's most notable contributions in PDEs is his formulation of the Kirchhoff equations, which describe the propagation of waves in elastic materials, such as solids and thin plates. These equations are fundamental to the study of vibrations, acoustics, and the behavior of mechanical systems subjected to dynamic loads.
-    \end{enrichment}    
-\end{figure*}
 \[
     u(x,t) = \frac{\partial}{\partial t}\left[\frac{1}{4\pi c^2 t}\int_{|y-x|=ct}\phi(y)dS_y\right] + \frac{1}{4\pi c^2 t}\int_{|y-x|=ct}\psi(y)dS_y    
 \]
 which is called Kirchhoff's Formula.
-
 
 \section{Laplace's Equation}
 Laplace's equation is one of the most important PDE in mathematical physics most notably in the study of electromagnetism. Our first stem is get accustomed to some terminology. Consider the following problem.
@@ -1711,9 +1736,9 @@ this equation is Green's Identity.
     \\
     therefore M $\ngtr$ m therefore M must equal m 
 \end{proof}
-\begin{theorem}[Uniqueness of Drichlet Problem]
+\begin{theorem}[Uniqueness of Dirichlet Problem]
     if there exist a solution of Laplace's equation 
-    with a boundary condition (Drichlet problem)
+    with a boundary condition (Dirichlet problem)
     \[
     \exists u \in C^2(G), u \in C(G \cup \gamma),\;\; \text{such that} \;\;\; \nabla^2 u =0 \;\;\; \text{and} \;\;\; u|_\gamma = f
     \]
@@ -1768,7 +1793,7 @@ where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the laplacean with resprect to x 
 
 \setcounter{equation}{0}
 \subsection{Representation formula}
-We will utilize Green's identity and the potential function for solving Laplace's equation Drichlet problem. Due to the singularity of the potential function an issue arises, thus we will apply the identity to the pair of functions u and E on the region G with a sphere of radius $\epsilon$ cutout with the singularity being the center of the sphere, then take the limit of $\epsilon$ to zero to find our final answer.
+We will utilize Green's identity and the potential function for solving Laplace's equation Dirichlet problem. Due to the singularity of the potential function an issue arises, thus we will apply the identity to the pair of functions u and E on the region G with a sphere of radius $\epsilon$ cutout with the singularity being the center of the sphere, then take the limit of $\epsilon$ to zero to find our final answer.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.15]{rep.png}
@@ -1843,7 +1868,7 @@ substituting in (3) we finally get the representation formula
 \end{enrichment*}
 \setcounter{equation}{0}
 \subsection{Laplace's Equation in Cylinderical Coordinates}
-considering the Drichlet problem.
+considering the Dirichlet problem.
 \begin{equation}
 \nabla^2 u(r,z) = \frac{\partial^2 u(r,z)}{\partial z^2} + \frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right] = 0 \;\; , \;\;\; r >0
 \end{equation}
