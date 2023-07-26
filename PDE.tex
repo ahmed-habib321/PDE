@@ -1,8 +1,8 @@
 \documentclass[]{article}
 
-\usepackage[hidelinks]{hyperref}
-\input{H_structue}
-\usepackage[a4paper, margin=1.2in]{geometry}
+
+\input{MyTools}
+
 
 \definecolor{cover}{RGB}{230, 194, 24}
 
@@ -456,7 +456,8 @@ and in general
 \subsection{Cauchy Problem}
 \begin{figure*}[b]
     \begin{enrichment}{Augustin-Louis Cauchy}{Cauchy.jpg}{2.4}{.8}{.17}
-        Baron Augustin-Louis Cauchy (1789-1857) was a renowned French mathematician and physicist who made significant contributions to various fields of mathematics, including partial differential equations (PDEs). His work in PDEs laid the groundwork for modern analysis and helped establish the rigorous theoretical foundation for the study of these equations.
+        Baron Augustin-Louis Cauchy (1789-1857) was a French mathematician and physicist 
+        His work included the theory of characteristics for first-order PDEs and the Cauchy-Kovalevskaya theorem, which greatly influenced the study and practical applications of PDEs in various fields. Cauchy's rigorous approach set a standard for future mathematicians and remains a cornerstone of PDE theory.
     \end{enrichment}    
 \end{figure*}
 
@@ -766,9 +767,9 @@ now by substitute $T_n (t)$ in (5) we get $v$ then we can obtain $u$ by $u = v +
 
 \setcounter{equation}{0}
 \subsection{Cauchy In-homogeneous Problem}
-also know as Heat with a source cauchy problem
+also known as Heat with a source Cauchy problem
 \\
-consider the inhomogeneous heat equation on the whole line
+consider the in-homogeneous heat equation on the whole line
 \begin{equation}
     \begin{cases}
         \displaystyle \frac{\partial u\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t),\quad c\neq 0,\quad-\infty<x<\infty,\quad t>0
@@ -779,9 +780,9 @@ consider the inhomogeneous heat equation on the whole line
 where $f(x, t)$ and $\phi(x)$ are arbitrary given functions. 
 \\$f(x, t)$ is called the source term, and it measures the physical effect of an external heat source.
 \par
-From the superposition principle, we know that the solution of the inhomogeneous equation can
+From the superposition principle, we know that the solution of the in-homogeneous equation can
 be written as the sum of the solution of the homogeneous equation, and a particular solution of the
-inhomogeneous equation. We can thus break problem (1) into the following two problems
+in-homogeneous equation. We can thus break problem (1) into the following two problems
 \begin{equation}
     \begin{cases}
         \displaystyle \frac{\partial u^h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^h(x,t)}{\partial x^2}
@@ -822,7 +823,7 @@ now substitute the heat kernel
 \[
     u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
 \]
-One can draw parallels between formula (6) and the solution to the inhomogeneous ODE analogous
+One can draw parallels between formula (6) and the solution to the in-homogeneous ODE analogous
 to the heat equation. consider the IVP for the following ODE.
 \begin{equation}
     \begin{cases}
@@ -872,7 +873,7 @@ by differentiating (5) with respect to t gives
     &= f(x,t) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
     = f(x,t) + c^2 \frac{\partial^2 u^p}{\partial x^2}
 \end{align*}
-which shows that up solves the inhomogeneous heat equation. It is also clear that
+which shows that up solves the in-homogeneous heat equation. It is also clear that
 \[
 \lim_{t \to 0} u^p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
 \]
@@ -880,7 +881,7 @@ therefore $u^p$ indeed solves problem (3),
 \\
 which finishes the proof that (6) solves the original IVP (1).
 \begin{enrichment*}{Duhamel's principle}
-    If one can solve an initial value problem for a homogeneous linear differential equation then an inhomogeneous linear differential equation can be solved as well.
+    If one can solve an initial value problem for a homogeneous linear differential equation then an in-homogeneous linear differential equation can be solved as well.
 \end{enrichment*}
 
 \newpage
@@ -989,12 +990,8 @@ from the initial condition $u(x,0)$, we find that K=0 and finally we are left wi
 this Equation is called d'Alembert formula.
 \begin{figure*}[b]
     \begin{enrichment}{Jean le Rond d'Alembert}{d_Alembert.jpg}{2.4}{.8}{.17}
-        Jean le Rond d'Alembert (1717-1783) was a renowned French mathema-
-        
-        tician and physicist who made significant contributions to partial differ-
-        
-        ential equations. His groundbreaking work on wave equations and the d'Alembertian operator laid the foundation for understanding wave-like behavior in various physical systems, influencing modern engineering, acoustics, and mathematical physics.
-        D'Alembert's profound insights continue to be integral to the study of PDEs, serving as a lasting legacy in the field of mathematical analysis.
+        Jean le Rond d'Alembert (1717-1783) was a prominent French mathematician, physicist, and philosopher. Born in Paris, d'Alembert made significant contributions to various fields, including mathematics, mechanics, and music.
+        In the realm of PDEs, He is best known for solution to the one-dimensional wave equation, also known as d'Alembert's formula. This equation describes the behavior of waves, such as those in vibrating strings or propagating through a medium, and is fundamental in mathematical physics.
     \end{enrichment}    
 \end{figure*}
 
@@ -1094,12 +1091,12 @@ where $\nabla_{x}^{2}$ is the Laplace-Beltrami operator, a generalization of the
 \par
 \begin{figure*}[b]
     \begin{enrichment}{Jean Gaston Darboux}{Darboux.jpg}{2.4}{.8}{.17}
-        Born in Nimes Jean Gaston Darboux (1842-1917) was a renowned 
-        French mathematician who made significant contributions to Partial Differential Equations (PDEs). 
-        Darboux's work centered on the theory of linear and nonlinear partial differential equations, 
+        Born in Nimes Jean Gaston Darboux (1842-1917) was a French mathema-
+        \\
+        tician his work in PDEs centered on the theory of linear and nonlinear PDEs, 
         which are fundamental to understanding various physical phenomena and mathematical models. 
         He tackled important questions related to the existence, uniqueness, and regularity of solutions to these equations, 
-        laying the groundwork for future investigations in the field.
+        One of his biggest achievements was his work on integrability conditions for PDEs, which provided a deeper understanding of when such equations could be solved through integration. These conditions, known as Darboux's integrability conditions
     \end{enrichment}    
 \end{figure*}
 we will start by defining the unit vector $\xi$ such that the vector is normal to the surface.
@@ -1384,49 +1381,42 @@ using the definition of spherical mean with $r=ct$ our final formula becomes.
 which is called Kirchhoff's Formula.
 
 \section{Laplace's Equation}
-Laplace's equation is one of the most important PDE in mathematical physics most notably in the study of electromagnetism. Our first stem is get accustomed to some terminology. Consider the following problem.
+Laplace's equation is one of the most important PDE in mathematical physics most notably in the study of electromagnetism.
+and it's in the form of:
 \[
     \nabla^2 u(x,y)= \frac{\partial^2 u(x,y,z)}{\partial x^2}+\frac{\partial^2 u(x,y,z)}{\partial y^2} = 0 \;\;\;\; , (x,y) \in G    
 \]
-where G is a simply bounded connected domain whose boundary $\gamma$ is a contour.
-\\
-the boundary condition for this problem is.
-\[
-    u(x,y)|_\gamma = f(x,y)    
-\]
+where G is a simply bounded connected domain whose boundary $\gamma$ is a simple closed contour.
 \begin{center}
 \includegraphics[scale=0.1]{domain.png}
 \end{center}
-we can see that this is a Dirichlet problem.
-\par
 if the function $u$ that satisfy the Laplace equation and is in the set of two dimensional continuous functions on the domain G $u \in C^2(G)$, 
 i.e. all of $u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
 are continuous functions on G, then the function $u$ is called a harmonic function on G.
-
 \setcounter{equation}{0}
 \subsection{Solution of Laplace's Equation on a Circle}
 
-consider the partial differential equation
+consider the following Dirichlet problem
 \begin{equation}
-\nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \;\;\; \forall (x,y) \in G
+    \begin{cases}
+        \displaystyle \nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \;\;\; \forall (x,y) \in G
+        \\
+        \text{I.C} \quad \Longrightarrow \quad u(x,y)|_\gamma = f(x,y)
+    \end{cases}
 \end{equation}
-\begin{equation}
-\text{I.C} \quad \Longrightarrow \quad u(x,y)|_\gamma = f(x,y)
-\end{equation}
-
 \begin{center}
-\includegraphics[scale=0.17]{circle.png}
+\includegraphics[scale=0.14]{circle.png}
 \end{center}
 \begin{align*}
 G &= \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace
 \\
 \gamma &= \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace
 \end{align*}
-buy puting $x = r cos(\theta)$ and $y = r sin(\theta)$ and recreate equation (1) using chain rule we can express (1) as.
-\begin{equation}
-r^2 \frac{\partial^2 u(r,\theta)}{\partial r^2} + r \frac{\partial u(r,\theta)}{\partial r} + \frac{\partial^2 u(r,\theta)}{\partial \theta^2} = 0
-\end{equation}
-notice from (3) that the derivatives of $r$ and $\theta$ can be separated thus utilizing the separation of variables method.
+by putting $x = r cos(\theta)$ and $y = r sin(\theta)$ and recreate equation (1) using chain rule we can express it as.
+\[
+    r^2 \frac{\partial^2 u(r,\theta)}{\partial r^2} + r \frac{\partial u(r,\theta)}{\partial r} + \frac{\partial^2 u(r,\theta)}{\partial \theta^2} = 0    
+\]
+the derivatives of $r$ and $\theta$ can be separated thus utilizing the separation of variables method.
 \begin{align*}
 u(r,\theta) &= V(r)F(\theta)
 \\
@@ -1437,10 +1427,16 @@ u(r,\theta) &= V(r)F(\theta)
 \frac{\partial^2 u}{\partial \theta^2} &= V(r)\frac{d^2 F(\theta)}{d\theta^2}
 \end{align*}
 therefore we get.
+\begin{figure*}[b]
+    \begin{enrichment}{Laplace}{Laplace.jpg}{2.4}{.8}{.17}
+        Pierre-Simon Laplace (1749-1827) was a French mathematician, astronomer, and physicist 
+        In the context of PDEs, Laplace's most influential contributions stem from his work in mathematical physics and celestial mechanics. One of his fundamental achievements was in the development of the theory of potential, where he used PDEs to study the behavior of gravitational and electric fields. Laplace's pioneering work laid the foundation for the study of potential theory and its applications in various branches of science and engineering.
+    \end{enrichment}    
+\end{figure*}
 \begin{equation}
 r^2F(\theta)\frac{d^2 V(r)}{dr^2} +rF(\theta)\frac{d V(r)}{dr} + V(r)\frac{d^2 F(\theta)}{d\theta^2} = 0
 \end{equation}
-dividing (4) by $V(r)F(\theta)$ we get.
+dividing (2) by $V(r)F(\theta)$ we get.
 \begin{equation}
 \frac{r^2}{V(r)}\frac{d^2 V(r)}{dr^2} +\frac{r}{V(r)}\frac{d V(r)}{dr} + \frac{1}{F(\theta)}\frac{d^2 F(\theta)}{d\theta^2} = 0
 \end{equation}
@@ -1459,7 +1455,7 @@ then solving for $V(r)$.
 \[
 r^2\frac{d^2 V(r)}{dr^2} +r\frac{d V(r)}{dr} = n^2V(r)    
 \]
-by puting $r = e^t$
+by putting $r = e^t$
 \begin{align*}
 \frac{dV(r)}{dr} &= \frac{dV(r)}{dt}\frac{dt}{dr} = e^{-t} \frac{dV(r)}{dt}\;\Rightarrow  r \frac{dV(r)}{dr}=\frac{dV(r)}{dt}
 \\
@@ -1524,13 +1520,14 @@ from the value of the exponential series we can get.
 \[
     S_1 + i S_2 = \sum_{n=0}^{\infty} r^n e^{in\phi}    
 \]
-this is the form of a geometric series the value of the summition is
+this is the form of a geometric series the value of the summation is
 \[
     \sum_{n=0}^{\infty} r^n e^{in\phi} = \frac{r e^{i\phi}}{1- r e^{i\phi}}
 \]
 we now manipulate the expression to obtain the real part.
 \\
 \begin{align*}
+\hspace{4cm}
 \frac{r^n e^{i\phi}}{1- r^n e^{i\phi}} &= \frac{r(cos\phi+isin\phi)}{1-r(cos\phi+isin\phi)}
 \\
 &= \frac{r(cos\phi+isin\phi)}{(1-rcos\phi)-irsin\phi} \cdot \frac{(1-rcos\phi)+irsin\phi}{(1-rcos\phi)+irsin\phi}
@@ -1543,7 +1540,7 @@ we find that.
 \[
     S_1 = \frac{rcos\phi - r^2}{1-2rcos\phi+r^2}    
 \]
-substituting in the expression for u we get.
+substituting in the expression for $u$ we get.
 \begin{align*}
 u(r,\theta) &= \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi ) d\psi  + \frac{1}{\pi}\int_{0}^{2\pi} H(\psi )\frac{rcos(\psi  -\theta) - r^2}{1-2rcos(\psi  -\theta)+r^2}d\psi 
 \\
@@ -1553,17 +1550,17 @@ simplify.
 \[
     u(r,\theta) = \frac{1}{2\pi}\int_{0}^{2\pi} H(\psi )\frac{1-r^2}{1-2rcos(\psi  -\theta)+r^2}d\psi     
 \]
-and for a circle of radius R we get Poisson's Formula.
+and for a circle of radius $R$ we get Poisson's Formula.
 \[
     u(r,\theta) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2}d\beta \;\;\;, \;\;\;\; \beta = R\psi     
 \]
-we can easily find u in terms of x and y, the two forms are equivalent.
+we can easily find $u$ in terms of $x$ and $y$, the two forms are equivalent.
 
 \subsection{Harmonic Functions}
 we will discuss some properties or theorems of the harmonic function
 
 \begin{observation}
-    u(x,y) at the center of the circle where r=0 that is when x=0 and y=0 is
+    $u(x,y)$ at the center of the circle where $r=0$ that is when $x=0$ and $y=0$ is
     \[
         u(0,0) = \frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)\frac{R^2-(0)^2}{R^2-2R(0)cos(\psi  -\theta)+(0)^2}d\beta =\frac{1}{2\pi R}\int_{0}^{2\pi R} H(\beta)d\beta     
     \]
@@ -1579,7 +1576,7 @@ we will discuss some properties or theorems of the harmonic function
     \]
     without loss of generality $m > 0$ is assumed.
     \\
-    we know that $ -1 \leq cos(\theta) \leq 1$
+    we know that $ -1 \leq \cos(\theta) \leq 1$
     \begin{align*}
         \therefore
         \frac{R^2-r^2}{R^2+2Rr+r^2} &\leq \frac{R^2-r^2}{R^2-2Rrcos(\psi  -\theta)+r^2} \leq \frac{R^2-r^2}{R^2-2Rr+r^2}
@@ -1604,7 +1601,7 @@ we will discuss some properties or theorems of the harmonic function
 \end{proof}
 
 \begin{theorem}[Regularity Theorem]
-    If u is a harmonic and continuous function on G and its boundary $\gamma$, then u is analytic at every point on G, i.e. can be represented as as a power series and can be differentiated infinite times.    
+    If $u$ is a harmonic and continuous function on $G$ and its boundary $\gamma$, then $u$ is analytic at every point on $G$, i.e. can be represented as as a power series and can be differentiated infinite times.    
 \end{theorem}
 \begin{proof}
     we know that.       
@@ -1620,9 +1617,11 @@ we will discuss some properties or theorems of the harmonic function
         \sin(n\theta) =  \sum_{k=0}^{n} B_k {(\cos\theta)}^k {(\sin\theta)}^{n-k}    
     \]
     substituting in $u(x,y)$ we get.
+
     \[
         u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty} r^n\left[a_n\sum_{k=0}^{n} A_k (cos\theta)^k (sin\theta)^{n-k}\right] + \sum_{n=1}^{\infty} r^n\left[b_n\sum_{k=0}^{n} B_k (cos\theta)^k (sin\theta)^{n-k}\right]    
     \]
+
     put $r^n = r^{n-k}r^k $ and we know that $x = rcos\theta$ and $y=rsin\theta$.
     \[
         u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty}\sum_{k=0}^{n} a_n A_k x^k y^{n-k} + \sum_{n=1}^{\infty}\sum_{k=0}^{n}b_n B_k x^k y^{n-k}    
@@ -1646,23 +1645,23 @@ we will discuss some properties or theorems of the harmonic function
 
 \setcounter{equation}{0}
 \subsection{Green's Identity}
-we will study Green's intgral in three dimensions but it can be also applied to n dimensions.
+we will study Green's integral in three dimensions but it can be also applied to n dimensions.
 \begin{center}
 \includegraphics[scale=0.2]{green.png}
 \end{center}
-for any domain $G$ in three dimensions with boundry $\Gamma$, where the volume element is $dx = dx_1 dx_2 dx_3$, the surface element is $d\sigma$, and $\vec{n}$ is the normal to the surface, let $v(x_1,x_2,x_3)$, $u(x_1,x_2,x_3)$ be functions such that $v,u\in C^3(G)$ and $v,u\in C^2(G\cup \Gamma)$.
+for any domain $G$ in three dimensions with boundary $\Gamma$, where the volume element is $dx = dx_1 dx_2 dx_3$, the surface element is $d\sigma$, and $\vec{n}$ is the normal to the surface, let $v(x_1,x_2,x_3)$, $u(x_1,x_2,x_3)$ be functions such that $v,u\in C^3(G)$ and $v,u\in C^2(G\cup \Gamma)$.
 \par
-now we start our treatment by studying the following diffrentitation. 
+now we start our treatment by studying the following differentiation. 
 \begin{align*}
 \frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) &= v\frac{\partial^2 u}{\partial x_{i}^{2}} + \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i}
 \\
 v\frac{\partial^2 u}{\partial x_{i}^{2}} &= \frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) - \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i}
 \end{align*}
-intgrating over volume.
+integrating over volume.
 \[
     \int_G v\frac{\partial^2 u}{\partial x_{i}^{2}} dx = \int_G \frac{\partial }{\partial x_i}\left(v\frac{\partial u}{\partial x_i}\right) dx - \int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx    
 \]
-from the divergance theorem we can transform the first integral on the right hand side to a surface integral.
+from the divergence theorem we can transform the first integral on the right hand side to a surface integral.
 \[
     \int_G v\frac{\partial^2 u}{\partial x_{i}^{2}} dx = \int_\Gamma v\frac{\partial u}{\partial x_i}cos(\vec{n},x_i) d\sigma - \int_G \frac{\partial v}{\partial x_i}\frac{\partial u}{\partial x_i} dx    
 \]
@@ -1677,7 +1676,7 @@ in the same manner we can find.
 \begin{equation}
 \int_G u\nabla^2 v dx = \int_\Gamma u\frac{\partial v}{\partial \vec{n}} d\sigma - \sum_{i=1}^{3}\int_G \frac{\partial u}{\partial x_i}\frac{\partial v}{\partial x_i} dx
 \end{equation}
-substracting (2) from (1) results in.
+subtracting (2) from (1) results in.
 \[
     \int_G \left[v\nabla^2 u - u\nabla^2 v\right]dx = \int_\Gamma \left[v\frac{\partial u}{\partial \vec{n}}-u\frac{\partial v}{\partial \vec{n}}\right] d\sigma    
 \]
@@ -1769,7 +1768,7 @@ the value of the function attains its maximum or minimum value on its boundary a
 \end{proof}
 
 \begin{enrichment*}{Potential Function}
-    The inverse square law's occurrence is frequent in physics, most notably in the classical theory of gravitation where the gravitational force is inversly proportional to the square of the sepration between two masses.
+    The inverse square law's occurrence is frequent in physics, most notably in the classical theory of gravitation where the gravitational force is inversely proportional to the square of the separation between two masses.
 \[
     F_g = G\frac{m_1 m_2}{r^2}    
 \]
@@ -1777,10 +1776,10 @@ and in classical electrostatics where cloumb's law for the electrical force betw
 \[
     F_e = K\frac{q_1 q_2}{r^2}    
 \]
-in general we find that $F \propto \frac{1}{r^2}$ is frequently occuring in physics and since the potential energy is the intgration of force
-= $\displaystyle -\int F dr$ we find that potential energy is porportioanl to the inverse of or sepration distance $PE \propto \frac{1}{r}$, thus the need for studying such functions is as important as potential energy which showed to be very important.
+in general we find that $F \propto \frac{1}{r^2}$ is frequently occurring in physics and since the potential energy is the integration of force
+= $\displaystyle -\int F dr$ we find that potential energy is proportional to the inverse of or separation distance $PE \propto \frac{1}{r}$, thus the need for studying such functions is as important as potential energy which showed to be very important.
 \par
-now we define a general function called E which is porportioanl to the inverse of or sepration, the most general will be.
+now we define a general function called E which is proportional to the inverse of or separation, the most general will be.
 \[
     E(x,y) = \frac{1}{r}\;\;,\;\;\;\;\;\;\; where\;\;\;\;\; r = \sqrt{(y_1-x_1)^2 + (y_2-x_2)^2 + (y_2-x_2)^2}    
 \]
@@ -1788,7 +1787,7 @@ It is easy to show that E is harmonic on $\mathbb{R}^3$.
 \[
     \nabla_{x}^{2} E(x,y) = 0 \tquad \text{and} \tquad \nabla_{y}^{2} E(x,y) = 0    
 \]
-where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the laplacean with resprect to x and y respectivly
+where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the laplacean with respect to x and y respectively
 \end{enrichment*}
 
 \setcounter{equation}{0}
@@ -1798,10 +1797,10 @@ We will utilize Green's identity and the potential function for solving Laplace'
 \begin{center}
 \includegraphics[scale=0.15]{rep.png}
 \captionlabelfalse
-\caption{the domian}
+\caption{the domain}
 \end{center}
 \end{figure}
-the domain $G$ is any contineous closed volume, with surface $S$, the domain $G_\epsilon$ is a sphere inside our volume, i.e. $G_\epsilon \in G$, with its center $x = (x_1,x_2,x_3)$, radius $\epsilon$, and surface $S_\epsilon$. 
+the domain $G$ is any continuous closed volume, with surface $S$, the domain $G_\epsilon$ is a sphere inside our volume, i.e. $G_\epsilon \in G$, with its center $x = (x_1,x_2,x_3)$, radius $\epsilon$, and surface $S_\epsilon$. 
 \begin{align}
 \nabla_{y}^{2} u(y) =0
 \end{align}
@@ -1809,7 +1808,7 @@ where
 \begin{align}
 u(y) \in C^3(G)\;,\;\;\; u(y) \in C^2(G\cup S)
 \end{align}
-from (2) the condition for using Green's identity between the pair of function u and the potential function E is satisfyed since they are both contineous on our domain. Thus using the identity yeilds.
+from (2) the condition for using Green's identity between the pair of function u and the potential function E is satisfied since they are both continuous on our domain. Thus using the identity yields.
 \[
     \int_G \left[E(x,y)\nabla_{y}^{2} u(y) - u(y)\nabla_{y}^{2} E(x,y)\right]dx = \int_\Gamma \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma    
 \]
@@ -1824,7 +1823,7 @@ since a sphere cutout was proposed then our region of study has two surfaces wit
 \[
     \int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma - \int_{S_\epsilon} \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n_\epsilon}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n_\epsilon}}\right] d\sigma_\epsilon  = 0    
 \]
-the first term in the second intgral vanishes due to spherical symmetry, 
+the first term in the second integral vanishes due to spherical symmetry, 
 \\and on $S_\epsilon$ we have $r=\epsilon$ then $E = \frac{1}{\epsilon}$ therefore $\displaystyle \frac{\partial E(x,y)}{\partial \vec{n_\epsilon}} = \frac{\partial}{\partial \epsilon}\frac{1}{\epsilon} = -\frac{1}{\epsilon^2}$
 thus we are left with.
 \[
@@ -1839,7 +1838,7 @@ we now show that the first integral on the right hand side vanishes as $\epsilon
     \left|\int_{S_\epsilon} u(y)-u(x) d\sigma_\epsilon \right| \leq \int_{S_\epsilon} |u(y)-u(x)| d\sigma_\epsilon \leq \delta(\epsilon)\int_{S_\epsilon} d\sigma_\epsilon \leq 4\pi \delta(\epsilon)    
 \]
 as $\epsilon \to 0$ , $\delta(\epsilon) \to 0$
-\\because the absolute value of the integral is $\leq$ 0 then it's equal 0. Now we evalute the second integral.
+\\because the absolute value of the integral is $\leq$ 0 then it's equal 0. Now we evaluate the second integral.
 \[
     \int_{S_\epsilon} u(x)d\sigma_\epsilon = u(x)\int_{S_\epsilon}d\sigma_\epsilon = u(x) 4\pi\epsilon^2
 \]
@@ -1867,29 +1866,26 @@ substituting in (3) we finally get the representation formula
     \]
 \end{enrichment*}
 \setcounter{equation}{0}
-\subsection{Laplace's Equation in Cylinderical Coordinates}
+\subsection{Laplace's Equation in Cylindrical Coordinates}
 considering the Dirichlet problem.
-\begin{equation}
-\nabla^2 u(r,z) = \frac{\partial^2 u(r,z)}{\partial z^2} + \frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right] = 0 \;\; , \;\;\; r >0
-\end{equation}
-\begin{equation}
-\text{I.C} \quad \Longrightarrow \quad u(r,0) = f(r)
-\end{equation}
-\begin{equation}
-\text{B.C} \quad \Longrightarrow \quad \lim_{r\rightarrow\infty} u(r,z) =0
-\end{equation}
-by taking Hankel transformation for equation (1) 
+\[
+    \begin{cases}
+        \displaystyle \nabla^2 u(r,z) = \frac{\partial^2 u(r,z)}{\partial z^2} + \frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right] = 0 \;\; , \;\;\; r >0
+        \\
+        \text{I.C} \quad \Longrightarrow \quad u(r,0) = f(r)
+        \\
+        \text{B.C} \quad \Longrightarrow \quad \lim_{r\rightarrow\infty} u(r,z) =0
+    \end{cases}
+\]
+by taking Hankel transformation for both sides
 \begin{align*}
 \frac{\partial^2 }{\partial z^2}\int_{0}^{\infty} rJ_o(r\rho)u(r,z) dr &+ \int_{0}^{\infty}rJ_o(r\rho)\frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
 \\
 \frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2} &+ \int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
 \end{align*}
-\begin{equation}
-\frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2}  = -\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr
-\end{equation}
-
-\newpage 
-
+\[
+    \frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2}  = -\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr    
+\]
 now we write the right hand side as.
 \begin{align*}
 -\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr &= -\int_{0}^{\infty}\frac{\partial}{\partial r}\left[J_o(r\rho)r\frac{\partial u(r,z)}{\partial r}\right]dr + \int_{0}^{\infty} r\frac{\partial u(r,z)}{\partial r} \rho J_o'(r\rho)dr
@@ -1928,7 +1924,7 @@ and from the boundary condition after taking the Hankel transformation for it $\
 \[
 \therefore A = 0    
 \]
-and preforming the Hankel transorm on the initial condition.
+and preforming the Hankel transform on the initial condition.
 \[
 \hat{u}(\rho,0) = B = \hat{f}(\rho)    
 \]
@@ -1943,33 +1939,30 @@ u(r,z) = \int_{0}^{\infty} \rho J_o(r\rho)\hat{f}(\rho)e^{-\rho z} d\rho
 \newpage
 \setcounter{equation}{0}
 \section{Burger's Equation}
-
-Burger's equation  is a fundamental partial differential equation occurring in various areas of applied mathematics. It has many forms, we will be studying the solution of one of its forms; the viscous Burger's equation Cauchy problem, occurying in fluid dynamics, , the viscous equation is non linear thus needs a different approuch than those used earlier. We will be using the method of Hopf-Cole.
-
+Burger's equation  is a partial differential equation occurring in various areas of applied mathematics. It has many forms, we will be studying the solution of one of its forms; the viscous Burger's equation Cauchy problem, occurring in fluid dynamics, , the viscous equation is non linear thus needs a different approach than those used earlier. We will be using the method of Hopf-Cole.
 \begin{equation}
-\frac{\partial u(x,t)}{\partial t} + u(x,t)\frac{\partial u(x,t)}{\partial x} = \gamma \frac{\partial^2 u(x,t)}{\partial x^2} \tquad \gamma > 0 , x \in \mathbb{R}
-\end{equation}
-\begin{equation}
-\text{I.C} \quad \Longrightarrow \quad u(x,0) = f(x)
+    \begin{cases}
+        \displaystyle \frac{\partial u(x,t)}{\partial t} + u(x,t)\frac{\partial u(x,t)}{\partial x} = \gamma \frac{\partial^2 u(x,t)}{\partial x^2} \tquad \gamma > 0 , x \in \mathbb{R}
+        \\
+        \text{I.C} \quad \Longrightarrow \quad u(x,0) = f(x)
+    \end{cases}
 \end{equation}
 \begin{enrichment*}{}
-    if $\gamma = 0$ the equation is called the inviscous Burger's equation
+    if $\gamma = 0$ the equation is called the in-viscous Burger's equation
 \end{enrichment*}
 we start our treatment by defining a new function
 \[
-v(x,t) = e^{\alpha\phi(x,t)}    
-\]
-\[
-\phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))    
+v(x,t) = e^{\alpha\phi(x,t)}  \quad \Longrightarrow \quad \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))
 \]
 we try to find the function $\phi$ such that $v$ satisfy
 \begin{equation}
-\frac{\partial v}{\partial t} = \gamma \frac{\partial^2 v}{\partial x^2}
+    \begin{cases}
+        \displaystyle \frac{\partial v}{\partial t} = \gamma \frac{\partial^2 v}{\partial x^2}
+        \\
+        \text{I.C} \quad \Longrightarrow \quad v(x,0) = g(x)
+    \end{cases}
 \end{equation}
-\begin{equation*}
-\text{I.C} \quad \Longrightarrow \quad v(x,0) = g(x)
-\end{equation*}
-we start finding the terms of the equation (3) in terms of $\phi$
+we start finding the terms of the equation (2) in terms of $\phi$
 \begin{align*}
 \hspace{2cm}
 \frac{\partial v}{\partial t} &= \alpha e^{\alpha\phi} \frac{\partial \phi}{\partial t}
@@ -1978,13 +1971,13 @@ we start finding the terms of the equation (3) in terms of $\phi$
 \\
 \frac{\partial^2 v}{\partial x^2} &= \alpha^2 e^{\alpha \phi} {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \alpha e^{\alpha\phi} \frac{\partial^2 \phi}{\partial x^2}
 \end{align*}
-substitute in (3)
+substitute in (2)
 \begin{align}
 \alpha e^{\alpha\phi} \frac{\partial \phi}{\partial t} &= \gamma\left(\alpha^2 e^{\alpha \phi} {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \alpha e^{\alpha\phi} \frac{\partial^2 \phi}{\partial x^2}\right)\nonumber
 \\
 \frac{\partial \phi}{\partial t} &= \gamma\alpha {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \gamma \frac{\partial^2 \phi}{\partial x^2}
 \end{align}
-diffrentiating the equation (4) with respect to x and changing the order of diffrentiation on the left hand side
+differentiating with respect to $x$ and changing the order of differentiation on the left hand side
 \[
     \frac{\partial }{\partial t}\left[ \frac{\partial \phi}{\partial x}\right] = 2\gamma\alpha \frac{\partial\phi}{\partial x}\frac{\partial^2 \phi }{\partial x^2} + \gamma\frac{\partial^3 \phi}{\partial x^3}    
 \]
@@ -1998,11 +1991,11 @@ set $2\gamma\alpha = -1$ we get
 \]
 means that $\displaystyle \frac{\partial \phi(x,t)}{\partial x}$ is a solution for the burger equation 
 
-we know that problem (3) is the heat equation cauchy problem that we solved before using Poisson's formula and we know that the solution is 
+we know that problem (2) is the heat equation Cauchy problem that we solved before using Poisson's formula and we know that the solution is 
 \[
 v(x,t) = \frac{1}{\sqrt{4\pi \gamma t}} \int_{-\infty}^{\infty} e^{-\frac{(x-y)^2}{4\gamma t}} g(y)dy    
 \]
-finding v we can now find $\phi$ from the relation $\displaystyle \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))$ then diffrentiating it with respect to x to finally find u.
+finding $v$ we can now find $\phi$ from the relation $\displaystyle \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))$ then differentiating it with respect to $x$ to finally find $u$.
 
 \section{Integral Equations}
 \
@@ -2056,17 +2049,12 @@ The successive approximation method is an iterative approach that allows us to f
 It's important to note that the convergence of the successive approximation method for integral equations depends on various factors, including the nature of the kernel $K(x,y)$, the choice of the initial guess, and the value of the parameter 
 $\lambda$. In some cases, convergence may be slow or may not occur at all. In such situations, other numerical methods tailored for specific types of integral equations may be more appropriate.
 
-\newpage 
-
-
-
-
 \subsection{Fredholm's Integral Equation}
-consider the following intgral equation.
+consider the following integral equation.
 \[
 u(x) = f(x) + \lambda\int_{a}^{b} k(x,y) u(y)dy    
 \]
-where $f(x)$ and $k(x,y)$ are given contineous function on $[a,b]\times[c,d]$ and
+where $f(x)$ and $k(x,y)$ are given continuous function on $[a,b]\times[c,d]$ and
 \[
     G 
     \begin{cases}
@@ -2093,15 +2081,15 @@ u_1(x) &= u_o(x) + \lambda\int_{a}^{b} k(x,y) u_o(y)dy
 \\
 u_1(x)- u_o(x) &= \lambda\int_{a}^{b} k(x,y) u_o(y)dy
 \end{align*}
-since the intgral is defenite and the functions are contineous on the limits of intgration 
-this can be considerd as the inner product of the two functions 
+since the integral is definite and the functions are continuous on the limits of integration 
+this can be considered as the inner product of the two functions 
 with will be less than or equal to their magnitudes where $|k(x,y)| = M$ and $|f(x)| = m$.
 \begin{enrichment*}{}
-    the inner product of two functions on the space of continous functions is defined as 
+    the inner product of two functions on the space of continuous functions is defined as 
     \[
         <f,g> = \int f(x)g(x)dx \leq |f(x)||g(x)|
     \]
-     remmber the inner product of vectors $\vec{v}\cdot \vec{u} = vu \cos(\theta) \leq vu$
+     remember the inner product of vectors $\vec{v}\cdot \vec{u} = vu \cos(\theta) \leq vu$
 \end{enrichment*}
 \begin{align*}
     \left|u_1(x)- u_o(x)\right| &= |\lambda|\left|\int_{a}^{b} k(x,y) u_o(y)dy\right|    
@@ -2135,7 +2123,7 @@ we can find the solution $u(x)$ by taking the limit to $\infty$
     \lim_{n\to\infty} u_n(x) = u(x) = u_o(x) + \sum_{k=1}^{\infty} [u_{k}(x) - u_{k-1}(x)] \leq u_o(x) + m\sum_{k=1}^{\infty} {(|\lambda|M(b-a))}^k    
 \]
 this is geometric series
-if $|\lambda|M(b-a) < 1$ then the series converges absolutly and uniformally
+if $|\lambda|M(b-a) < 1$ then the series converges absolutely and uniformally
 \begin{example}
     Consider the Fredholm integral equation 
     \[
@@ -2227,11 +2215,11 @@ u(x) = f(x) + \int_{0}^{x} K(x,y) u(y)dy
 where the functions $f(x)$ is a given function, often called the "forcing function" or "input function."
 and $k(x,y)$ is a given kernel function
 \\
-To solve this equation we use, as we did with Fredholm's intergral equation, the method f succssive approximation. We first define a sequence.
+To solve this equation we use, as we did with Fredholm's integral equation, the method f successive approximation. We first define a sequence.
 \[
 u_n(x) = f(x) + \int_{0}^{x} K(x,y) u_{n-1}(y)dy    
 \]
-we can choose our first term arbitrarly but here we choose it to be $u_0(x) = f(x)$ then we getting.
+we can choose our first term arbitrary but here we choose it to be $u_0(x) = f(x)$ then we getting.
 \begin{align*}
 u_1(x) &= u_0(x) + \int_{0}^{x} K(x,y) u_0(y)dy
 \\
@@ -2260,18 +2248,14 @@ u_0 + \sum_{k=1}^{n} [u_k-u_{k-1}] &= u_0 + u_1 - u_0 +u_2 - u_1 + \cdots +u_{n-
 \\
 &= u_n
 \end{align*}
-taking the limit as n approches infinity
+taking the limit as n approaches infinity
 \begin{align*}
 u(x) = \lim_{n\to \infty} u_n(x) &= u_0 + \sum_{k=1}^{\infty} [u_k-u_{k-1}]    
 \\
 & \leq m\sum_{k=1}^{\infty} \frac{{(xM)}^n}{n!}
 \end{align*}
 and we can deduce that the sum is uniformally convergent and we can find u because the factorial is more powerful that the exponential.
-
-\newpage
-
-
-\subsection{Abel Integral equation}
+\subsection{Abel Integral Equation}
 Abel integral equation belongs to the class of Volterra equations of the first kind
 it's expressed in the following general form:
 \[
@@ -2288,6 +2272,25 @@ and integrating with respect to $x$ from $0 \to t$
 \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx=  \int_{0}^{t} \frac{1}{{(t-x)}^{1-\alpha}} \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau)}^\alpha} d\tau dx
 \]
 by switching the order of the integration 
+
+\begin{center}
+        \begin{tikzpicture}
+            \draw[->, blue] (0,0,0) -- (3,0,0) node[right]{$x$};
+            \draw[->, blue] (0,0,0) -- (0,3,0) node[above]{$\tau$};
+            \draw[->, orange] (0,0,0) -- (2.5,2.5,0) node[above right]{$\tau = x $};
+            \draw[->, orange] (0,2.2,0) -- (2.7,2.2,0) node[right]{$\tau = t$};
+		
+            \draw[-,red] (0,1,0)--(1,1,0);
+            \draw[-,red] (0,1.2,0)--(1.2,1.2,0);
+
+            \draw[-,red] (1,1,0)--(1,2.2,0);
+            \draw[-,red] (1.2,1.2,0)--(1.2,2.2,0);
+
+            \draw (-.2,1.1,0) node{$d\tau$};
+            \draw (1.1,2.4,0) node{$dx$};
+	\end{tikzpicture}
+\end{center}
+
 \[
 \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx= \int_{0}^{t}\int_{\tau}^{t} \frac{1}{{(t-x)}^{1-\alpha}{(x-\tau)}^\alpha} dx \phi(\tau) d\tau
 \]
@@ -2310,7 +2313,7 @@ taking the derivative for t
 \[
 \frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx = \frac{\pi}{\sin(\alpha\pi)} \phi(t)
 \]
-therefore $\phi(t)$ can be writen as 
+therefore $\phi(t)$ can be written as 
 \[
 \phi(t) = \frac{\sin(\alpha\pi)}{\pi}  \frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx
 \]
@@ -2336,7 +2339,7 @@ E(t)  =  \frac{\rho}{2} \int {\left(\frac{\partial u}{\partial t}\right)}^2 dx +
 
 The energy integral is essential because it helps us understand how energy is distributed in the wave as it propagates through space and time. It also plays a crucial role in analyzing the behavior of waves, their interactions with other waves or boundaries, and studying the overall dynamics of wave phenomena in various physical systems.
 
-\subsection{Energy Conservation For a Wave in 1D}
+\subsection{Energy Conservation For 1D Wave Equation}
 To prove that the energy integral is conservative over the wave equation in 1D,
 we need to show that the total energy of the system remains constant over time, i.e., the derivative of the energy with respect to time is zero.
 \par
@@ -2345,10 +2348,10 @@ let's consider the wave equation
     \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \tquad c^2 = \frac{\mu}{\rho} \tquad x : a\to b \text{ (string length)}
 \]
 \begin{theorem}
-    let $g : \mathbb{R}\times\mathbb{R} \to \mathbb{R}$ be a contineous function such that $\displaystyle \frac{\partial g(x,t)}{\partial t}$ exist and is continous.
+    let $g : \mathbb{R}\times\mathbb{R} \to \mathbb{R}$ be a continuous function such that $\displaystyle \frac{\partial g(x,t)}{\partial t}$ exist and is continuous.
     \\
     Suppose $\displaystyle \int_{-\infty}^{\infty} |g(x,t)| dx $  and   $\displaystyle \int_{-\infty}^{\infty} |\frac{\partial g(x,t)}{\partial t}| dx $ exists for each $t$
-    and that $\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$ uniformally in $t$ on every interval $[a,b]$.\
+    and that $\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$ uniformly in $t$ on every interval $[a,b]$.\
     \\
     Then $\displaystyle \int_{-\infty}^{\infty} g(x,t) dx $ is differentiable with :
     \[
@@ -2428,12 +2431,12 @@ to be no blow ups so we can assume this condition is satisfied for all t.
 The final condition in the theorem requires
 $\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$
 and since we are dealing with a finite spatial interval this should also be satisfied.
-Hence, differentiating under the integral sign is accepetable.
+Hence, differentiating under the integral sign is acceptable.
 
-\subsection{Energy conservation for the 3d wave equation}
+\subsection{Energy Conservation For 3D Wave Equation}
 let's consider the wave equation in 3d
 \[
-u_{tt} = \nabla_x^2 u \tquad B.C \to u|_{\Gamma} = 0
+u_{tt} = \nabla_x^2 u \tquad B.C \to u(x,y)|_\Gamma = 0
 \]
 the Energy Integral will be as following
 \[
@@ -2471,5 +2474,4 @@ and because u is smooth thus $\nabla_x (u_t) =(\nabla_x u)_t$
     \therefore  \frac{dE}{dt} = 0
 \]
 therefore the energy $E(t)$ is conservative on 3D wave equation and same method can be applied with n-th dimension
-
 \end{document}
