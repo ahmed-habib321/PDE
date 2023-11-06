@@ -3,9 +3,25 @@
 
 \input{MyTools}
 
-
+\usepackage{fontspec}
 \definecolor{cover}{RGB}{230, 194, 24}
 
+\newfontfamily\Acmefont{Acme-Regular}[
+        Path = fonts/Acme/,
+        Extension =.ttf
+]
+\newfontfamily\fancyfont{GreatVibes-Regular}[
+        Path = fonts/Great_Vibes/,
+        Extension =.ttf
+]
+\newfontfamily\handfont{PlaypenSans-ExtraBold}[
+        Path = fonts/Playpen_Sans/,
+        Extension =.ttf
+]
+\newfontfamily\Garamondfont{EBGaramond-Medium}[
+        Path = fonts/Garamond/,
+        Extension =.ttf
+]
 \begin{document}
 
 
@@ -19,20 +35,41 @@
 \fontsize{80pt}{0}\selectfont Partial\par
 \fontsize{80pt}{0}\selectfont Differential\par
 \fontsize{80pt}{0}\selectfont Equations\par
-\begin{center}
-    {\LARGE 01356 Spring 2023}\par
-    \vspace*{1cm}
-    {\Huge Lecture Notes}\par       
-\end{center}
-\color{white}
-\vspace*{4.5cm}
-\fontsize{22pt}{0}\selectfont Lecturer: Prof. Mahmoud M. El-Borai\par
-\fontsize{22pt}{0}\selectfont Prepared by: Ossama Abdelwahed And\par
-\hspace*{4cm}
-\fontsize{22pt}{0}\selectfont Ahmed.M.Habib\par
 \endgroup
 
-\newpage 
+\newpage
+\setcounter{page}{1}
+\begingroup
+\newgeometry{left=.8in, right=1in, top=.8in}
+\begin{center}
+    \includegraphics[scale=.5]{collage logo.png}
+    \vspace*{1.5cm}
+    \par
+    {\fontsize{20pt}{30pt}\selectfont
+    \textbf{Partial Differential Equations\\(040101356)\\Spring 2023}
+    \\
+    \vspace*{.75cm}
+    By
+    \vspace*{.75cm}
+    
+    Prof. Dr. Mahmoud M. El-Borai
+    
+    Department of Mathematics and computer Sciences
+    
+    Faculty of Sciences
+    
+    Alexandria University
+    }
+
+    \begin{figure*}[b]
+        \centering
+        Written by: Ossama Abdelwahed And Ahmed M. Habib    
+    \end{figure*}
+\end{center}
+
+\restoregeometry
+\endgroup
+\newpage
 
 \tableofcontents
 
@@ -47,20 +84,23 @@ The main goal of many scientific disciplines can be summarized to the following:
 \item Analyze solutions to these equations in order to extract information and make predictions.
 \end{enumerate}
 
-The result of 1 is often a system of partial differential equations, thus the second becomes solving those partial differential equations.
-\par
-A partial differential equation (PDE) is is a differential equation containing partial derivatives of the dependent variable with respect to more than one independent variable.
+The result of (1) is often a system of partial differential equations, thus the second becomes solving those equations.
+\ \\ 
+\begin{definition}[Partial Differential Equation]
+    A partial differential equation (PDE) is a differential equation containing partial derivatives of the dependent variable with respect to more than one independent variable.
+\end{definition}
+
 
 \subsection{Order of PDE}
 The order of a PDE is determined by the highest derivative in the equation.
 \begin{align*}
-\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \ \ \ \ \Longrightarrow  \text{First order}
+\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \ \ \ \ \Longrightarrow  \text{First Order}
 \\
-\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= c \ \ \ \ \Longrightarrow  \text{Fourth order}
+\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= c \ \ \ \ \Longrightarrow  \text{Fourth Order}
 \end{align*}
-do not mistake the order of the PDE with its degree, the degree of the PDE is the highest exponent appearing in the equation.
+Do not mistake the order of the PDE with its degree, the degree of the PDE is the highest exponent appearing in the equation.
 \subsection{Linearity} 
-A linear PDE is one that is of first degree in all of its field variables and partial derivatives.
+A linear PDE is one that is of first degree in all of it's field variables and partial derivatives.
 \begin{align*}
 \frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \dquad \text{linear}
 \\
@@ -71,11 +111,11 @@ A linear PDE is one that is of first degree in all of its field variables and pa
 \frac{\partial^3 u}{\partial x^3} + {(\frac{\partial^2 u}{\partial y^2})}^5 &= \sin(x) \dquad \text{nonlinear}
 \end{align*}
 
-a linear operator can be defined for any linear equation, taking the first equation in the previous list, the linear operator $L$ can be defined as.
+A linear operator can be defined for any linear equation, taking the first equation in the previous list, the linear operator $L$ can be defined as.
 \[
-L = \frac{\partial }{\partial t} + \frac{\partial u}{\partial x}
+L = \frac{\partial u }{\partial t} + \frac{\partial u}{\partial x}
 \]
-and the equation can be written as.
+And the equation can be written as.
 \[
     L(u)=0    
 \]
@@ -85,7 +125,7 @@ Let $L$ be a linear operator. Then a linear partial differential equation can be
 \[
     L(u) = f(x_1,x_2, \dots , t)    
 \]
-if $f = 0$ then the equation is homogeneous, otherwise it is in-homogeneous.
+If $f = 0$ then the equation is homogeneous, otherwise it is inhomogeneous.
 \begin{align*}
 \frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \dquad \text{homogeneous}
 \\
@@ -97,7 +137,7 @@ if $f = 0$ then the equation is homogeneous, otherwise it is in-homogeneous.
 \subsection{Boundary Conditions}
 \
 \begin{definition}[Boundary Conditions]
-    Boundary conditions are constraints necessary for the solution of a boundary value problem.
+    Boundary conditions are constraints describes the function at the ends of it's region and they are necessary for the solution of a boundary value problem.
 \end{definition}
 \begin{definition}[Boundary Value Problem]
     BVP is a differential equation to be solved in a domain on whose boundary the function is known.
@@ -115,12 +155,12 @@ We will be interested in one type of boundary conditions in this course which is
 \[
     G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \;\;\;\;\;\;\;\;\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
-\begin{definition}[Dirichlet problems]
-    or Initial Value Problem IVP are problems that has only boundary conditions
+\begin{definition}[Dirichlet Problems]
+    are problems that has only boundary conditions
 \end{definition}
 \subsection{Initial Condition}
 \
-\begin{definition}[The initial condition]
+\begin{definition}[The Initial Condition]
     is a condition that a solution must have at only on instant of time, which is the starting time as it can be found experimentally.
 \end{definition}
 An example is the heat equation with initial condition.
@@ -130,27 +170,35 @@ An example is the heat equation with initial condition.
 \[
     u(x,0) = f(x)
 \]
-\begin{definition}[Cauchy problems]
+\begin{definition}[Cauchy Problems]
     are problems that has only initial conditions
 \end{definition}
-\begin{enrichment}{Dirichlet}{Dirichlet.jpg}{2.4}{.8}{.17}
-    Peter Gustav Lejeune Dirichlet (1805-1859)  Born in Düren, Germany, Dirichlet's work on boundary value problems, particularly for the Poisson equation, laid the foundation for modern PDE theory. Dirichlet introduced "Dirichlet boundary conditions," enabling unique solutions and influencing various scientific and engineering disciplines. His principle for potential theory remains vital in mathematical physics, making him a prominent figure in PDE history.
-\end{enrichment}
+\begin{figure*}[b]
+    \begin{enrichment}{Dirichlet}{Dirichlet.jpg}{2.4}{.8}{.17}
+        Peter Gustav Lejeune Dirichlet (1805-1859)  Born in Düren, Germany, Dirichlet's work on boundary value problems, particularly for the Poisson equation, laid the foundation for modern PDE theory. Dirichlet introduced "Dirichlet boundary conditions," enabling unique solutions and influencing various scientific and engineering disciplines. His principle for potential theory remains vital in mathematical physics, making him a prominent figure in PDE history.
+    \end{enrichment}
+\end{figure*}
 
 \section{Canonical Form}
 Consider the following PDE with variable coefficients. We are aiming to transform this equation into its canonical form
 \begin{equation}
 A\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x^2} + 2B\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial x\partial y}+C\left(x,y\right)\frac{\partial^2 u\left(x,y\right)}{\partial y^2}+F\left(x,y,u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right) = 0
 \end{equation}
-The first three terms are called the principle terms and the last term is called the Young term (Y.T) which does not contain second order derivatives of u.
+The first three terms are called the principle terms and the last term is called the Young term
+\
+\begin{definition}[Young Term]
+    are terms which does not contain second order derivatives of the function
+\end{definition}
 \par
 We start by preforming a change of variables such that.
 \[
-    \xi = \xi\left(x,y\right),\dquad \eta = \eta\left(x,y\right)    
+    \xi = \xi\left(x,y\right)\quad,\quad\eta = \eta\left(x,y\right)    
 \]
-taking into consideration the Jacobian of the transformation
+Taking into consideration the Jacobian of the transformation
 \[
-    J =\begin{vmatrix} \frac{\partial\xi}{\partial x}  \;\;\; \frac{\partial\eta}{\partial x} \\ \\ \frac{\partial\xi}{\partial y}\;\;\; \frac{\partial\eta}{\partial y} \end{vmatrix} \neq 0    
+    J =\begin{vmatrix} \frac{\partial\xi}{\partial x}  & \frac{\partial\eta}{\partial x} 
+        \\\\
+        \frac{\partial\xi}{\partial y} & \frac{\partial\eta}{\partial y} \end{vmatrix} \neq 0    
 \]
 Then we find our derivatives.
 \begin{align*}
@@ -158,14 +206,12 @@ Then we find our derivatives.
 \\
 \frac{\partial^2 u}{\partial x^2} &= \frac{\partial u}{\partial\xi}\frac{\partial^2\xi}{\partial x^2}+\frac{\partial\xi}{\partial x}\left[\frac{\partial^2 u}{\partial\xi^2}\frac{\partial\xi}{\partial x}+\frac{\partial^2 u}{\partial\eta\partial\xi}\frac{\partial\eta}{\partial x}\right]+\frac{\partial u}{\partial\eta}\frac{\partial^2\eta}{\partial x^2}+\frac{\partial\eta}{\partial x}\left[\frac{\partial^2 u}{\partial\eta^2}\frac{\partial\eta}{\partial x}+\frac{\partial^2 u}{\partial\eta\partial\xi}\frac{\partial\xi}{\partial x}\right]
 \end{align*}
-
-adding similar terms and simplifying
-
+Adding similar terms and simplifying
 \begin{equation}
 \frac{\partial^2 u}{\partial x^2} = {(\frac{\partial\xi}{\partial x})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial x})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
 \end{equation}
 
-and in similar way we can get.
+And in similar way we can get.
 
 \begin{equation}
 \frac{\partial^2 u}{\partial y^2} = {(\frac{\partial\xi}{\partial y})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial y})}^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
@@ -175,18 +221,19 @@ and in similar way we can get.
 \frac{\partial^2 u}{\partial y\partial x} = \frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}\frac{\partial^2 u}{\partial\xi^2}+\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta^2} + Y.T
 \end{equation}
 
-substituting (2), (3), and (4) in (1) we get.
+Substituting (2), (3), and (4) in (1) we get.
 \begin{align*}
        A&\left[{(\frac{\partial\xi}{\partial x})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial x})}^2\frac{\partial^2 u}{\partial\eta^2}\right]
     \\ +2B&\left[\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}\frac{\partial^2 u}{\partial\xi^2}+\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]\frac{\partial^2 u}{\partial\xi\partial\eta}+\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta^2}\right] 
     \\ +C&\left[{(\frac{\partial\xi}{\partial y})}^2\frac{\partial^2 u}{\partial\xi^2}+2\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\frac{\partial^2 u}{\partial\eta\partial\xi}+{(\frac{\partial\eta}{\partial y})}^2\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T =0    
 \end{align*}
-rearranging terms.
+\newpage
+Rearranging terms.
 \begin{align*}
 \left[A{(\frac{\partial\xi}{\partial x})}^2+2B\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}+C{(\frac{\partial\xi}{\partial y})}^2\right]\frac{\partial^2 u}{\partial\xi^2}+\left[A{(\frac{\partial\eta}{\partial x})}^2+2B\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}+C{(\frac{\partial\eta}{\partial y})}^2\right]\frac{\partial^2 u}{\partial\eta^2}\\
 +\left[2A\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial x}+2B\left[\frac{\partial\xi}{\partial x}\frac{\partial\eta}{\partial y}+\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial x}\right]+2C\frac{\partial\xi}{\partial y}\frac{\partial\eta}{\partial y}\right]\frac{\partial^2 u}{\partial\eta\partial\xi}+Y.T=0
 \end{align*}
-we now try to find $\xi$ and $\eta$ such that.
+We now try to find $\xi$ and $\eta$ such that.
 \[
     \left[A{(\frac{\partial\xi}{\partial x})}^2+2B\frac{\partial\xi}{\partial x}\frac{\partial\xi}{\partial y}+C{(\frac{\partial\xi}{\partial y})}^2\right] =0    
 \]
@@ -194,7 +241,7 @@ we now try to find $\xi$ and $\eta$ such that.
     \left[A{(\frac{\partial\eta}{\partial x})}^2+2B\frac{\partial\eta}{\partial x}\frac{\partial\eta}{\partial y}+C{(\frac{\partial\eta}{\partial y})}^2\right]=0    
 \]
 
-we notice that both equations are the same quadratic equation, thus we solve for one of them to find both $\xi$ and $\eta$, we choose the first one and start by dividing the equation by ${(\frac{\partial\xi}{\partial y})}^2$.
+We notice that both equations are the same quadratic equation, thus we solve for one of them to find both $\xi$ and $\eta$, we choose the first one and start by dividing the equation by $\displaystyle {\left(\frac{\partial\xi}{\partial y}\right)}^2$.
 \[
     A\frac{{(\frac{\partial\xi}{\partial x})}^2}{{(\frac{\partial\xi}{\partial y})}^2}+2B\frac{\left(\frac{\partial\xi}{\partial x}\right)}{\left(\frac{\partial\xi}{\partial y}\right)}+C =0    
 \]
@@ -202,13 +249,13 @@ we notice that both equations are the same quadratic equation, thus we solve for
     A{(\frac{\partial y}{\partial x})}^2-2B\frac{\partial y}{\partial x}+C =0    
 \]
 
-now using the quadratic formula to solve for $\frac{\partial y}{\partial x}$.
+Now using the quadratic formula to solve for $\displaystyle \frac{\partial y}{\partial x}$.
 
 \[
     \frac{\partial y}{\partial x} = \frac{-\left(-2B\right)\pm\sqrt{{(-2B)}^2 -4AC}}{2A} = \frac{B\pm\sqrt{B^2 -AC}}{A}    
 \]
 
-this is called the characteristic equation.
+This is called the characteristic equation.
 
 \begin{enrichment*}{Equations Classification}
 PDEs are classified based on the value of the expression under the root
@@ -219,45 +266,40 @@ $B^2 < AC \;\;\;\;\;\; \forall x,y\in G$, Elliptic PDE (the general case of the 
 
 $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the Heat equation) 
 \end{enrichment*}
-
-
-\subsection{Examples}
-
 \begin{example}
     Transform to the canonical form.
     \[
         4y^2\frac{\partial^2 u}{\partial x^2}-e^{2x}\frac{\partial^2 u}{\partial y^2}+\underbrace{6y^3}_{\text{Y.T}} = 0    
     \]
-    \begin{center}
-        ------ \textcolor{Solution}{Solution} ------ 
-    \end{center}
-    we start by determining the functions A,B, and C.
+    We start by determining the functions A,B, and C.
     \[
-        A\left(x,y\right)=4y^2 \quad,\quad B\left(x,y\right)=0 \;\;\;,\;\;\; C\left(x,y\right)=-e^{2x}    
+        A\left(x,y\right)=4y^2 \quad,\quad B\left(x,y\right)=0 \quad,\quad C\left(x,y\right)=-e^{2x}    
     \]
-    we conclude from this that it has the form of a Hyperbolic PDE.
+    We conclude from this that it has the form of a Hyperbolic PDE.
     \[
-        B^2 =0 \quad>\quad AC=-4y^2e^{2x}, \quad \forall y\neq0,\quad \forall x    
+        B^2 =0 \quad>\quad AC=-4y^2e^{2x} \quad \forall y\neq0 , \forall x    
     \]
-    now we use the characteristic equation to determine the value of $\xi$ and $\eta$.
+    Now we use the characteristic equation to determine the value of $\xi$ and $\eta$.
     \begin{align*}
         \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}\\
         \\
         &= \frac{\pm\sqrt{4y^2 e^{2x}}}{4y^2}=\pm\frac{e^x}{2y}
     \end{align*}
-    rearranging and integrating.
+    Rearranging and integrating.
     \begin{align*}
         2ydy &= \pm e^x dx
         \\
         \int 2ydy &= \pm \int e^x dx
-        \\ \hspace{6cm}
-        y^2 &= \pm e^x + constant \quad \Longrightarrow \quad y^2 \pm e^x = constant 
+        \\
+        y^2 &= \pm e^x + constant
+        \\
+        y^2 \pm e^x &= constant 
     \end{align*}
-    we now set $\xi$ and $\eta$.
+    We now set $\xi$ and $\eta$.
     \[
         \xi = e^x + y^2 \quad , \quad \eta = e^x - y^2    
     \]
-    we now work out the derivatives.
+    We now start getting the canonical form.
     \begin{align*}
         \hspace{5cm}
         \frac{\partial u}{\partial x} &= \frac{\partial u}{\partial\xi}\frac{\partial\xi}{\partial x} + \frac{\partial u }{\partial\eta}\frac{\partial\eta}{\partial x}
@@ -270,7 +312,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
         \\
         \frac{\partial^2 u}{\partial y^2} &= 4y^2\frac{\partial^2 u}{\partial\xi^2}-8y^2\frac{\partial^2 u}{\partial\xi\partial\eta}+4y^2\frac{\partial^2 u}{\partial\eta^2}+Y.T
     \end{align*}
-    substituting in our original equation.
+    Substituting in our original equation.
     \[
         4y^2\left[e^{2x}\frac{\partial^2 u}{\partial\xi^2}+2e^{2x}\frac{\partial^2 u}{\partial\xi\partial\eta}+e^{2x}\frac{\partial^2 u}{\partial\eta^2}\right]-e^{2x}\left[4y^2\frac{\partial^2 u}{\partial\xi^2}-8y^2\frac{\partial^2 u}{\partial\xi\eta}+4y^2\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T = 0    
     \]
@@ -285,32 +327,28 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \[
         x^2\frac{\partial^2 u}{\partial x^2}+y^2\frac{\partial^2 u}{\partial y^2} = 0  
     \]
-    \begin{center}
-        ------ \textcolor{Solution}{Solution} ------ 
-    \end{center}
-    determining the functions A,B, and C.
+    Determining the functions A,B, and C.
     \[
-        A\left(x,y\right)=x^2 \;\;\;,\;\;\; B\left(x,y\right)=0 \;\;\;,\;\;\; C\left(x,y\right)=y^2    
+        A\left(x,y\right)=x^2 \quad,\quad B\left(x,y\right)=0 \quad,\quad C\left(x,y\right)=y^2    
     \]
-    it has the form of a Elliptic PDE.
+    It has the form of a Elliptic PDE.
     \[
-        B^2 =0 \;\;\;<\;\;\; AC=x^2 y^{2}, \;\;\;\forall y, x  
+        B^2 =0 \quad<\quad AC=x^2 y^{2} \quad,\quad \forall y, x  
     \]
-    using the characteristic equation.
+    Using the characteristic equation.
+    \[
+        \frac{\partial y}{\partial x} = \frac{B\pm\sqrt{B^2 -AC}}{A} = \frac{\pm\sqrt{-x^2 y^2}}{x^2}=\pm i\frac{y}{x}    
+    \]
     \begin{align*}
-        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
-        \\
-        &= \frac{\pm\sqrt{-x^2 y^2}}{x^2}=\pm i\frac{y}{x}
-        \\
         \int\frac{dy}{y} &= \pm i\int\frac{dx}{x}
         \\
         \ln\left(y\right) &= \pm i \ln\left(x\right)+\text{constant}
     \end{align*}
-    we will choose $\xi$ to be the imaginary part and $\eta$ to be the real part.
+    We will choose $\xi$ to be the imaginary part and $\eta$ to be the real part.
     \[
         \xi = \ln\left(x\right) \;\;\;\;\; , \;\;\;\;\; \eta = \ln\left(y\right)    
     \]
-    working out the derivatives.
+    Now to get the canonical form.
     \begin{align*}
         \frac{\partial u}{\partial x} &= \frac{\partial u}{\partial\xi}\frac{\partial\xi}{\partial x} + \frac{\partial u }{\partial\eta}\frac{\partial\eta}{\partial x}
         \\
@@ -322,7 +360,7 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
         \\
         \frac{\partial^2 u}{\partial y^2} &=\frac{1}{y^2}\frac{\partial^2 u}{\partial\eta^2}+Y.T
     \end{align*}
-    substituting in our original equation.
+    Substituting in our original equation.
     \begin{align*}
         x^2\left[\frac{1}{x^2}\frac{\partial^2 u}{\partial\xi^2}\right]+y^2\left[\frac{1}{y^2}\frac{\partial^2 u}{\partial\eta^2}\right]+Y.T &= 0
         \\
@@ -334,37 +372,32 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
     \[
         y^2\frac{\partial^2 u}{\partial x^2}+2xy\frac{\partial^2 u}{\partial x\partial y}+x^2\frac{\partial^2 u}{\partial y^2} = 0  
     \]
-    \begin{center}
-        ------ \textcolor{Solution}{Solution} ------ 
-    \end{center}
-    determining the functions A,B, and C.
+    Determining the functions A,B, and C.
     \[
         A\left(x,y\right)=y^2 \;\;\;,\;\;\; B\left(x,y\right)=xy \;\;\;,\;\;\; C\left(x,y\right)=x^2    
     \]
-    it has the form of a Parabolic PDE.
+    It has the form of a Parabolic PDE.
     \[
         B^2 =x^2 y^2 \;\;\;=\;\;\; AC=x^2 y^2, \;\;\;\forall y, x  
     \]
-    using the characteristic equation.
+    Using the characteristic equation.
     \begin{align*}
-        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A}
-        \\
-        &= \frac{xy}{y^2}=\frac{x}{y}
+        \frac{\partial y}{\partial x} &= \frac{B\pm\sqrt{B^2 -AC}}{A} = \frac{xy}{y^2}=\frac{x}{y}
         \\
         \int y dy &= \int x dx 
         \\
         y^2 &= x^2 +\text{constant}
     \end{align*}
-    we will assign $\xi$ to be this function
+    We will assign $\xi$ to be this function
     \[
         \xi = y^2 - x^2
     \]
-    and for $\eta$ it's Optional but to make the solution easier we will assign the previous function with different sign  
+    And for $\eta$ it's Optional but to make the solution easier we will assign the previous function with different sign  
     \[
         \eta = y^2 + x^2 \ \ \text{or} \ \ \eta = - y^2 - x^2
     \]
-    rest of the solution same as Hyperbolic and elliptic PDEs
-    the Canonical form in the end will be 
+    Rest of the solution same as Hyperbolic and elliptic PDEs
+    The Canonical form in the end will be 
     \begin{align*}
         \frac{\partial^2 u}{\partial\xi^2}+Y.T &=0
         \\
@@ -375,19 +408,19 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
 \end{example}
 
 \begin{observation}
-    the Canonical form of all Hyperbolic equations is 
+    The Canonical form of all Hyperbolic equations is 
     \[
         \frac{\partial^2 u}{\partial\xi\partial\eta} +Y.T = 0
     \]
 \end{observation}
 \begin{observation}
-    the Canonical form of all elliptic equations is 
+    The Canonical form of all elliptic equations is 
     \[
         \frac{\partial^2 u}{\partial\xi^2}+\frac{\partial^2 u}{\partial\eta^2}+Y.T =0
     \]
 \end{observation}
 \begin{observation}
-    the Canonical form of all Parabolic equations is 
+    The Canonical form of all Parabolic equations is 
     \begin{align*}
         \frac{\partial^2 u}{\partial\xi^2}+Y.T &=0
         \\
@@ -398,51 +431,47 @@ $B^2 = AC \;\;\;\;\;\; \forall x,y\in G$, Parabolic PDE (the general case of the
 \end{observation}
 
 \newpage
-
 \section{Heat Equation}
 The heat equation is a prototypical example for a parabolic equation. The general form of the heat equation is the following.
 \[
     \frac{\partial u(x,t)}{\partial t} = c^2\nabla^2 u(x,t) = C^2\left[\frac{\partial^2 u(x)}{\partial x^{2}_{1}} + \frac{\partial^2 u(x)}{\partial x^{2}_{2}} + \frac{\partial^2 u(x)}{\partial x^{2}_{3}} + \dots\right]    
 \]
-we will be studying the heat equation only in one dimension thus this reduces to.
+We will be studying the heat equation only in one dimension thus this reduces to.
 \[
     \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2}     
 \]
-
-
 \subsection{Fourier Transform}
-
 The Fourier transform of the function $f(x)$ is defined as.
 \[
     \mathscr{F}\left[f\left(x\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}f\left(x\right)dx= g\left(s\right)    
 \] 
-the inverse Fourier transform is 
+The inverse Fourier transform is 
 \[
     \mathscr{F}^{-1}\left[g\left(s\right)\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ixs}g\left(s\right)ds= f\left(x\right)    
 \]
 \setcounter{equation}{0}
-\subsubsection*{the Fourier transform of a derivative}
+Now let's see The result of Fourier transform acting on a derivative
 \begin{align}
     \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right]=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}\frac{df\left(x\right)}{dx}dx
 \end{align}
-notice that
+Notice that
 \begin{align}
 \frac{d}{dx}\left[e^{ixs}f\left(x\right)\right] &= e^{ixs}\frac{df\left(x\right)}{dx} + ise^{ixs}f\left(x\right)
 \\
 e^{ixs}\frac{df\left(x\right)}{dx} &= \frac{d}{dx}\left[e^{ixs}f\left(x\right)\right] -ise^{ixs}f\left(x\right)
 \end{align}
-substitute (3) in (2)
+Substitute (3) in (2)
 \begin{align*}
 \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= \frac{1}{\sqrt{2\pi}}
 \int_{-\infty}^{\infty}\frac{d}{dx}\left[e^{ixs}f\left(x\right)\right]dx - is\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ixs}f\left(x\right)dx
 \\
 \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= \frac{1}{\sqrt{2\pi}}{\left[e^{ixs}f\left(x\right)\right]}_{-\infty}^{\infty} - is \mathscr{F}\left[f\left(x\right)\right]
-\\
-\text{the  first term must vanish }&\text{as we assume f is absolutely intgrable on} \mathbb{R}
-\\
+\end{align*}
+The first term must vanish as we assume $f$ is absolutely intgrable on $\mathbb{R}$
+\begin{align*}
 \mathscr{F}\left[\frac{df\left(x\right)}{dx}\right] &= - is \mathscr{F}\left[f\left(x\right)\right]
 \end{align*}
-in the same way the Fourier transform for the second derivative will yield
+In the same way the Fourier transform for the second derivative will yield
 \begin{align*}
 \mathscr{F}\left[\frac{d^2f\left(x\right)}{dx^2}\right] &=  \mathscr{F}\left[\frac{d}{dx}\frac{df\left(x\right)}{dx}\right]
 \\
@@ -466,75 +495,75 @@ Consider the following one dimensional heat equation Cauchy problem
     \begin{cases}
         \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \quad c \neq 0 , \quad -\infty < x< \infty
         \\
-        u(x,0) = \phi (x)
+        \text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
     \end{cases}
 \end{equation}
-the Fourier transform of u is
+The Fourier transform of $u(x,t)$ is
 \[
     \mathscr{F}[u(x,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}u\left(x,t\right)dx= \nu\left(\xi,t\right)    
 \]
-preforming the transform on both sides of equation (1)
+Preforming the transform on both sides of equation (1)
 \begin{equation}
 \frac{\partial\nu(\xi,t)}{\partial t} = -c^2 \xi^2 \nu(\xi,t)
 \end{equation}
-and the new initial condition.
+And the new initial condition.
 \begin{equation}
 \mathscr{F}[u(x,0)] = \nu(\xi,0) =\mathscr{F}[\phi(x)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{ix\xi}\phi\left(x\right)dx = \psi(\xi)
 \end{equation}
-the solution of (2) is.
+The solution of (2) is.
 \[
     \nu(\xi,t) = Ae^{-c^2 \xi^2 t}    
 \]
-and A can be found from using new initial condition. 
+And A can be found from using new initial condition. 
 \begin{equation}
 \nu(\xi,t)= \psi(\xi)e^{-c^2 \xi^2 t}
 \end{equation}
-to find u we preform the inverse Fourier transform on (4).
+To find $u(x,t)$ we preform the inverse Fourier transform on (4).
 \begin{align*}
 u(x,t) &= \mathscr{F}^{-1}[\nu(\xi,t)] = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}\nu(\xi,t)d\xi
 \\
 &= \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\psi(\xi)d\xi
 \end{align*}
-substituting the value of $\psi$ from (3) and renaming the variable of integration to y.
+Substituting the value of $\psi$ from (3) and changing the variable of integration to y to prevent the variables from mixing.
 \[
     u(x,t) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{-ix\xi}e^{-c^2 \xi^2 t}\left[\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}e^{iy\xi}\phi\left(y\right)dy\right]d\xi    
 \]
-simplify.
+Simplify.
 \begin{equation}
 u(x,t) = \frac{1}{2\pi}\int_{-\infty}^{\infty}\left[\int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi \right] \phi(y)dy
 \end{equation}
-considering the inner integral.
+Considering the inner integral.
 \begin{equation}
 J = \int_{-\infty}^{\infty}e^{iy\xi -ix\xi - c^2 \xi^2 t} d\xi
 \end{equation}
-simplifying the power by completing the square.
+Simplifying the power by completing the square.
 \begin{align*}
 iy\xi -ix\xi - c^2 \xi^2 t &= -tc^2\left(\xi^2-\frac{i\xi}{tc^2}(y-x)\right)
 \\
-&= -tc^2\left({(\xi-\frac{i}{tc^2}(y-x))}^2 + \frac{{(y-x)}^2}{4t^2 c^4}\right)
+&= -tc^2\left({\left(\xi-\frac{i}{tc^2}(y-x)\right)}^2 + \frac{{(y-x)}^2}{4t^2 c^4}\right)
 \end{align*}
-substituting in (6)
+Substituting in (6)
 \begin{align*}
 J   &= \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{-tc^2\frac{{(y-x)}^2}{4t^2 c^4}} d\xi
 \\
     &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
 \end{align*}
-substitute  $\eta$ where 
+Substitute  $\eta$ where 
 \[
-    \eta = \xi-\frac{i}{tc^2}(y-x)   \tquad \Longrightarrow d\eta = d\xi   
+    \eta = \xi-\frac{i}{tc^2}(y-x)   \dquad \Longrightarrow d\eta = d\xi   
 \]
 \[
     J =e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\eta^2} d\eta 
 \]
-it is now clear that J is a Gaussian integral that we can easily find its value.
+It is now clear that J is a Gaussian integral that we can easily find its value.
 \[
     J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}    
 \]
-substituting in (5) we finally get u.
+Substituting in (5) we finally get u.
 \[
     u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
 \]
-this equation is called Poisson's Formula.
+This equation is called Poisson's Formula.
 
 \begin{figure*}[b]
     \begin{enrichment}{Siméon Poisson}{Poisson.jpg}{2.4}{.8}{.17}
@@ -559,28 +588,28 @@ Consider the following one dimensional heat equation
         \text{B.C} \quad \Longrightarrow \quad u(0,t) = u(L,t) = 0
     \end{cases}
 \end{equation}
-using the separation of variables method.
+Using the separation of variables method.
 \begin{equation}
 u(x,t) = X(x)T(t)
 \end{equation}
-substituting in (1)
+Substituting in (1)
 \begin{align*}
 X(x)\dot{T}(t) &= c^2 X''(x)T(t)
 \\
 \frac{\dot{T}(t)}{c^2 T(t)} &= \frac{X''(x)}{X(x)} = \lambda
 \end{align*}
-now there are 3 cases for $\lambda$
+Now there are 3 cases for $\lambda$
 \begin{enumerate}
 \item if $\lambda > 0$ then the solution of $X(x)$ will be 
 \[
 X(x) = A \cosh(\sqrt{\lambda} x) + B \sinh(\sqrt{\lambda}x)
 \]
-and by using the boundary condition $u(0,t) = 0$ we get that $X(0) = 0$ then
+And by using the boundary condition $u(0,t) = 0$ we get that $X(0) = 0$ then
 \begin{align*}
     0 &= A \cosh(\sqrt{\lambda} 0) + B \sinh(\sqrt{\lambda}0)\\
     \therefore 0 &= A
 \end{align*}
-and by using the boundary condition $u(L,t) = 0$ we get that $X(L) = 0$ then
+And by using the boundary condition $u(L,t) = 0$ we get that $X(L) = 0$ then
 \[
     0 = B \sinh(\sqrt{\lambda}L)    
 \]
@@ -592,71 +621,75 @@ they are imaginary except when n = 0 but that cannot happen because we choose $\
 \[
     \therefore B = 0
 \]
-then the $X(x) = 0$ then $u(x,t) = 0 $ which is a trivial solution
+Then the $X(x) = 0$ then $u(x,t) = 0 $ which is a trivial solution
 \item if $\lambda = 0$ then $X(x) = 0 $ then $u(x,t) = 0 $ which is also a trivial solution
 \item if $\lambda < 0$ then the solution of $X(x)$ will be 
 \[
 X(x) = A \cos(\sqrt{\lambda} x) + B \sin(\sqrt{\lambda}x)
 \]
-and by using the boundary condition $u(0,t) = 0$ we get that $X(0) = 0$ then
+And by using the boundary condition $u(0,t) = 0$ we get that $X(0) = 0$ then
 \begin{align*}
     0 &= A \cos(\sqrt{\lambda} 0) + B \sin(\sqrt{\lambda}0)\\
     \therefore 0 &= A
 \end{align*} 
-and by using the boundary condition $u(L,t) = 0$ we get that $X(L) = 0$ then
+And by using the boundary condition $u(L,t) = 0$ we get that $X(L) = 0$ then
 \[
     0 = B \sin  (\sqrt{\lambda}L)    
 \]
-now if B = 0 it gives trivial solution then $\sin(\sqrt{\lambda}L) = 0$ 
+Now if B = 0 it gives trivial solution then $\sin(\sqrt{\lambda}L) = 0$ 
 \begin{align*}
     \because \sin(\sqrt{\lambda}L) &= 0 \\
     \therefore \sqrt{\lambda} L &= n \pi \\
     \lambda &= \frac{n^2 \pi^2}{L^2}
 \end{align*}
-because the right hand side is all square then we sure it's positive to make it negative number we will add a negative sign to it
+Because the right hand side is all square then we sure it's positive to make it negative number we will add a negative sign to it
 \[
     -\lambda = -\frac{n^2 \pi^2}{L^2}
 \]
 \end{enumerate}
-therefore $X(x)$ will be.
+Therefore $X(x)$ will be.
 \begin{align*}
 \frac{X''(x)}{X(x)} &= -\lambda = -\frac{n^2 \pi^2}{L^2}
 \\
 X(x) &= B \sin\left(\frac{n\pi x}{L}\right)
 \end{align*}
-now solving for $T(t)$ using our constant.
+Now solving for $T(t)$ using our constant.
 \begin{align*}
 \dot{T}(t) &= -\frac{c^2 n^2 \pi^2}{L^2} T(t)
 \\
 T(t) &= Ae^{-\frac{c^2 n^2 \pi^2}{L^2}}
 \end{align*}
-substituting in (2).
+Substituting in (2).
 \[
     u(x,t) = \sum_{n=1}^{\infty} b_n e^{-\frac{c^2 n^2 \pi^2}{L^2}}\sin\left(\frac{n\pi x}{L}\right)    
 \]
-using the initial condition.
+Using the initial condition.
 \[
     u(x,0) = \phi(x) = \sum_{n=1}^{\infty} b_n \sin\left(\frac{n\pi x}{L}\right)    
 \]
-now we found Fourier coefficient which is our final step to determine u.
+Now we found Fourier coefficient which is our final step to determine $u(x,t)$.
 \begin{enrichment*}{Fourier Coefficient}
     \[
-        f(x) = a_0  + \sum_{n=1}^{\infty}\left[a_n \cos\left(\frac{n\pi x}{L}\right) + b_n \sin\left(\frac{n\pi x}{L}\right) \right]
+        f(x) = \frac{a_0}{2}  + \sum_{n=1}^{\infty}\left[a_n \cos\left(\frac{n\pi x}{L}\right) + b_n \sin\left(\frac{n\pi x}{L}\right) \right]
     \]
     \[
-        a_0 = \frac{1}{L}\int_{0}^{L}f(x)dx
+        a_0 = \frac{1}{2L}\int_{0}^{L}f(x)dx
     \]
     \[
-        a_n = \frac{2}{L}\int_{0}^{L}f(x)\cos\left(\frac{n\pi x}{L}\right)dx
+        a_n = \frac{1}{L}\int_{0}^{L}f(x)\cos\left(\frac{n\pi x}{L}\right)dx
     \]
     \[
-        b_n = \frac{2}{L}\int_{0}^{L}f(x)\sin\left(\frac{n\pi x}{L}\right)dx
+        b_n = \frac{1}{L}\int_{0}^{L}f(x)\sin\left(\frac{n\pi x}{L}\right)dx
     \]
 \end{enrichment*}
 
 \setcounter{equation}{0}
 \subsection{Mixed In-homogeneous Problem}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Consider a more general heat equation than the previous one. Notice that the boundary conditions are functions not zeros as before.
 
 \begin{equation}

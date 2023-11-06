@@ -5,7 +5,6 @@
 \contentsline {subsection}{\numberline {1.4}Boundary Conditions}{4}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Initial Condition}{4}{subsection.1.5}%
 \contentsline {section}{\numberline {2}Canonical Form}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Examples}{6}{subsection.2.1}%
 \contentsline {section}{\numberline {3}Heat Equation}{10}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Fourier Transform}{10}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Cauchy Problem}{11}{subsection.3.2}%
