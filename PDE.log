@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  7 NOV 2023 00:03
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  9 NOV 2023 00:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1412,79 +1412,79 @@ Overfull \hbox (1.51756pt too wide) in paragraph at lines 179--179
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 189.
+(mdframed)              on input line 194.
 [5]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 270.
+(Font)              <9> on input line 275.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 270.
+(Font)              <6> on input line 275.
  [6] [7] [8] [9]
 File: Cauchy.jpg Graphic file (type bmp)
 <Cauchy.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 490--490
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 495--495
 [][] 
  []
 
 [10] [11]
-Underfull \hbox (badness 1248) in paragraph at lines 570--572
+Underfull \hbox (badness 1248) in paragraph at lines 575--577
 \TU/lmr/m/n/10 was mathematician, engineer, and physicist who made significant
  []
 
 File: Poisson.jpg Graphic file (type bmp)
 <Poisson.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 572--572
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 577--577
 [][] 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 578.
+(mdframed)              on input line 583.
 [12] [13] [14] [15]
-Overfull \hbox (0.70856pt too wide) in paragraph at lines 858--861
+Overfull \hbox (0.70856pt too wide) in paragraph at lines 860--863
 \TU/lmr/m/n/10 One can draw parallels between formula (6) and the solution to t
 he in-homogeneous ODE analogous
  []
 
 [16] [17] [18]
-Underfull \hbox (badness 3009) in paragraph at lines 1026--1028
+Underfull \hbox (badness 3009) in paragraph at lines 1025--1027
 []\TU/lmr/m/n/10 Jean le Rond d’Alembert (1717-1783) was a prominent French
  []
 
 File: d_Alembert.jpg Graphic file (type bmp)
 <d_Alembert.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1028--1028
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1027--1027
 [][] 
  []
 
 [19]
-Overfull \hbox (2.19969pt too wide) detected at line 1068
+Overfull \hbox (4.69969pt too wide) detected at line 1067
 []
  []
 
 [20]
-Overfull \hbox (6.36977pt too wide) in paragraph at lines 1122--1124
-\TU/lmr/m/n/10 where $\OMS/lmsy/m/n/10 r[]$ \TU/lmr/m/n/10 is the Laplace-Beltr
+Overfull \hbox (9.42976pt too wide) in paragraph at lines 1121--1123
+\TU/lmr/m/n/10 Where $\OMS/lmsy/m/n/10 r[]$ \TU/lmr/m/n/10 is the Laplace-Beltr
 ami operator, a generalization of the Laplace operator in n-dimensional
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 1127--1133
+Underfull \hbox (badness 1968) in paragraph at lines 1126--1132
 \TU/lmr/m/n/10 PDEs, which are fundamental to understanding various physical
  []
 
 File: Darboux.jpg Graphic file (type bmp)
 <Darboux.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1133--1133
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1132--1132
 [][] 
  []
 
@@ -1493,16 +1493,16 @@ File: xi.png Graphic file (type bmp)
 [21]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1182.
+(mdframed)              on input line 1181.
  [22] [23]
-Underfull \hbox (badness 1590) in paragraph at lines 1257--1260
+Underfull \hbox (badness 1590) in paragraph at lines 1253--1256
 []\TU/lmr/m/n/10 Gustav Kirchhoff (1824-1887) was a prominent German physicist
  []
 
 File: Kirchhoff.jpg Graphic file (type bmp)
 <Kirchhoff.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1260--1260
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1256--1256
 [][] 
  []
 
@@ -1512,28 +1512,23 @@ File: domain.png Graphic file (type bmp)
 File: circle.png Graphic file (type bmp)
 <circle.png>
  [27]
-Underfull \hbox (badness 4217) in paragraph at lines 1465--1467
-[]\TU/lmr/m/n/10 Pierre-Simon Laplace (1749-1827) was a French mathematician,
+Underfull \hbox (badness 2653) in paragraph at lines 1460--1462
+[]\TU/lmr/m/n/10 Pierre Simon Laplace (1749-1827) was a French mathematician,
  []
 
 File: Laplace.jpg Graphic file (type bmp)
 <Laplace.jpg>
 
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1467--1467
+Overfull \hbox (1.51756pt too wide) in paragraph at lines 1462--1462
 [][] 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 1559--1562
-
- []
-
-[29]
+[28] [29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1602.
+(mdframed)              on input line 1594.
 
-Overfull \hbox (37.42564pt too wide) detected at line 1624
+Overfull \hbox (37.42564pt too wide) detected at line 1616
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 
 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lm
 r/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lms
@@ -1544,87 +1539,87 @@ y/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT
 [30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1636.
+(mdframed)              on input line 1628.
  [31]
 File: green.png Graphic file (type bmp)
 <green.png>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1718.
+(mdframed)              on input line 1707.
  [32]
-Package mdframed Info: Not enough space on this page on input line 1720.
+Package mdframed Info: Not enough space on this page on input line 1709.
 File: diameter.png Graphic file (type bmp)
 <diameter.png>
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1771.
  [33]
-Package mdframed Info: Not enough space on this page on input line 1778.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1794.
+(mdframed)              on input line 1761.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1784.
+ [34]
 File: rep.png Graphic file (type bmp)
 <rep.png>
- [34] [35] [36] [37]
-Overfull \hbox (4.3897pt too wide) in paragraph at lines 1975--1976
+ [35] [36] [37] [38]
+Overfull \hbox (4.3897pt too wide) in paragraph at lines 1969--1970
 \TU/lmr/m/n/10 Burger’s equation is a partial differential equation occurring i
 n various areas of applied mathematics.
  []
 
-[38]
+[39]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2035.
+(mdframed)              on input line 2029.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2042.
+(mdframed)              on input line 2036.
 
-Overfull \hbox (1.66968pt too wide) in paragraph at lines 2068--2069
+Overfull \hbox (1.66968pt too wide) in paragraph at lines 2062--2063
 []\TU/lmr/m/n/10 The successive approximation method is an iterative approach t
 hat allows us to find an approximate
  []
 
-[39]
-Overfull \hbox (4.79471pt too wide) in paragraph at lines 2071--2072
+[40]
+Overfull \hbox (4.79471pt too wide) in paragraph at lines 2065--2066
 []\TU/lmr/bx/n/10 Formulate the Integral Equation\TU/lmr/m/n/10 : Write down th
 e integral equation in the form mentioned
  []
 
 
-Overfull \hbox (7.11903pt too wide) in paragraph at lines 2078--2079
+Overfull \hbox (7.11903pt too wide) in paragraph at lines 2072--2073
 []\TU/lmr/bx/n/10 Repeat the Process\TU/lmr/m/n/10 : Use $\OML/lmm/m/it/10 ^^^[
 ]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \TU/lmr/m/n/10 as the ne
 w approximation and repeat the process. Substitute
  []
 
-[40] [41] [42]
-Overfull \hbox (1.60168pt too wide) in paragraph at lines 2242--2243
+[41] [42] [43]
+Overfull \hbox (1.60168pt too wide) in paragraph at lines 2236--2237
 \TU/lmr/m/n/10 Volterra integral equations have wide applications in areas like
  control theory, population dynamics,
  []
 
-[43] [44] [45]
+[44] [45] [46]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2359.
+(mdframed)              on input line 2353.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2383.
- [46] [47] [48] (PDE.aux)
+(mdframed)              on input line 2377.
+ [47] [48] [49] (PDE.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
  ***********
 Package rerunfilecheck Info: File `PDE.out' has not changed.
-(rerunfilecheck)             Checksum: 787DA21D3836422FBEAC73DA4FEE561D;5564.
+(rerunfilecheck)             Checksum: E5EA8E5DFC8CE444FC59FEA8CBA2455E;5768.
  ) 
 Here is how much of TeX's memory you used:
- 34197 strings out of 410633
- 731171 string characters out of 5792050
- 1934879 words of memory out of 5000000
- 54725 multiletter control sequences out of 15000+600000
+ 34181 strings out of 410633
+ 730803 string characters out of 5792050
+ 1935879 words of memory out of 5000000
+ 54709 multiletter control sequences out of 15000+600000
  582738 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,92p,1237b,943s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,92p,1237b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on PDE.pdf (49 pages).
+Output written on PDE.pdf (50 pages).
