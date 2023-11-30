@@ -2,7 +2,14 @@
 
 
 \input{MyTools}
+\usetikzlibrary{patterns}
 
+\tikzset{
+  oblique lines/.style={
+    pattern = north east lines,
+    pattern color = red,
+  }
+}
 \usepackage{fontspec}
 \definecolor{cover}{RGB}{230, 194, 24}
 
@@ -29,12 +36,18 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 \begingroup
-\AddToShipoutPicture*{\put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{Cover1.jpg}}}
+\AddToShipoutPicture*{\put(0,0){\includegraphics[width=\paperwidth,height=\paperheight]{Cover2.jpg}}}
 \par\sffamily\selectfont
+\thispagestyle{empty}
 \color{cover}
-\fontsize{80pt}{0}\selectfont Partial\par
-\fontsize{80pt}{0}\selectfont Differential\par
-\fontsize{80pt}{0}\selectfont Equations\par
+\begin{center}
+    \vspace*{9cm}
+    {\fontsize{50pt}{30pt}\selectfont\Acmefont
+    Partial\par
+    $\partial$ifferential\par
+    Equations
+    }
+\end{center}
 \endgroup
 
 \newpage
@@ -101,15 +114,15 @@ The order of a PDE is determined by the highest derivative in the equation.
 Do not mistake the order of the PDE with its degree, the degree of the PDE is the highest exponent appearing in the equation.
 \subsubsection{Linearity} 
 A linear PDE is one that is of first degree in all of it's field variables and partial derivatives.
-\begin{align*}
-\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} &= 0 \dquad \text{linear}
+\begin{alignat*}{2}
+&\frac{\partial u}{\partial t} + \frac{\partial u}{\partial x} = 0 &\dquad &\text{linear}
 \\
-\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} &= y \dquad \text{linear}
+&\frac{\partial^4 u}{\partial y^4} + \frac{\partial u}{\partial x} = y &\dquad &\text{linear}
 \\
-\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 &= 0 \dquad \text{nonlinear}
+&\frac{\partial u}{\partial t} + {(\frac{\partial u}{\partial x})}^2 = 0 &\dquad &\text{nonlinear}
 \\
-\frac{\partial^3 u}{\partial x^3} + {(\frac{\partial^2 u}{\partial y^2})}^5 &= \sin(x) \dquad \text{nonlinear}
-\end{align*}
+&\frac{\partial^3 u}{\partial x^3} + {(\frac{\partial^2 u}{\partial y^2})}^5 = \sin(x) &\dquad &\text{nonlinear}
+\end{alignat*}
 
 A linear operator can be defined for any linear equation, taking the first equation in the previous list, the linear operator $L$ can be defined as.
 \[
@@ -153,7 +166,7 @@ We will be interested in one type of boundary conditions in this course which is
 \includegraphics[scale=0.1]{laplacecircle.png} 
 \end{center}
 \[
-    G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \quad\quad\;\ \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
+    G = \left\lbrace (x,y):x^2+y^2 < R^2 \right\rbrace  \dquad \Gamma = \left\lbrace (x,y):x^2+y^2 = R^2 \right\rbrace    
 \]
 \begin{definition}[Dirichlet Problems]
     are problems that has only boundary conditions
@@ -265,11 +278,11 @@ This is called the characteristic equation.
 \begin{enrichment*}{Equations Classification}
 PDEs are classified based on the value of the expression under the root
 
-$B^2 > AC \quad\;\; \forall x,y\in G$, Hyperbolic PDE (the general case of the wave equation) 
+$B^2 > AC \dquad \forall x,y\in G$, Hyperbolic PDE (the general case of the wave equation) 
 
-$B^2 < AC \quad\;\; \forall x,y\in G$, Elliptic PDE (the general case of the Laplace equation) 
+$B^2 < AC \dquad \forall x,y\in G$, Elliptic PDE (the general case of the Laplace equation) 
 
-$B^2 = AC \quad\;\; \forall x,y\in G$, Parabolic PDE (the general case of the Heat equation) 
+$B^2 = AC \dquad \forall x,y\in G$, Parabolic PDE (the general case of the Heat equation) 
 \end{enrichment*}
 \begin{example}
     Transform to the canonical form.
@@ -549,24 +562,24 @@ iy\xi -ix\xi - c^2 \xi^2 t &= -tc^2\left(\xi^2-\frac{i\xi}{tc^2}(y-x)\right)
 \end{align*}
 Substituting in (6)
 \begin{align*}
-J   &= \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{-tc^2\frac{{(y-x)}^2}{4t^2 c^4}} d\xi
+J   &= \int_{-\infty}^{\infty}e^{\textstyle -tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2}e^{\textstyle -tc^2\frac{{(y-x)}^2}{4t^2 c^4}} d\xi
 \\
-    &=e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
+    &=e^{\textstyle -\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{\textstyle -tc^2{(\xi-\frac{i}{tc^2}(y-x))}^2} d\xi
 \end{align*}
 Substitute  $\eta$ where 
 \[
     \eta = \xi-\frac{i}{tc^2}(y-x)   \dquad \Longrightarrow d\eta = d\xi   
 \]
 \[
-    J =e^{-\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\eta^2} d\eta 
+    J =e^{\textstyle -\frac{{(y-x)}^2}{4tc^2}} \int_{-\infty}^{\infty}e^{-tc^2\eta^2} d\eta 
 \]
 It is now clear that J is a Gaussian integral that we can easily find its value.
 \[
-    J = e^{-\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}    
+    J = e^{\textstyle -\frac{{(y-x)}^2}{4tc^2}}\sqrt{\frac{\pi}{tc^2}}    
 \]
 Substituting in (5) we finally get u.
 \[
-    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(y-x)}^2}{4tc^2}} \phi(y)dy    
 \]
 This equation is called Poisson's Formula.
 
@@ -586,7 +599,7 @@ This equation is called Poisson's Formula.
 Consider the following one dimensional heat equation 
 \begin{equation}
     \begin{cases}
-        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2}, \quad\; c\neq0, \quad\; 0<x<L
+        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2\frac{\partial^2 u(x,t)}{\partial x^2} \quad,\quad c\neq0 \quad,\quad 0<x<L
         \\
         \text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
         \\
@@ -662,11 +675,11 @@ Now solving for $T(t)$ using our constant.
 \begin{align*}
 \dot{T}(t) &= -\frac{c^2 n^2 \pi^2}{L^2} T(t)
 \\
-T(t) &= Ae^{-\frac{c^2 n^2 \pi^2}{L^2}}
+T(t) &= Ae^{\textstyle -\frac{c^2 n^2 \pi^2}{L^2}}
 \end{align*}
 Substituting in (2).
 \[
-    u(x,t) = \sum_{n=1}^{\infty} b_n e^{-\frac{c^2 n^2 \pi^2}{L^2}}\sin\left(\frac{n\pi x}{L}\right)    
+    u(x,t) = \sum_{n=1}^{\infty} b_n e^{\textstyle -\frac{c^2 n^2 \pi^2}{L^2}}\sin\left(\frac{n\pi x}{L}\right)    
 \]
 Using the initial condition.
 \[
@@ -689,12 +702,12 @@ Now we found Fourier coefficient which is our final step to determine $u(x,t)$.
 \end{enrichment*}
 
 \setcounter{equation}{0}
-\subsection{Mixed In-homogeneous Problem}
+\subsection{Mixed In-Homogeneous Problem}
 Consider a more general heat equation than the previous one. Notice that the boundary conditions are functions not zeros as before.
 
 \begin{equation}
     \begin{cases}
-        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t), \quad\; c\neq 0, \quad 0<x<L
+        \displaystyle \frac{\partial u(x,t)}{\partial t} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} + f(x,t) \quad,\quad c\neq 0 \quad,\quad 0<x<L
         \\
         \text{I.C} \quad \Longrightarrow \quad u(x,0) = \phi(x)
         \\
@@ -784,22 +797,22 @@ It's solution is
 \]
 Then in our case
 \[
-\mu = e^{\int c^2\frac{n^2 \pi^2}{L^2} dt} = e^{c^2\frac{n^2 \pi^2}{L^2} t}
+\mu = e^{\textstyle \int c^2\frac{n^2 \pi^2}{L^2} dt} = e^{\textstyle c^2\frac{n^2 \pi^2}{L^2} t}
 \]
 \[
-\therefore T_n(t) = e^{-\frac{n^2 c^2 \pi^2}{L^2}t}c + e^{-\frac{n^2 c^2 \pi^2}{L^2}t}\int_{0}^{t} e^{\frac{n^2 c^2 \pi^2}{L^2}s} G(s) ds
+\therefore T_n(t) = e^{\textstyle -\frac{n^2 c^2 \pi^2}{L^2}t}c + e^{\textstyle -\frac{n^2 c^2 \pi^2}{L^2}t}\int_{0}^{t} e^{\frac{n^2 c^2 \pi^2}{L^2}s} G(s) ds
 \]
 And to get c put $t = 0$
 \[
 T_n(0) = c
 \]
 \begin{equation*}
-    \therefore  T_n (t) = e^{-\frac{n^2 c^2 \pi^2}{L^2}t}T_n(0) +\int_{0}^{t} e^{\frac{n^2 c^2 \pi^2}{L^2}(s-t)} G(s) ds      
+    \therefore  T_n (t) = e^{\textstyle -\frac{n^2 c^2 \pi^2}{L^2}t}T_n(0) +\int_{0}^{t} e^{\textstyle \frac{n^2 c^2 \pi^2}{L^2}(s-t)} G(s) ds      
 \end{equation*}
 Now by substitute $T_n (t)$ in (5) we get $v(x,t)$ then we can obtain $u(x,t)$ by $u = v + u_E$.
 
 \setcounter{equation}{0}
-\subsection{Cauchy In-homogeneous Problem}
+\subsection{Cauchy In-Homogeneous Problem}
 Also known as Heat with a source Cauchy problem
 \\
 Consider the in-homogeneous heat equation on the whole line
@@ -820,25 +833,25 @@ in-homogeneous equation.
 Thus we can break problem (1) into the following two problems
 \begin{equation}
     \begin{cases}
-        \displaystyle \frac{\partial u^h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^h(x,t)}{\partial x^2}
+        \displaystyle \frac{\partial u_h\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u_h(x,t)}{\partial x^2}
         \\
-        u^h\left(x,0 \right) = \phi\left(x\right)
+        u_h\left(x,0 \right) = \phi\left(x\right)
     \end{cases}
 \end{equation}
 \begin{equation}
     \begin{cases}
-        \displaystyle \frac{\partial u^p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u^p(x,t)}{\partial x^2}+ f(x,t)
+        \displaystyle \frac{\partial u_p\left(x,t \right)}{\partial t} = c^2 \frac{\partial^2 u_p(x,t)}{\partial x^2}+ f(x,t)
         \\
-        u^p\left(x,0 \right) = 0
+        u_p\left(x,0 \right) = 0
     \end{cases}
 \end{equation}
-Obviously, $u = u^h + u^p$ will solve the original problem (1).
+Obviously, $u = u_h + u_p$ will solve the original problem (1).
 \\
 We have solved problem (2) before, and arrived at the solution
 \begin{equation}
-    u^h(x,t) = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy        
+    u_h(x,t) = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy        
 \end{equation}
-Where $S(x,t)$ is the heat kernel and it's equal to $\displaystyle \frac{e^{-\frac{x^2}{4tc^2}}}{2\sqrt{\pi tc^2}}$.
+Where $S(x,t)$ is the heat kernel and it's equal to $\displaystyle \frac{\textstyle e^{-\frac{x^2}{4tc^2}}}{2\sqrt{\pi tc^2}}$.
 \\
 Notice that the physical meaning of expression (4) is that the heat
 kernel averages out the initial temperature distribution along the entire rod.
@@ -848,15 +861,15 @@ But in this case one needs to average not only over the entire rod, but over tim
 since the heat contribution at an earlier time will effect the temperatures at all later times. 
 We claim that the solution to (3) is given by
 \begin{equation}
-    u^p(x,t) = \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
+    u_p(x,t) = \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
 \end{equation}
-Combining (4) and (5) we obtain the following solution to the IVP (1)
+Combining (4) and (5) we obtain the solution to the IVP (1)
 \begin{equation}
     u(x,t)  = \int_{-\infty}^{\infty}S(x-y,t) \phi(y)dy + \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
 \end{equation}
 Now substitute the heat kernel
 \[
-    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{-\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
 \]
 One can draw parallels between formula (6) and the solution to the in-homogeneous ODE analogous
 to the heat equation. consider the IVP for the following ODE.
@@ -884,11 +897,11 @@ C = \phi
 \]
 We now need to show that (6) indeed solves problem (1) by direct substitution. 
 \\
-Since we have solved the homogeneous equation before, it suffices to show that $u^p$ solves problem (3). 
+Since we have solved the homogeneous equation before, it suffices to show that $u_p$ solves problem (3). 
 \par
 By differentiating (5) with respect to t gives
 \[
-    \frac{\partial u^p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
+    \frac{\partial u_p}{\partial t} = \int_{-\infty}^{\infty}S(x-y,0) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}\frac{\partial}{\partial t}S(x-y,t-s) f(y,s)dyds    
 \]
 \begin{enrichment*}{}
     The heat kernel solves the heat equation and has the Dirac delta function as its initial
@@ -904,16 +917,16 @@ By differentiating (5) with respect to t gives
     \]
 \end{enrichment*}
 \begin{align*}
-    \frac{\partial u^p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
+    \frac{\partial u_p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
     \\
     &= f(x,t) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
-    = f(x,t) + c^2 \frac{\partial^2 u^p}{\partial x^2}
+    = f(x,t) + c^2 \frac{\partial^2 u_p}{\partial x^2}
 \end{align*}
-Which shows that $u^p(x,t)$ solves the in-homogeneous heat equation. It is also clear that
+Which shows that $u_p(x,t)$ solves the in-homogeneous heat equation. It is also clear that
 \[
-\lim_{t \to 0} u^p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
+\lim_{t \to 0} u_p(x,t)  = \lim_{t \to 0}\int_{0}^{t} \int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds = 0
 \]
-Therefore $u^p(x,t)$ indeed solves problem (3)
+Therefore $u_p(x,t)$ indeed solves problem (3)
 \begin{figure*}[b]
     \begin{enrichment*}{Duhamel's principle}
         If one can solve an initial value problem for a homogeneous linear differential equation then an in-homogeneous linear differential equation can be solved as well.
@@ -1142,7 +1155,7 @@ We will start by defining the unit vector $\xi$ such that the vector is normal t
 y = x + \xi r
 \end{equation}
 \[
-    |y-x| = |\xi|r = r, \quad\;\; |\xi| = 1    
+    |y-x| = |\xi|r = r \quad,\quad |\xi| = 1    
 \]
 Thus the surface elements are related as.
 \[
@@ -1258,7 +1271,7 @@ we will use the results of the spherical mean and Darboux's equation to develop 
 Consider the following three dimensional wave equation Cauchy problem.
 \begin{equation}
     \begin{cases}
-        \displaystyle \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \nabla_{x}^{2}u(x,t), \quad\;\; c\neq 0 ,\quad t > 0
+        \displaystyle \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \nabla_{x}^{2}u(x,t) \quad,\quad c\neq 0 \quad,\quad t > 0
         \\
         \text{I.C} \quad \Longrightarrow \quad 
         \begin{cases}
@@ -1346,7 +1359,9 @@ the first limit can be rearranged to.
 \[
     \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+ctM_\phi(x,r+ct)+rM_\phi(x,r-ct)-ctM_\phi(x,r-ct)\right]    
 \]
-rearranging one more time and noting that the spherical mean function is an even function $\displaystyle M_f(r)=M_f(-r)$ thus we can multiply the r variable by negative one.
+rearranging one more time and noting that the spherical mean function is an even function 
+\\
+$\displaystyle M_f(r)=M_f(-r)$ thus we can multiply the $r$ variable by negative one.
 \begin{align*}
     \lim_{r\to 0} \frac{1}{2r}\left[rM_\phi(x,r+ct)+rM_\phi(x,r-ct)\right] & +\lim_{r\to 0} \frac{1}{2r}ct\left[M_\phi(x,r+ct)-M_\phi(x,ct-r)\right]
     \\
@@ -1419,7 +1434,7 @@ Where G is a simply bounded connected domain whose boundary $\gamma$ is a simple
 \includegraphics[scale=0.1]{domain.png}
 \end{center}
 If the function $u$ that satisfy the Laplace equation and is in the set of two dimensional continuous functions on the domain G , $u \in C^2(G)$, 
-i.e. all of $u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
+i.e. all of $\displaystyle u, \frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial^2 u}{\partial x^2},\frac{\partial^2 u}{\partial y^2}$,
 are continuous functions on G, then the function $u$ is called a harmonic function on G.
 \setcounter{equation}{0}
 \subsection{Solution of Laplace's Equation on a Circle}
@@ -1427,7 +1442,7 @@ are continuous functions on G, then the function $u$ is called a harmonic functi
 Consider the following Dirichlet problem
 \begin{equation}
     \begin{cases}
-        \displaystyle \nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0\;, \quad \forall (x,y) \in G
+        \displaystyle \nabla^2 u(x,y) = \frac{\partial^2 u(x,y)}{\partial x^2} + \frac{\partial^2 u(x,y)}{\partial y^2} = 0 \quad,\quad \forall (x,y) \in G
         \\
         \text{I.C} \quad \Longrightarrow \quad u(x,y)|_\gamma = f(x,y)
     \end{cases}
@@ -1477,7 +1492,7 @@ We start solving for the $F(\theta)$.
 \]
 The solution will be. 
 \begin{equation}
-F(\theta) = A\;\cos(n\theta)+B\;\sin(n\theta)
+F(\theta) = A cos(n\theta)+B sin(n\theta)
 \end{equation}
 Then solving for $V(r)$.
 \[
@@ -1485,7 +1500,7 @@ r^2\frac{d^2 V(r)}{dr^2} +r\frac{d V(r)}{dr} = n^2V(r)
 \]
 By putting $r = e^t$
 \begin{align*}
-\frac{dV(r)}{dr} &= \frac{dV(r)}{dt}\frac{dt}{dr} = e^{-t} \frac{dV(r)}{dt}\;\Rightarrow  r \frac{dV(r)}{dr}=\frac{dV(r)}{dt}
+\frac{dV(r)}{dr} &= \frac{dV(r)}{dt}\frac{dt}{dr} = e^{-t} \frac{dV(r)}{dt} \quad\Rightarrow  r \frac{dV(r)}{dr}=\frac{dV(r)}{dt}
 \\
 \frac{d^2V(r)}{dr^2} &= \frac{d}{dr}\left[e^{-t} \frac{dV(r)}{dt}\right]
 \\
@@ -1493,7 +1508,7 @@ By putting $r = e^t$
 \\
 &= \frac{d}{dt}\left[e^{-t} \frac{dV(r)}{dt}\right] e^{-t}
 \\
-&= e^{-2t}\left[-\frac{dV(r)}{dt}+\frac{d^2V(r)}{dt^2}\right] \;\Rightarrow\; r^2\frac{d^2V(r)}{dr^2} = \frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}
+&= e^{-2t}\left[-\frac{dV(r)}{dt}+\frac{d^2V(r)}{dt^2}\right] \quad \Rightarrow \quad r^2\frac{d^2V(r)}{dr^2} = \frac{d^2V(r)}{dt^2}-\frac{dV(r)}{dt}
 \end{align*}
 Substituting will result in.
 \begin{align*}
@@ -1510,7 +1525,7 @@ To maintain the continuity of the function we put D=0.
 \]
 Substituting V and F in u.
 \begin{equation}
-u(r,\theta) = r^n[A\;cos(n\theta)+B\;sin(n\theta)]
+u(r,\theta) = r^n[A cos(n\theta)+B sin(n\theta)]
 \end{equation}
 From this the boundary condition becomes a function only in $\theta$.
 \begin{equation}
@@ -1518,11 +1533,11 @@ u|_\gamma = H(\theta)
 \end{equation}
 Taking the sum of all solutions we get.
 \[
-    u(r,\theta) = a_o + \sum_{n=1}^{\infty} r^n[a_n\;cos(n\theta)+b_n\;sin(n\theta)]    
+    u(r,\theta) = a_o + \sum_{n=1}^{\infty} r^n[a_n cos(n\theta)+b_n sin(n\theta)]    
 \]
 At $\gamma \longrightarrow $ r = 1.
 \[
-    H(\theta) = a_o + \sum_{n=1}^{\infty} a_n\;cos(n\theta)+b_n\;sin(n\theta) 
+    H(\theta) = a_o + \sum_{n=1}^{\infty} a_n cos(n\theta)+b_n sin(n\theta) 
 \]
 Then we find the Fourier coefficients.
 \begin{align*}
@@ -1597,7 +1612,7 @@ We will discuss some properties or theorems of the harmonic function
 \begin{proof}
     Assume the harmonic function is bounded from below, i.e.    
     \[
-        u(x,y) \geq m \;\; \forall (x,y) \in \mathbb{R}^2     
+        u(x,y) \geq m \quad,\quad \forall (x,y) \in \mathbb{R}^2     
     \]
     Without loss of generality $m > 0$ is assumed.
     \\
@@ -1631,7 +1646,7 @@ We will discuss some properties or theorems of the harmonic function
 \begin{proof}
     We know that.       
     \[
-        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty} r^n[a_n\;\cos(n\theta)+b_n\;\sin(n\theta)]    
+        u(x,y) = \frac{a_o}{2} + \sum_{n=1}^{\infty} r^n[a_n \cos(n\theta)+b_n \sin(n\theta)]    
     \]
     And we know from de Moivre's formula that.
     \[
@@ -1665,7 +1680,7 @@ We will discuss some properties or theorems of the harmonic function
 \newpage
 \setcounter{equation}{0}
 \subsection{Green's Identity}
-We will study Green's integral in three dimensions but it can be also applied to n dimensions.
+We will study Green's integral in three dimensions but it can be also applied to $n^{\text{th}}$ dimensions.
 \begin{center}
 \includegraphics[scale=0.2]{green.png}
 \end{center}
@@ -1736,7 +1751,7 @@ This equation is Green's Identity.
     \end{align*}
     This means that $v$ attains a maximum value at a point call it $(x_2,y_2)$ inside G thus we have.
     \[
-        \frac{\partial^2 v(x_2,y_2)}{\partial x^2} \leq 0 \quad\; \text{and} \quad\; \frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
+        \frac{\partial^2 v(x_2,y_2)}{\partial x^2} \leq 0 \quad \text{and} \quad \frac{\partial^2 v(x_2,y_2)}{\partial y^2} \leq 0    
     \]
     \setcounter{equation}{0}
     \begin{equation}
@@ -1762,19 +1777,23 @@ This equation is Green's Identity.
     If there exist a solution of Laplace's equation 
     with a boundary condition (Dirichlet problem)
     \[
-    \exists u \in C^2(G), u \in C(G \cup \gamma),\;\; \text{such that} \quad \nabla^2 u =0 \quad \text{and} \quad u|_\gamma = f
+    \exists u \in C^2(G) \quad,\quad u \in C(G \cup \gamma) \quad,\quad \text{such that} \quad \nabla^2 u =0 \quad \text{and} \quad u|_\gamma = f
     \]
     Then the solution is unique.
 \end{theorem}
 \begin{proof}
 Assuming the two function $u_1$ and $u_2$ are harmonic functions on G with boundary $\gamma$, i.e. 
-\[
-    u_1 ,u_2 \in C^2(G), u_1 , u_2 \in C(G \cup \gamma), \nabla^2 u_1 =0, \nabla^2 u_2 =0, u_1|_\gamma = f, u_2|_\gamma = f    
-\]
+\begin{align*}
+    u_1 ,u_2 \in C^2(G) \quad&,\quad u_1 , u_2 \in C(G \cup \gamma)
+    \\
+    \nabla^2 u_1 = \nabla^2 u_2 =0 \quad&,\quad u_1|_\gamma = u_2|_\gamma = f    
+\end{align*}
 We define the function $w$ as follow
-\[
-    w = u_1-u_2 \Rightarrow w\in C^2(G), w \in C(G \cup \gamma), \nabla^2 w =0, w|_\gamma = f-f = 0    
-\]
+\begin{alignat*}{2}
+    &w = u_1-u_2 \Rightarrow w\in C^2(G) \quad&,\quad &w \in C(G \cup \gamma)
+    \\
+    &\nabla^2 w =0 \quad&,\quad &w|_\gamma = f-f = 0
+\end{alignat*}
 The value of the function attains its maximum or minimum value on its boundary according to the maximum principle thus we have
 \[
     \min(w) = 0 \leq w(x) \leq 0= \max(w) \forall x \in G \quad \text{thus} \quad w = 0 \Rightarrow u_1 = u_2     
@@ -1789,60 +1808,65 @@ The value of the function attains its maximum or minimum value on its boundary a
 \begin{proof}
     According to he maximum principle $-\epsilon \leq u_1 - u_2 \leq \epsilon \quad \Rightarrow \quad |u_1 - u_2| \leq \epsilon$
 \end{proof}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{enrichment*}{Potential Function}
-    The inverse square law's occurrence is frequent in physics, most notably in the classical theory of gravitation where the gravitational force is inversely proportional to the square of the separation between two masses.
-\[
-    F_g = G\frac{m_1 m_2}{r^2}    
-\]
-And in classical electrostatics where cloumb's law for the electrical force between stationary charges is.
-\[
-    F_e = K\frac{q_1 q_2}{r^2}    
-\]
-In general we find that $F \propto \frac{1}{r^2}$ is frequently occurring in physics and since the potential energy is the integration of force
-= $\displaystyle -\int F dr$ we find that potential energy is proportional to the inverse of or separation distance $PE \propto \frac{1}{r}$, thus the need for studying such functions is as important as potential energy which showed to be very important.
-\par
-Now we define a general function called E which is proportional to the inverse of or separation, the most general will be.
-\[
-    E(x,y) = \frac{1}{r}\;\;,\quad\quad where\quad\; r = \sqrt{(y_1-x_1)^2 + (y_2-x_2)^2 + (y_2-x_2)^2}    
-\]
-It is easy to show that E is harmonic on $\mathbb{R}^3$.
-\[
-    \nabla_{x}^{2} E(x,y) = 0 \tquad \text{and} \tquad \nabla_{y}^{2} E(x,y) = 0    
-\]
-Where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the laplacean with respect to x and y respectively
-\end{enrichment*}
-
+\newpage
 \setcounter{equation}{0}
-\subsection{Representation formula}
-We will utilize Green's identity and the potential function for solving Laplace's equation Dirichlet problem. Due to the singularity of the potential function an issue arises, thus we will apply the identity to the pair of functions u and E on the region G with a sphere of radius $\epsilon$ cutout with the singularity being the center of the sphere, then take the limit of $\epsilon$ to zero to find our final answer.
+\subsection{Representation Formula}
+We will utilize Green's identity and the potential function for solving Laplace's equation Dirichlet problem. 
+\\
+Due to the singularity of the potential function an issue arises, 
+thus we will apply the identity to the pair of functions $u$ and $E$ on the region $G$ 
+with a sphere of radius $\epsilon$ cutout with the singularity being the center of the sphere, 
+then take the limit of $\epsilon$ to zero to find our final answer.
 \begin{figure}[h]
 \begin{center}
 \includegraphics[scale=0.15]{rep.png}
 \captionlabelfalse
-\caption{the domain}
+\caption{The domain}
 \end{center}
 \end{figure}
+\par
 The domain $G$ is any continuous closed volume, with surface $S$, the domain $G_\epsilon$ is a sphere inside our volume, i.e. $G_\epsilon \in G$, with its center $x = (x_1,x_2,x_3)$, radius $\epsilon$, and surface $S_\epsilon$. 
+\vfill
+\begin{enrichment*}{Potential Function}
+        The inverse square law's occurrence is frequent in physics, most notably in the classical theory of gravitation where the gravitational force is inversely proportional to the square of the separation between two masses.
+    \[
+        F_g = G\frac{m_1 m_2}{r^2}    
+    \]
+    And in classical electrostatics where cloumb's law for the electrical force between stationary charges is.
+    \[
+        F_e = K\frac{q_1 q_2}{r^2}    
+    \]
+    In general we find that $\displaystyle F \propto \frac{1}{r^2}$ is frequently occurring in physics and since the potential energy is the integration of force
+    = $\displaystyle -\int F dr$ we find that potential energy is proportional to the inverse of or separation distance $\displaystyle PE \propto \frac{1}{r}$, thus the need for studying such functions is as important as potential energy which showed to be very important.
+    \par
+    Now we define a general function called $E(x,y)$ which is proportional to the inverse of or separation, the most general will be.
+    \[
+        E(x,y) = \frac{1}{r} \quad \text{where} \quad r = \sqrt{(y_1-x_1)^2 + (y_2-x_2)^2 + (y_3-x_3)^2}    
+    \]
+    It is easy to show that $E(x,y)$ is harmonic on $\mathbb{R}^3$.
+    \[
+        \nabla_{x}^{2} E(x,y) = 0 \tquad \text{and} \tquad \nabla_{y}^{2} E(x,y) = 0    
+    \]
+    Where $\nabla_{x}^{2}$ and $\nabla_{y}^{2}$ is the Laplacian with respect to $x$ and $y$ respectively
+\end{enrichment*}    
+
+\newpage
 \begin{align}
 \nabla_{y}^{2} u(y) =0
 \end{align}
 Where
 \begin{align}
-u(y) \in C^3(G)\;,\quad u(y) \in C^2(G\cup S)
+u(y) \in C^3(G) \quad,\quad u(y) \in C^2(G\cup S)
 \end{align}
-From (2) the condition for using Green's identity between the pair of function u and the potential function E is satisfied since they are both continuous on our domain. Thus using the identity yields.
+From (2) the condition for using Green's identity between the pair of function $u$ and the potential function $E$ is satisfied since they are both continuous on our domain. 
+\\
+Thus using the identity yields.
 \[
     \int_G \left[E(x,y)\nabla_{y}^{2} u(y) - u(y)\nabla_{y}^{2} E(x,y)\right]dx = \int_\Gamma \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma    
 \]
 \[
-  \because \nabla_{y}^{2} E(x,y) = 0    
+  \because \nabla_{y}^{2} E(x,y) = 0  \quad,\quad  \nabla_{y}^{2} u(y) =0
 \]
-And from (1) we get that the left hand side is zero then we get.
 \[
     \int_\Gamma \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma = 0    
 \]
@@ -1865,7 +1889,8 @@ We now show that the first integral on the right hand side vanishes as $\epsilon
     \left|\int_{S_\epsilon} u(y)-u(x) d\sigma_\epsilon \right| \leq \int_{S_\epsilon} |u(y)-u(x)| d\sigma_\epsilon \leq \delta(\epsilon)\int_{S_\epsilon} d\sigma_\epsilon \leq 4\pi \delta(\epsilon)    
 \]
 As $\epsilon \to 0$ , $\delta(\epsilon) \to 0$
-\\because the absolute value of the integral is $\leq$ 0 then it's equal 0. Now we evaluate the second integral.
+\\
+Because the absolute value of the integral is $\leq$ 0 then it's equal 0. Now we evaluate the second integral.
 \[
     \int_{S_\epsilon} u(x)d\sigma_\epsilon = u(x)\int_{S_\epsilon}d\sigma_\epsilon = u(x) 4\pi\epsilon^2
 \]
@@ -1873,7 +1898,47 @@ Substituting in (3) we finally get the representation formula
 \[
     u(x) = \frac{1}{4\pi} \int_S \left[E(x,y)\frac{\partial u(y)}{\partial \vec{n}}-u(y)\frac{\partial E(x,y)}{\partial \vec{n}}\right] d\sigma    
 \]
-
+\newpage
+\setcounter{equation}{0}
+\subsection{Laplace's Equation in Cylindrical Coordinates}
+Considering the Dirichlet problem.
+\[
+    \begin{cases}
+        \displaystyle \nabla^2 u(r,z) &= \frac{\partial^2 u(r,z)}{\partial z^2} + \frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right] = 0 \;\; , \quad r >0
+        \\
+        \text{I.C} \quad &\Longrightarrow \quad u(r,0) = f(r)
+        \\
+        \text{B.C} \quad &\Longrightarrow \quad \lim_{r\rightarrow\infty} u(r,z) =0
+    \end{cases}
+\]
+By taking Hankel transformation for both sides
+\begin{align*}
+\frac{\partial^2 }{\partial z^2}\int_{0}^{\infty} rJ_o(r\rho)u(r,z) dr &+ \int_{0}^{\infty}rJ_o(r\rho)\frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
+\\
+\frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2} &+ \int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
+\end{align*}
+\[
+    \frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2}  = -\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr    
+\]
+Now we write the right hand side as.
+\begin{align*}
+-\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr &= -\int_{0}^{\infty}\frac{\partial}{\partial r}\left[J_o(r\rho)r\frac{\partial u(r,z)}{\partial r}\right]dr + \int_{0}^{\infty} r\frac{\partial u(r,z)}{\partial r} \rho J_o'(r\rho)dr
+\\
+&= -\left[rJ_o(r\rho)\frac{u(r,z)}{\partial r}\right]_{0}^{\infty} + \int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
+\\
+&= \int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
+\end{align*}
+The first term vanishes since Bessel functions tend to zero when $r$ approaches infinity
+\begin{align*}
+\int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
+&= \int_{0}^{\infty} \frac{\partial}{\partial r}\left[ r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)\right]dr 
+- \int_{0}^{\infty} \left[\rho J_o'(r\rho)+ r\rho^2 J_o''(r\rho)\right] u(r,z)dr
+\\
+&= \left[ r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)\right]_{0}^{\infty} - \int_{0}^{\infty} \frac{1}{r}\left[r\rho J_o'(r\rho)+ r^2\rho^2 J_o''(r\rho)\right] u(r,z)dr
+\\
+&= - \int_{0}^{\infty} \frac{1}{r}\left[r\rho J_o'(r\rho)+ r^2\rho^2 J_o''(r\rho)\right] u(r,z)dr
+\end{align*}
+From the bassel function property we get.
 \begin{enrichment*}{Hanckel Transform}
     Let $f$ be a function in $r$ on the interval $[0,\infty]$, then the Hanckel transform is defined as.
     \[
@@ -1892,46 +1957,6 @@ Substituting in (3) we finally get the representation formula
         f(r) = \int_{0}^{\infty} \rho J_o(r\rho) \hat{f}(\rho) d\rho    
     \]
 \end{enrichment*}
-\setcounter{equation}{0}
-\subsection{Laplace's Equation in Cylindrical Coordinates}
-considering the Dirichlet problem.
-\[
-    \begin{cases}
-        \displaystyle \nabla^2 u(r,z) = \frac{\partial^2 u(r,z)}{\partial z^2} + \frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right] = 0 \;\; , \quad r >0
-        \\
-        \text{I.C} \quad \Longrightarrow \quad u(r,0) = f(r)
-        \\
-        \text{B.C} \quad \Longrightarrow \quad \lim_{r\rightarrow\infty} u(r,z) =0
-    \end{cases}
-\]
-by taking Hankel transformation for both sides
-\begin{align*}
-\frac{\partial^2 }{\partial z^2}\int_{0}^{\infty} rJ_o(r\rho)u(r,z) dr &+ \int_{0}^{\infty}rJ_o(r\rho)\frac{1}{r}\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
-\\
-\frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2} &+ \int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr = 0
-\end{align*}
-\[
-    \frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2}  = -\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr    
-\]
-now we write the right hand side as.
-\begin{align*}
--\int_{0}^{\infty}J_o(r\rho)\frac{\partial}{\partial r}\left[r\frac{\partial u(r,z)}{\partial r}\right]dr &= -\int_{0}^{\infty}\frac{\partial}{\partial r}\left[J_o(r\rho)r\frac{\partial u(r,z)}{\partial r}\right]dr + \int_{0}^{\infty} r\frac{\partial u(r,z)}{\partial r} \rho J_o'(r\rho)dr
-\\
-&= -\left[rJ_o(r\rho)\frac{u(r,z)}{\partial r}\right]_{0}^{\infty} + \int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
-\\
-&= \int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
-\end{align*}
-the first term vanishes since Bessel functions tend to zero when r approaches infinity
-\begin{align*}
-\int_{0}^{\infty} r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)dr
-&= \int_{0}^{\infty} \frac{\partial}{\partial r}\left[ r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)\right]dr 
-- \int_{0}^{\infty} \left[\rho J_o'(r\rho)+ r\rho^2 J_o''(r\rho)\right] u(r,z)dr
-\\
-&= \left[ r\rho\frac{\partial u(r,z)}{\partial r} J_o'(r\rho)\right]_{0}^{\infty} - \int_{0}^{\infty} \frac{1}{r}\left[r\rho J_o'(r\rho)+ r^2\rho^2 J_o''(r\rho)\right] u(r,z)dr
-\\
-&= - \int_{0}^{\infty} \frac{1}{r}\left[r\rho J_o'(r\rho)+ r^2\rho^2 J_o''(r\rho)\right] u(r,z)dr
-\end{align*}
-from the bassel function property we get.
 \begin{align*}
 - \int_{0}^{\infty} \frac{1}{r}\left[r\rho J_o'(r\rho)+ r^2\rho^2 J_o''(r\rho)\right] u(r,z)dr &= \int_{0}^{\infty} \frac{1}{r}\left[r^2\rho^2 J_o(r\rho)\right] u(r,z)dr
 \\
@@ -1939,26 +1964,26 @@ from the bassel function property we get.
 \\
 &= \rho^2 \hat{u}(\rho,z)
 \end{align*}
-therefore we can get.
+Therefore we can get.
 \[
     \frac{\partial^2 \hat{u}(\rho,z)}{\partial z^2} = \rho^2 \hat{u}(\rho,z)    
 \]
-which have the solution. 
+Which have the solution. 
 \[
 \hat{u}(\rho,z) = A e^{\rho z} + Be^{-\rho z}    
 \]
-and from the boundary condition after taking the Hankel transformation for it $\hat{u}(\rho,z)$ is convergent at $\rho \to \infty$
+And from the boundary condition after taking the Hankel transformation for it $\hat{u}(\rho,z)$ is convergent at $\rho \to \infty$
 \[
 \therefore A = 0    
 \]
-and preforming the Hankel transform on the initial condition.
+And preforming the Hankel transform on the initial condition.
 \[
 \hat{u}(\rho,0) = B = \hat{f}(\rho)    
 \]
 \[
 \hat{u}(\rho,z) = \hat{f}(\rho)e^{-\rho z}    
 \]
-now to find u we preform the inverse Hankel Transform.
+Now to find $u$ we preform the inverse Hankel Transform.
 \[
 u(r,z) = \int_{0}^{\infty} \rho J_o(r\rho)\hat{f}(\rho)e^{-\rho z} d\rho    
 \]
@@ -1966,7 +1991,11 @@ u(r,z) = \int_{0}^{\infty} \rho J_o(r\rho)\hat{f}(\rho)e^{-\rho z} d\rho
 \newpage
 \setcounter{equation}{0}
 \section{Burger's Equation}
-Burger's equation  is a partial differential equation occurring in various areas of applied mathematics. It has many forms, we will be studying the solution of one of its forms; the viscous Burger's equation Cauchy problem, occurring in fluid dynamics, , the viscous equation is non linear thus needs a different approach than those used earlier. We will be using the method of Hopf-Cole.
+Burger's equation  is a partial differential equation occurring in various areas of applied mathematics. 
+It has many forms, we will be studying the solution of one of its forms
+the viscous Burger's equation Cauchy problem, occurring in fluid dynamics, 
+the viscous equation is non linear thus needs a different approach than those used earlier. 
+We will be using the method of Hopf-Cole.
 \begin{equation}
     \begin{cases}
         \displaystyle \frac{\partial u(x,t)}{\partial t} + u(x,t)\frac{\partial u(x,t)}{\partial x} = \gamma \frac{\partial^2 u(x,t)}{\partial x^2} \tquad \gamma > 0 , x \in \mathbb{R}
@@ -1977,11 +2006,11 @@ Burger's equation  is a partial differential equation occurring in various areas
 \begin{enrichment*}{}
     if $\gamma = 0$ the equation is called the in-viscous Burger's equation
 \end{enrichment*}
-we start our treatment by defining a new function
+We start our treatment by defining a new function
 \[
 v(x,t) = e^{\alpha\phi(x,t)}  \quad \Longrightarrow \quad \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))
 \]
-we try to find the function $\phi$ such that $v$ satisfy
+We try to find the function $\phi$ such that $v$ satisfy
 \begin{equation}
     \begin{cases}
         \displaystyle \frac{\partial v}{\partial t} = \gamma \frac{\partial^2 v}{\partial x^2}
@@ -1989,7 +2018,7 @@ we try to find the function $\phi$ such that $v$ satisfy
         \text{I.C} \quad \Longrightarrow \quad v(x,0) = g(x)
     \end{cases}
 \end{equation}
-we start finding the terms of the equation (2) in terms of $\phi$
+We start finding the terms of the equation (2) in terms of $\phi$
 \begin{align*}
 \hspace{2cm}
 \frac{\partial v}{\partial t} &= \alpha e^{\alpha\phi} \frac{\partial \phi}{\partial t}
@@ -1998,43 +2027,44 @@ we start finding the terms of the equation (2) in terms of $\phi$
 \\
 \frac{\partial^2 v}{\partial x^2} &= \alpha^2 e^{\alpha \phi} {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \alpha e^{\alpha\phi} \frac{\partial^2 \phi}{\partial x^2}
 \end{align*}
-substitute in (2)
+Substitute in (2)
 \begin{align}
 \alpha e^{\alpha\phi} \frac{\partial \phi}{\partial t} &= \gamma\left(\alpha^2 e^{\alpha \phi} {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \alpha e^{\alpha\phi} \frac{\partial^2 \phi}{\partial x^2}\right)\nonumber
 \\
 \frac{\partial \phi}{\partial t} &= \gamma\alpha {\left(\frac{\partial \phi}{\partial x}\right)}^2 + \gamma \frac{\partial^2 \phi}{\partial x^2}
 \end{align}
-differentiating with respect to $x$ and changing the order of differentiation on the left hand side
+Differentiating with respect to $x$ and changing the order of differentiation on the left hand side
 \[
     \frac{\partial }{\partial t}\left[ \frac{\partial \phi}{\partial x}\right] = 2\gamma\alpha \frac{\partial\phi}{\partial x}\frac{\partial^2 \phi }{\partial x^2} + \gamma\frac{\partial^3 \phi}{\partial x^3}    
 \]
-now put $\displaystyle u(x,t) = \frac{\partial \phi(x,t)}{\partial x}$
+Now put $\displaystyle u(x,t) = \frac{\partial \phi(x,t)}{\partial x}$
 \[
     \frac{\partial u }{\partial t} = 2\gamma\alpha u\frac{\partial u}{\partial x} + \gamma\frac{\partial^2 u}{\partial x^2}    
 \]
-set $2\gamma\alpha = -1$ we get
+Set $2\gamma\alpha = -1$ we get
 \[
     \frac{\partial u }{\partial t} + u\frac{\partial u}{\partial x} = \gamma\frac{\partial^2 u}{\partial x^2}    
 \]
-means that $\displaystyle \frac{\partial \phi(x,t)}{\partial x}$ is a solution for the burger equation 
-
-we know that problem (2) is the heat equation Cauchy problem that we solved before using Poisson's formula and we know that the solution is 
+Means that $\displaystyle \frac{\partial \phi(x,t)}{\partial x}$ is a solution for the burger equation 
+\\
+We know that problem (2) is the heat equation Cauchy problem that we solved before using Poisson's formula and we know that the solution is 
 \[
-v(x,t) = \frac{1}{\sqrt{4\pi \gamma t}} \int_{-\infty}^{\infty} e^{-\frac{(x-y)^2}{4\gamma t}} g(y)dy    
+v(x,t) = \frac{1}{\sqrt{4\pi \gamma t}} \int_{-\infty}^{\infty} e^{\textstyle -\frac{(x-y)^2}{4\gamma t}} g(y)dy    
 \]
-finding $v$ we can now find $\phi$ from the relation $\displaystyle \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))$ then differentiating it with respect to $x$ to finally find $u$.
+Finding $v$ will get us $\phi$ from the relation $\displaystyle \phi(x,t) = \frac{1}{\alpha}\ln(v(x,t))$ then differentiating it with respect to $x$ to finally find $u$.
 
-\section{Integral Equations}
+\section{Introduction To Integral Equations}
 \
 \begin{definition}[Integral equations]
-    are equations in which an unknown function appears under an integral sign.
+    Are equations in which an unknown function appears under an integral sign.
 \end{definition}
-There is a close connection between differential and integral equations, and some problems may be formulated either way.
+There is a close connection between differential and integral equations, 
+there are some differential equations problems can be transform to integral equations and the other way around.
 
 \subsection{Successive Approximation}
 \
 \begin{definition}[Successive Approximation Method]
-    is a numerical technique used to solve equations or find the roots of functions that cannot be solved analytically. It is an iterative process in which you start with an initial guess for the solution and then repeatedly refine that guess to get closer and closer to the actual solution.
+    Is a numerical technique used to solve equations or find the roots of functions that cannot be solved analytically. It is an iterative process in which you start with an initial guess for the solution and then repeatedly refine that guess to get closer and closer to the actual solution.
 \end{definition}
 
 Here's a step-by-step explanation of the successive approximation method:
@@ -2043,11 +2073,11 @@ Here's a step-by-step explanation of the successive approximation method:
     \item \textbf{Formulate the Equation}: Start with the equation you want to solve or the function for which you want to find the root. For example, let's say you want to find the root of the equation $f(x)=0$.
     \item \textbf{Choose an Initial Guess}: Pick an initial guess for the root. This can be any value that you think is close to the actual root. The quality of your initial guess can affect the convergence speed of the method.
     \item \textbf{Update the Guess}: Use the chosen initial guess and the equation (or function) to calculate an updated value, which will be a new approximation for the root. Let's call this updated value $x_1$.
-    \item \textbf{Check for Convergence}:Determine if the updated value $x_1$ is close enough to the actual root. If it's not, go back to step 3 and repeat the process using $x_1$ as the new guess. Keep iterating until the solution converges to the desired accuracy.
-    \item \textbf{Termination Criteria}:Decide on a termination condition to stop the iterations. This condition could be a maximum number of iterations or reaching a desired level of accuracy (e.g.,$|x_1-x_0|<\epsilon$ , where $\epsilon$ is a small tolerance value).
+    \item \textbf{Check for Convergence}: Determine if the updated value $x_1$ is close enough to the actual root. If it's not, go back to step 3 and repeat the process using $x_1$ as the new guess. Keep iterating until the solution converges to the desired accuracy.
+    \item \textbf{Termination Criteria}: Decide on a termination condition to stop the iterations. This condition could be a maximum number of iterations or reaching a desired level of accuracy (e.g.,$|x_1-x_0|<\epsilon$ , where $\epsilon$ is a small tolerance value).
     \item \textbf{Final Result}: Once the termination condition is met, the value obtained in the last iteration is considered the approximation of the root.
 \end{enumerate}
-The successive approximation method is straightforward to implement and can be used for a wide range of equations and functions. However, its convergence may not always be guaranteed, especially if the function has complex behavior or multiple roots. In such cases, other numerical methods like the Newton-Raphson method or the bisection method may be more appropriate.
+The successive approximation method is straightforward to implement and can be used for a wide range of equations and functions. However, its convergence may not always be guaranteed, especially if the function has complex behavior or multiple roots. In such cases, other numerical methods may be more appropriate.
 
 It's also essential to be cautious with the choice of the initial guess, as an inappropriate initial value might lead to divergence or convergence to a different root. Experimenting with different initial guesses can help you achieve better results.
 
@@ -2055,134 +2085,130 @@ In the context of integral equations, the successive approximation method is a p
 \[
 \phi(x) = f(x) + \lambda\int_{a}^{b} K(x,t) \phi(t)dt    
 \]
-where $\phi(x)$ is the unknown function to be determined,
+Where $\phi(x)$ is the unknown function to be determined,
 $f(x)$  is a given function, $K(x,y)$ is the kernel of the integral equation,
-and $\lambda$ is a constant parameter.
+And $\lambda$ is a constant parameter.
 
 The successive approximation method is an iterative approach that allows us to find an approximate solution to this integral equation by breaking it down into simpler steps. Here's how it works:
 
 \begin{enumerate}[itemsep=10pt]
     \item \textbf{Formulate the Integral Equation}: Write down the integral equation in the form mentioned above, making sure you have a well-defined kernel $K(x,y)$ and a given function $f(x)$ 
-    \item \textbf{Choose an Initial Guess}: Start with an initial guess for the unknown function $\phi(x)$. This guess can be any reasonable function that satisfies any known boundary or initial conditions.
+    \item \textbf{Choose an Initial Guess}: Start with an initial guess $\phi_0(x)$ for the unknown function $\phi(x)$. This guess can be any reasonable function that satisfies any known boundary or initial conditions most of the time it's chosen to be 0 or $f(x)$.
     \item \textbf{Update the Guess}: Substitute the initial guess for $\phi(x)$ into the integral equation and calculate an updated function $\phi_1(x)$ :
     \[
-       \phi_1(x) = f(x) + \lambda\int_{a}^{b} K(x,t) \phi(t)dt     
+       \phi_1(x) = f(x) + \lambda\int_{a}^{b} K(x,t) \phi_0(t)dt     
     \]
-    \item \textbf{Check for Convergence}:Check the difference between the updated function $\phi_1(x)$ and the previous approximation. If the difference is below a certain tolerance level or satisfies a convergence criterion, stop the iterations and consider $\phi_1(x)$ as the final approximation. Otherwise, continue to the next step.
+    \item \textbf{Check for Convergence}: Check the difference between the updated function $\phi_1(x)$ and the previous approximation. If the difference is below a certain tolerance level or satisfies a convergence criterion, stop the iterations and consider $\phi_1(x)$ as the final approximation. Otherwise, continue to the next step.
     \item \textbf{Repeat the Process}: Use $\phi_1(x)$ as the new approximation and repeat the process. Substitute $\phi_1(x)$ into the integral equation to find a new approximation $\phi_2(x)$ , and so on. Continue iterating until the solution converges to the desired accuracy.
-    \item \textbf{Termination Criteria}:Decide on a termination condition to stop the iterations, similar to the termination criteria in the general successive approximation method. This could be based on a maximum number of iterations or reaching a desired level of accuracy.    
+    \item \textbf{Termination Criteria}: Decide on a termination condition to stop the iterations, similar to the termination criteria in the general successive approximation method. This could be based on a maximum number of iterations or reaching a desired level of accuracy.    
     \item \textbf{Final Result}: Once the termination condition is met, the last obtained approximation $\phi_n(x)$ is considered the solution to the integral equation.
 \end{enumerate}
 It's important to note that the convergence of the successive approximation method for integral equations depends on various factors, including the nature of the kernel $K(x,y)$, the choice of the initial guess, and the value of the parameter 
 $\lambda$. In some cases, convergence may be slow or may not occur at all. In such situations, other numerical methods tailored for specific types of integral equations may be more appropriate.
 
 \subsection{Fredholm's Integral Equation}
-consider the following integral equation.
+Consider the following integral equation.
 \[
-u(x) = f(x) + \lambda\int_{a}^{b} k(x,y) u(y)dy    
+u(x) = f(x) + \lambda\int_{a}^{b} K(x,y) u(y)dy    
 \]
-where $f(x)$ and $k(x,y)$ are given continuous function on $[a,b]\times[c,d]$ and
+Where $f(x)$ and $K(x,y)$ are given continuous function on $[a,b]\times[c,d]$ and
 \[
-    G 
-    \begin{cases}
-    (x,y) |&     a\leq x\leq b \quad \text{and} \quad c\leq y\leq d
-    \end{cases}
+    G := \left\{ (x,y) | \quad a\leq x\leq b \quad \text{and} \quad c\leq y\leq d \right\}
 \]
-we try to determine the function $u(x)$ using the successive approximation method.
+We try to determine the function $u(x)$ using the successive approximation method.
 \begin{align*}
-u_1(x) &= f(x) + \lambda\int_{a}^{b} k(x,y) u_o(y)dy
+u_1(x) &= f(x) + \lambda\int_{a}^{b} K(x,y) u_o(y)dy
 \\
-u_2(x) &= f(x) + \lambda\int_{a}^{b} k(x,y) u_1(y)dy
+u_2(x) &= f(x) + \lambda\int_{a}^{b} K(x,y) u_1(y)dy
 \\
 \vdots
 \\
-u_{n+1}(x) &= f(x) + \lambda\int_{a}^{b} k(x,y) u_n(y)dy
+u_{n+1}(x) &= f(x) + \lambda\int_{a}^{b} K(x,y) u_n(y)dy
 \end{align*}
-let us choose.
+Let us choose.
 \[
 u_o(x) = f(x)    
 \]
-then.
+Then.
 \begin{align*}
-u_1(x) &= u_o(x) + \lambda\int_{a}^{b} k(x,y) u_o(y)dy
+u_1(x) &= u_o(x) + \lambda\int_{a}^{b} K(x,y) u_o(y)dy
 \\
-u_1(x)- u_o(x) &= \lambda\int_{a}^{b} k(x,y) u_o(y)dy
+u_1(x)- u_o(x) &= \lambda\int_{a}^{b} K(x,y) u_o(y)dy
 \end{align*}
-since the integral is definite and the functions are continuous on the limits of integration 
+Since the integral is finite and the functions are continuous on the limits of integration 
 this can be considered as the inner product of the two functions 
-with will be less than or equal to their magnitudes where $|k(x,y)| = M$ and $|f(x)| = m$.
+that will be less than or equal to their magnitudes where $|K(x,y)| = M$ and $|f(x)| = m$.
 \begin{enrichment*}{}
-    the inner product of two functions on the space of continuous functions is defined as 
+    The inner product of two functions on the space of continuous functions is defined as 
     \[
         <f,g> = \int f(x)g(x)dx \leq |f(x)||g(x)|
     \]
-     remember the inner product of vectors $\vec{v}\cdot \vec{u} = vu \cos(\theta) \leq vu$
+    Remember the inner product of vectors $\vec{v}\cdot \vec{u} = vu \cos(\theta) \leq vu$
 \end{enrichment*}
 \begin{align*}
-    \left|u_1(x)- u_o(x)\right| &= |\lambda|\left|\int_{a}^{b} k(x,y) u_o(y)dy\right|    
+    \left|u_1(x)- u_o(x)\right| &= |\lambda|\left|\int_{a}^{b} K(x,y) u_o(y)dy\right|    
     \\
-    & \leq |\lambda|\int_{a}^{b}|k(x,y)||u_o(y)|dy = |\lambda|Mm\int_{a}^{b}dy
+    & \leq |\lambda|\int_{a}^{b}|K(x,y)||u_o(y)|dy = |\lambda|Mm\int_{a}^{b}dy
     \\
     & \leq |\lambda|Mm(b-a)
 \end{align*}
-we also have in the same manner. 
+We also have in the same manner. 
 \begin{align*}
-u_2(x) &= f(x) + \lambda\int_{a}^{b} k(x,y) u_1(y)dy
+u_2(x) &= f(x) + \lambda\int_{a}^{b} K(x,y) u_1(y)dy
 \\
-u_2(x) - u_1(x)&= \lambda\int_{a}^{b} k(x,y) [u_1(y)-u_o(y)]dy
+u_2(x) - u_1(x)&= \lambda\int_{a}^{b} K(x,y) [u_1(y)-u_o(y)]dy
 \\
-|u_2(x) - u_1(x)| &= |\lambda|\left|\int_{a}^{b} k(x,y) [u_1(y)-u_o(y)]dy\right| 
+|u_2(x) - u_1(x)| &= |\lambda|\left|\int_{a}^{b} K(x,y) [u_1(y)-u_o(y)]dy\right| 
 \\
-&\leq |\lambda|Mm(b-a) M \int_{a}^{b}dy = |\lambda|^2M^2{(b-a)}^2 m
+&\leq |\lambda|M |\lambda|Mm(b-a) \int_{a}^{b}dy = |\lambda|^2M^2{(b-a)}^2 m
 \end{align*}
-and by induction we can find.
+And by induction we can find.
 \[
     |u_{k}(x) - u_{k-1}(x)| \leq |\lambda|^kM^k {(b-a)}^k m    
 \]
-we note that.
+We note that.
 \begin{align*}
 u_o(x) + \sum_{k=1}^{n} [u_{k}(x) - u_{k-1}(x)] &= u_o + u_1 - u_o + u_2 - u_1 + u_3 - u_2 + ...+u_n - u_{n-1}
 \\
 &= u_n(x)
 \end{align*}
-we can find the solution $u(x)$ by taking the limit to $\infty$
+We can find the solution $u(x)$ by taking the limit to $\infty$
 \[
     \lim_{n\to\infty} u_n(x) = u(x) = u_o(x) + \sum_{k=1}^{\infty} [u_{k}(x) - u_{k-1}(x)] \leq u_o(x) + m\sum_{k=1}^{\infty} {(|\lambda|M(b-a))}^k    
 \]
-this is geometric series
-if $|\lambda|M(b-a) < 1$ then the series converges absolutely and uniformally
+This is geometric series if $|\lambda|M(b-a) < 1$ then the series converges absolutely and uniformally
 \begin{example}
     Consider the Fredholm integral equation 
     \[
         u(x) = e^x + e^{-1}\int_{0}^{1}u(y)dy    
     \]
-    we can select any real value function for the zeroth component then we set 
+    We can select any real value function for the initial guess then we set 
     \[
-    u_0(x) = e^x 
+    u_0(x) =f(x) =e^x 
     \]
-    now to get $u_1(x)$
+    Now to get $u_1(x)$
     \[
-        u_1(x) = e^x + e^{-1}\int_{0}^{1}u_0(y)dy        
+        u_1(x) = e^x + e^{-1}\int_{0}^{1}e^y dy        
     \]
-    and that gives us the first approximation of $u(x)$ by
+    And that gives us the first approximation of $u(x)$ by
     \[
         u_1(x) = e^x + 1 - e^{-1} 
     \]
-    now to get $u_2(x)$
+    Now to get $u_2(x)$
     \[
-        u_2(x) = e^x + e^{-1}\int_{0}^{1}e^ydy = e^x + 1 - e^{-2}
+        u_2(x) = e^x + e^{-1}\int_{0}^{1}e^y + 1 - e^{-1}dy = e^x + 1 - e^{-2}
     \]
-    this gives us the second approximation of $u(x)$
+    This gives us the second approximation of $u(x)$
     \\
-    continue in the same manner we find the third approximation of $u(x)$
+    Continue in the same manner we find the third approximation of $u(x)$
     \[
         u_3(x) = e^x + 1 - e^{-3}
     \]
-    proceeding as before we can obtain the n-th component
+    Proceeding as before we can obtain the $n^{\text{th}}$ approximation
     \[
         u_n(x) = e^x + 1 - e^{-n} , \quad n \geq 1
     \]
-    now to get the solution taking the limit to $\infty$
+    Now to get the solution taking the limit as $n \to \infty$
     \begin{align*}
         u(x) &= \lim_{n\to\infty} u_n(x)
         \\
@@ -2196,119 +2222,125 @@ if $|\lambda|M(b-a) < 1$ then the series converges absolutely and uniformally
     \[
         u(x) = x + \lambda\int_{0}^{1} xt u(t)dt
     \]
-    for the zeroth component we set 
+    For the zeroth approximation we set 
     \[
     u_0(x) = x
     \]
-    then we get get $u_1(x)$
+    Then we get get $u_1(x)$
     \[
         u_1(x) = x + \lambda\int_{0}^{1} xt^2dt
     \]
-    and that gives us the first approximation of $u(x)$ by
+    And that gives us the first approximation of $u(x)$ by
     \[
         u_1(x) = x + \frac{\lambda}{3}x
     \]
-    now to get $u_2(x)$
+    Now to get $u_2(x)$
     \[
         u_2(x) = x + \lambda\int_{0}^{1} xt\left(t + \frac{\lambda}{3}t\right)dt = x +\frac{\lambda}{3} x +\frac{\lambda^2}{9} x
     \]
-    this gives us the second approximation of $u(x)$
+    This gives us the second approximation of $u(x)$
     \\
-    proceeding as before we can obtain the n-th component
+    Proceeding as before we can obtain the $n^{\text{th}}$ approximation
     \[
         u_n(x) = x +\frac{\lambda}{3} x +\frac{\lambda^2}{9} x + \dots + \frac{\lambda^{n-1}}{3^{n-1}} x , \quad n \geq 1
     \]
     \[
         u_n(x) = x\sum_{k=0}^{n} {\left(\frac{\lambda}{3}\right)}^{k}
     \]
-    now to get the solution taking the limit to $\infty$
+    Now to get the solution taking the limit as $n \to \infty$
     \begin{align*}
         u(x) &= \lim_{n\to\infty} u_n(x)
         \\
         &= x\sum_{k=0}^{\infty} {\left(\frac{\lambda}{3}\right)}^{k}
     \end{align*}
-    this is geometric series if $|\lambda| < 3$ and $\lambda \neq 0$ it's value will be 
+    This is geometric series if $|\lambda| < 3$ and $\lambda \neq 0$ it's value will be 
     \[
     u(x) = \frac{3}{3-\lambda}x, \quad  |\lambda| < 3,\lambda \neq 0
     \]
 \end{example}
 \subsection{Volttera Integral Equation}
-Volterra integral equations have wide applications in areas like control theory, population dynamics, signal processing, and modeling dynamic systems. Different forms of the equation, such as Volterra integral equations of the second kind, exist to address specific scenarios and applications.
+Volterra integral equations have wide applications in areas like control theory, 
+population dynamics, signal processing, and modeling dynamic systems. 
+There are different forms of it, such as Volterra integral equations of the second kind, exist to address specific scenarios and applications.
 \par 
-consider the following  integral equation.
+Consider the following  integral equation.
 \[
 u(x) = f(x) + \int_{0}^{x} K(x,y) u(y)dy
 \]
-where the functions $f(x)$ is a given function, often called the "forcing function" or "input function."
-and $k(x,y)$ is a given kernel function
+Where the functions $f(x)$ is a given function, often called the "forcing function" or "input function."
+and $K(x,y)$ is a given kernel function
 \\
 To solve this equation we use, as we did with Fredholm's integral equation, the method f successive approximation. We first define a sequence.
 \[
 u_n(x) = f(x) + \int_{0}^{x} K(x,y) u_{n-1}(y)dy    
 \]
-we can choose our first term arbitrary but here we choose it to be $u_0(x) = f(x)$ then we getting.
+We can choose our first term arbitrary but here we choose it to be $u_0(x) = f(x)$ then we getting.
 \begin{align*}
 u_1(x) &= u_0(x) + \int_{0}^{x} K(x,y) u_0(y)dy
 \\
 u_1(x) - u_0(x) &= \int_{0}^{x} K(x,y) f(y)dy
 \end{align*}
-from this as before we can see that.
+From this as before we can see that.
 \[
 |u_1(x) - u_0(x)| \leq mMx
 \]
 \[
 \because M=\sup|K(x,y)| \quad , \quad m=\sup |f(x)|        
 \]
-then we continue in the same way.
+Then we continue in the same way.
 \begin{align*}
 u_2(x) - u_1(x) &= \int_{0}^{x} k(x,y) [u_1(x) - u_0(x)] dy
 \\
 |u_2(x) - u_1(x)| &\leq mM^2\frac{x^2}{2}
 \end{align*}
-and by induction we find that.
+And by induction we find that.
 \[
 |u_n(x) - u_{n-1}(x)| \leq mM^n\frac{x^n}{n!}    
 \]
-now we study the series.
+Now we study the series.
 \begin{align*}
 u_0 + \sum_{k=1}^{n} [u_k-u_{k-1}] &= u_0 + u_1 - u_0 +u_2 - u_1 + \cdots +u_{n-1}-u_{n-2}+ u_n - u_{n-1} 
 \\
 &= u_n
 \end{align*}
-taking the limit as n approaches infinity
+Taking the limit as n approaches infinity
 \begin{align*}
 u(x) = \lim_{n\to \infty} u_n(x) &= u_0 + \sum_{k=1}^{\infty} [u_k-u_{k-1}]    
 \\
-& \leq m\sum_{k=1}^{\infty} \frac{{(xM)}^n}{n!}
+& \leq m\sum_{k=1}^{\infty} \frac{{(xM)}^k}{k!} = m e^{xM}
 \end{align*}
-and we can deduce that the sum is uniformally convergent and we can find u because the factorial is more powerful that the exponential.
+And we can deduce that the sum is uniformally convergent and we can find $u(x)$ because the factorial is more powerful that the exponential.
 \subsection{Abel Integral Equation}
 Abel integral equation belongs to the class of Volterra equations of the first kind
 it's expressed in the following general form:
 \[
 f(x) = \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau )}^\alpha} d\tau
 \]
-where $0<\alpha<1$ is known constants, $f(x)$ is a known function and $\phi(\tau)$ is unknown function,
+Where $0<\alpha<1$ is known constants, $f(x)$ is a known function and $\phi(\tau)$ is unknown function,
 The expression ${(x-\tau )}^\alpha$  is called the kernel of the Abel integral equation, or Abel kernel
-by multiplying both sides with $\displaystyle \frac{1}{{(t-x)}^{1-\alpha}}$
+\\
+Now by multiplying both sides with $\displaystyle \frac{1}{{(t-x)}^{1-\alpha}}$
 \[
 \frac{f(x)}{{(t-x)}^{1-\alpha}} = \frac{1}{{(t-x)}^{1-\alpha}} \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau)}^\alpha} d\tau
 \]
-and integrating with respect to $x$ from $0 \to t$
+And integrating with respect to $x$ from $0 \to t$
 \[
 \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx=  \int_{0}^{t} \frac{1}{{(t-x)}^{1-\alpha}} \int_{0}^{x} \frac{\phi(\tau)}{{(x-\tau)}^\alpha} d\tau dx
 \]
-by switching the order of the integration 
+By switching the order of the integration 
 
 \begin{center}
         \begin{tikzpicture}
-            \draw[->, blue] (0,0,0) -- (3,0,0) node[right]{$x$};
-            \draw[->, blue] (0,0,0) -- (0,3,0) node[above]{$\tau$};
-            \draw[->, orange] (0,0,0) -- (2.5,2.5,0) node[above right]{$\tau = x $};
+            \draw[->] (0,0,0) -- (3,0,0) node[right]{$x$};
+            \draw[->] (0,0,0) -- (0,3,0) node[above]{$\tau$};
+            \draw[->, blue] (0,0,0) -- (2.5,2.5,0) node[above right]{$\tau = x $};
             \draw[->, orange] (0,2.2,0) -- (2.7,2.2,0) node[right]{$\tau = t$};
 		
             \draw[-,red] (0,1,0)--(1,1,0);
             \draw[-,red] (0,1.2,0)--(1.2,1.2,0);
+
+            \fill [oblique lines] (0,1,0) -- (1,1,0) -- (1.2,1.2,0) -- (0,1.2,0);
+            \fill [oblique lines] (1,1,0) -- (1,2.2,0) -- (1.2,2.2,0) -- (1.2,1.2,0);
 
             \draw[-,red] (1,1,0)--(1,2.2,0);
             \draw[-,red] (1.2,1.2,0)--(1.2,2.2,0);
@@ -2317,43 +2349,44 @@ by switching the order of the integration
             \draw (1.1,2.4,0) node{$dx$};
 	\end{tikzpicture}
 \end{center}
-
 \[
 \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx= \int_{0}^{t}\int_{\tau}^{t} \frac{1}{{(t-x)}^{1-\alpha}{(x-\tau)}^\alpha} dx \phi(\tau) d\tau
 \]
-taking the inner integral and put $x = \tau + (t-\tau)\xi \Longrightarrow dx = (t-\tau)d\xi$
+Taking the inner integral and put $x = \tau + (t-\tau)\xi \Longrightarrow dx = (t-\tau)d\xi$
 \begin{align*}
-    \int_{0}^{1} \frac{(t-\tau)}{{(t-\tau)}^\alpha \xi^\alpha {(t-\tau-(t-\tau)\xi)}^{1-\alpha}} d\xi 
+    \int_{0}^{1} \frac{(t-\tau)}{{(t-\tau)}^\alpha \xi^{\alpha} {(t-\tau-(t-\tau)\xi)}^{1-\alpha}} d\xi 
     &= \int_{0}^{1} \frac{(t-\tau)}{{(t-\tau)}^\alpha \xi^\alpha {(t-\tau)}^{-\alpha}{(1-\xi)}^{1-\alpha}} d\xi
     \\
     &= \int_{0}^{1} \frac{1}{\xi^{\alpha} {(1-\xi)}^{1-\alpha} } d\xi
-    \\
-    \text{this is the form of the } &\beta \text{ function }    
+\end{align*}
+this is the form of the $\beta$ function
+\begin{align*}
+    \int_{0}^{1} \frac{1}{\xi^{\alpha} {(1-\xi)}^{1-\alpha} } d\xi &= \int_{0}^{1} \xi^{-\alpha} {(1-\xi)}^{\alpha-1} d\xi
     \\
     &=\beta (1-\alpha,\alpha) = \frac{\pi}{\sin(\alpha\pi)}
 \end{align*}
-then
+Then
 \[
 \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx = \int_{0}^{t} \frac{\pi}{\sin(\alpha\pi)} \phi(\tau) d\tau
 \]
-taking the derivative for t 
+Taking the derivative for $t$ 
 \[
 \frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx = \frac{\pi}{\sin(\alpha\pi)} \phi(t)
 \]
-therefore $\phi(t)$ can be written as 
+Therefore $\phi(t)$ can be written as 
 \[
 \phi(t) = \frac{\sin(\alpha\pi)}{\pi}  \frac{d}{dt} \int_{0}^{t} \frac{f(x)}{{(t-x)}^{1-\alpha}} dx
 \]
-this is the solution of Abel Integral equation
+This is the solution of Abel Integral equation
 
 \newpage
 
 \section{Energy Integral}
 \
 \begin{definition} [The Energy Integral]
-    is a mathematical expression that represents the total energy of a vibrating string.
+    Is a mathematical expression that represents the total energy of a vibrating string.
 \end{definition}
-$E(t)$ in 1-dimension is defined as :
+$E(t)$ in one dimension is defined as :
 \[
 E(t)  =  \frac{\rho}{2} \int {\left(\frac{\partial u}{\partial t}\right)}^2 dx + \frac{\mu}{2} \int {\left(\frac{\partial u}{\partial x}\right)}^2 dx
 \] 
@@ -2370,12 +2403,12 @@ The energy integral is essential because it helps us understand how energy is di
 To prove that the energy integral is conservative over the wave equation in 1D,
 we need to show that the total energy of the system remains constant over time, i.e., the derivative of the energy with respect to time is zero.
 \par
-let's consider the wave equation
+Let's consider the wave equation
 \[
-    \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \tquad c^2 = \frac{\mu}{\rho} \tquad x : a\to b \text{ (string length)}
+    \frac{\partial^2 u(x,t)}{\partial t^2} = c^2 \frac{\partial^2 u(x,t)}{\partial x^2} \dquad c^2 = \frac{\mu}{\rho} \dquad x \in [a,b] \text{ (string length)}
 \]
 \begin{theorem}
-    let $g : \mathbb{R}\times\mathbb{R} \to \mathbb{R}$ be a continuous function such that $\displaystyle \frac{\partial g(x,t)}{\partial t}$ exist and is continuous.
+    Let $g : \mathbb{R}\times\mathbb{R} \to \mathbb{R}$ be a continuous function such that $\displaystyle \frac{\partial g(x,t)}{\partial t}$ exist and is continuous.
     \\
     Suppose $\displaystyle \int_{-\infty}^{\infty} |g(x,t)| dx $  and   $\displaystyle \int_{-\infty}^{\infty} |\frac{\partial g(x,t)}{\partial t}| dx $ exists for each $t$
     and that $\displaystyle \int_{|x|>R} |\frac{\partial g(x,t)}{\partial t}| dx \to 0 $ as $R \to \infty$ uniformly in $t$ on every interval $[a,b]$.\
@@ -2385,30 +2418,34 @@ let's consider the wave equation
         \frac{\partial}{\partial t} \int_{-\infty}^{\infty} g(x,t) dx = \int_{-\infty}^{\infty} \frac{\partial g(x,t)}{\partial t} dx
     \]
 \end{theorem}
-by differentiate $E(t)$
+By differentiate $E(t)$ and let's say for now that 
+$\displaystyle {\left(\frac{\partial u}{\partial t}\right)}^2$
+And
+$\displaystyle {\left(\frac{\partial u}{\partial x}\right)}^2$
+satisfies theorem 8.1 it will be explained later 
 \[
 E'(t) = \frac{\rho}{2} \int_{a}^{b} 2\frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx + \frac{\mu}{2} \int_{a}^{b} 2\frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial t\partial x} dx    
 \]
-by integrating by parts for the second integral 
+By integrating by parts for the second integral 
 \[
 E'(t) = \rho \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx +\mu\left[\frac{\partial u}{\partial x}\frac{\partial u}{\partial t}\right]_{a}^{b} -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
 \]
 \newpage 
-assuming that initial conditions on the derivatives are
+Assuming that initial conditions on the derivatives are
 $\displaystyle \frac{\partial u(a,t)}{\partial t} = \frac{\partial u(b,t)}{\partial t} = 0$
-in other words the ends are fixed so there is no movement and hence no velocity
+In other words the ends are fixed so there is no movement and hence no velocity
 \[
 \therefore E'(t) = \rho \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial t^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
 \]
-from the wave equation we get 
+From the wave equation we get 
 \begin{align*}
     E'(t) &= \rho c^2 \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx    
     \\
     &= \mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx -\mu \int_{a}^{b} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx = 0
 \end{align*}
-that shows us that $E(t)$ is constant for all $t$
+That shows us that $E(t)$ is constant for all $t$
 \par
-in a more general context by starting with the kinetic energy
+In a more general context by starting with the kinetic energy
 \[
 K.E = \frac{\rho}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx    
 \]
@@ -2424,30 +2461,30 @@ parts we come up with something useful:
 \[
     \mu \int_{-\infty}^{\infty} \frac{\partial u}{\partial t}\frac{\partial^2 u}{\partial x^2} dx = \mu \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{-\infty}^{\infty} - \mu \int_{-\infty}^{\infty} \frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial x \partial t} dx
 \]
-now $\displaystyle \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{-\infty}^{\infty} $ should vanish because the derivatives ought to approach zero in the limit. So we are left with:
+Now $\displaystyle \left[\frac{\partial u}{\partial t}\frac{\partial u}{\partial x}\right]_{-\infty}^{\infty} $ should vanish because the derivatives ought to approach zero in the limit. So we are left with:
 \[
 \frac{d}{dt}K.E = -\frac{d}{dt}\left(\frac{\mu}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx\right)
 \]
-and because the potential Energy is defined as 
+And because the potential Energy is defined as 
 \[
 P.E = \frac{\mu}{2} \int_{-\infty}^{\infty} {\left(\frac{\partial u}{\partial t}\right)}^2 dx
 \]
-then 
+Then 
 \[
    \frac{d}{dt}K.E = \frac{d}{dt}P.E 
 \]
-or 
+Or 
 \[
 \frac{d}{dt} \left(K.E + P.E \right) = 0    
 \]
-then that says that the total energy $E(t)$ is conservative
-
+Then that says that the total energy $E(t)$ is conservative
+\newpage
 \subsubsection*{Differentiating Under Integral}
 As can be seen from the Theorem, we need continuity of 
 $\displaystyle \frac{\partial g(x, t)}{\partial t}$
-where $g(x,t)$ is 
+Where $g(x,t)$ is 
 $\displaystyle {\left(\frac{\partial u}{\partial t}\right)}^2$
-and
+And
 $\displaystyle {\left(\frac{\partial u}{\partial x}\right)}^2$. 
 From physical considerations the energy is finite so that we should have existence of
 $\displaystyle \int_{a}^{b} |g(x,t)|dx$. As for the integral
@@ -2461,20 +2498,20 @@ and since we are dealing with a finite spatial interval this should also be sati
 Hence, differentiating under the integral sign is acceptable.
 
 \subsection{Energy Conservation For 3D Wave Equation}
-let's consider the wave equation in 3d
+Let's consider the wave equation in 3d
 \[
-u_{tt} = \nabla_x^2 u \tquad B.C \to u(x,y)|_\Gamma = 0
+u_{tt} = \nabla_x^2 u \quad,\quad B.C \Longrightarrow  u(x,y)|_\Gamma = 0
 \]
-the Energy Integral will be as following
+The Energy Integral will be as following
 \[
     E = \iiint_{D}(u_t^2 + |\nabla_x u|^2) dx
 \]
-Suppose u is smooth so that $u_{x_{i}t}=u_{t x_{i}}$, 
+Suppose $u$ is smooth so that $u_{x_{i}t}=u_{t x_{i}}$, 
 and the energy is bounded, then we can put the differentiation inside the integral sign:
 \[
 \frac{dE}{dt} = \iiint_{D}(  2 u_t u_{tt} + 2 \nabla_x u \cdot (\nabla_x u)_t) dx
 \]
-now because $u_{tt} = \nabla_x^2 u$ then
+Now because $u_{tt} = \nabla_x^2 u$ then
 \[
     \frac{dE}{dt} = \iiint_{D}(  2 u_t \nabla_x^2 u + 2 \nabla_x u \cdot (\nabla_x u)_t) dx
 \]
@@ -2482,23 +2519,24 @@ Use Green's identities (integration by parts using divergence theorem):
 \[
     \iiint_{D} \psi \nabla^2 \phi dx = -\iiint_{D} \nabla \psi \cdot \nabla \phi dx + \iint \psi (\nabla \phi \cdot n )dS
 \]
-where $\psi = u_t $ and  $\phi = u$
+Where $\psi = u_t $ and  $\phi = u$
 \[
-    \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2\nabla_x u \cdot (\nabla_x u)_t) dx  + \iint u_t(\nabla_x u \cdot n )dS
+    \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2\nabla_x u \cdot (\nabla_x u)_t) dx  + \iint u_t(\nabla_x u \cdot n )d\Gamma
 \]
-For the boundary condition u=0 on boundary then 
+From the boundary condition $u=0$ on $\Gamma$ then 
 \[
     u_t(\nabla_x u \cdot n ) = 0
 \]
 \[
   \therefore  \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2\nabla_x u \cdot (\nabla_x u)_t) dx
 \]
-and because u is smooth thus $\nabla_x (u_t) =(\nabla_x u)_t$
+And because $u$ is smooth thus $\nabla_x (u_t) =(\nabla_x u)_t$
 \[
   \therefore  \frac{dE}{dt} = \iiint_{D}( -2 \nabla_x u \cdot \nabla_x (u_t) + 2 \nabla_x u \cdot \nabla_x (u_t)) dx
 \]
 \[
     \therefore  \frac{dE}{dt} = 0
 \]
-therefore the energy $E(t)$ is conservative on 3D wave equation and same method can be applied with n-th dimension
+Therefore the energy $E(t)$ is conservative on 3D wave equation and same method can be applied with 
+$n^{\text{th}}$ dimension 
 \end{document}
