@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  9 NOV 2023 14:19
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  8 DEC 2023 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,8 +1122,12 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@env@ii=\count369
 \c@mdf@zref@counter=\count370
 Package zref Info: New property: mdf@pagevalue on input line 895.
-))
-(C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
+)) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/tools\afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks50
+\AP@partial=\box94
+\AP@footins=\box95
+) (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec.sty
 Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/fontspec\fontspec-xetex
@@ -1203,37 +1207,37 @@ n;language=dflt;"
 n;language=dflt;+smcp;"
 
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 32.
- (PDE.aux)
+h' as default language. on input line 33.
+ (PDE.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
 \openout1 = `PDE.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-2.
+3.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-Package hyperref Info: Link coloring OFF on input line 32.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+Package hyperref Info: Link coloring OFF on input line 33.
 
 (PDE.out) (PDE.out)
 \@outlinefile=\write5
@@ -1248,15 +1252,15 @@ Package hyperref Info: Link coloring OFF on input line 32.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(86.72377pt, 424.06033pt, 86.72377pt)
-* v-part:(T,H,B)=(86.72377pt, 671.5993pt, 86.72377pt)
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=424.06033pt
-* \textheight=671.5993pt
-* \oddsidemargin=14.45378pt
-* \evensidemargin=14.45378pt
-* \topmargin=-22.54622pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -1283,51 +1287,54 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 32.
-LaTeX Font Info:    Calculating math sizes for size <50> on input line 47.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-7.
+or `english'. on input line 33.
+\openout2 = `BookStarter.aux'.
+
+ (BookStarter.tex
+LaTeX Font Info:    Calculating math sizes for size <50> on input line 13.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+3.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-7.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+3.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-47.
+13.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-47.
+13.
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <50> on input line 47.
+(Font)              <50> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <34.99985> on input line 47.
+(Font)              <34.99985> on input line 13.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <25> on input line 47.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 47.
+(Font)              <25> on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
 
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 47
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
 .
 
 (C:\Users\Ahmed\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
@@ -1335,15 +1342,16 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <50> not available
-(Font)              size <24.88> substituted on input line 47.
+(Font)              size <24.88> substituted on input line 13.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <34.99985> not available
-(Font)              size <24.88> substituted on input line 47.
+(Font)              size <24.88> substituted on input line 13.
 
-File: Cover2.jpg Graphic file (type bmp)
-<Cover2.jpg>
+File: front.jpg Graphic file (type bmp)
+<front.jpg>
 [1
+
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -1380,171 +1388,115 @@ File: Cover2.jpg Graphic file (type bmp)
 
 File: collage logo.png Graphic file (type bmp)
 <collage logo.png>
- [1
+ [2
 
 ] (PDE.toc)
 \tf@toc=\write6
 \openout6 = `PDE.toc'.
 
- [2
+ [3
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+])
+\openout2 = `BookBody.aux'.
+
+ (BookBody.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 102.
+(mdframed)              on input line 11.
+
+Overfull \hbox (1.07326pt too wide) in paragraph at lines 12--13
+[][]\TU/lmr/bx/n/9 Definition 1.1 — Partial Differential Equation. []\TU/lmr/m/
+n/10 A partial differential equation (PDE) is a differential
+ []
+
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 109.
+(Font)              <10> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 109.
+(Font)              <7> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 109.
-[3]
+(Font)              <5> on input line 18.
+[1
+
+
+
+]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 152.
+(mdframed)              on input line 61.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 155.
+(mdframed)              on input line 64.
 File: laplacecircle.png Graphic file (type bmp)
 <laplacecircle.png>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 171.
+(mdframed)              on input line 80.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 176.
+(mdframed)              on input line 85.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 186.
+(mdframed)              on input line 95.
+
+Underfull \hbox (badness 1210) in paragraph at lines 102--103
+[]\TU/lmr/m/n/10 Peter Gustav Lejeune Dirichlet (1805-1859) Born in Düren, Germ
+any,
+ []
+
 File: Dirichlet.jpg Graphic file (type bmp)
 <Dirichlet.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 192--192
-[][] 
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 204--207
-
- []
-
+[2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 207.
-[5]
+(mdframed)              on input line 121.
+ [3]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 288.
+(Font)              <9> on input line 202.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 288.
- [6] [7] [8] [9]
+(Font)              <6> on input line 202.
+ [4] [5] [6] [7]
 File: Cauchy.jpg Graphic file (type bmp)
 <Cauchy.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 508--508
-[][] 
- []
-
-[10] [11]
-Underfull \hbox (badness 1248) in paragraph at lines 588--590
-\TU/lmr/m/n/10 was mathematician, engineer, and physicist who made significant
- []
-
+ [8] [9]
 File: Poisson.jpg Graphic file (type bmp)
 <Poisson.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 590--590
-[][] 
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 596.
-[12] [13] [14] [15]
-Overfull \hbox (0.70856pt too wide) in paragraph at lines 873--876
-\TU/lmr/m/n/10 One can draw parallels between formula (6) and the solution to t
-he in-homogeneous ODE analogous
- []
-
-[16] [17] [18]
-Underfull \hbox (badness 3009) in paragraph at lines 1038--1040
-[]\TU/lmr/m/n/10 Jean le Rond d’Alembert (1717-1783) was a prominent French
- []
-
+(mdframed)              on input line 515.
+ [10] [11] [12] [13] [14] [15] [16]
 File: d_Alembert.jpg Graphic file (type bmp)
 <d_Alembert.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1040--1040
-[][] 
- []
-
-[19]
-Overfull \hbox (4.69969pt too wide) detected at line 1080
-[]
- []
-
-[20]
-Overfull \hbox (9.42976pt too wide) in paragraph at lines 1134--1136
-\TU/lmr/m/n/10 Where $\OMS/lmsy/m/n/10 r[]$ \TU/lmr/m/n/10 is the Laplace-Beltr
-ami operator, a generalization of the Laplace operator in n-dimensional
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 1139--1145
-\TU/lmr/m/n/10 PDEs, which are fundamental to understanding various physical
- []
-
+ [17]
+[18]
 File: Darboux.jpg Graphic file (type bmp)
 <Darboux.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1145--1145
-[][] 
- []
-
 File: xi.png Graphic file (type bmp)
 <xi.png>
-[21]
+ [19]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1194.
- [22] [23]
-Underfull \hbox (badness 1590) in paragraph at lines 1266--1269
-[]\TU/lmr/m/n/10 Gustav Kirchhoff (1824-1887) was a prominent German physicist
- []
-
+(mdframed)              on input line 1115.
+ [20] [21]
 File: Kirchhoff.jpg Graphic file (type bmp)
 <Kirchhoff.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1269--1269
-[][] 
- []
-
-[24] [25] [26]
+ [22] [23] [24]
 File: domain.png Graphic file (type bmp)
 <domain.png>
 File: circle.png Graphic file (type bmp)
 <circle.png>
- [27]
-Underfull \hbox (badness 2653) in paragraph at lines 1475--1477
-[]\TU/lmr/m/n/10 Pierre Simon Laplace (1749-1827) was a French mathematician,
- []
-
+ [25]
 File: Laplace.jpg Graphic file (type bmp)
 <Laplace.jpg>
-
-Overfull \hbox (1.51756pt too wide) in paragraph at lines 1477--1477
-[][] 
- []
-
-[28] [29]
+ [26] [27]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1609.
+(mdframed)              on input line 1537.
 
-Overfull \hbox (37.42564pt too wide) detected at line 1631
+Overfull \hbox (8.51808pt too wide) detected at line 1559
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 
 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lm
 r/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lms
@@ -1552,76 +1504,141 @@ y/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT
 1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L
  []
 
-[30]
+[28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1643.
- [31]
+(mdframed)              on input line 1571.
+ [29]
 File: green.png Graphic file (type bmp)
 <green.png>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1722.
- [32]
-Package mdframed Info: Not enough space on this page on input line 1724.
+(mdframed)              on input line 1652.
+Package mdframed Info: Not enough space on this page on input line 1654.
+ [30]
+Package mdframed Info: Not enough space on this page on input line 1654.
 File: diameter.png Graphic file (type bmp)
 <diameter.png>
- [33]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1776.
+(mdframed)              on input line 1706.
+Package mdframed Info: Not enough space on this page on input line 1713.
+ [31]
+Package mdframed Info: Not enough space on this page on input line 1713.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1803.
- [34]
+(mdframed)              on input line 1733.
+ [32]
 File: rep.png Graphic file (type bmp)
 <rep.png>
- [35] [36] [37] [38]
-Overfull \hbox (4.3897pt too wide) in paragraph at lines 1994--1999
-\TU/lmr/m/n/10 Burger’s equation is a partial differential equation occurring i
-n various areas of applied mathematics.
- []
-
-[39]
+ [33] [34] [35] [36] [37]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2058.
+(mdframed)              on input line 1984.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2066.
-
-Overfull \hbox (1.66968pt too wide) in paragraph at lines 2092--2093
-[]\TU/lmr/m/n/10 The successive approximation method is an iterative approach t
-hat allows us to find an approximate
- []
-
-[40]
-Overfull \hbox (4.79471pt too wide) in paragraph at lines 2095--2096
-[]\TU/lmr/bx/n/10 Formulate the Integral Equation\TU/lmr/m/n/10 : Write down th
-e integral equation in the form mentioned
- []
-
-
-Overfull \hbox (7.11903pt too wide) in paragraph at lines 2102--2103
-[]\TU/lmr/bx/n/10 Repeat the Process\TU/lmr/m/n/10 : Use $\OML/lmm/m/it/10 ^^^[
-]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$ \TU/lmr/m/n/10 as the ne
-w approximation and repeat the process. Substitute
- []
-
-[41] [42] [43]
-Overfull \hbox (1.60168pt too wide) in paragraph at lines 2262--2265
-\TU/lmr/m/n/10 Volterra integral equations have wide applications in areas like
- control theory, population dynamics,
- []
-
-[44] [45] [46]
+(mdframed)              on input line 1992.
+ [38] [39] [40] [41] [42]
+[43]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2386.
+(mdframed)              on input line 2304.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2410.
- [47] [48] [49] (PDE.aux)
+(mdframed)              on input line 2329.
+ [44] [45]) [46]
+\openout2 = `BookEnd.aux'.
+
+ (BookEnd.tex
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(57.81621pt, 467.42168pt, 72.26999pt)
+* v-part:(T,H,B)=(57.81621pt, 729.41443pt, 57.81621pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=467.42168pt
+* \textheight=729.41443pt
+* \oddsidemargin=-14.45378pt
+* \evensidemargin=-14.45378pt
+* \topmargin=-51.45378pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Font family 'Arial(0)' created for font 'Arial' with
+(fontspec)             options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"Arial/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"Arial/B/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"Arial/I/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"Arial/BI/OT:script=latn;language=dflt;+smcp;"
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--47
+
+ []
+
+File: back.jpg Graphic file (type bmp)
+<back.jpg>
+[47
+
+
+
+
+]) (PDE.aux (BookStarter.aux) (BookBody.aux) (BookEnd.aux))
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-11>
@@ -1635,12 +1652,12 @@ Package rerunfilecheck Info: File `PDE.out' has not changed.
 (rerunfilecheck)             Checksum: B50E522E2DD9FC452817C9FC70189A04;5854.
  ) 
 Here is how much of TeX's memory you used:
- 34213 strings out of 410633
- 731380 string characters out of 5792050
+ 34384 strings out of 410633
+ 735445 string characters out of 5792050
  1935879 words of memory out of 5000000
- 54738 multiletter control sequences out of 15000+600000
- 595007 words of font info for 113 fonts, out of 8000000 for 9000
+ 54865 multiletter control sequences out of 15000+600000
+ 595119 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,92p,1237b,941s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,92p,1237b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on PDE.pdf (50 pages).

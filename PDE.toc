@@ -1,35 +1,35 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Classification Of PDEs}{3}{subsection.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.1}Order of PDE}{3}{subsubsection.1.1.1}%
-\contentsline {subsubsection}{\numberline {1.1.2}Linearity}{3}{subsubsection.1.1.2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Homogeneity}{3}{subsubsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.2}Boundary Conditions}{4}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Initial Condition}{4}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Canonical Form}{5}{section.2}%
-\contentsline {section}{\numberline {3}Heat Equation}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Fourier Transform}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Cauchy Problem}{11}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Mixed Homogeneous Problem}{12}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Mixed In-Homogeneous Problem}{14}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Cauchy In-Homogeneous Problem}{16}{subsection.3.5}%
-\contentsline {section}{\numberline {4}Wave Equation}{18}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{18}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{20}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Spherical Mean and Darboux's Equation}{21}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Kirchhoff's Formula}{24}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Laplace's Equation}{27}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Solution of Laplace's Equation on a Circle}{27}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Harmonic Functions}{30}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Green's Identity}{32}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Representation Formula}{35}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Laplace's Equation in Cylindrical Coordinates}{37}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Burger's Equation}{39}{section.6}%
-\contentsline {section}{\numberline {7}Introduction To Integral Equations}{40}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Successive Approximation}{40}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Fredholm's Integral Equation}{41}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Volttera Integral Equation}{44}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Abel Integral Equation}{45}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Energy Integral}{47}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Energy Conservation For 1D Wave Equation}{47}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Energy Conservation For 3D Wave Equation}{49}{subsection.8.2}%
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Classification Of PDEs}{1}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Order of PDE}{1}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Linearity}{1}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Homogeneity}{1}{subsubsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.2}Boundary Conditions}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Initial Condition}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Canonical Form}{3}{section.2}%
+\contentsline {section}{\numberline {3}Heat Equation}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fourier Transform}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Cauchy Problem}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Mixed Homogeneous Problem}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Mixed In-Homogeneous Problem}{12}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Cauchy In-Homogeneous Problem}{14}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Wave Equation}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Cauchy Problem (1D)}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Mixed Problem (1D)}{18}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Spherical Mean and Darboux's Equation}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Kirchhoff's Formula}{22}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Laplace's Equation}{25}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Solution of Laplace's Equation on a Circle}{25}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Harmonic Functions}{28}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Green's Identity}{30}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Representation Formula}{33}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Laplace's Equation in Cylindrical Coordinates}{35}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Burger's Equation}{37}{section.6}%
+\contentsline {section}{\numberline {7}Introduction To Integral Equations}{38}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Successive Approximation}{38}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Fredholm's Integral Equation}{39}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Volttera Integral Equation}{41}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Abel Integral Equation}{43}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Energy Integral}{44}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Energy Conservation For 1D Wave Equation}{44}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Energy Conservation For 3D Wave Equation}{46}{subsection.8.2}%
 \contentsfinish 
