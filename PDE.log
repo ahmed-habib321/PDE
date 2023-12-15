@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  8 DEC 2023 14:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.10.20)  15 DEC 2023 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1479,7 +1479,7 @@ File: xi.png Graphic file (type bmp)
  [19]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1115.
+(mdframed)              on input line 1116.
  [20] [21]
 File: Kirchhoff.jpg Graphic file (type bmp)
 <Kirchhoff.jpg>
@@ -1494,9 +1494,9 @@ File: Laplace.jpg Graphic file (type bmp)
  [26] [27]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1537.
+(mdframed)              on input line 1538.
 
-Overfull \hbox (8.51808pt too wide) detected at line 1559
+Overfull \hbox (8.51808pt too wide) detected at line 1560
 [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 
 )[]\OML/lmm/m/it/10 d^^L \OMS/lmsy/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lm
 r/m/n/10 (\OML/lmm/m/it/10 ^^L\OT1/lmr/m/n/10 )[]\OML/lmm/m/it/10 d^^L \OMS/lms
@@ -1507,45 +1507,45 @@ y/m/n/10 ^^T [] [][] \OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 ^^L\OT
 [28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1571.
+(mdframed)              on input line 1572.
  [29]
 File: green.png Graphic file (type bmp)
 <green.png>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1652.
-Package mdframed Info: Not enough space on this page on input line 1654.
+(mdframed)              on input line 1653.
+Package mdframed Info: Not enough space on this page on input line 1655.
  [30]
-Package mdframed Info: Not enough space on this page on input line 1654.
+Package mdframed Info: Not enough space on this page on input line 1655.
 File: diameter.png Graphic file (type bmp)
 <diameter.png>
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1706.
-Package mdframed Info: Not enough space on this page on input line 1713.
+(mdframed)              on input line 1707.
+Package mdframed Info: Not enough space on this page on input line 1714.
  [31]
-Package mdframed Info: Not enough space on this page on input line 1713.
+Package mdframed Info: Not enough space on this page on input line 1714.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1733.
+(mdframed)              on input line 1734.
  [32]
 File: rep.png Graphic file (type bmp)
 <rep.png>
  [33] [34] [35] [36] [37]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1984.
+(mdframed)              on input line 1985.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1992.
+(mdframed)              on input line 1993.
  [38] [39] [40] [41] [42]
 [43]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2304.
+(mdframed)              on input line 2305.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2329.
+(mdframed)              on input line 2330.
  [44] [45]) [46]
 \openout2 = `BookEnd.aux'.
 

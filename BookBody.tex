@@ -788,7 +788,7 @@ Combining (4) and (5) we obtain the solution to the IVP (1)
 \end{equation}
 Now substitute the heat kernel
 \[
-    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{0}^{t} \int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4(t-s)c^2}} \phi(y)dyds            
+    u(x,t) = \frac{1}{2\sqrt{\pi tc^2}}\int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4tc^2}} \phi(y)dy + \int_{0}^{t} \frac{1}{2\sqrt{\pi (t-s)c^2}} \int_{-\infty}^{\infty}e^{\textstyle -\frac{{(x-y)}^2}{4(t-s)c^2}} f(y,s)dyds            
 \]
 One can draw parallels between formula (6) and the solution to the in-homogeneous ODE analogous
 to the heat equation. consider the IVP for the following ODE.
@@ -839,7 +839,8 @@ By differentiating (5) with respect to t gives
     \frac{\partial u_p}{\partial t} &= \int_{-\infty}^{\infty}\delta(x-y) f(y,t) dy  + \int_{0}^{t}\int_{-\infty}^{\infty}c^2 \frac{\partial^2}{\partial x^2}S(x-y,t-s) f(y,s)dyds
     \\
     &= f(x,t) + c^2 \frac{\partial^2}{\partial x^2} \int_{0}^{t}\int_{-\infty}^{\infty}S(x-y,t-s) f(y,s)dyds
-    = f(x,t) + c^2 \frac{\partial^2 u_p}{\partial x^2}
+    \\
+    &= f(x,t) + c^2 \frac{\partial^2 u_p}{\partial x^2}
 \end{align*}
 Which shows that $u_p(x,t)$ solves the in-homogeneous heat equation. It is also clear that
 \[
